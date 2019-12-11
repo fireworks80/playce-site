@@ -189,7 +189,6 @@
     };
 
     document.addEventListener('DOMContentLoaded', onCustomSelectHandler);
-    document.domain = document.domain.split('.').reverse().splice(0, 2).reverse().join('.');
 
   }());
 

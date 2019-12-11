@@ -221,4 +221,26 @@
     setLocale(getLocale());
     getGnbLocale(getLocale());
   }());
+
+  (function() {
+
+    document.body.addEventListener('click', function(e) {
+
+      if (Playce.isMobile) return;
+
+      var calloutEls = document.querySelectorAll('.has-callout'); 
+      var arrCallouts = Array.prototype.slice.call(calloutEls);
+      console.log( e.target.className);
+
+      if (e.target.className !== null && e.target.className.indexOf('js-has-callout') < 0) {
+
+        arrCallouts.forEach(function(li, idx) {
+          if (li.classList.contains('is-active')) {
+            li.classList.remove('is-active');
+            console.log('hide');
+          }
+        });
+      }
+    });
+  }());
 </script>

@@ -202,7 +202,7 @@
       return location.pathname.indexOf('en') > -1 ? 'en' : 'ko';
     };
 
-    var setLanguage = function(lang) {
+    var setLocale = function(lang) {
       $.i18n({
         locale: lang
       })
@@ -215,12 +215,12 @@
       });
     };
     
-    var setGnbLang = function(lang) {
+    var getGnbLocale = function(lang) {
       currentLangEl.textContent = lang === 'en' ? 'ENG' : 'KOR';        
       langEl.classList.remove('is-active');
     };
 
-    setLanguage(getLocale());
-    setGnbLang(getLocale());
+    setLocale(getLocale());
+    getGnbLocale(getLocale());
   }());
 </script>

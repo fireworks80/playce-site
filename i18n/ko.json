@@ -11,11 +11,14 @@
 	"support": "고객지원",
 	"inquiry": "문의하기",
 	"resource": "리소스",
+	"add-resource": "추가 리소스",
 	"partner": "파트너",
+	"partner-program": "파트너 프로그램",
 	"buy": "구매 문의",
 	"product-inquiry": "제품 문의",
 	"link-detail": "바로가기",
 	"tech-support": "기술 지원",
+	"faq": "자주 묻는 질문",
 	"index-wasup-tit": "<span class=\"lineup-wasup__tit-opacity\">클라우드 인프라를 더욱 <span class=\"line-brake\"></span> 강력하게 업그레이드 시켜줄</span><span class=\"line-brake last\"></span>Web Application Server!",
 	"index-wasup-desc": "Playce WASup은 커뮤니티 오픈소스 <span class=\"line-brake\"></span>WAS를 더욱 쉽게 통합 관리하여 고객의 IT <span class=\"line-brake\"></span>비용을 최대로 줄일 수 있습니다.",
 	"detail-wasup": "Playce WASup 자세히보기",
@@ -25,8 +28,10 @@
 	"index-service-desc": "오픈소스컨설팅의 고객지원 서비스를 통해 <em>궁금한 점을 해결</em>해보세요.",
 	"index-service-inquiry": "Playce 제품에 대해 궁금한 사항이 있으신가요?",
 	"index-service-tech": "Playce 제품 전담 엔지니어의 도움이 필요하신가요?",
-	"index-service-faq": "자주 묻는 질문",
 	"index-service-faq-desc": "layce Support에 문의 전 FAQ 내용을 확인해<span class=\"line-brake\"></span>보세요.",
 	"experience-index-desc1": "오픈소스컨설팅의 <em>Playce 제품을<span class=\"line-brake\"></span> 무료로</em> 시작해 보세요.",
-	"experience-index-desc2": "Playce WASup과 Playce RoRo는<span class=\"line-brake\"></span> 오픈소스 기반 솔루션으로, 언제든지<span class=\"line-brake\"></span> 무료로 사용해 볼 수 있습니다."
+	"experience-index-desc2": "Playce WASup과 Playce RoRo는<span class=\"line-brake\"></span> 오픈소스 기반 솔루션으로, 언제든지<span class=\"line-brake\"></span> 무료로 사용해 볼 수 있습니다.",
+	"reg-num": "사업자등록번호",
+	"representative": "대표자 : 장용훈",
+	"addr": "서울특별시 강남구 테헤란로 83길 32, 5층  (삼성동,나라키움삼성동A빌딩)"
 }

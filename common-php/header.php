@@ -15,9 +15,10 @@
   $root_url = $locale === 'en' ? '/'.$locale : '/';
 
   // gnb 국문 / 영문 클릭했을때
-  $ko_url = basename($_SERVER['PHP_SELF']);
-  $ko_url .= $_SERVER['QUERY_STRING'] ? '?'.$_SERVER['QUERY_STRING'] : '';
-  $en_url = '/en'.$_SERVER['REQUEST_URI'];
+  $query_string = $_SERVER['QUERY_STRING'] ? '?'.$_SERVER['QUERY_STRING'] : '';
+  $ko_url = '/'.basename($_SERVER['PHP_SELF']).$query_string;
+  $en_url = '/en/'.basename($_SERVER['PHP_SELF']).$query_string;
+  
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $locale; ?>">

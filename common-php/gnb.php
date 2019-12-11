@@ -42,7 +42,7 @@
               <div class="callout__content">
                 <a class="go-sel-page" href="./wasup.html">
                   <h3 class="callout__tit">Playce WASup</h3>
-                  <p class="callout__desc" data-i18n="gnb.dropdown2.desc">통합 미들웨어 관리 솔루션</p>
+                  <p class="callout__desc" data-i18n="gnb.dropdown-wasup.desc">통합 미들웨어 관리 솔루션</p>
                 </a>
                 <ul class="callout__list js-drop-down">
                   <li><a class="callout__link" data-i18n="feature" href="./wasup.html#feature">특장점</a></li>
@@ -58,7 +58,7 @@
               <div class="callout__content">
                 <a class="go-sel-page" href="./roro.html">
                   <h3 class="callout__tit">Playce RoRo</h3>
-                  <p class="callout__desc" data-i18n="gnb.dropdown1.desc">
+                  <p class="callout__desc" data-i18n="gnb.dropdown-roro.desc">
                     클라우드 마이그레이션 솔루션
                   </p>
                 </a>
@@ -88,7 +88,7 @@
       </ul>
       <ul class="gnb__list gnb-etc">
         <li class="gnb__item"><a data-i18n="inquiry" class="gnb__link" href="https://jira.osci.kr/servicedesk/customer/portal/21" target="_blank">문의하기</a></li>
-        <!-- .is-active로 하위 메뉴 열림  
+        <!-- .is-active로 하위 메뉴 열림  -->
         <li class="gnb__item has-callout js-lang">
           <span class="gnb__link js-has-callout js-current-lang">KOR</span>
           <div class="callout callout--lang">
@@ -97,7 +97,7 @@
               <li><a class="lang-link" href="<?php echo $en_url; ?>" data-lang="en">english</a></li>
             </ul>
           </div>
-        </li>-->
+        </li>
       </ul>
       <button class="gnb__close js-gnb__close" type="button">
         <span class="a11y">전체 메뉴 닫기</span>

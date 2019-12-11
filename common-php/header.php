@@ -48,10 +48,8 @@
     <div class="banner js-banner" data-collapsed="false">
       <div class="l-center">
         <a class="banner-anchor" href="https://www.dailysecu.com/news/articleView.html?idxno=81596" target="_blank">
-          <picture>
-            <source srcset="./images/top-banner2x.png" media="(min-width: 721px)">
-            <img class="banner__img" src="./images/top-banner2x-m.png" alt="GS인증 1등급 획득! 클라우드에 최적화된 WAS - Playce WASup, GS인증 1등급 획득!">
-          </picture>
+          <img class="banner__pc-img" src="./images/top-banner2x.png" alt="">
+          <img class="banner__m-img" src="./images/top-banner2x-m.png" alt="">
         </a>
         <button class="banner-btn js-banner-btn" type="button">닫기</button>
       </div>

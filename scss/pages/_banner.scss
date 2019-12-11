@@ -35,4 +35,20 @@
   &:hover p {
     text-decoration: underline;
   }
+
+  &__m-img {
+    display: none;
+  }
+  &__pc-img {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 720px) {
+  .banner__m-img {
+    display: inline-block;
+  }
+  .banner__pc-img {
+    display: none;
+  }
 }

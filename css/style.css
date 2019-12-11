@@ -2082,7 +2082,22 @@ body.show-gnb {
 .banner:hover p {
   text-decoration: underline;
 }
+.banner__m-img {
+  display: none;
+}
+.banner__pc-img {
+  display: inline-block;
+}
 
+@media (max-width: 720px) {
+  .banner__m-img {
+    display: inline-block;
+  }
+
+  .banner__pc-img {
+    display: none;
+  }
+}
 @keyframes fade-in {
   from {
     opacity: 0;

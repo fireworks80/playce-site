@@ -93,7 +93,7 @@
       <!-- // bottom -->
       <div class="footer__row copyright">
         <p>Copyright © 2019 Open Source Consulting, Inc. All rights reserved.</p>
-        <span class="copyright__link"><a href="./policy.html" type="button" data-i18n="individual.info">개인정보 처리방침</a></span>
+        <span class="copyright__link"><a href="./policy.html" type="button" data-i18n="individual-info">개인정보 처리방침</a></span>
         <span class="copyright__link"><a href="./franchisability.html" type="button" data-i18n="software">소프트웨어 사용권동의</a></span>
 
         <div class="footer__sns">

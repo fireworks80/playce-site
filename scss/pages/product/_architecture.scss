@@ -1,0 +1,128 @@
+// =============================
+//  style
+// =============================
+.architecture {
+  padding-bottom: 137px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  // wasup
+  // ==============================
+  &--wasup {
+    padding-top: 222px;
+    background-image: url($path-img+'bg-architecture.png');
+  }
+
+  // roro
+  // ==============================
+  &--roro {
+    padding-top: 60px;
+    background-color: #2557a0;
+  }
+
+  // mobile
+  // ==============================
+  @media ($query-mobile) {
+    padding-bottom: 80px;
+
+    &--wasup {
+      padding-top: 100px;
+      background-position: center top;
+    }
+
+    .btn-pic {
+      display: none;
+    }
+  }
+}
+
+// title
+// =======================
+.architecture__tit {
+  margin-bottom: 40px;
+  text-align: right;
+
+  &::before {
+    transform: rotate(225deg) scale(0.8);
+    display: inline-block;
+    margin-top: -2px;
+    margin-right: 10px;
+    content: '';
+  }
+
+  // wasup
+  // =========================
+  .architecture--wasup & {
+    @include section-heading(#9c563b) {
+      &::before {
+        @include icon-setting($ic-arrow-brown2x);
+      }
+    }
+  } // wasup tit
+
+  // roro
+  // ==============================
+  .architecture--roro & {
+    @include section-heading(#c4dff4) {
+      &::before {
+        @include icon-setting($ic-arrow-sora2x);
+      }
+    }
+  } // roro tit
+
+  // mobile
+  // ==============================
+  @media ($query-mobile) {
+    &::before {
+      transform: rotate(225deg) scale(0.6);
+      margin-top: -6px;
+    }
+  }
+}
+
+// desc
+// =======================
+.architecture__desc {
+  @include section-desc($color-light) {
+    margin-bottom: 110px;
+    text-align: right;
+  }
+
+  @media ($query-mobile) {
+    margin-bottom: 40px;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+// img
+// =======================
+.architecture__img {
+  @include relative;
+
+  display: inline-block;
+  -webkit-box-shadow: -17px 27px 23px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: -17px 27px 23px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: -17px 27px 23px 0px rgba(0, 0, 0, 0.2);
+
+  .architecture--wasup & {
+    @include size(percent(864px, $width-max - 20), null);
+    border-radius: 30px;
+  }
+  .architecture--roro & {
+    @include size(percent(880px, $width-max - 20), null);
+  }
+
+  @media ($query-mobile) {
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: none;
+
+    .architecture--wasup &,
+    .architecture--roro & {
+      @include size(100%, null);
+    }
+  }
+}

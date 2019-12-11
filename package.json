@@ -1,0 +1,15 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "lite-server": "^2.5.4",
+    "spritesmith-cli": "^1.1.2"
+  },
+  "scripts": {
+    "server": "lite-server",
+    "scss": "sass --watch ./scss/style.scss ./css/style.css",
+    "sprite": "spritesmith"
+  }
+}

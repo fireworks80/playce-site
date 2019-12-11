@@ -1,0 +1,147 @@
+// ==================================================
+// style
+// ==================================================
+.guide {
+  // @include debug;
+  background: {
+    repeat: no-repeat;
+    size: contain;
+    position: center top;
+  }
+
+  // bg settion
+  // ==============================
+
+  @each $name, $color in ('wasup': #fffdfa, 'roro': #fafcff) {
+    &--#{$name} {
+      background-image: url($path-img+'bg-guide-top-'+$name+'.png');
+      background-color: $color;
+    }
+  }
+
+  &.guide--wasup {
+    padding-bottom: 132px;
+  }
+
+  @media ($query-mobile) {
+    &.guide--wasup {
+      padding-bottom: 50px;
+    }
+  }
+}
+
+// poster
+// ==============================
+.guide--roro figure {
+  text-align: right;
+}
+
+.guide__poster {
+  // x좌표가 빠진 box shadow 값
+  // prevend($list, $val:x좌표값)을 이용해서
+  // $list의 맨앞에 $val을 추가한다.
+  $default: 29px 26px 5px rgba(50, 62, 81, 0.3);
+
+  @include relative;
+  @include size(percent(778px, $width-max - 20), null);
+  display: inline-block;
+  margin-bottom: 132px;
+  border-radius: 18px;
+
+  // wasup poster
+  // ==============================================
+  .guide--wasup & {
+    -webkit-box-shadow: prepend($default, -22px);
+    box-shadow: prepend($default, -22px);
+  } // wasup
+  // ==============================================
+
+  // roro poster
+  // ==============================================
+  .guide--roro & {
+    -webkit-box-shadow: prepend($default, 22px);
+    box-shadow: prepend($default, 22px);
+  } // roro
+  // ==============================================
+
+  // mobile
+  // ==============================================
+  @media ($query-mobile) {
+    @include size(100%, null);
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 50px;
+  } // > 960
+}
+
+// tit
+.guide__tit {
+  @include relative;
+  margin-bottom: 30px;
+  display: block;
+
+  &::before,
+  &::after {
+    display: inline-block;
+    content: '';
+  }
+
+  // wasup tit
+  // ==============================================
+  .guide--wasup & {
+    @include section-heading(#a86247) {
+      text-align: right;
+      &::before {
+        @include icon-setting($ic-arrow-brown2x);
+        // @include iconSetting($ic-arrow-brown2x);
+        transform: rotate(-45deg) scale(0.8);
+      }
+    }
+  } // wasup
+  // ==============================================
+
+  // roro tit
+  // ==============================================
+  .guide--roro & {
+    @include section-heading(#2557a0) {
+      text-align: left;
+    }
+
+    &::after {
+      @include icon-setting($ic-arrow-blue-2x);
+      transform: rotate(45deg) scale(0.7);
+      margin-top: -2px;
+    }
+  } // roro
+  // ==============================================
+
+  // mobile
+  // ==============================================
+  @media ($query-mobile) {
+    .guide--wasup & {
+      margin-bottom: 16px;
+      &::before {
+        transform: rotate(-45deg) scale(0.6) translateY(-10px);
+      }
+    }
+  } // > 960
+}
+
+// desc
+.guide__desc {
+  @include section-desc;
+
+  // wasup
+  // ==============================================
+  .guide--wasup & {
+    text-align: right;
+  } // wasup
+  // ==============================================
+
+  // roro
+  // ==============================================
+  .guide--roro & {
+    text-align: left;
+  } // roro
+  // ==============================================
+}

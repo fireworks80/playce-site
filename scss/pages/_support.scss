@@ -1,0 +1,203 @@
+.support-hero {
+  @include relative;
+  @include background-image($path-img + 'bg-support-hero.png');
+  background-size: cover;
+
+  &::after {
+    background-image: url($path-img+'bg-support-hero-round.png');
+  }
+
+  &__sub-tit,
+  &__desc em {
+    font-weight: bold;
+  }
+
+  .sub__tit {
+    color: #324c99;
+  }
+
+  .sub__tit2 {
+    // line-height: 1.73;
+    color: #2f394d;
+    em {
+      display: block;
+      color: #324c99;
+    }
+  }
+
+  &__desc em {
+    color: #324c99;
+  }
+
+  .btn-round {
+    padding: 0 24px;
+    border-radius: 8px 4px;
+    background-color: #2f394d;
+
+    &:hover {
+      background-color: #2a3346;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .sub__tit2 em {
+      display: inline;
+    }
+
+    .sub__desc br {
+      display: none;
+    }
+  }
+}
+
+// qna
+// =================================================================
+.qna {
+  $size-card: 380px;
+  // padding-bottom: 60px;
+  background-color: #253043;
+
+  &__list {
+    @include relative;
+    margin-top: -97px;
+    // margin-bottom: 60px;
+
+    .card {
+      height: 308px;
+      padding-right: percent(20px, $width-max - 20);
+
+      dl {
+        margin-left: 10px;
+      }
+
+      &__tit {
+        margin-bottom: 22px;
+      }
+
+      &:hover {
+        color: #2f394d;
+
+        .link-detail {
+          color: #4871f9;
+
+          &::after {
+            @include sprite-position2x($ic-arrow-bluelight2x);
+          }
+        }
+      }
+    } // card
+
+    .card:nth-child(1) {
+      &::before {
+        @include icon-setting($ico-mail);
+      }
+
+      &:hover::before {
+        @include sprite-position2x($ico-mail-on);
+      }
+    }
+
+    .card:nth-child(2) {
+      margin-left: percent(20px, $width-max - 20);
+
+      &::before {
+        @include icon-setting($ico-head-phone);
+      }
+
+      &:hover::before {
+        @include sprite-position2x($ico-head-phone-on);
+      }
+    }
+
+    .card:nth-child(3) {
+      &::before {
+        @include icon-setting($ico-faq);
+      }
+
+      &:hover::before {
+        @include sprite-position2x($ico-faq-on);
+      }
+    }
+
+    .link-detail {
+      @include absolute($bottom: 30px, $left: percent(40px, 380px));
+      color: #fff;
+
+      &::after {
+        @include absolute($left: 100%, $top: -6px);
+        @include sprite-position2x($ic-arrow-white2x);
+      }
+    }
+  } // qna__list
+
+  @media ($query-mobile) {
+    // padding-bottom: 40px;
+
+    &__list {
+      margin-top: -50px;
+      // margin-bottom: 24px;
+    }
+
+    .l-left,
+    .l-right {
+      float: none;
+    }
+
+    .card {
+      padding: 26px 36px;
+    }
+
+    .card:nth-child(2) {
+      margin: 24px 0;
+    }
+
+    .card::before {
+      transform: scale(0.9) translateX(-10px);
+    }
+
+    .card dl {
+      margin-left: 0;
+    }
+
+    .card:last-child br {
+      display: none;
+    }
+
+    .link-detail {
+      left: 36px;
+    }
+  }
+}
+
+.experience--support.experience {
+  margin-top: -20px;
+  padding-top: 124px;
+  padding-bottom: 103px;
+  background-color: #1e2839;
+  color: #d5dffa;
+
+  em {
+    color: #7c97e7;
+  }
+
+  .btn-round {
+    @include absolute($top: 4px, $right: percent(10px, $width-max - 20));
+  }
+
+  @media ($query-mobile) {
+    padding-top: 80px;
+    padding-bottom: 70px;
+    text-align: center;
+    font-size: 20px;
+
+    .experience__desc {
+      font-size: 16px;
+      // line-height: 1.6;
+    }
+
+    .btn-round {
+      position: static;
+      margin-top: 40px;
+    }
+  }
+}

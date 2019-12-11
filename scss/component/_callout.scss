@@ -1,0 +1,230 @@
+.callout {
+  // @include debug(tomato);
+  @include absolute($top: 100%, $left: -46px);
+  z-index: 5;
+  display: none;
+  padding-top: 14px;
+
+  &__inner {
+    // @include debug;
+    $color-drop-down: #6b7581;
+    display: flex;
+    justify-content: space-between;
+    width: 666px;
+    padding: 43px percent(30px, 666px) 37px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
+    font-size: rem(14px);
+    color: $color-drop-down;
+
+    &::before {
+      @include absolute($top: -4px, $left: 78px);
+      content: '';
+
+      border: {
+        style: solid;
+        color: transparent transparent #fff;
+        width: 10px;
+      }
+    }
+
+    // before
+
+    .callout--lang & {
+      width: 100%;
+      padding: 10px 20px;
+      display: block;
+
+      &::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  // inner
+
+
+  &__content {
+    // @include debug;
+    @include relative;
+    width: 50%; // 303px;
+    padding-left: (22px + 34px);
+
+    &::before {
+      @include absolute($top: 0, $left: 0);
+      @include size(34px);
+      border-radius: 50%;
+      content: '';
+    }
+
+    // .drop-down__content 두 요소 색 설정
+    $colors: ((#faa61e #a86247), (#51a1f0 #2557a0));
+
+    @for $i from 1 through length($colors) {
+      &:nth-of-type(#{$i}) {
+        @if $i==1 {
+          border-right: 1px solid #dde0e4;
+        }
+
+        @else {
+          margin-left: 29px;
+        }
+
+        // drop down 아이콘 설정
+        &::before {
+          @if $i==1 {
+            @include sprite2x($gnb-favicon-wasup-2x);
+          }
+
+          @else {
+            @include sprite2x($gnb-favicon-roro-2x);
+          }
+
+          transform-origin: left top;
+        }
+
+        // drop down 컨텐츠 하위 모든 link 마우스 올렸을때
+        a:hover {
+          $list-color: nth($colors, $i);
+          color: nth($list-color, 2);
+          font-weight: 500;
+        }
+      }
+    }
+
+    // for
+  }
+
+  &__tit {
+    margin-bottom: 10px;
+    padding-top: 9px;
+    font-size: rem(17px);
+    font-weight: 700;
+    color: $color-default;
+
+    // title, subtitle 감싼리링크 hover시
+    .go-sel-page:hover & {
+      color: inherit;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 32px;
+    font-size: rem(16px);
+    color: inherit;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    color: inherit;
+
+    li {
+      width: 50%;
+      margin-bottom: 14px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__link {
+    // @include debug;
+    @include size(80px, null);
+    line-height: 24px;
+  }
+
+  &--lang {
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+  }
+
+  &--lang li {
+    display: block;
+  }
+
+  .lang-link {
+    @include size(null, 40px);
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    border: 0;
+    text-transform: uppercase;
+  }
+
+  // mobile
+  // ====================================
+  @media ($query-mobile) {
+    // @include debug;
+    position: static;
+
+    &__inner {
+      @include size(auto);
+      display: block;
+      padding: 10px 10px 20px;
+      box-shadow: none;
+
+      .callout--lang & {
+        padding: 0;
+      }
+    }
+
+    &__content {
+      // @include debug;
+      @include size(auto);
+      margin-left: 0;
+      padding-left: (10px + 34px);
+
+      &:first-child {
+        border-right: 0;
+      }
+
+      &:last-child {
+        margin-top: 20px;
+        margin-left: 0;
+      }
+    }
+
+    // content
+
+    &__tit {
+      font-size: 16px;
+    }
+
+    &__desc {
+      font-size: 15px;
+    }
+
+    &__list {
+      display: block;
+      font-size: 14px;
+
+      li {
+        @include size(auto);
+        display: inline-block;
+        margin-bottom: 0;
+
+        &:nth-child(n + 2) {
+          // @include debug;
+          margin-left: 10px;
+        }
+      }
+
+      // li
+    }
+
+    // list
+
+    &__link {
+      @include size(auto);
+    }
+
+    &--lang {
+      transform: translateX(0);
+    }
+  }
+}

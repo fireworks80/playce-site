@@ -1,0 +1,49 @@
+// =======================================
+// experience
+// =======================================
+.experience {
+  font-size: 32px;
+  line-height: 1.6;
+  background-color: #e5e9ed;
+  color: #687381;
+
+  em {
+    color: #3d5399;
+  }
+
+  &__desc {
+    margin-top: 20px;
+    font-size: rem(20px);
+  }
+
+  .btn-round.is-big {
+    @include size(null, 48px);
+    border-radius: 5px 10px;
+    font-size: 20px;
+    line-height: 48px;
+  }
+
+  .btn-round:nth-of-type(2) {
+    margin-left: 20px;
+  }
+
+  .l-center {
+    // @include debug;
+    @include relative;
+  }
+
+  @media ($query-mobile) {
+    // .l-center {
+    // line-height: 2;
+    // }
+
+    .experience__desc {
+      margin-top: 10px;
+    }
+
+    .experience__btns {
+      display: inline-block;
+      margin-top: 40px;
+    }
+  }
+} // experience

@@ -1,0 +1,364 @@
+$list-color: (
+  'blue': #788ece,
+  'green': #85af30
+);
+
+// =============================
+//  function wizard step num generate
+// =============================
+@mixin step-num($from: 0, $to) {
+  @for $i from $from through $to {
+    &:nth-child(n + #{$i + 1})::before {
+      content: '#{$i}';
+    }
+  }
+}
+
+@mixin set-list-color($type, $color) {
+  .function--#{$type} & {
+    $color: map-get($list-color, $color);
+    $shadow: inset 0 0 0 3px $color, 0 2px 5px 0 rgba(50, 62, 81, 0.3);
+    @include step-num($to: 6);
+
+    &::before {
+      z-index: 2;
+      box-shadow: $shadow;
+      color: $color;
+    }
+
+    &.current::before {
+      color: #fff;
+      background-color: $color;
+      box-shadow: $shadow;
+    }
+  }
+}
+
+// =============================
+//  style
+// =============================
+.function {
+  background: {
+    size: 103%;
+    repeat: no-repeat;
+  }
+
+  &__tit {
+    margin-bottom: 30px;
+    text-align: center;
+
+    @each $name, $color in ('wasup': #485c9b, 'roro': #446d15) {
+      .function--#{$name} & {
+        @include section-heading($color);
+      }
+    }
+  }
+
+  &__desc {
+    @include section-desc($color-light-black) {
+      margin-bottom: 217px;
+      text-align: center;
+    }
+  } // desc
+
+  // mobile
+  // ===================================
+  @media ($query-mobile) {
+    .l-left,
+    .l-right {
+      float: none;
+    }
+
+    &__desc {
+      margin-bottom: 90px;
+    }
+  } // > 960
+} // function
+
+// step icon, 문구 color setting
+// =============================
+.wizard__tit {
+  padding-left: percent(10px, $width-max);
+  margin-bottom: 30px;
+  font-size: rem(24px);
+  font-weight: 500;
+  line-height: 1.42;
+
+  @media (max-width: 1107px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 1070px) {
+    font-size: 16px;
+  }
+
+  @media ($query-mobile) {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.wizard__desc {
+  // @include debug(gray);
+  margin-bottom: 63px;
+  padding-left: 30px;
+  font-size: rem(18px);
+  line-height: 2.22;
+
+  @media (max-width: 1107px) {
+    font-size: 16px;
+  } // > 1107
+
+  @media (max-width: 1070px) {
+    font-size: 14px;
+  } // > 1070
+
+  @media ($query-mobile) {
+    margin-bottom: 30px;
+    line-height: 1.7;
+    font-weight: 500;
+  }
+}
+
+.wizard__list {
+  // @include debug;
+  $keys: map-keys($list-color);
+  @include relative;
+
+  margin-left: 30px;
+  font-size: rem(16px);
+
+  .a11y {
+    display: none;
+  }
+
+  // 점선
+  &::after {
+    @include absolute($left: 16px, $top: 0);
+    @include size(1px, 100%);
+    z-index: 1;
+    background-size: 2px 4px;
+    background-repeat: repeat-y;
+    content: '';
+
+    .function--wasup & {
+      background-image: url($path-img+'bg-dot-#{nth($keys, 1)}.png');
+    }
+    .function--roro & {
+      background-image: url($path-img+'bg-dot-#{nth($keys, 2)}.png');
+    }
+  }
+
+  // common
+  li {
+    // @include debug;
+    position: relative;
+    padding-left: (32px + 24px);
+    line-height: 32px;
+    cursor: pointer;
+
+    &:nth-child(n + 2) {
+      margin-top: 26px;
+    }
+
+    // ======================
+    // before
+    // ======================
+    &::before {
+      @include absolute($top: 0, $left: 0);
+      @include size(32px);
+
+      text-align: center;
+      line-height: inherit;
+      border-radius: 50%;
+      background-color: #fff;
+    } // ::before
+
+    // wizard 숫자들의 색 설정
+    // $list-color, set-list-color 는 상단에 있음
+    @include set-list-color('wasup', 'blue');
+    @include set-list-color('roro', 'green');
+  } // li
+
+  // ======================
+  // strong
+  // ======================
+  strong {
+    display: block;
+
+    .function--wasup & {
+      color: map-get($list-color, 'blue');
+    }
+    .function--roro & {
+      color: map-get($list-color, 'green');
+    }
+  }
+  .current strong {
+    margin-left: -1px;
+    font-weight: 500;
+  }
+
+  // mobile
+  // ==============================
+  @media (max-width: 1070px) {
+    font-size: 13px;
+
+    li {
+      padding-left: 34px;
+      line-height: 25px;
+
+      &:nth-child(n + 2) {
+        margin-top: 25px;
+      }
+
+      &::before {
+        @include size(24px);
+      }
+    }
+
+    &::after {
+      left: 14px;
+    }
+  } // > 1070
+
+  @media ($query-mobile) {
+    li:nth-child(n + 2) {
+      margin-top: 12px;
+    }
+  }
+} // list
+
+// ===== wizard
+
+.slide-panel {
+  @include relative;
+  @include size(520px, null);
+  background-size: cover;
+  border-radius: 18px;
+
+  &::before,
+  &::after {
+    @include absolute($left: 50%);
+    background-color: #fff;
+    border-radius: 50%;
+    content: '';
+  }
+
+  &--wizard {
+    // slider panel wizard setting
+    // =========================================
+    -webkit-box-shadow: 0px 27px 36px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 27px 36px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 27px 36px 0px rgba(0, 0, 0, 0.4);
+
+    &::before,
+    &::after {
+      top: 0;
+    }
+
+    &::before {
+      // @include debug;
+      @include size(74px);
+      transform: translateX(-50%) translateY(-50%);
+      box-shadow: 0 2px 10px 0 rgba(50, 62, 81, 0.3);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%);
+    }
+  } // wizard
+
+  &--path {
+    -webkit-box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.35);
+    margin-left: percent(10px, $width-max);
+    padding: 76px 50px 40px;
+    background-image: url($path-img+'bg-function-path-2x.png');
+  } // slide panel path
+} // slider panel
+
+.wizard-slider-wrap {
+  @media (max-width: 1070px) {
+    @include absolute($top: 0, $right: 0);
+    display: flex;
+    justify-content: center;
+
+    .slide-panel--wizard {
+      display: inline-block;
+      transform-origin: right center;
+      transform: scale(0.9);
+    }
+  } // > 1107
+
+  @media ($query-mobile) {
+    position: static;
+    margin-top: 60px;
+    text-align: center;
+
+    .slide-panel--wizard {
+      transform-origin: center center;
+    }
+  } // > 960
+
+  @media (max-width: 640px) {
+    margin-top: -80px;
+    .slide-panel--wizard {
+      transform: scale(0.6);
+    }
+  } // > 640
+}
+
+// =============================
+//  wasup, roro function common list
+// =============================
+
+.function__row {
+  // @include debug;
+  @include relative;
+  // margin-top: 248px;
+  margin-bottom: 180px;
+
+  .prd-info {
+    margin-top: 40px;
+  }
+
+  @media ($query-mobile) {
+    margin-bottom: 0;
+
+    &--sec {
+      margin-bottom: 120px;
+    }
+
+    .prd-info {
+      margin: 0 0 60px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .prd-info {
+      margin: 0 0 -50px;
+    }
+  }
+}
+
+.motion-box-wrap {
+  @media ($query-mobile) {
+    display: flex;
+    justify-content: center;
+
+    .motion-box {
+      display: inline-block;
+      transform: scale(0.8);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .motion-box {
+      // @include debug;
+      transform: scale(0.6);
+      margin-top: -16px;
+    }
+  }
+}

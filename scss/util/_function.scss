@@ -1,0 +1,32 @@
+$font-default-size: 16px;
+// ===================================
+// percent
+// ===================================
+@function percent($current, $container) {
+  @if $container {
+    @return $current / $container * 100%;
+  } @else {
+    @error '$container is not defained';
+  }
+}
+
+// ===================================
+// rem
+// ===================================
+@function rem($current, $container: 10px) {
+  @if $container {
+    @return $current / $container * 1rem;
+  } @else {
+    @error '$container is not defained';
+  }
+}
+
+@function vw($current, $container) {
+  @return $current / $container * 100vw;
+}
+
+// @param ($list, $val: ani)
+// 리스트앞에 value를 추가해서 리스트를 리턴한다.
+@function prepend($list, $val) {
+  @return join($val, $list);
+}

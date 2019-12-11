@@ -1,0 +1,120 @@
+.prd-info-wrap {
+  // @include debug;
+  display: flex;
+  justify-content: space-between;
+
+  @media ($query-mobile) {
+    flex-direction: column;
+  }
+}
+
+.prd-info {
+  // @include debug(dodgerblue);
+  @include relative;
+
+  .prd-info-wrap & {
+    @include size(100%, null);
+  }
+
+  &__tit {
+    padding-left: 2.5%;
+    margin-bottom: 30px;
+    font-size: rem(24px);
+    font-weight: bold;
+  }
+
+  &__desc {
+    font-size: rem(16px);
+    line-height: 2.22;
+  }
+
+  li:nth-child(n + 2) {
+    margin-top: 12px;
+  } // li
+
+  &.has-ico {
+    padding-top: 170px;
+
+    &::before {
+      @include absolute($top: 0, $left: 10px);
+      @include size(100px);
+      border-radius: 50%;
+      content: '';
+    }
+  }
+
+  // =============================
+  // .has-ico를 가지는 .prd-info의 아이콘 설정
+  // =============================
+  @mixin prdInfoImg($name, $imgs) {
+    @for $i from 1 through length($imgs) {
+      #{$name} &.has-ico:nth-child(#{$i})::before {
+        @if $name == '.function--wasup' or $name == '.function--roro' {
+          border-radius: 0;
+        }
+        @include icon-setting(nth($imgs, $i));
+      }
+    }
+  }
+
+  @include prdInfoImg('.why--wasup', ($why1-2x, $why2-2x, $why3-2x));
+  @include prdInfoImg('.why--roro', ($ic-why1-roro-2x, $ic-why2-roro-2x, $ic-why3-roro-2x));
+  @include prdInfoImg('.function--wasup', ($ic-function1-2x, $ic-function2-2x, $ic-function3-2x));
+  @include prdInfoImg('.function--roro', ($ic-function1-roro-2x, $ic-function2-roro-2x, $ic-function3-roro-2x));
+  @include prdInfoImg('.partner-prd-info-wrap', ($ico-benefit1-2x, $ico-benefit2-2x, $ico-benefit3-2x));
+
+  // mobile
+  // ==========================================
+  @media (max-width: 1070px) {
+    &__tit {
+      font-size: 20px;
+    }
+
+    &__desc {
+      font-size: 14px;
+    }
+  }
+
+  @media ($query-mobile) {
+    line-height: 1.9;
+
+    &,
+    &.has-ico {
+      padding-top: 0;
+    }
+
+    .prd-info-wrap & {
+      &:nth-child(n + 2) {
+        margin-top: 40px;
+      }
+    }
+
+    &.has-ico::before {
+      position: static;
+      display: block;
+      margin-bottom: 16px;
+      transform: scale(0.7);
+    }
+
+    &__tit {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+
+    &__desc {
+      line-height: 1.7;
+    }
+
+    li {
+      font-weight: 500;
+    }
+
+    li:nth-child(n + 2) {
+      margin-top: 8px;
+    }
+
+    br {
+      display: none;
+    }
+  }
+}

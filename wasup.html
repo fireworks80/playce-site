@@ -1,0 +1,1249 @@
+<?php 
+include_once 'common-php/header.php'; 
+?>
+  <h2 class="a11y">page content</h2>
+
+  <!-- visual -->
+  <section class="hero hero--wasup">
+    <!-- snb -->
+    <div class="snb snb--wasup js-snb">
+      <div class="l-center">
+        <a class="snb__logo" href="./wasup.html">
+          <img src="./images/logo-snb-wasup-2x.png" alt="Playce Wasup"/>
+        </a>
+        <nav>
+          <h2 class="a11y">snb</h2>
+          <ul class="snb__list js-hash-link">
+            <li class="snb__item"><a class="snb__link" href="#feature" data-subject="wasup" data-i18n="feature">특장점</a></li>
+            <li class="snb__item"><a class="snb__link" href="#function" data-subject="wasup" data-i18n="function">주요기능</a></li>
+            <li class="snb__item"><a class="snb__link" href="#case" data-subject="wasup" data-i18n="case">고객사례</a></li>
+            <li class="snb__item"><a class="snb__link" href="#subscription" data-subject="wasup" data-i18n="subscription">서브스크립션</a></li>
+            <li class="snb__item">
+              <!-- 무료시작하기 페이지 이동 -->
+              <a class="snb__link" href="./free-start.html" data-i18n="freeStart">무료로 시작</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div><!-- // snb -->
+
+    <div class="l-center clear-fix">
+      <div class="hero-motion-panel-wrap l-right">
+        <div class="hero-motion-panel">
+          <figure class="graph">
+            <div class="graph-section">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs>
+                  <filter
+                    id="a"
+                    width="144.7%"
+                    height="144.7%"
+                    x="-22.4%"
+                    y="-21.2%"
+                    filterUnits="objectBoundingBox"
+                  >
+                    <feMorphology
+                      in="SourceAlpha"
+                      operator="dilate"
+                      radius="6.5"
+                      result="shadowSpreadOuter1"
+                    />
+                    <feOffset
+                      dy="1"
+                      in="shadowSpreadOuter1"
+                      result="shadowOffsetOuter1"
+                    />
+                    <feMorphology
+                      in="SourceAlpha"
+                      radius="6.5"
+                      result="shadowInner"
+                    />
+                    <feOffset dy="1" in="shadowInner" result="shadowInner" />
+                    <feComposite
+                      in="shadowOffsetOuter1"
+                      in2="shadowInner"
+                      operator="out"
+                      result="shadowOffsetOuter1"
+                    />
+                    <feGaussianBlur
+                      in="shadowOffsetOuter1"
+                      result="shadowBlurOuter1"
+                      stdDeviation="4"
+                    />
+                    <feColorMatrix
+                      in="shadowBlurOuter1"
+                      values="0 0 0 0 0.815686275 0 0 0 0 0.82745098 0 0 0 0 0.901960784 0 0 0 1 0"
+                    />
+                  </filter>
+                  <circle id="b" cx="42.5" cy="42.5" r="42.5" />
+                </defs>
+    
+                <g fill="none" fill-rule="evenodd" transform="translate(13 13)">
+                  <use fill="#000" filter="url(#a)" xlink:href="#b" />
+                  <use stroke="#CDD9E8" stroke-width="13" xlink:href="#b" />
+                  <!-- circle -->
+                  <circle
+                    stroke-linecap="round"
+                    class="circle-inner"
+                    cx="42.5"
+                    cy="42.5"
+                    r="42.5"
+                    transform="rotate(-90, 42.5, 42.5)"
+                  />
+                  <circle
+                    class="circle-outer"
+                    cx="42.5"
+                    cy="42.5"
+                    r="42.5"
+                    stroke-linecap="round"
+                    transform="rotate(-90, 42.5, 42.5)"
+                  />
+                  <!-- // circle -->
+    
+                  <!-- warning -->
+                  <g class="anim-warning">
+                    <g transform="translate(142 13)">
+                      <path d="M0 0h25.21v25.21H0z" />
+                      <path
+                        fill="#788ECE"
+                        fill-rule="nonzero"
+                        d="M15.25 4.76l7.463 13.435a3.025 3.025 0 01-2.644 4.494H5.14a3.025 3.025 0 01-2.644-4.494L9.96 4.76a3.025 3.025 0 015.289 0z"
+                      />
+                      <rect
+                        width="2.241"
+                        height="7.843"
+                        x="11.485"
+                        y="8.571"
+                        fill="#FFF"
+                        fill-rule="nonzero"
+                        rx="1.008"
+                        transform="matrix(1 0 0 -1 0 24.986)"
+                      />
+                      <circle
+                        cx="12.605"
+                        cy="18.655"
+                        r="1.12"
+                        fill="#FFF"
+                        fill-rule="nonzero"
+                        transform="matrix(1 0 0 -1 0 37.31)"
+                      />
+                    </g>
+                    <rect
+                      width="68.571"
+                      height="7"
+                      x="184.1"
+                      y="22.16"
+                      fill="#788ECE"
+                      rx="2"
+                    />
+                  </g>
+                  <!-- warning -->
+    
+                  <!-- err -->
+                  <g class="anim-err">
+                    <rect
+                      width="68.571"
+                      height="7"
+                      x="184.1"
+                      y="66.025"
+                      fill="#3D5399"
+                      fill-rule="nonzero"
+                      rx="2"
+                    />
+                    <path d="M142 56h25.21v25.21H142z" />
+                    <path
+                      fill="#3D5399"
+                      fill-rule="nonzero"
+                      d="M143.26 68.605c0 6.266 5.08 11.345 11.345 11.345 6.266 0 11.345-5.079 11.345-11.345 0-6.266-5.079-11.344-11.345-11.344-6.266 0-11.344 5.078-11.344 11.344z"
+                    />
+                    <path
+                      fill="#FFF"
+                      fill-rule="nonzero"
+                      d="M149.577 65.301a.504.504 0 01-.01-.712l.882-.881a.498.498 0 01.712.009l8.192 8.192c.2.199.203.518.01.712l-.882.881a.498.498 0 01-.712-.009l-8.192-8.192z"
+                    />
+                    <path
+                      fill="#FFF"
+                      fill-rule="nonzero"
+                      d="M157.769 63.717a.504.504 0 01.712-.01l.881.882a.498.498 0 01-.009.712l-8.192 8.192a.504.504 0 01-.712.01l-.881-.882a.498.498 0 01.009-.712l8.192-8.192z"
+                    />
+                  </g>
+                  <!-- // err -->
+    
+                  <!-- line -->
+                  <rect
+                    class="anim-line"
+                    width="194"
+                    height="10"
+                    x="313.671"
+                    y="8"
+                    fill="#788ECE"
+                    rx="3"
+                  />
+                  <rect
+                    class="anim-line"
+                    width="184"
+                    height="10"
+                    x="313.671"
+                    y="52"
+                    fill="#788ECE"
+                    rx="3"
+                  />
+                  <rect
+                    class="anim-line"
+                    width="140"
+                    height="10"
+                    x="313.671"
+                    y="30"
+                    fill="#CDD9E8"
+                    rx="3"
+                  />
+                  <rect
+                    class="anim-line"
+                    width="136"
+                    height="10"
+                    x="313.671"
+                    y="74"
+                    fill="#CDD9E8"
+                    rx="3"
+                  />
+                  <!-- line -->
+                </g>
+              </svg>
+            </div>
+            <div class="graph-section">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs>
+                  <filter
+                    id="a"
+                    width="144.7%"
+                    height="144.7%"
+                    x="-22.4%"
+                    y="-21.2%"
+                    filterUnits="objectBoundingBox"
+                  >
+                    <feMorphology
+                      in="SourceAlpha"
+                      operator="dilate"
+                      radius="6.5"
+                      result="shadowSpreadOuter1"
+                    />
+                    <feOffset
+                      dy="1"
+                      in="shadowSpreadOuter1"
+                      result="shadowOffsetOuter1"
+                    />
+                    <feMorphology
+                      in="SourceAlpha"
+                      radius="6.5"
+                      result="shadowInner"
+                    />
+                    <feOffset dy="1" in="shadowInner" result="shadowInner" />
+                    <feComposite
+                      in="shadowOffsetOuter1"
+                      in2="shadowInner"
+                      operator="out"
+                      result="shadowOffsetOuter1"
+                    />
+                    <feGaussianBlur
+                      in="shadowOffsetOuter1"
+                      result="shadowBlurOuter1"
+                      stdDeviation="4"
+                    />
+                    <feColorMatrix
+                      in="shadowBlurOuter1"
+                      values="0 0 0 0 0.815686275 0 0 0 0 0.82745098 0 0 0 0 0.901960784 0 0 0 1 0"
+                    />
+                  </filter>
+                  <circle id="b" cx="42.5" cy="42.5" r="42.5" />
+                </defs>
+    
+                <g fill="none" fill-rule="evenodd" transform="translate(13 13)">
+                  <use fill="#000" filter="url(#a)" xlink:href="#b" />
+                  <use stroke="#fde4bb" stroke-width="13" xlink:href="#b" />
+                  <!-- circle -->
+                  <circle
+                    stroke-linecap="round"
+                    class="circle-inner"
+                    cx="42.5"
+                    cy="42.5"
+                    r="42.5"
+                    transform="rotate(-90, 42.5, 42.5)"
+                  />
+                  <circle
+                    class="circle-outer"
+                    cx="42.5"
+                    cy="42.5"
+                    r="42.5"
+                    stroke-linecap="round"
+                    transform="rotate(-90, 42.5, 42.5)"
+                  />
+                  <!-- // circle -->
+    
+                  <!-- warning -->
+                  <g class="anim-warning">
+                    <g transform="translate(142 13)">
+                      <path d="M0 0h25.21v25.21H0z" />
+                      <path
+                        fill="#faa61e"
+                        fill-rule="nonzero"
+                        d="M15.25 4.76l7.463 13.435a3.025 3.025 0 01-2.644 4.494H5.14a3.025 3.025 0 01-2.644-4.494L9.96 4.76a3.025 3.025 0 015.289 0z"
+                      />
+                      <rect
+                        width="2.241"
+                        height="7.843"
+                        x="11.485"
+                        y="8.571"
+                        fill="#FFF"
+                        fill-rule="nonzero"
+                        rx="1.008"
+                        transform="matrix(1 0 0 -1 0 24.986)"
+                      />
+                      <circle
+                        cx="12.605"
+                        cy="18.655"
+                        r="1.12"
+                        fill="#FFF"
+                        fill-rule="nonzero"
+                        transform="matrix(1 0 0 -1 0 37.31)"
+                      />
+                    </g>
+                    <rect
+                      width="68.571"
+                      height="7"
+                      x="184.1"
+                      y="22.16"
+                      fill="#faa61e"
+                      rx="2"
+                    />
+                  </g>
+                  <!-- warning -->
+    
+                  <!-- err -->
+                  <g class="anim-err">
+                    <rect
+                      width="68.571"
+                      height="7"
+                      x="184.1"
+                      y="66.025"
+                      fill="#a85838"
+                      fill-rule="nonzero"
+                      rx="2"
+                    />
+                    <path d="M142 56h25.21v25.21H142z" />
+                    <path
+                      fill="#a85838"
+                      fill-rule="nonzero"
+                      d="M143.26 68.605c0 6.266 5.08 11.345 11.345 11.345 6.266 0 11.345-5.079 11.345-11.345 0-6.266-5.079-11.344-11.345-11.344-6.266 0-11.344 5.078-11.344 11.344z"
+                    />
+                    <path
+                      fill="#FFF"
+                      fill-rule="nonzero"
+                      d="M149.577 65.301a.504.504 0 01-.01-.712l.882-.881a.498.498 0 01.712.009l8.192 8.192c.2.199.203.518.01.712l-.882.881a.498.498 0 01-.712-.009l-8.192-8.192z"
+                    />
+                    <path
+                      fill="#FFF"
+                      fill-rule="nonzero"
+                      d="M157.769 63.717a.504.504 0 01.712-.01l.881.882a.498.498 0 01-.009.712l-8.192 8.192a.504.504 0 01-.712.01l-.881-.882a.498.498 0 01.009-.712l8.192-8.192z"
+                    />
+                  </g>
+                  <!-- // err -->
+    
+                  <!-- line -->
+                  <g transform="translate(0 1)">
+                    <rect
+                      class="anim-line"
+                      width="194"
+                      height="10"
+                      x="313.671"
+                      y="8"
+                      fill="#faa61e"
+                      rx="3"
+                    />
+                    <rect
+                      class="anim-line"
+                      width="184"
+                      height="10"
+                      x="313.671"
+                      y="52"
+                      fill="#faa61e"
+                      rx="3"
+                    />
+                    <rect
+                      class="anim-line"
+                      width="140"
+                      height="10"
+                      x="313.671"
+                      y="30"
+                      fill="#fde4bb"
+                      rx="3"
+                    />
+                    <rect
+                      class="anim-line"
+                      width="136"
+                      height="10"
+                      x="313.671"
+                      y="74"
+                      fill="#fde4bb"
+                      rx="3"
+                    />
+                  </g>
+                  <!-- line -->
+                </g>
+              </svg>
+            </div>
+          </figure>
+        </div>
+      </div>
+      <div class="hero__text-section l-left">
+        <h2 class="hero__tit" data-i18n="">
+          Playce WASup은
+          <em class="hero__em">클라우드 환경에 최적화된</em>
+          WAS 솔루션입니다.
+        </h2>
+        <p class="hero__desc" data-i18n="">
+          벤더의 종속성에서 탈피하고 Web과 <br>WAS의 기능을 강화하여, 고객의 IT 비용을 <br>최대로 줄일 수 있습니다.
+        </p>
+        <div>
+          <!-- 무료 시작 페이지 이동 -->
+          <a class="btn-round btn-round--yellow" href="./free-start.html#playce-wasup" data-i18n="freeStart">무료로 시작</a>
+          <!-- JSD로 이동 -->
+          <a class="btn-round btn-round--dark-navy" href="https://jira.osci.kr/servicedesk/customer/portal/21" target="_blank" data-i18n="">제품 문의</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- // visual -->
+
+  <div class="wrap-gradient">
+    <!-- why playce wasup -->
+    <section class="why why--wasup l-center">
+      <header>
+        <h2 class="why__tit"><span>Why Playce WASup?</span></h2>
+      </header>
+      <div class="prd-info-wrap">
+        <dl class="prd-info has-ico">
+          <dt class="prd-info__tit" data-i18n="wasup.why1.tit">벤더 종속성 탈피</dt>
+          <dd class="prd-info__desc">
+            <ul>
+              <li class="ico-check ico-check--normal" data-i18n="[html]wasup.why1.item1">
+                커뮤니티의 오픈소스를 활용하여 <br />
+                고객의 IT 비용 절감
+              </li>
+              <li class="ico-check ico-check--normal" data-i18n="[html]wasup.why1.item2">
+                벤더 종속성 탈피를 통한 고객 IT<br />
+                오너쉽 강화
+              </li>
+            </ul>
+          </dd>
+        </dl>
+
+        <dl class="prd-info has-ico">
+          <dt class="prd-info__tit" data-i18n="wasup.why2.tit">오픈소스 Web/WAS 기능 보완</dt>
+          <dd class="prd-info__desc">
+            <ul>
+              <li class="ico-check ico-check--normal" data-i18n="wasup.why2.item1">
+                위자드 및 통합 관리 기능을 통한 편의성 향상
+              </li>
+              <li class="ico-check ico-check--normal" data-i18n="wasup.why2.item2">
+                세션 클러스터링 안정성 강화
+              </li>
+              <li class="ico-check ico-check--normal" data-i18n="wasup.why2.item3">
+                대규모 시스템에 적합한 관리 기능 강화
+              </li>
+              <li class="ico-check ico-check--normal" data-i18n="wasup.why2.item4">
+                모니터링 및 장애 대응 기능 강화
+              </li>
+            </ul>
+          </dd>
+        </dl>
+
+        <dl class="prd-info has-ico">
+          <dt class="prd-info__tit" data-i18n="wasup.why3.tit">클라우드 환경에 최적화</dt>
+          <dd class="prd-info__desc">
+            <ul>
+              <li class="ico-check ico-check--normal" data-i18n="wasup.why3.item1">
+                클라우드 도입 시의 운영 관리 어려움 해결
+              </li>
+              <li class="ico-check ico-check--normal" data-i18n="wasup.why3.item2">
+                클라우드 환경에 적합한 운영 확장성 제공
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+    </section>
+    <!-- // why playce wasup -->
+
+    <!-- feature -->
+    <section class="feature l-center" id="feature">
+      <header>
+        <h2 class="feature__tit" data-i18n=""><span>특장점</span></h2>
+        <p class="feature__desc" data-i18n="">
+          빠르게 확장 가능하며, <span class="line-brake"></span><em>신속한 장애 진단과 장애에<br /> 선대응할 수 있는 관리 기능</em>을 제공합니다
+        </p>
+      </header>
+      <!-- anim -->
+      <div class="feature__motion-box">
+        <div class="feature__anim-section">
+          <div class="feature__btn-wrap">
+            <button class="feature__btn feature__btn--play">
+              <span class="a11y">start</span>
+            </button>
+            <button class="feature__btn feature__btn--stop">
+              <span class="a11y">stop</span>
+            </button>
+          </div>
+          <figure class="feature__pic">
+            <div class="feature__rows-wrap">
+              <div class="feature__row-img feature__anim-single"></div>
+              <div class="feature__anim-double">
+                <div class="feature__row-img front"></div>
+                <div class="feature__row-img selected"></div>
+              </div>
+              <div class="feature__anim-double">
+                <div class="feature__row-img front"></div>
+                <div class="feature__row-img selected"></div>
+              </div>
+              <div class="feature__row-img feature__anim-single"></div>
+              <div class="feature__row-img feature__anim-single"></div>
+            </div>
+          </figure>
+        </div>
+      </div>
+      <!-- // .feture__anim -->
+
+      <div class="prd-info-wrap">
+        <dl class="prd-info">
+          <dt class="prd-info__tit" data-i18n="wasup.feature.prd1.tit">쉽고 차별화된 관리 기능</dt>
+          <dd class="prd-info__desc">
+            <ul>
+              <li class="ico-check ico-check--normal" data-i18n="wasup.feature.prd1.item1">
+                멀티 서버 및 클라우드 기반의 운영 최적화
+              </li>
+              <li class="ico-check ico-check--normal" data-i18n="wasup.feature.prd1.item2">
+                다수 서버의 통합 관리 및 제어
+              </li>
+              <li class="ico-check ico-check--normal" data-i18n="wasup.feature.prd1.item3">
+                웹 어드민 및 모니터링 기능 강화
+              </li>
+            </ul>
+          </dd>
+        </dl>
+        <dl class="prd-info">
+          <dt class="prd-info__tit" data-i18n="wasup.feature.prd3.tit">신속한 장애 진단 및 대응</dt>
+          <dd class="prd-info__desc">
+            <ul>
+              <li class="ico-check ico-check--normal" data-i18n="wasup.feature.prd3.item1">
+                장애 사전 진단 및 대응으로 장애 발생 예방
+              </li>
+              <li class="ico-check ico-check--normal" data-i18n="wasup.feature.prd3.item2">
+                장애 발생 시, 실시간 알림으로 빠른 대응
+              </li>
+              <li class="ico-check ico-check--normal" data-i18n="wasup.feature.prd3.item3">
+                장애 원인의 추적 및 분석
+              </li>
+            </ul>
+          </dd>
+        </dl>
+        <dl class="prd-info">
+          <dt class="prd-info__tit" data-i18n="wasup.feature.prd2.tit">획기적인 비용 절감</dt>
+          <dd class="prd-info__desc">
+            <ul>
+              <li class="ico-check ico-check--normal" data-i18n="wasup.feature.prd2.item1">
+                기존 상용 WAS 대비 비용 절감 효과
+              </li>
+              <li class="ico-check ico-check--normal" data-i18n="wasup.feature.prd2.item2">
+                고객의 환경 변화에 따른 확장 비용 최소화
+              </li>
+              <li class="ico-check ico-check--normal" data-i18n="wasup.feature.prd2.item3">
+                클라우드 환경에 최적화된 라이선스 구조
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+    </section>
+    <!-- // feature -->
+  </div>
+
+  <!-- guide mv -->
+  <section class="guide guide--wasup">
+    <h2 class="a11y">가이드 영상</h2>
+    <div class="l-center">
+      <figure>
+        <span class="guide__poster">
+          <button class="btn-play js-popup-btn" data-name="guideWasup">
+            <span class="a11y">Playce Wasup 사용자 가이드 영상 재생하기</span>
+          </button>
+          <img src="./images/video-poster.png" alt="" />
+        </span>
+        <figcaption class="guide__tit">
+          <span data-i18n="guide.tit">
+            사용자가이드 영상
+          </span>
+        </figcaption>
+      </figure>
+      <p class="guide__desc" data-i18n="">간편한 통합관리 기능을 경험해 보세요</p>
+    </div>
+  </section>
+  <!-- // guide mv -->
+
+  <!-- function -->
+  <section class="function function--wasup">
+    <div class="l-center" id="function">
+      <h2 class="function__tit" data-i18n="wasup.func.tit">주요기능</h2>
+      <p class="function__desc" data-i18n="">
+        설치부터 구성, 세션 클러스터링,<span class="line-brake"></span> 장애 진단 및<span class="line-brake"></span>
+        대응까지 다양한<span class="line-brake"></span> 기능을 제공합니다
+      </p>
+      <!-- wizard -->
+      <div class="function__row js-wizard clear-fix">
+        <div class="wizard__step l-left">
+          <h2 class="wizard__tit" data-i18n="wasup.wizard.tit">편리한 Wizard 기능</h2>
+          <p class="wizard__desc ico-check ico-check--blue" data-i18n="wasup.wizard.desc">
+            웹 서버와 미들웨어 설정을 동시에 진행할 수 있는 Wizard 기능 제공
+          </p>
+          <ol class="wizard__list js-wizard__list">
+            <li class="a11y">
+              <strong>Step 0. hide</strong>
+              hide item
+            </li>
+            <li>
+              <strong data-i18n="wasup.wizard.step1">Step 1. 도메인 선택 및 신규 생성</strong>
+            </li>
+            <li>
+              <strong data-i18n="wasup.wizard.step2">Step 2. 어플리케이션 서버 선택 및 신규 생성</strong>
+            </li>
+            <li>
+              <strong data-i18n="wasup.wizard.step3">Step 3. 웹 서버 선택 및 신규 생성</strong>
+            </li>
+            <li>
+              <strong data-i18n="wasup.wizard.step4">Step 4. 세션 서버 선택 및 신규 생성</strong>
+            </li>
+            <li>
+              <strong data-i18n="wasup.wizard.step5">Step 5. 데이터소스 배포 및 대상 서버 수정</strong>
+            </li>
+            <li>
+              <strong data-i18n="wasup.wizard.step6">Step 6. 애플리케이션 배포 및 대상 서버 수정</strong>
+            </li>
+            <li>
+              <strong data-i18n="wasup.wizard.step7">Step 7. Wizard 검토 및 종료</strong>
+            </li>
+          </ol>
+        </div>
+        <div class="wizard-slider-wrap l-right">
+          <figure class="slide-panel slide-panel--wizard js-wizard-panel">
+            <img class="" src="./images/step1@2x.png" alt="" />
+            <img class="" src="./images/step2@2x.png" alt="" />
+            <img class="" src="./images/step3@2x.png" alt="" />
+            <img class="" src="./images/step4@2x.png" alt="" />
+            <img class="" src="./images/step5@2x.png" alt="" />
+            <img class="" src="./images/step6@2x.png" alt="" />
+            <img class="" src="./images/step7@2x.png" alt="" />
+            <img class="" src="./images/step8@2x.png" alt="" />
+          </figure>
+        </div>
+      </div>
+      <!-- // wizard -->
+
+      <dl class="prd-info function__row function__row--sec">
+        <dt class="prd-info__tit" data-i18n="wasup.ui.tit">웹 UI 기반 사용자 친화적 관리 기능</dt>
+        <dd class="prd-info__desc">
+          <ul>
+            <li class="ico-check ico-check--blue" data-i18n="wasup.ui.item1">
+              멀티 서버 관리 및 제어 기능 제공
+            </li>
+            <li class="ico-check ico-check--blue" data-i18n="">
+              Topology View를 통해 도메인에 구성된 서버, 리소스를 한눈에<br /> 파악 가능
+            </li>
+            <li class="ico-check ico-check--blue" data-i18n="wasup.ui.item3">
+              브라우저의 Light Mode/Dark Mode로 전환 기능 제공
+            </li>
+          </ul>
+        </dd>
+      </dl>
+
+      <!-- dashboard -->
+      <div class="function__row clear-fix">
+        <dl class="prd-info l-right">
+          <dt class="prd-info__tit" data-i18n="dash.tit">실시간 모니터링 대시보드</dt>
+          <dd class="prd-info__desc">
+            <ul>
+              <li class="ico-check ico-check--blue" data-i18n="">
+                직관적인 대시보드 화면을 통해 서버 및 모니터링 주요<br /> 정보를
+                조회할 수 있음
+              </li>
+              <li class="ico-check ico-check--blue" data-i18n="">
+                자체 에이전트, JMX, 스카우터X(ScouterX) APM을 <br />활용한 실시간 모니터링 시스템 구현
+              </li>
+              <li class="ico-check ico-check--blue" data-i18n="">
+                운영체제 상태(CPU, 메모리, 디스크, 네트워크 등)에<br /> 대한 데이터 수집 및 통계 정보 표시
+              </li>
+            </ul>
+          </dd>
+        </dl>
+        <div class="l-left motion-box-wrap">
+          <div class="motion-box">
+            <figure class="dashboard__img-panels"></figure>
+          </div>
+        </div>
+      </div>
+      <!-- // dashboard -->
+      <!-- function list -->
+      <div class="function__row clear-fix">
+        <dl class="prd-info l-left">
+          <dt class="prd-info__tit" data-i18n="notifi.tit">장애 선대응 및 추적</dt>
+          <dd class="prd-info__desc">
+            <ul>
+              <li class="ico-check ico-check--blue" data-i18n="notifi.item1">
+                시스템에 최적화된 장애 이벤트 규칙 등록
+              </li>
+              <li class="ico-check ico-check--blue" data-i18n="notifi.item2">
+                IP, Domain 기반의 Rule을 이용한 접근 제어
+              </li>
+              <li class="ico-check ico-check--blue" data-i18n="notifi.item3">
+                장애 발생 시, 실시간 알림 및 추적/분석 기능
+              </li>
+              <li class="ico-check ico-check--blue" data-i18n="notifi.item4">
+                장애 원인 분석을 위한 로그 관리 기능
+              </li>
+            </ul>
+          </dd>
+        </dl>
+
+        <div class="l-right motion-box-wrap">
+          <div class="motion-box">
+            <figure class="notification">
+              <div class="notification__inner">
+                <div class="notification__panel">
+                  <h3>Notification</h3>
+                  <div class="notification__card-wrap"></div>
+                </div>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <!-- // function list -->
+
+      <div class="prd-info-wrap">
+        <dl class="prd-info has-ico">
+          <dt class="prd-info__tit" data-i18n="wasup.fn.prd1.tit">프로비저닝 기능</dt>
+          <dd class="prd-info__desc">
+            <ul>
+              <li class="ico-check ico-check--blue" data-i18n="wasup.fn.prd1.item1">
+                엔진 설치 및 환경 구성 가능
+              </li>
+              <li class="ico-check ico-check--blue" data-i18n="">
+                데이터 소스 및 쓰레드 설정, 드라이버 추가 등 <br /> 복잡한 기능의 손쉬운 사용
+              </li>
+              <li class="ico-check ico-check--blue" data-i18n="">
+                Web/Application/Session 서버의 버전 별 <br /> 설치 기능 및 업그레이드 지원
+              </li>
+            </ul>
+          </dd>
+        </dl>
+
+        <dl class="prd-info has-ico">
+          <dt class="prd-info__tit" data-i18n="wasup.fn.prd2.tit">세션 클러스터링을 통한 성능 확장</dt>
+          <dd class="prd-info__desc">
+            <ul>
+              <li class="ico-check ico-check--blue" data-i18n="">
+                Playce Dolly 제품을 통해 대규모 세션 <br /> 클러스터링 기능 지원
+              </li>
+              <li class="ico-check ico-check--blue" data-i18n="wasup.fn.prd2.item2">
+                세션 메모리 부족 및 GC 문제 해결
+              </li>
+              <li class="ico-check ico-check--blue" data-i18n="wasup.fn.prd2.item3">
+                서버의 안정성 및 고성능 보장
+              </li>
+            </ul>
+          </dd>
+        </dl>
+
+        <dl class="prd-info has-ico">
+          <dt class="prd-info__tit" data-i18n="wasup.fn.prd3.tit">작업 이력 및 사용자 권한 관리</dt>
+          <dd class="prd-info__desc">
+            <ul>
+              <li class="ico-check ico-check--blue" data-i18n="">
+                서버 설치 및 제어 등의 작업에 대한 이력 관리, <br /> 복원 기능 지원
+              </li>
+              <li class="ico-check ico-check--blue" data-i18n="wasup.fn.prd3.item2">
+                역할별 권한 부여가 가능한 사용자 관리 기능
+              </li>
+              <li class="ico-check ico-check--blue" data-i18n="wasup.fn.prd3.item3">
+                시스템의 버전 관리, 패치 기능 제공
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+  <!-- // function -->
+
+  <!-- architecture -->
+  <section class="architecture architecture--wasup">
+    <div class="l-center">
+      <h2 class="architecture__tit" data-i18n=""><span>아키텍처</span></h2>
+      <p class="architecture__desc" data-i18n="">
+        시스템의 일관성을 유지할 수 있도록 세션 클러스터링 기능을 <br /> 제공하며 운영 오류를 최소화하여 효율적인 운영을 돕습니다.
+      </p>
+      <figure class="architecture__img">
+        <img src="./images/architecture-blueprint-large-2x.png" alt="" />
+        <button
+          class="btn-pic btn-pic--in-large js-popup-btn"
+          data-name="architecture">
+          <span class="a11y">확대보기</span>
+        </button>
+      </figure>
+    </div>
+  </section>
+  <!-- // architecture -->
+
+  <!-- specification -->
+  <section class="specification--wasup">
+    <div class="l-center">
+      <h2 class="specification__tit" data-i18n="spec.tit">표준 지원 명세</h2>
+      <p class="specification__desc" data-i18n="wasup.spec.desc">
+        Java SE 6, 7, 8의 주요 표준 Specification을 제공합니다
+      </p>
+      <div class="specification__table-wrap clear-fix">
+        <div class="specification__table l-left">
+          <table>
+            <caption class="a11y">
+              Wasup 표준 지원 명세
+            </caption>
+            <colgroup>
+              <col class="spec-fix-col" />
+              <col width="*" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="table-tit radius-left" scope="col">Spec</th>
+                <th class="table-tit radius-right" scope="col" colspan="3">
+                  Playce WASup
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="has-border-bottom" scope="row">Web Server</th>
+                <td class="has-border-bottom" colspan="3">Apache 2.4 / Nginx 1.15</td>
+              </tr>
+              <tr>
+                <th scope="row">HTTP</th>
+                <td colspan="3">1.0 / 1.1 / 2.0</td>
+              </tr>
+              <tr class="server-version">
+                <th class="radius-left server-version">App Server Version</th>
+                <td><span class="spec-server-name">WASup App Server </span>7.0</td>
+                <td><span class="spec-server-name">WASup App Server </span>8.5</td>
+                <td class="radius-right"><span class="spec-server-name">WASup App Server</span>9.0</td>
+              </tr>
+              <tr>
+                <th class="has-border-bottom">Java SE</th>
+                <td class="has-border-bottom">6.0+</td>
+                <td class="has-border-bottom">7.0+</td>
+                <td class="has-border-bottom">8.0+</td>
+              </tr>
+              <tr>
+                <th class="has-border-bottom">Servlet</th>
+                <td class="has-border-bottom">3.0</td>
+                <td class="has-border-bottom">3.1</td>
+                <td class="has-border-bottom">4.0</td>
+              </tr>
+              <tr>
+                <th class="has-border-bottom">JSP</th>
+                <td class="has-border-bottom">2.2</td>
+                <td class="has-border-bottom">2.3</td>
+                <td class="has-border-bottom">2.3</td>
+              </tr>
+              <tr>
+                <th class="has-border-bottom">EL</th>
+                <td class="has-border-bottom">2.2</td>
+                <td class="has-border-bottom">3.0</td>
+                <td class="has-border-bottom">3.0</td>
+              </tr>
+              <tr>
+                <th class="has-border-bottom">WebSocket</th>
+                <td class="has-border-bottom">1.0</td>
+                <td class="has-border-bottom">1.1</td>
+                <td class="has-border-bottom">1.1</td>
+              </tr>
+              <tr>
+                <th>JASPIC</th>
+                <td>N/A</td>
+                <td>1.1</td>
+                <td>1.1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.specification__table -->
+        <dl class="specification__os l-left">
+          <dt data-i18n="os">지원 운영체제</dt>
+          <dd>
+            <ul>
+              <li class="ico-check ico-check--orange" data-i18n="">
+                	Linux / Unix / Mac / Windows 등<br>Java Runtime Environment 8(JRE)<br>
+                	이상 설치가 가능한 OS
+              </li>
+              <li class="ico-check ico-check--orange" data-i18n="">
+                Web Server 설치 등 일부 기능은<br> Red Hat 계열의 Linux에서만 동작
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+  <!-- // specification -->
+
+  <!-- case -->
+  <section class="case case--wasup">
+    <div class="l-center" id="case">
+      <header>
+        <h2 class="case__tit" data-i18n="case">고객사례</h2>
+        <p class="case__desc">
+          Playce WASup은 GS인증을 획득한 공인된 제품으로<br>
+          <em>고객사에 안정적인 운영이 가능한 환경을 제공합니다</em>
+        </p>
+      </header>
+
+      <!-- Slider main container -->
+      <div class="case__slider js-slider">
+        <div class="case__slide">
+          <blockquote class="case__extract">
+            <p data-i18n="[html]wasup.case.ext">
+              <em>웹 서버/미들웨어 제어, <br />모니터링을 통해</em> 오픈소스
+              기반의 효율적인 운영환경을 만드는 최고의 도구입니다.
+            </p>
+          </blockquote>
+          <blockquote class="case__quotation" data-i18n="[html]wasup.case.quot">
+            “하나투어에서 운영하던 기존의 웹 서버와 WAS를 Playce WASup으로
+            구성하여 관리하도록 차세대 시스템을 구축하였고, 기존의 작업자가 각
+            시스템별로 환경 설정을 진행하던 것을 중앙의 웹 콘솔을 통해 손쉽게
+            구성함으로써, 전체적인 리소스 관리 효율을 향상시켰습니다.
+            <em>
+              웹 서버/미들웨어 제어, 모니터링을 통해 오픈소스 기반의 효율적인
+              운영환경을 만드는 최고의 도구입니다”
+            </em>
+          </blockquote>
+        </div>
+        <div class="case__slide">
+          <blockquote class="case__extract">
+            <p>
+              플랫폼 내부의 핵심 요소인 미들웨어를 <em>체계적으로 관리할 수 있게 되었습니다.</em>
+            </p>
+          </blockquote>
+          <blockquote class="case__quotation">
+            “중랑구청의 스마트시티 IoT 통합 플랫폼에 Playce WASup을 적용하여, <em>플랫폼 내부의 핵심 요소인 미들웨어를 체계적으로 관리할 수 있게 되었습니다.</em>
+            센서 및 디바이스 데이터를 중랑구청 IoT 서버로 전송하고 실시간 모니터링을 진행함으로써, <em>중랑구민에게 보다 안정적 서비스를 제공하게 되었습니다.</em>"
+          </blockquote>
+        </div>
+      </div>
+      <div class="case__footer">
+        <ul class="case__user-list js-case-logos">
+          <li><button type="button"><img src="./images/logo-hana.png" alt="하나투어"></button></li>
+          <li><button type="button"><img src="./images/logo-jungrang.png" alt="중랑구"></button></li>
+        </ul>
+        <span class="case__btns">
+          <button class="btn-arrow btn-arrow--puple-prev" type="button"><span class="a11y">prev</span></button>
+          <button class="btn-arrow btn-arrow--puple-next" type="button"><span class="a11y">next</span></button>
+        </span>
+      </div>
+    </div>
+  </section>
+  <!-- // case -->
+
+  <!-- subscription -->
+  <section class="subscription">
+    <div class="l-center" id="subscription">
+      <h2 class="subscription__tit" data-i18n="subscription">서브스크립션</h2>
+      <p class="subscription__desc" data-i18n="">
+        오픈소스컨설팅의 서브크립션 모델은 고객에게<br /> <em>최고 수준의 기술 지원 서비스와 최신의 소프트웨어를</em> 제공합니다.
+      </p>
+      <div class="clear-fix">
+        <dl class="card l-left">
+          <dt class="card__tit" data-i18n="">최신 제품 버전을 안심하고 사용</dt>
+          <dd>
+            <p class="card__desc ico-check ico-check--blue" data-i18n="[html]wasup.subc1.desc">
+              서브스크립션 기간 내내 제공되는 보안 <br />패치와 버그 픽스를 사용할 수 있으며 최신<br /> 버전으로 업그레이드도 지원합니다.
+            </p>
+          </dd>
+        </dl>
+        <dl class="card l-left">
+          <dt class="card__tit" data-i18n="">신뢰할수 있는 전문가의 지원</dt>
+          <dd>
+            <p class="card__desc ico-check ico-check--orange" data-i18n="[html]wasup.subc2.desc">
+              지식과 경험이 풍부한 전문 엔지니어로 구성<br />된 본사 지원 서비스 데스크에 24시간 액세<br />스할 수 있습니다.
+            </p>
+          </dd>
+        </dl>
+        <dl class="card l-right">
+          <dt class="card__tit" data-i18n="">입증된 기술을 통한 안정성 보장</dt>
+          <dd>
+            <p class="card__desc ico-check ico-check--blue" data-i18n="[html]wasup.subc3.desc">
+              오픈소스컨설팅의 입증된 기술 경험을 <br />제공하여 문제가 발생하기 전에 해결함으로<br />써 고객의 시간과 비용을 절약해줍니다.
+            </p>
+          </dd>
+        </dl>
+      </div>
+
+      <p class="subscription__txt-in-mobile">서브스크립션 관련 자세한 사항은 PC에서 확인 가능합니다.</p>
+
+      <button class="btn-detail js-wasup-subscription" data-isShow="false" type="button" data-i18n="detailView">자세히 보기</button>
+    </div>
+    <!-- subscription scope -->
+    <section class="subscription-scope js-subscription-scope is-hide">
+      <div class="l-center">
+        <h3 class="subscription-scope__tit" id="subscription-scope__title" data-i18n="wasup.scop.tit">서브스크립션 서비스 범위 및 수준</h3>
+        <!-- table1 -->
+        <div class="subscription-scope__table">
+          <table aria-describedby="subscription-scope__title">
+            <colgroup>
+              <col width="35%">
+              <col>
+              <col>
+              <col width="25.58333333%">
+            </colgroup>
+            <thead>
+              <tr class="scope-header">
+                <th scope="col" data-i18n="wasup.scop.tb.th">서비스 범위</th>
+                <th scope="col">Community</th>
+                <th scope="col">Trial</th>
+                <th scope="col">Enterprise</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="scope-sub-tit">
+                <th data-i18n="wasup.scop.service">제품 지원 서비스</th>
+                <td></td>
+                <td></td>
+                <th>제품 지원 서비스</th>
+              </tr>
+              <tr>
+                <td data-i18n="wasup.scop.install">설치 파일 및 가이드</td>
+                <td><span class="ico-check ico-check--skyblue"></span><span class="a11y" data-i18n="scop.support">지원</span></td>
+                <td><span class="ico-check ico-check--skyblue"></span><span class="a11y" data-i18n="scop.support">지원</span></td>
+                <td><span class="ico-check ico-check--skyblue"></span><span class="a11y" data-i18n="scop.support">지원</span></td>
+              </tr>
+              <tr>
+                <td data-i18n="wasup.scop.userGuide">사용자 가이드</td>
+                <td><span class="ico-check ico-check--skyblue"></span><span class="a11y" data-i18n="scop.support">지원</span></td>
+                <td><span class="ico-check ico-check--skyblue"></span><span class="a11y" data-i18n="scop.support">지원</span></td>
+                <td><span class="ico-check ico-check--skyblue"></span><span class="a11y" data-i18n="scop.support">지원</span></td>
+              </tr>
+              <tr>
+                <td data-i18n="patch">패치 파일 및 적용 가이드(이메일 제공)</td>
+                <td><span class="ico-check ico-check--skyblue"></span><span class="a11y" data-i18n="scop.support">지원</span></td>
+                <td><span class="ico-check ico-check--skyblue not-support"></span><span class="a11y" data-i18n="scop.support.not">미지원</span></td>
+                <td><span class="ico-check ico-check--skyblue"></span><span class="a11y" data-i18n="scop.support">지원</span></td>
+              </tr>
+              <tr class="scope-space">
+                <td data-i18n="scope.upgrade">제품 버전 업그레이드(이메일 제공)</td>
+                <td><span class="ico-check ico-check--skyblue"></span><span class="a11y" data-i18n="scop.support">지원</span></td>
+                <td><span class="ico-check ico-check--skyblue not-support"></span><span class="a11y" data-i18n="scop.support.not">미지원</span></td>
+                <td><span class="ico-check ico-check--skyblue"></span><span class="a11y" data-i18n="scop.support">지원</span></td>
+              </tr>
+              <tr class="scope-sub-tit">
+                <th>기술 지원 서비스</th>
+                <td></td>
+                <td></td>
+                <th>기술 지원 서비스</th>
+              </tr>
+              <tr>
+                <td data-i18n="scop.support.online">Playce Support 지원 - 온라인 (24 X 7)</td>
+                <td><span class="ico-check ico-check--skyblue not-support"></span><span class="a11y" data-i18n="scop.support.not">미지원</span></td>
+                <td><span class="ico-check ico-check--skyblue not-support"></span><span class="a11y" data-i18n="scop.support.not">미지원</span></td>
+                <td><span class="ico-check ico-check--skyblue"></span><span class="a11y" data-i18n="scop.support">지원</span></td>
+              </tr>
+              <tr>
+                <td data-i18n="scop.support.tel">전화 지원(월-금요일, 오전 9시 - 오후 5시)</td>
+                <td><span class="ico-check ico-check--skyblue not-support"></span><span class="a11y" data-i18n="scop.support.not">미지원</span></td>
+                <td><span class="ico-check ico-check--skyblue not-support"></span><span class="a11y" data-i18n="scop.support.not">미지원</span></td>
+                <td><span class="ico-check ico-check--skyblue"></span><span class="a11y" data-i18n="scop.support">지원</span></td>
+              </tr>
+              <tr>
+                <td data-i18n="scop.support.en">전문 엔지니어를 통한 지원(월-금요일, 오전 9시 - 오후 5시)</td>
+                <td><span class="ico-check ico-check--skyblue not-support"></span><span class="a11y" data-i18n="scop.support.not">미지원</span></td>
+                <td><span class="ico-check ico-check--skyblue not-support"></span><span class="a11y" data-i18n="scop.support.not">미지원</span></td>
+                <td><span class="ico-check ico-check--skyblue"></span><span class="a11y" data-i18n="scop.support">지원</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- // table 1-->
+
+        <!-- table2 -->
+        <div class="subscription-scope__table">
+          <table>
+            <thead>
+              <tr class="scope-header">
+                <th data-i18n="">서비스 수준</th>
+                <th>Community</th>
+                <th>Trial</th>
+                <th data-i18n="">Enterprise</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n="scop.online.num">온라인 지원문의 수</td>
+                <td><span class="ico-check ico-check--skyblue not-support"></span><span class="a11y" data-i18n="scop.support.not">미지원</span></td>
+                <td><span class="ico-check ico-check--skyblue not-support"></span><span class="a11y" data-i18n="scop.support.not">미지원</span></td>
+                <td><span data-i18n="scop.support.everyday">무제한</span></td>
+              </tr>
+              <tr>
+                <td data-i18n="scop.offline.num">오프라인 지원문의 수</td>
+                <td><span class="ico-check ico-check--skyblue not-support"></span><span class="a11y" data-i18n="scop.support.not">미지원</span></td>
+                <td><span class="ico-check ico-check--skyblue not-support"></span><span class="a11y" data-i18n="scop.support.not">미지원</span></td>
+                <td><span data-i18n="scop.support.4">오프라인 4회</span></td>
+              </tr>
+              <tr>
+                <td data-i18n="scop.online.time">온라인 응답 시간</td>
+                <td><span class="ico-check ico-check--skyblue not-support"></span><span class="a11y" data-i18n="scop.support.not">미지원</span></td>
+                <td><span class="ico-check ico-check--skyblue not-support"></span><span class="a11y" data-i18n="scop.support.not">미지원</span></td>
+                <td><span data-i18n="scop.support.time4">영업일 기준 4시간 내</span></td>
+              </tr>
+              <tr>
+                <td data-i18n="scop.offline.time">오프라인 응답 시간</td>
+                <td><span class="ico-check ico-check--skyblue not-support"></span><span class="a11y" data-i18n="scop.support.not">미지원</span></td>
+                <td><span class="ico-check ico-check--skyblue not-support"></span><span class="a11y" data-i18n="scop.support.not">미지원</span></td>
+                <td><span data-i18n="scop.support.offline8">영업일 기준 8시간 내</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- // table2 -->
+        <button class="btn-detail is-active js-wasup-subscription" data-isShow="true" type="button" data-i18n="detailView">자세히 보기</button>
+      </div>
+    </section>
+    <!-- // subscription scope -->
+  </section>
+  <!-- // subscription -->
+
+  <!-- experience -->
+  <section class="experience experience--wasup">
+    <h2 class="a11y">무료로 시작</h2>
+    <div class="l-center">
+      <p class="l-left" data-i18n="[html]wasup.exp.string">지금 바로 <em>Playce WASup 제품을 무료로</em> 체험해 볼 수 있습니다.</p>
+      <span class="experience__btns l-right">
+        <a class="btn-round btn-round--apblue" href="./free-start.html#playce-wasup" data-i18n="">무료로 시작</a>
+        <a class="btn-round btn-round--white2" href="https://jira.osci.kr/servicedesk/customer/portal/21" target="_blank" data-i18n="">제품 문의</a>
+      </span>
+    </div>
+  </section>
+  <!-- // experience -->
+
+
+  <?php
+  include_once 'common-php/footer.php';
+  ?>
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+      var hash = Playce.getHash();
+      if (!hash) return;
+      setTimeout(function() {
+        var snbHeight = document.querySelector('.js-snb').getBoundingClientRect().height;
+        var sectionOffset = document.querySelector(hash).offsetTop;
+
+        Playce.quick(sectionOffset - snbHeight);
+      }, 150);
+  });
+
+    var dashboard = new TickAnimation({
+    tickCount: 2,
+    el: '.dashboard__img-panels',
+    direction: 'orthodromicDirection',
+    datas: [{
+        className: 'dashboard__img-panel--0',
+        src: 'dash-board0-2x.png'
+      },
+      {
+        className: 'dashboard__img-panel--1',
+        src: 'dash-board1-2x.png'
+      },
+      {
+        className: 'dashboard__img-panel--2',
+        src: 'dash-board2-2x.png'
+      },
+      {
+        className: 'dashboard__img-panel--3',
+        src: 'dash-board3-2x.png'
+      }
+    ],
+    callBack: function (data, idx) {
+      return '<div class="dashboard__img-panel ' + data.className + '"></div>';
+    }
+  });
+
+  var notification = new TickAnimation({
+    tickCount: 2,
+    el: '.notification__card-wrap',
+    direction: 'reverseDirection',
+    datas: [{
+        className: 'alert',
+        title: 'Alarm'
+      },
+      {
+        className: 'key',
+        title: 'Subscription'
+      },
+      {
+        className: 'warning',
+        title: 'Alarm'
+      },
+      {
+        className: 'warning',
+        title: 'Subscription'
+      }
+    ],
+    callBack: function (data, idx) {
+      return (
+        '<div class="notification__card notification__card--' +
+        data.className +
+        '">' +
+        '<strong>' +
+        data.title +
+        '</strong>' +
+        '<span class="card-line card-line--bold card-line--short"></span>' +
+        '<span class="card-line"></span>' +
+        '<span class="card-line card-line--middle"></span>' +
+        '<time>Today 13:05</time>' +
+        '</div>'
+      );
+    }
+  });
+
+  
+    dashboard.start();
+    notification.start();
+  
+    wizardSlider('.js-wizard');
+
+  // ============================
+  // 고객사례
+  // ============================
+
+    // case
+    caseSlider('.case--wasup', {
+      fade: true,
+      infinite: false,
+      prevArrow: '.case--wasup .btn-arrow--puple-prev',
+      nextArrow: '.case--wasup .btn-arrow--puple-next'
+    });
+
+    // subscription
+    setSubscriptionScope();
+    smoothAnchor('.js-hash-link');
+
+    snbSticky();
+</script>
+</body>
+</html>
+

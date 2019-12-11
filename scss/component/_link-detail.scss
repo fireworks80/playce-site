@@ -1,0 +1,14 @@
+// 바로가기, 자세히 보기
+.link-detail {
+  display: inline-block;
+  font-size: rem(14px);
+  font-weight: bold;
+
+  &::after {
+    @include icon-setting($ic-arrow-blue2x);
+    display: inline-block;
+    transform: rotate(90deg) scale($scale-arrow-sm) translateY(-10px);
+    transition: transform $arrow-anim-time;
+    content: '';
+  }
+}

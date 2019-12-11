@@ -1,0 +1,496 @@
+// inner wrap
+// max-width: 1200
+// 페이지마다 좌우 패딩값은 각각 줌
+// 좌우 패딩 10을 안잡는 페이지도 있음
+
+body.show-gnb {
+  overflow: hidden;
+}
+
+.wrap {
+  // @include debug;
+  @include relative;
+  min-width: 360px;
+  // overflow-x: hidden;
+
+  &--prd {
+    padding-top: 70px;
+  }
+}
+
+// ==============================
+// header
+// ==============================
+
+.header {
+  // @include debug;
+  @include absolute($top: 0, $left: 0);
+  @include size(100%, null);
+  z-index: 10;
+  color: $color-light-black;
+
+  .logo__link {
+    // @include debug;
+    @include size(79px, 30px);
+    display: block;
+    background: url($path-img+'logo-2x.png') no-repeat center top;
+    background-size: contain;
+  }
+
+  .l-center {
+    height: 70px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  @media ($query-mobile) {
+    .l-center {
+      @include size(null, 60px);
+      padding: 0 20px;
+      background-color: $color-default;
+      // border-bottom: 0;
+    }
+  } // > 960
+}
+
+// modifier
+// ==============================
+.header--white {
+  color: #fff;
+
+  .l-center {
+    border-bottom-color: rgba(213, 223, 250, 0.3);
+  }
+
+  .logo__link {
+    background-image: url($path-img+'logo-white-2x.png');
+  }
+}
+
+.header--white-gray {
+  color: #fff;
+
+  .l-center {
+    border-bottom-color: rgba(107, 117, 129, 0.3);
+  }
+}
+
+.header--gray {
+  color: #2f394d;
+
+  .l-center {
+    border-bottom-color: rgba(104, 115, 129, 0.3);
+  }
+
+  .logo__link {
+    background-image: url($path-img+'logo-gray-2x.png');
+  }
+}
+
+.header--blue {
+  color: #fff;
+
+  .l-center {
+    border-bottom-color: rgba(213, 223, 250, 0.3);
+  }
+}
+
+@media ($query-mobile) {
+  .header--white .logo__link,
+  .header--gray .logo__link,
+  .header--white-gray .logo__link {
+    background-image: url($path-img+'logo-white-2x.png');
+  }
+}
+
+// ==============================
+// hamburger
+// ==============================
+.hamburger {
+  @include relative;
+  @include size(24px);
+  display: none;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+
+  span,
+  &::before,
+  &::after {
+    @include absolute($top: 50%, $left: 0);
+    @include size(100%, 3px);
+    transform: translateY(-50%);
+    background-color: #fff;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+  }
+
+  &::before {
+    margin-top: -10px;
+  }
+
+  &::after {
+    margin-top: 10px;
+  }
+
+  @media ($query-mobile) {
+    display: inline-block;
+  }
+}
+
+// ==============================
+// gnb
+// ==============================
+.gnb {
+  &,
+  &__list {
+    display: flex;
+  }
+
+  font-size: rem(16px);
+
+  &__logo {
+    @include size(79px, null);
+    display: none;
+  }
+
+  // list--main, list--etc 공통 설정
+  &__link,
+  .callout__link {
+    display: block;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  &__link {
+    // @include debug;
+    padding: 10px 18px;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+
+  // gnb__list--etc 설정
+  &-etc {
+    margin-left: 20px;
+  }
+
+  &__close {
+    @include absolute($top: 16px, $right: 25px);
+    // @include size(18px);
+    @include icon-setting($btn-close-gray2x);
+    display: none;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+  }
+
+  @media ($query-mobile) {
+    @include fixed($top: 0, $left: 100%);
+    @include size(100%, 100%);
+    overflow-y: auto;
+    display: block;
+    z-index: 10;
+    padding: 16px 16px 0;
+    background-color: #fff;
+    color: #687381;
+    font-size: 16px;
+
+    .show-gnb & {
+      transform: translateX(-100%);
+    }
+
+    &__logo {
+      display: block;
+    }
+
+    &__list {
+      // @include debug;
+      display: block;
+      margin-left: 0;
+      padding: 0 10px;
+
+      &--main {
+        margin-top: 24px;
+      }
+    }
+
+    &__item {
+      border-bottom: 1px solid rgba(107, 117, 129, 0.3);
+
+      .gnb__list--main &:first-child {
+        border-bottom: 0;
+      }
+    }
+
+    &__link {
+      // @include debug;
+      @include size(null, 50px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+
+      &::after {
+        @include icon-setting($ic-arrow-blue-2x);
+        display: inline-block;
+        transform: scale(0.5) rotate(90deg);
+        content: '';
+      }
+    }
+
+    &__close {
+      display: inline-block;
+    }
+  } // > 960
+}
+
+// 제품, KOR 링크는 drop down 아이콘을 갖는다.
+// ====================================================================================
+.has-callout {
+  @include relative;
+
+  .gnb__link {
+    cursor: pointer;
+    padding: 10px 40px 10px 20px;
+
+    &::after {
+      // @include debug;
+      @include icon-setting($btn-arrow-down-2x);
+      @include absolute($top: 50%);
+      transform: translateY(-50%);
+      content: '';
+
+      .header--white &,
+      .header--blue & {
+        // @debug &;
+        @include sprite-position2x($ico-arrow-down-white-2x);
+      }
+    }
+  } // gnb link
+
+  // &:hover .callout {
+  //   display: block;
+  // }
+
+  // pc / mobile 에서 hover 없이
+  // click event (.is-active) 시에만
+  // 2depth 활성화
+  &.is-active .gnb__link::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  &.is-active .callout {
+    display: block;
+  }
+
+  @media ($query-mobile) {
+    // 모바일일 경우 hover 가 되지 않으므로 반응이 없게
+    // (딱히 영향을 주지 않지만...)
+    // &:hover .callout {
+    //   display: none;
+    // }
+
+    // &.is-active {
+    //   .gnb__link::after {
+    //     transform: rotate(180deg);
+    //   }
+    //   .callout {
+    //     display: block;
+    //   }
+    // }
+
+    .gnb__link {
+      padding: 0;
+      border-bottom: 1px solid rgba(107, 117, 129, 0.3);
+
+      &::after {
+        position: static;
+        display: inline-block;
+        transform: none;
+      }
+
+      .header--white &::after,
+      .header--blue &::after {
+        @include sprite-position($btn-arrow-down-2x);
+      }
+    }
+  } // > 960
+} // has-drop-down
+
+// lang
+// ====================================================================================
+.lang__list {
+  @include absolute($top: 100%, $left: 0);
+  @include size(100%, null);
+
+  display: none;
+  background-color: #fff;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    display: block;
+  }
+
+  button {
+    @include size(100%, null);
+    display: block;
+    padding: 10px 0;
+    border: 0;
+    text-align: center;
+    background-color: transparent;
+
+    &:hover {
+      background-color: #ddd;
+    }
+  }
+
+  .is-active & {
+    display: block;
+  }
+
+  @media ($query-mobile) {
+    // box-shadow
+  }
+} // list
+
+// ======================================================================
+// snb
+// ======================================================================
+
+@keyframes sticky-anim {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+.snb {
+  // @include debug;
+  @include relative;
+  z-index: 2;
+  margin-bottom: 106px;
+
+  font-size: rem(14px);
+
+  .sticky & {
+    @include fixed($left: 0, $top: 0);
+    @include size(100%, null);
+    z-index: 15;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(50, 62, 81, 0.1);
+    animation: sticky-anim 0.45s;
+  }
+  .l-center {
+    @include size(null, $height-snb);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding-top: 14px;
+  }
+
+  &__logo {
+    margin-top: 6px;
+
+    .snb--roro & {
+      @include size(106px, null);
+    }
+
+    .snb--wasup & {
+      @include size(122px, null);
+    }
+  }
+
+  &__list {
+    display: flex;
+  } // list
+
+  &__item:last-child {
+    margin-left: 10px;
+  } // li
+
+  // snb--wasup a color
+  // snb--roro a color
+  // =========================================
+
+  &__link {
+    // @include debug;
+    @each $name, $color in ('wasup': #a86247, 'roro': #2557a0) {
+      .snb--#{$name} & {
+        color: $color;
+      }
+    }
+
+    display: block;
+    padding: 0 18px;
+    line-height: 32px;
+
+    &:hover {
+      font-weight: 500;
+    }
+
+    .snb__item:last-child & {
+      border-radius: 3px 8px;
+      background-color: #fff;
+      box-shadow: 0 2px 6px 0 rgba(50, 62, 81, 0.2);
+      font-weight: bold;
+
+      &:hover {
+        background-color: #f9f7f4;
+        box-shadow: 0 2px 2px 0 rgba(50, 62, 81, 0.2);
+      }
+    } // item last a
+  } // link
+
+  @media (max-width: 1050px) {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    .l-center {
+      @include size(null, auto);
+
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px 0 16px 18px;
+    }
+
+    &__item {
+      margin-right: 4px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__link {
+      padding: 4px;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 28px;
+
+      .snb__item:first-child & {
+        padding-left: 0;
+      }
+
+      .snb__item:last-child & {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+
+    &__logo {
+      margin-bottom: 18px;
+    }
+  }
+} // snb

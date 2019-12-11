@@ -1,0 +1,47 @@
+.card {
+  $box-color: rgb(50, 76, 153);
+  @include relative;
+  width: percent(380px, $width-max - 20);
+  padding: 30px percent(40px, $width-max - 20) 28px percent(30px, $width-max - 20);
+  background-color: $box-color;
+  box-shadow: 0 4px 12px 0 rgba(47, 57, 77, 0.2);
+  border-radius: 32px 10px;
+  text-align: left;
+  color: #fff;
+
+  &::before {
+    @include size(80px);
+    display: block;
+    margin-bottom: 24px;
+    content: '';
+  }
+
+  &__tit {
+    font-size: rem(23px);
+    font-weight: bold;
+  }
+
+  &__desc {
+    font-size: rem(15px);
+    line-height: 2.13;
+  }
+
+  &--hover {
+    transition: all 0.32s;
+
+    &:hover {
+      background-color: #fff;
+      transform: translateY(-10px);
+      box-shadow: 16px 16px 30px 0 rgba(47, 57, 77, 0.3), 0 2px 12px 0 rgba(47, 57, 77, 0.2);
+    }
+  }
+
+  @media ($query-mobile) {
+    @include size(auto, 264px);
+    display: block;
+
+    &__desc {
+      line-height: 1.9;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.ico-arrow {
+  // @include debug;
+  @include icon-setting($ic-arrow-blue2x);
+  display: inline-block;
+
+  &--darkblue {
+    @include sprite-position2x($ic-arrow-bluedark2x);
+  }
+  &--lightblue {
+    @include sprite-position2x($ic-arrow-bluelight2x);
+  }
+  &--skyblue {
+    @include sprite-position2x($ic-arrow-bluesky2x);
+  }
+  &--brown {
+    @include sprite-position2x($ic-arrow-brown2x);
+  }
+  &--sora {
+    @include sprite-position2x($ic-arrow-sora2x);
+  }
+  &--white {
+    @include sprite-position2x($ic-arrow-white2x);
+  }
+
+  &--sm {
+    transform: scale(0.593);
+  }
+
+  &--big {
+    transform: scale(0.741);
+  }
+}

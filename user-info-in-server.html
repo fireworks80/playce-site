@@ -1,0 +1,152 @@
+<?php
+  session_start();
+
+  $type = $_GET['type'];
+  if (empty($type)) {
+    $type =- 'gzip';
+  }
+
+  include_once 'common-php/header.php'; 
+?> 
+<section class="user-info">
+  <div class="user-info__inner">
+    <?php include_once 'common-php/gnb.php'; ?>
+    <div class="l-center user-info-center">
+      <h2 class="user-info__tit">Playce WASup 설치파일 다운로드</h2>
+      <p class="user-info__desc">Playce WASup를 설치하시어 간편한 미들웨어<br />통합관리 기능을 경험해 보세요.</p>
+    </div>
+  </div>
+  <div class="l-center">
+    <form class="form" method="POST" action="user-info-proc.php" target="_balnk" onsubmit="return onSubmit(this)">
+      <fieldset>
+        <legend class="a11y">사용자 정보 입력</legend>
+        <p class="form__row">
+          <label class="form__lb" for="user-name">이름<sup>*</sup></label>
+          <span class="form__field"><input type="text" id="user-name" name="name" max-length="50" required placeholder="이름을 입력해주세요."></span>
+        </p>
+        <p class="form__row">
+          <label class="form__lb" for="user-company">회사명<sup>*</sup></label>
+          <span class="form__field"><input type="text" id="user-company" name="company" max-length="50" required placeholder="회사명을 입력해주세요."></span>
+        </p>
+        <p class="form__row">
+          <label class="form__lb" for="user-mail">이메일<sup>*</sup></label>
+          <span class="form__field"><input type="email" id="user-mail" name="email" max-length="50" required placeholder="example@osci.kr"></span>
+        </p>
+        <p class="form__row">
+          <label class="form__lb" for="user-tel">연락처<sup>*</sup></label>
+          <span class="form__field"><input type="tel" id="user-tel" name="phone" max-length="20" required placeholder="010-1234-5678"></span>
+        </p>
+        <p class="form__row">
+          <label class="form__lb" for="user-department">부서<sup>*</sup></label>
+          <span class="form__field"><input type="text" id="user-department" name="department" max-length="50" required placeholder="부서 입력해주세요."></span>
+        </p>
+        <p class="form__row">
+          <label class="form__lb" for="user-job-grade">직급<sup>*</sup></label>
+          <span class="form__field"><input type="text" id="user-job-grade" name="position" max-length="50" required placeholder="직급 입력해주세요."></span>
+        </p>
+        <p class="form__row">
+          <label class="form__lb" for="user-path">인지경로<sup>*</sup></label>
+          <span class="form__select">
+            <select id="user-path" name="path" required>
+              <option value="" disabled selected>인지경로를 선택해주세요.</option>
+              <option>당사 SNS(페이스북, 블로그)</option>
+              <option>당사 메일링/뉴스레터</option>
+              <option>포털사이트 검색</option>
+              <option>홈페이지 직접 방문</option>
+              <option>언론기사</option>
+              <option>오픈소스컨설팅 직원 소개</option>
+              <option>지인 및 동료 소개</option>
+              <option>세미나/전시</option>
+              <option>교육</option>
+              <option>기타</option>
+            </select>
+          </span>
+        </p>
+      </fieldset>
+      <div class="form__row">
+        <p class="form__lb">개인정보수집<br />이용동의</p>
+        <div class="form__text-field">
+          <h3>
+            개인정보수집 이용동의 안내 (개인정보 수집자 : ㈜오픈소스컨설팅)
+          </h3>
+          <ul>
+            <li>1. 개인정보 수집 범위 : 회사명, 이름, 부서명, 직급, 이메일, 휴대폰번호</li>
+            <li>2. 오픈소스컨설팅은 영업, 마케팅, 고객 지원 등의 다양한 업무상의 목적으로 고객 개인 정보를 수집 및 활용할 수 있습니다.</li>
+            <li>3. 개인정보 보유 및 이용기간 : 개인정보는 수집 및 이용목적 달성시까지 보유하며, 제공자가 정보 파기를 원하는 경우 지체없이 파기하는 것을 원칙으로 합니다.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="form__agree">
+        <input type="checkbox" id="user-agree" name="agree" value="Y" />
+        <label class="lb-agree" for="user-agree">본인은 동의내용을 숙지하였으며, 회사가 본인의 개인정보를 수집 및 이용하는 것을 동의합니다.</label>
+      </p>
+      <div class="form__btns">
+        <a class="btn-round btn-round--white" href="#">이전 화면</a>
+        <button class="btn-round btn-round--navy" type="submit" href="#">다운로드</button> 
+      </div>
+      <input type="hidden" name="type" value="<?=$type?>" />
+    </form>
+  
+  
+</section>
+<?php 
+
+include_once 'common-php/footer.php'; 
+?>
+<script type="text/javascript">
+  function isValidEmail(email) {
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);;
+  }
+  function onSubmit(form) {
+    if (!form.name.value.length) {
+      form.name.focus();
+      alert('이름을 입력해주세요.');
+      return false;
+    }
+    if (!form.company.value.length) {
+      form.company.focus();
+      alert('회사명을 입력해주세요.');
+      return false;
+    }
+    if (!form.email.value.length) {
+      form.email.focus();
+      alert('이메일을 입력해주세요.');
+      return false;
+    }
+    if (!isValidEmail(form.email.value)) {
+      form.email.focus();
+      alert('이메일을 정확히 입력해주세요.');
+      return false;
+    }
+    if (!form.phone.value.length) {
+      form.phone.focus();
+      alert('연락처를 입력해주세요.');
+      return false;
+    }
+    if (!form.department.value.length) {
+      form.department.focus();
+      alert('부서를 입력해주세요.');
+      return false;
+    }
+    if (!form.position.value.length) {
+      form.position.focus();
+      alert('직급을 입력해주세요.');
+      return false;
+    }
+    if (!form.path.value.length) {
+      form.path.focus();
+      alert('인지경로를 선택해주세요.');
+      return false;
+    }
+    if (!form.agree.checked) {
+      form.agree.focus();
+      alert('개인정보수집에 동의해주세요.');
+      return false;
+    }
+    
+    return true;
+  }
+</script>
+</body>
+</html>
+

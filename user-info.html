@@ -10,8 +10,8 @@
 ?> 
   <div class="sub-top user-info bg-navy">
     <div class="l-center">
-      <h2 class="sub__tit">Playce WASup 설치파일 다운로드</h2>
-      <p class="user-info__desc">Playce WASup를 설치하시어 간편한 미들웨어<br />통합관리 기능을 경험해 보세요.</p>
+      <h2 class="sub__tit" data-i18n="user-tit">Playce WASup 설치파일 다운로드</h2>
+      <p class="user-info__desc" data-i18n="[html]user-desc">Playce WASup를 설치하시어 간편한 미들웨어<br />통합관리 기능을 경험해 보세요.</p>
     </div>
   </div>
     <div class="sub-bottom">
@@ -20,68 +20,66 @@
           <fieldset>
             <legend class="a11y">사용자 정보 입력</legend>
             <p class="form__row">
-              <label class="form__lb" for="user-name">이름<sup>*</sup></label>
-              <span class="form__field"><input type="text" id="user-name" name="name" max-length="50" required placeholder="이름을 입력해주세요."></span>
+              <label class="form__lb" for="user-name" data-i18n="name">이름<sup>*</sup></label>
+              <span class="form__field"><input type="text" id="user-name" name="name" max-length="50" required data-i18n="[placeholder]placeholder-name" placeholder="이름을 입력해주세요."></span>
             </p>
             <p class="form__row">
-              <label class="form__lb" for="user-company">회사명<sup>*</sup></label>
-              <span class="form__field"><input type="text" id="user-company" name="company" max-length="50" required placeholder="회사명을 입력해주세요."></span>
+              <label class="form__lb" for="user-company" data-i18n="company">회사명<sup>*</sup></label>
+              <span class="form__field"><input type="text" id="user-company" name="company" max-length="50" required data-i18n="[placeholder]placeholder-company" placeholder="회사명을 입력해주세요."></span>
             </p>
             <p class="form__row">
-              <label class="form__lb" for="user-mail">이메일<sup>*</sup></label>
+              <label class="form__lb" for="user-mail" data-i18n="email">이메일<sup>*</sup></label>
               <span class="form__field"><input type="email" id="user-mail" name="email" max-length="50" required placeholder="example@osci.kr"></span>
             </p>
             <p class="form__row">
-              <label class="form__lb" for="user-tel">연락처<sup>*</sup></label>
+              <label class="form__lb" for="user-tel" data-i18n="tel">연락처<sup>*</sup></label>
               <span class="form__field"><input type="tel" id="user-tel" name="phone" max-length="20" required placeholder="010-1234-5678"></span>
             </p>
             <p class="form__row">
-              <label class="form__lb" for="user-department">부서<sup>*</sup></label>
-              <span class="form__field"><input type="text" id="user-department" name="department" max-length="50" required placeholder="부서 입력해주세요."></span>
+              <label class="form__lb" for="user-department" data-i18n="subject">부서<sup>*</sup></label>
+              <span class="form__field"><input type="text" id="user-department" name="department" max-length="50" required data-i18n="[placeholder]placeholder-subject" placeholder="부서 입력해주세요."></span>
             </p>
             <p class="form__row">
-              <label class="form__lb" for="user-job-grade">직급<sup>*</sup></label>
-              <span class="form__field"><input type="text" id="user-job-grade" name="position" max-length="50" required placeholder="직급 입력해주세요."></span>
+              <label class="form__lb" for="user-job-grade" data-i18n="grade">직급<sup>*</sup></label>
+              <span class="form__field"><input type="text" id="user-job-grade" name="position" max-length="50" required data-i189n="[placeholder]placeholder-grade" placeholder="직급 입력해주세요."></span>
             </p>
             <p class="form__row">
-              <label class="form__lb" for="user-path">인지경로<sup>*</sup></label>
+              <label class="form__lb" for="user-path" data-i18n="path">인지경로<sup>*</sup></label>
               <span class="form__select">
                 <select id="user-path" name="path" required>
-                  <option value="" disabled selected>인지경로를 선택해주세요.</option>
-                  <option>당사 SNS(페이스북, 블로그)</option>
-                  <option>당사 메일링/뉴스레터</option>
-                  <option>포털사이트 검색</option>
-                  <option>홈페이지 직접 방문</option>
-                  <option>언론기사</option>
-                  <option>오픈소스컨설팅 직원 소개</option>
-                  <option>지인 및 동료 소개</option>
-                  <option>세미나/전시</option>
-                  <option>교육</option>
-                  <option>기타</option>
+                  <option value="" disabled selected data-i18n="path-1">인지경로를 선택해주세요.</option>
+                  <option data-i18n="path-2">당사 SNS(페이스북, 블로그)</option>
+                  <option data-i18n="path-3">당사 메일링/뉴스레터</option>
+                  <option data-i18n="path-4">포털사이트 검색</option>
+                  <option data-i18n="path-5">홈페이지 직접 방문</option>
+                  <option data-i18n="path-6">언론기사</option>
+                  <option data-i18n="path-7">오픈소스컨설팅 직원 소개</option>
+                  <option data-i18n="path-8">지인 및 동료 소개</option>
+                  <option data-i18n="path-9">세미나/전시</option>
+                  <option data-i18n="path-10">교육</option>
+                  <option data-i18n="path-11">기타</option>
                 </select>
               </span>
             </p>
           </fieldset>
           <div class="form__row">
-            <p class="form__lb">개인정보수집<br />이용동의</p>
+            <p class="form__lb" data-i18n="[html]agree-p">개인정보수집<br />이용동의</p>
             <div class="form__text-field">
-              <h3>
-                개인정보수집 이용동의 안내 (개인정보 수집자 : ㈜오픈소스컨설팅)
-              </h3>
+              <h3 data-i18n="agree-h3">개인정보수집 이용동의 안내 (개인정보 수집자 : ㈜오픈소스컨설팅)</h3>
               <ul>
-                <li>1. 개인정보 수집 범위 : 회사명, 이름, 부서명, 직급, 이메일, 휴대폰번호</li>
-                <li>2. 오픈소스컨설팅은 영업, 마케팅, 고객 지원 등의 다양한 업무상의 목적으로 고객 개인 정보를 수집 및 활용할 수 있습니다.</li>
-                <li>3. 개인정보 보유 및 이용기간 : 개인정보는 수집 및 이용목적 달성시까지 보유하며, 제공자가 정보 파기를 원하는 경우 지체없이 파기하는 것을 원칙으로 합니다.</li>
+                <li data-i18n="agree-li1">1. 개인정보 수집 범위 : 회사명, 이름, 부서명, 직급, 이메일, 휴대폰번호</li>
+                <li data-i18n="agree-li2">2. 오픈소스컨설팅은 영업, 마케팅, 고객 지원 등의 다양한 업무상의 목적으로 고객 개인 정보를 수집 및 활용할 수 있습니다.</li>
+                <li data-i18n="agree-li3">3. 개인정보 보유 및 이용기간 : 개인정보는 수집 및 이용목적 달성시까지 보유하며, 제공자가 정보 파기를 원하는 경우 지체없이 파기하는 것을 원칙으로 합니다.</li>
               </ul>
             </div>
           </div>
           <p class="form__agree">
             <input type="checkbox" id="user-agree" name="agree" value="Y" />
-            <label class="lb-agree" for="user-agree">본인은 동의내용을 숙지하였으며, 회사가 본인의 개인정보를 수집 및 이용하는 것을 동의합니다.</label>
+            <label class="lb-agree" for="user-agree" data-i18n="agree-lb">본인은 동의내용을 숙지하였으며, 회사가 본인의 개인정보를 수집 및 이용하는 것을 동의합니다.</label>
           </p>
           <div class="form__btns">
-            <button class="btn-round btn-round--white js-history-back" href="#playce-wasup">이전 화면</button>
-            <button class="btn-round btn-round--navy" type="submit" href="#">다운로드</button> 
+            <button class="btn-round btn-round--white js-history-back" href="#playce-wasup" data-i18n="before-page">이전 화면</button>
+            <button class="btn-round btn-round--navy" type="submit" href="#" data-i18n="download">다운로드</button> 
           </div>
           <input type="hidden" name="type" value="<?=$type?>" />
         </form>

@@ -13,7 +13,7 @@
   @include relative;
 
   .prd-info-wrap & {
-    @include size(100%, null);
+    @include size(33.333333%, null);
   }
 
   &__tit {
@@ -84,6 +84,8 @@
     }
 
     .prd-info-wrap & {
+      @include size(auto, null);
+
       &:nth-child(n + 2) {
         margin-top: 40px;
       }

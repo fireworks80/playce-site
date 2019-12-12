@@ -804,7 +804,7 @@ body {
   position: relative;
 }
 .prd-info-wrap .prd-info {
-  width: 100%;
+  width: 33.333333%;
 }
 .prd-info__tit {
   padding-left: 2.5%;
@@ -956,6 +956,9 @@ body {
   }
   .prd-info, .prd-info.has-ico {
     padding-top: 0;
+  }
+  .prd-info-wrap .prd-info {
+    width: auto;
   }
   .prd-info-wrap .prd-info:nth-child(n+2) {
     margin-top: 40px;

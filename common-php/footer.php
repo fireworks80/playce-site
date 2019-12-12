@@ -193,33 +193,33 @@
   }());
 
   // 국문 영문
-  (function() {
-    var langEl = document.querySelector('.js-lang');
-    var currentLangEl = langEl.querySelector('.js-current-lang');
+  // (function() {
+  //   var langEl = document.querySelector('.js-lang');
+  //   var currentLangEl = langEl.querySelector('.js-current-lang');
 
-    var getLocale = function () {
-      return location.pathname.indexOf('en') > -1 ? 'en' : 'ko';
-    };
+  //   var getLocale = function () {
+  //     return location.pathname.indexOf('en') > -1 ? 'en' : 'ko';
+  //   };
 
-    var setLocale = function(lang) {
-      $.i18n({
-        locale: lang
-      })
-      .load({
-        ko: "./i18n/ko.json",
-        en: "./i18n/en.json"
-      })
-      .done(function () {
-        $("body").i18n();
-      });
-    };
+  //   var setLocale = function(lang) {
+  //     $.i18n({
+  //       locale: lang
+  //     })
+  //     .load({
+  //       ko: "./i18n/ko.json",
+  //       en: "./i18n/en.json"
+  //     })
+  //     .done(function () {
+  //       $("body").i18n();
+  //     });
+  //   };
     
-    var getGnbLocale = function(lang) {
-      currentLangEl.textContent = lang === 'en' ? 'ENG' : 'KOR';        
-      langEl.classList.remove('is-active');
-    };
+  //   var getGnbLocale = function(lang) {
+  //     currentLangEl.textContent = lang === 'en' ? 'ENG' : 'KOR';        
+  //     langEl.classList.remove('is-active');
+  //   };
 
-    setLocale(getLocale());
-    getGnbLocale(getLocale());
-  }());
+  //   setLocale(getLocale());
+  //   getGnbLocale(getLocale());
+  // }());
 </script>

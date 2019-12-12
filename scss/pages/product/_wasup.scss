@@ -294,6 +294,7 @@
   // @include debug(green);
 
   @media ($query-mobile) {
+    overflow: hidden;
     display: flex;
     justify-content: center;
 

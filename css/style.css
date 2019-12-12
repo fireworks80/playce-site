@@ -2968,6 +2968,7 @@ body.show-gnb {
 .architecture__img {
   position: relative;
   display: inline-block;
+  max-width: 100%;
   -webkit-box-shadow: -17px 27px 23px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: -17px 27px 23px 0px rgba(0, 0, 0, 0.2);
   box-shadow: -17px 27px 23px 0px rgba(0, 0, 0, 0.2);
@@ -2981,8 +2982,6 @@ body.show-gnb {
 }
 @media (max-width:960px) {
   .architecture__img {
-    left: 50%;
-    transform: translateX(-50%);
     box-shadow: none;
   }
   .architecture--wasup .architecture__img, .architecture--roro .architecture__img {
@@ -3256,8 +3255,6 @@ body.show-gnb {
 @media (max-width:960px) {
   .guide__poster {
     width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
     margin-bottom: 50px;
   }
 }
@@ -3954,6 +3951,7 @@ body.show-gnb {
 
 @media (max-width:960px) {
   .feature__motion-box {
+    overflow: hidden;
     display: flex;
     justify-content: center;
   }

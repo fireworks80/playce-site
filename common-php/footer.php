@@ -1,7 +1,7 @@
   <footer class="footer">
     <div class="l-center">
       <!-- top -->
-      <div class="footer__row footer__row--top">
+      <div class="footer__row">
         <!-- locale -->
         <div class="footer__locale">
           <a href="http://osci.kr/main.php" target="_blank">

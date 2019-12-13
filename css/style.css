@@ -804,7 +804,7 @@ body {
   position: relative;
 }
 .prd-info-wrap .prd-info {
-  width: 100%;
+  width: 33.333333%;
 }
 .prd-info__tit {
   padding-left: 2.5%;
@@ -956,6 +956,9 @@ body {
   }
   .prd-info, .prd-info.has-ico {
     padding-top: 0;
+  }
+  .prd-info-wrap .prd-info {
+    width: auto;
   }
   .prd-info-wrap .prd-info:nth-child(n+2) {
     margin-top: 40px;
@@ -1690,7 +1693,7 @@ body.show-gnb {
   display: flex;
 }
 .footer__row:nth-of-type(1) {
-  position: relative;
+  justify-content: space-between;
   margin-bottom: 70px;
 }
 @media (max-width: 640px) {
@@ -1708,16 +1711,13 @@ body.show-gnb {
     margin-bottom: 30px;
   }
 }
-.footer__row--top {
-  justify-content: space-between;
-}
 .footer__services, .footer__service-row {
   display: flex;
 }
 @media (max-width: 1000px) {
   .footer__services {
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
   }
 }
 @media (max-width: 640px) {
@@ -1725,11 +1725,13 @@ body.show-gnb {
     display: block;
   }
 }
-.footer__service-row {
-  width: 100%;
+@media (min-width: 641px) and (max-width: 1000px) {
+  .footer__service-row {
+    width: 50%;
+  }
 }
 @media (max-width: 640px) {
-  .footer__service-row:nth-of-type(2) {
+  .footer__service-row:last-child {
     margin-top: 30px;
   }
 }
@@ -1755,8 +1757,10 @@ body.show-gnb {
 .service--partner {
   margin-top: 40px;
 }
-.service--contact {
-  width: 180px;
+@media (min-width: 1000px) {
+  .service--contact {
+    width: 180px;
+  }
 }
 @media (max-width: 1000px) {
   .service {
@@ -2964,6 +2968,7 @@ body.show-gnb {
 .architecture__img {
   position: relative;
   display: inline-block;
+  max-width: 100%;
   -webkit-box-shadow: -17px 27px 23px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: -17px 27px 23px 0px rgba(0, 0, 0, 0.2);
   box-shadow: -17px 27px 23px 0px rgba(0, 0, 0, 0.2);
@@ -2977,8 +2982,6 @@ body.show-gnb {
 }
 @media (max-width:960px) {
   .architecture__img {
-    left: 50%;
-    transform: translateX(-50%);
     box-shadow: none;
   }
   .architecture--wasup .architecture__img, .architecture--roro .architecture__img {
@@ -3252,8 +3255,6 @@ body.show-gnb {
 @media (max-width:960px) {
   .guide__poster {
     width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
     margin-bottom: 50px;
   }
 }
@@ -3950,6 +3951,7 @@ body.show-gnb {
 
 @media (max-width:960px) {
   .feature__motion-box {
+    overflow: hidden;
     display: flex;
     justify-content: center;
   }

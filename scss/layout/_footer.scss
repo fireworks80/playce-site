@@ -30,7 +30,7 @@
 
     &:nth-of-type(1) {
       // @include debug;
-      @include relative;
+      justify-content: space-between;
       margin-bottom: 70px;
 
       @media (max-width: 640px) {
@@ -49,20 +49,16 @@
     }
   } // Footer__row
 
-  &__row--top {
-    // @include debug;
-    justify-content: space-between;
-  }
-
   &__services,
   &__service-row {
     display: flex;
   }
 
   &__services {
+    // @include debug;
     @media (max-width: 1000px) {
       width: 100%;
-      justify-content: center;
+      justify-content: space-between;
     }
     @media (max-width: 640px) {
       display: block;
@@ -70,14 +66,17 @@
   } // services
 
   &__service-row {
-    width: 100%;
+    // @include debug(green);
+    @media (min-width: 641px) and (max-width: 1000px) {
+      @include size(50%, null);
+    }
 
-    @media (max-width: 640px) {
-      &:nth-of-type(2) {
+    &:last-child {
+      @media (max-width: 640px) {
         margin-top: 30px;
       }
     }
-  } // service row
+  } // service-row
 }
 
 // =======================================
@@ -111,7 +110,9 @@
   }
 
   &--contact {
-    @include size(180px, null);
+    @media (min-width: 1000px) {
+      @include size(180px, null);
+    }
   }
 
   @media (max-width: 1000px) {
@@ -121,7 +122,7 @@
       width: 100%;
     }
   }
-}
+} // service
 
 // =======================================
 // custom select

@@ -1,7 +1,7 @@
   <footer class="footer">
     <div class="l-center">
       <!-- top -->
-      <div class="footer__row footer__row--top">
+      <div class="footer__row">
         <!-- locale -->
         <div class="footer__locale">
           <a href="http://osci.kr/main.php" target="_blank">
@@ -192,26 +192,26 @@
   }());
 
   // 국문 영문
-  (function() {
-    var langEl = document.querySelector('.js-lang');
-    var currentLangEl = langEl.querySelector('.js-current-lang');
+  // (function() {
+  //   var langEl = document.querySelector('.js-lang');
+  //   var currentLangEl = langEl.querySelector('.js-current-lang');
 
-    var getLocale = function () {
-      return location.pathname.indexOf('en') > -1 ? 'en' : 'ko';
-    };
+  //   var getLocale = function () {
+  //     return location.pathname.indexOf('en') > -1 ? 'en' : 'ko';
+  //   };
 
-    var setLocale = function(lang) {
-      $.i18n({
-        locale: lang
-      })
-      .load({
-        ko: "./i18n/ko.json",
-        en: "./i18n/en.json"
-      })
-      .done(function () {
-        $("body").i18n();
-      });
-    };
+  //   var setLocale = function(lang) {
+  //     $.i18n({
+  //       locale: lang
+  //     })
+  //     .load({
+  //       ko: "./i18n/ko.json",
+  //       en: "./i18n/en.json"
+  //     })
+  //     .done(function () {
+  //       $("body").i18n();
+  //     });
+  //   };
     
     var getGnbLocale = function(lang) {
       currentLangEl.textContent = lang === 'en' ? 'ENG' : 'KOR';        

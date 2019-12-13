@@ -103,6 +103,7 @@
   @include relative;
 
   display: inline-block;
+  max-width: 100%;
   -webkit-box-shadow: -17px 27px 23px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: -17px 27px 23px 0px rgba(0, 0, 0, 0.2);
   box-shadow: -17px 27px 23px 0px rgba(0, 0, 0, 0.2);
@@ -116,8 +117,6 @@
   }
 
   @media ($query-mobile) {
-    left: 50%;
-    transform: translateX(-50%);
     box-shadow: none;
 
     .architecture--wasup &,

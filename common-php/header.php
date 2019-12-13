@@ -12,12 +12,12 @@
   $locale =  (substr($_SERVER['REQUEST_URI'], 1, 2) === 'en') ? 'en' : 'ko';
   
   // logo click 했을때 
-  $root_url = $locale === 'en' ? '/'.$locale : '/';
+  $root_url = $locale === 'en' ? '/'.$locale.'/test/' : '/test/';
 
   // gnb 국문 / 영문 클릭했을때
   $query_string = $_SERVER['QUERY_STRING'] ? '?'.$_SERVER['QUERY_STRING'] : '';
-  $ko_url = '/'.basename($_SERVER['PHP_SELF']).$query_string;
-  $en_url = '/en/'.basename($_SERVER['PHP_SELF']).$query_string;
+  $ko_url = '/test/'.basename($_SERVER['PHP_SELF']).$query_string;
+  $en_url = '/en/test/'.basename($_SERVER['PHP_SELF']).$query_string;
   
 ?>
 <!DOCTYPE html>

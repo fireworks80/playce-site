@@ -1,6 +1,6 @@
-node_modules
+/node_modules
 *.mp4
-style-backup
-icons
-pdf
+/style-backup
+/icons
+/pdf
 .DS_Store

@@ -22,6 +22,13 @@
       $header_hook = '';
   }
 
+  // 현재 페이지의 gnb 링크에 bold 처리를 위해 현재
+  // 페이지가 맞는지 
+  // @return true : 1, false: ''
+  function isCurrentPage($curr, $page_name) {
+    return $curr === $page_name ? true : false;
+  }
+
 ?>
 <!-- .show-gnb으로 gnb 여닫기 모바일에서.. -->
 <header class="header js-header <?php echo $header_hook; ?>">
@@ -35,7 +42,7 @@
       <ul class="gnb__list gnb__list--main">
         <!-- is-active 시 .callout 이 오픈 -->
         <li class="gnb__item has-callout">
-          <span class="gnb__link js-has-callout" data-i18n="product">제품</span>
+          <span class="gnb__link js-has-callout <?php echo (isCurrentPage($current_page[0], 'wasup') || isCurrentpage($current_page[0], 'roro')) ? 'gnb__link--current': ''; ?>" data-i18n="product">제품</span>
           <div class="callout">
             <div class="callout__inner">
               <!-- wasup -->
@@ -81,10 +88,10 @@
             </div>
           </div><!-- // callout -->
         </li>
-        <li class="gnb__item"><a data-i18n="partner" class="gnb__link" href="./partner.html">파트너</a></li>
-        <li class="gnb__item"><a data-i18n="resource" class="gnb__link" href="./resource.html">리소스</a></li>
-        <li class="gnb__item"><a data-i18n="support" class="gnb__link" href="./support.html">고객지원</a></li>
-        <li class="gnb__item"><a data-i18n="freeStart" class="gnb__link" href="./free-start.html">무료로 시작</a></li>
+        <li class="gnb__item"><a data-i18n="partner" class="gnb__link <?php echo isCurrentPage($current_page[0], 'partner') ? 'gnb__link--current' : ''; ?>" href="./partner.html">파트너</a></li>
+        <li class="gnb__item"><a data-i18n="resource" class="gnb__link <?php echo isCurrentPage($current_page[0], 'resource') ? 'gnb__link--current' : ''; ?>" href="./resource.html">리소스</a></li>
+        <li class="gnb__item"><a data-i18n="support" class="gnb__link <?php echo isCurrentPage($current_page[0], 'support') ? 'gnb__link--current' : ''; ?>" href="./support.html">고객지원</a></li>
+        <li class="gnb__item"><a data-i18n="freeStart" class="gnb__link <?php echo isCurrentPage($current_page[0], 'free-start') ? 'gnb__link--current' : ''; ?>" href="./free-start.html">무료로 시작</a></li>
       </ul>
       <ul class="gnb__list gnb-etc">
         <li class="gnb__item"><a data-i18n="inquiry" class="gnb__link" href="https://jira.osci.kr/servicedesk/customer/portal/21" target="_blank">문의하기</a></li>

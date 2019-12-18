@@ -48,7 +48,7 @@
   <body>
     <div class="banner js-banner" data-collapsed="false">
       <div class="l-center">
-        <a class="banner-anchor" href="https://www.dailysecu.com/news/articleView.html?idxno=81596" target="_blank">
+        <a class="banner-anchor" href="http://bit.ly/2RIN2cp" target="_blank">
           <img class="banner__pc-img" src="./images/top-banner2x.png" alt="">
           <img class="banner__m-img" src="./images/top-banner2x-m.png" alt="">
         </a>

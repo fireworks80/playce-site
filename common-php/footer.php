@@ -83,10 +83,11 @@
       
       <!-- bottom -->
       <div class="footer__row">
-        <div class="js-select select ">
+        <div class="js-select select">
             <span class="select__current-text">Family Site</span>
             <ul class="select__list">
-              <li><a href="http://osci.kr/main.php" target="_blank">Open Source Consulting</a></li>
+              <li><a href="http://osci.kr/main.php" target="_blank">오픈소스컨설팅</a></li>
+              <li><a href="https://www.sharingtechlabs.com" target="_blank">열린기술공방</a></li>
             </ul>
           </div>
       </div>
@@ -149,45 +150,44 @@
   // 모바일일때 gnb 여닫기
   (function() {
     'use strict';
-    var wrap = document.querySelector('.js-wrap');
-    var hamburger = wrap.querySelector('.js-hamburger');
-    var close = wrap.querySelector('.js-gnb__close');
-    var gnb = wrap.querySelector('.gnb');
-    var gnbItems = Array.prototype.slice.call(gnb.querySelectorAll('.gnb__item'));
+    var mobileGnb = function() {
+      var wrap = document.querySelector('.js-wrap');
+      var hamburger = wrap.querySelector('.js-hamburger');
+      var close = wrap.querySelector('.js-gnb__close');
+      var gnb = wrap.querySelector('.gnb');
+      var gnbItems = Array.prototype.slice.call(gnb.querySelectorAll('.gnb__item'));
 
-    hamburger.addEventListener('click', function() {
-      document.body.classList.add('show-gnb');
-    });
+      hamburger.addEventListener('click', function() {
+        document.body.classList.add('show-gnb');
+      });
 
-    close.addEventListener('click', function() {
-      document.body.classList.remove('show-gnb');
-    });
-
-    // 2depth 토글
-
-    gnb.addEventListener('click', function(e) {
-      var target = e.target;
-
-      if (!target.classList.contains('js-has-callout')) {
+      close.addEventListener('click', function() {
         document.body.classList.remove('show-gnb');
-      } else {
-        target.parentElement.classList.toggle('is-active');
-      }
-    });
-    
+      });
 
-    // custion select
-    var onCustomSelectHandler = function() {
-      var selectEl = document.querySelector('.js-select');
+      // 2depth 토글
+      gnb.addEventListener('click', function(e) {
+        var target = e.target;
 
-      selectEl.addEventListener('click', function(e) {
-        var wrap = e.target.parentElement;
+        if (!target.classList.contains('js-has-callout')) return;
 
-        wrap.classList.contains('is-active') ? wrap.classList.remove('is-active') : wrap.classList.add('is-active');
+          target.parentElement.classList.toggle('is-active');
       });
     };
 
-    document.addEventListener('DOMContentLoaded', onCustomSelectHandler);
+    // custion select
+    var familySite = function() {
+      var wrapEl = document.querySelector('.js-select');
+
+      var collapseList = function() {
+        wrapEl.classList.contains('is-active') ? wrapEl.classList.remove('is-active') : wrapEl.classList.add('is-active');
+      };
+
+      wrapEl.addEventListener('click', collapseList);
+    };
+
+    mobileGnb();    
+    familySite();
 
   }());
 

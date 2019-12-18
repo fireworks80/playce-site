@@ -151,32 +151,30 @@
   // 모바일일때 gnb 여닫기
   (function() {
     'use strict';
-    var wrap = document.querySelector('.js-wrap');
-    var hamburger = wrap.querySelector('.js-hamburger');
-    var close = wrap.querySelector('.js-gnb__close');
-    var gnb = wrap.querySelector('.gnb');
-    var gnbItems = Array.prototype.slice.call(gnb.querySelectorAll('.gnb__item'));
+    var mobileGnb = function() {
+      var wrap = document.querySelector('.js-wrap');
+      var hamburger = wrap.querySelector('.js-hamburger');
+      var close = wrap.querySelector('.js-gnb__close');
+      var gnb = wrap.querySelector('.gnb');
+      var gnbItems = Array.prototype.slice.call(gnb.querySelectorAll('.gnb__item'));
 
-    hamburger.addEventListener('click', function() {
-      document.body.classList.add('show-gnb');
-    });
+      hamburger.addEventListener('click', function() {
+        document.body.classList.add('show-gnb');
+      });
 
-    close.addEventListener('click', function() {
-      document.body.classList.remove('show-gnb');
-    });
-
-    // 2depth 토글
-
-    gnb.addEventListener('click', function(e) {
-      var target = e.target;
-
-      if (!target.classList.contains('js-has-callout')) {
+      close.addEventListener('click', function() {
         document.body.classList.remove('show-gnb');
-      } else {
-        target.parentElement.classList.toggle('is-active');
-      }
-    });
-    
+      });
+
+      // 2depth 토글
+      gnb.addEventListener('click', function(e) {
+        var target = e.target;
+
+        if (!target.classList.contains('js-has-callout')) return;
+
+          target.parentElement.classList.toggle('is-active');
+      });
+    };
 
     // custion select
     var familySite = function() {
@@ -189,6 +187,7 @@
       wrapEl.addEventListener('click', collapseList);
     };
 
+    mobileGnb();    
     familySite();
 
   }());

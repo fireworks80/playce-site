@@ -174,7 +174,8 @@ body.show-gnb {
     // @include debug;
     padding: 10px 18px;
 
-    &:hover {
+    &:hover,
+    &--current {
       font-weight: bold;
     }
   }
@@ -193,7 +194,7 @@ body.show-gnb {
     background-color: transparent;
     border: 0;
   }
-
+  // mobile =======================================================
   @media ($query-mobile) {
     @include fixed($top: 0, $left: 100%);
     @include size(100%, 100%);

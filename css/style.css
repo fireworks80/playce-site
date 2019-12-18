@@ -1414,7 +1414,7 @@ body.show-gnb {
 .gnb__link {
   padding: 10px 18px;
 }
-.gnb__link:hover {
+.gnb__link:hover, .gnb__link--current {
   font-weight: bold;
 }
 .gnb-etc {

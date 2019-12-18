@@ -98,7 +98,7 @@
   "price.list2.item1": "SaaS 형태의 서버 마이그레이션",
   "price.list2.item2": "퍼블릭 접근 불가능 환경",
   "price.list2.item3": "VPN Connection 필요",
-  "vat2": "(서버 설치 배용 및 VAT 별도)",
+  "vat2": "(서버 설치 비용 및 VAT 별도)",
 
   "price.list3.item1": "사용자 On-premise 환경에",
   "price.list3.item2": "직접 설치하여 마이그레이션",

@@ -84,7 +84,7 @@
       
       <!-- bottom -->
       <div class="footer__row">
-        <div class="js-select select ">
+        <div class="js-select select">
             <span class="select__current-text">Family Site</span>
             <ul class="select__list">
               <li><a href="https://www.sharingtechlabs.com" target="_blank">열린기술공방</a></li>
@@ -179,17 +179,17 @@
     
 
     // custion select
-    var onCustomSelectHandler = function() {
-      var selectEl = document.querySelector('.js-select');
+    var familySite = function() {
+      var wrapEl = document.querySelector('.js-select');
 
-      selectEl.addEventListener('click', function(e) {
-        var wrap = e.target.parentElement;
+      var collapseList = function() {
+        wrapEl.classList.contains('is-active') ? wrapEl.classList.remove('is-active') : wrapEl.classList.add('is-active');
+      };
 
-        wrap.classList.contains('is-active') ? wrap.classList.remove('is-active') : wrap.classList.add('is-active');
-      });
+      wrapEl.addEventListener('click', collapseList);
     };
 
-    document.addEventListener('DOMContentLoaded', onCustomSelectHandler);
+    familySite();
 
   }());
 

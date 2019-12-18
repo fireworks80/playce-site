@@ -53,7 +53,7 @@
                 </a>
                 <ul class="callout__list js-drop-down">
                   <li><a class="callout__link" data-i18n="feature" href="./wasup.html#feature">특장점</a></li>
-                  <li><a class="callout__link" data-i18n="case" href="./wasup.html#case">고객사례</a></li>
+                  <li><a class="callout__link" data-i18n="Our-Customers" href="./wasup.html#case">고객사례</a></li>
                   <li><a class="callout__link" data-i18n="function" href="./wasup.html#function">주요기능</a></li>
                   <li>
                     <a class="callout__link" data-i18n="subscription" href="./wasup.html#subscription">서브스크립션</a>
@@ -74,7 +74,7 @@
                     <a class="callout__link" data-i18n="feature" href="./roro.html#feature">특장점</a>
                   </li>
                   <li>
-                    <a class="callout__link" data-i18n="case" href="./roro.html#case">고객사례</a>
+                    <a class="callout__link" data-i18n="Our-Customers" href="./roro.html#case">고객사례</a>
                   </li>
                   <li>
                     <a class="callout__link" data-i18n="function" href="./roro.html#function">주요기능</a>

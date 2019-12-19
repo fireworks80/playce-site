@@ -1669,11 +1669,6 @@ body.show-gnb {
   display: none;
 }
 
-[lang=en] .not-ko,
-[lang=ko] .not-eng {
-  display: flex;
-}
-
 .footer {
   padding-bottom: 70px;
   background-color: #e5e9ed;

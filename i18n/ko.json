@@ -22,7 +22,6 @@
 	"tech-support2": "기술 지원",
 	"faq": "자주 묻는 질문",
 	"faq2": "자주 묻는 질문",
-	"architecture": "아키텍처",
 	"detailView": "자세히 보기",
 	"support-ok": "지원",
 	"support-not": "미지원",
@@ -66,6 +65,7 @@
 	"wasup-why3-tit": "클라우드 환경에 최적화",
 	"wasup-why3-item1": "클라우드 도입 시의 운영 관리 어려움 해결",
 	"wasup-why3-item2": "클라우드 환경에 적합한 운영 확장성 제공",
+
 	"wasup-feature-desc": "빠르게 확장 가능하며, <span class=\"line-brake\"></span><em>신속한 장애 진단과 장애에<br /> 선대응할 수 있는 관리 기능</em>을 제공합니다",
 	"wasup-feature-prd1-tit": "쉽고 차별화된 관리 기능",
 	"wasup-feature-prd1-item1": "멀티 서버 및 클라우드 기반의 운영 최적화",
@@ -116,6 +116,8 @@
 	"wasup-fn-prd3-item1": "서버 설치 및 제어 등의 작업에 대한 이력 관리, <br /> 복원 기능 지원",
 	"wasup-fn-prd3-item2": "역할별 권한 부여가 가능한 사용자 관리 기능",
 	"wasup-fn-prd3-item3": "시스템의 버전 관리, 패치 기능 제공",
+
+	"architecture": "아키텍처",
 	"architecture-desc": "시스템의 일관성을 유지할 수 있도록 세션 클러스터링 기능을 <br /> 제공하며 운영 오류를 최소화하여 효율적인 운영을 돕습니다.",
 	"spec-tit": "표준 지원 명세",
 	"spec-desc": "Java SE 6, 7, 8의 주요 표준 Specification을 제공합니다",
@@ -151,6 +153,7 @@
 	"scope-td13": "영업일 기준 4시간 내",
 	"scope-td14": "오프라인 응답 시간",
 	"scope-td15": "영업일 기준 8시간 내",
+	"learn-less": "자세히 보기",
 	"experience-wasup-p": "지금 바로 <em>Playce WASup 제품을 무료로</em> 체험해 볼 수 있습니다.",
 
 	"roro-tit": "Playce RoRo는<br />Linux / Unix 로 구축된<br /><em class=\"hero__em\">AS-IS 인프라를 클라우드로<br /> 전환해주는 솔루션입니다.</em>",

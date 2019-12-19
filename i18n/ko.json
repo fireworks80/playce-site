@@ -233,7 +233,7 @@
 	"business-item4": "세일즈/제품 교육",
 	"business-item5": "파트너 세일즈 워크샵 참여",
 	"business-item6": "인센티브 지급",
-	
+
 	"tech-tit": "기술 지원",
 	"tech-item1": "테스트, 데모용 라이선스 제공",
 	"tech-item2": "기술 콘텐츠 제공",
@@ -259,18 +259,12 @@
 	"resource-release": "Playce WASup v1.0.0 릴리즈 노트",
 	"resource-file": "Playce WASup v1.0.0 설치 파일",
 	"resource-m": "*PC 버전만 다운로드 가능합니다.",
-	"resource-guide2": "Playce WASup v1.0.0 설치 가이드 (국문)",
+
 	"resource-guide3": "Playce WASup v1.0.0 사용자 가이드 (국문)",
 	"resource-file-mv": "문서 및 동영상",
-	"resource-guide4": "Playce WASup v1.0.0 브로슈어 (국문)",
 	"resource-guide5": "Playce WASup v1.0.0 브로슈어 (영문)",
 	"resource-guide6": "새로워진 Playce WASup을 만나보세요! - 사용 가이드",
-	"resource-guide7": "Playce RoRo 브로슈어 (국문)",
-	"resource-guide8": "Playce RoRo 사용자 가이드",
-	"resource-guide9": "새로워진 Playce RoRo를 만나보세요! - 사용 가이드",
-	"resource-guide10": "AWS 환경에서 Atlassian 구축하기 (with Playce RoRo)",
 	"document": "문서",
-	"resource-guide11": "오픈소스컨설팅 회사소개 브로슈어",
 
 	"support-tit": "<em>오픈소스컨설팅은 고객의 원활한 제품 사용을 위해</em> 고객지원에 적극적으로 임하고 있습니다.",
 	"support-desc": "<em>Playce Support</em>란 고객의 문제 해결을 위해 운영되는 고객지원 서비스로,<br /> 보다 신속 정확하게 고객 문의에 대한 응대, 장애 처리를 위한 기술을 지원합니다.",

@@ -496,6 +496,13 @@ body.show-gnb {
   }
 } // snb
 
-[lang='en'] .not-eng {
+
+[lang='en'] .not-eng, 
+[lang='ko'] .not-ko { 
   display: none;
+}
+
+[lang='en'] .not-ko,
+[lang='ko'] .not-eng {
+  display: flex;
 }

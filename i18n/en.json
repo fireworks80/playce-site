@@ -292,12 +292,15 @@
 	"resource-guide6": "새로워진 Playce WASup을 만나보세요! - 사용 가이드",
 	"document": "문서",
 
-	"support-tit": "<em>오픈소스컨설팅은 고객의 원활한 제품 사용을 위해</em> 고객지원에 적극적으로 임하고 있습니다.",
-	"support-desc": "<em>Playce Support</em>란 고객의 문제 해결을 위해 운영되는 고객지원 서비스로,<br /> 보다 신속 정확하게 고객 문의에 대한 응대, 장애 처리를 위한 기술을 지원합니다.",
-	"go-support": "Playce Support 가기",
-	"supprot-tech-inquiry": "기술 지원 문의",
-	"faq-desc": "Playce Support에 문의 전 FAQ 내용을 확인해 보세요.",
-	"exp-support-p": "Playce 제품을 <em>무료로 체험해보세요!</em>",
+	"support-tit": "Open Source Consulting actively supports customers for smooth product use experience.",
+	"support-desc": "Playce Support is a customer support service operated to solve customer problems and provides technical support for responding to customer inquiries and troubleshooting in an accurate and prompt fashion.",
+	"go-support": "Go to the Playce Support",
+
+	"supprot-tech-inquiry": "Technical Support Inquiry",
+	"link-detail2": "Go to the Technical Support",
+	"faq-desc": "Please check FAQs before contacting Playce Support.",
+	"go-to-faq": "Go to the FAQs",
+	"exp-support-p": "Try Playce product for free today</em>",
 	"exp-support-p2": "Playce 제품의 무료 체험을 원하시나요? 신청 후 24시간 안에 해당 메일로 정보를 보내드립니다.",
 
 	"free-desc": "<em>Playce WASup을 무료로 사용할 수 있는 Trial Key를 제공합니다.</em> Trial Key는 기능상의 제한이 없으며 최신 버전으로 사용 가능합니다.",

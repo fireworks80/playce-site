@@ -156,23 +156,51 @@
       var hamburger = wrap.querySelector('.js-hamburger');
       var close = wrap.querySelector('.js-gnb__close');
       var gnb = wrap.querySelector('.gnb');
-      var gnbItems = Array.prototype.slice.call(gnb.querySelectorAll('.gnb__item'));
 
+      
+      var hideGnb = function() {
+        document.body.classList.remove('show-gnb');
+      };
+      
+      var toggleCallout = function(target) {
+        target.classList.contains('is-active') ? target.classList.remove('is-active') : target.classList.add('is-active');
+      };
+      
+      
+      var resetGnb = function() {
+        var hasCalloutEls = gnb.querySelectorAll('.has-callout');
+        var arrHasCalloutEls = Array.prototype.slice.call(hasCalloutEls);
+        
+        arrHasCalloutEls.forEach(function(callout, idx) {
+          callout.classList.remove('is-active');
+        });
+        
+        hideGnb();
+      };
+      
+      // 모바일 때때
       hamburger.addEventListener('click', function() {
         document.body.classList.add('show-gnb');
       });
-
+      
       close.addEventListener('click', function() {
-        document.body.classList.remove('show-gnb');
+        hideGnb();
       });
 
+      // 모바일 / pc 공통
       // 2depth 토글
       gnb.addEventListener('click', function(e) {
         var target = e.target;
 
-        if (!target.classList.contains('js-has-callout')) return;
+        // callout toggle
+        if (target.classList.contains('js-has-callout')) {
+          toggleCallout(target.parentElement);
+        }
 
-          target.parentElement.classList.toggle('is-active');
+        // callout__link클릭시 callout, gnb hide
+        if (target.classList.contains('callout__link')) {
+          resetGnb();
+        }
       });
     };
 

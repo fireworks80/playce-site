@@ -144,6 +144,7 @@
 // 특장점
 // ======================================================
 .feature {
+  @include relative;
   padding-bottom: 200px;
   line-height: 2;
 
@@ -316,6 +317,7 @@
 
 // function
 .function--wasup {
+  
   padding-top: 318px;
   padding-bottom: 207px;
   background-image: url($path-img+'function-bg.png');
@@ -896,6 +898,7 @@ $noti-step4-end: translateY(300%);
 // subscription
 // ====================================================
 .subscription {
+
   &__tit {
     @include section-heading(#fff) {
       margin-bottom: 30px;

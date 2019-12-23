@@ -18,7 +18,7 @@
 
   &__tit {
     font-size: rem(23px);
-    font-weight: bold;
+    font-weight: 500;
   }
 
   &__desc {
@@ -43,5 +43,10 @@
     &__desc {
       line-height: 1.9;
     }
+  }
+
+  [lang='en'] &__desc {
+    font-size: 14px;
+    line-height: 1.8;
   }
 }

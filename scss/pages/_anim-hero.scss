@@ -74,6 +74,12 @@ $translateY-hero-comm: 10deg;
     font-size: rem(37px);
     font-weight: 500;
     line-height: 1.5;
+
+    [lang='en'] & {
+      font-size: rem(34px);
+      line-height: 1.5;
+      letter-spacing: -0.4px;
+    }
   }
 
   &__desc {
@@ -81,6 +87,11 @@ $translateY-hero-comm: 10deg;
     padding-right: percent(70px, 450px);
     font-size: rem(19px);
     line-height: 1.9;
+
+    [lang='en'] & {
+      font-size: rem(18px);
+      line-height: 1.8;
+    }
   }
 
   &-motion-panel-wrap {
@@ -95,7 +106,7 @@ $translateY-hero-comm: 10deg;
 .anim-dashboard,
 .graph {
   // @include debug;
-  @include relative;
+  // @include relative;
   @include size(720px, null);
   margin: 0 auto;
 

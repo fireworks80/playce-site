@@ -101,7 +101,7 @@
             <div class="service">
               <h2 class="service__tit" data-i18n="support">고객지원</h2>
               <ul class="service__list">
-                <li><a href="https://jira.osci.kr/servicedesk/customer/portal/21" target="_blank" data-i18n="product-inquiry2">제품 문의</a></li>
+                <li><a href="https://jira.osci.kr/servicedesk/customer/portal/21" target="_blank" data-i18n="product-inquires-foot">제품 문의</a></li>
                 <li><a href="https://jira.osci.kr/servicedesk/customer/portal/21" target="_blank" data-i18n="tech-support2">기술 지원</a></li>
                 <li><a href="https://osci.atlassian.net/wiki/spaces/PWUG/pages/19464217/FAQ" target="_blank" data-i18n="faq2">자주 묻는 질문</a></li>
                 <li><a href="./free-start.html" data-i18n="freeStart">무료로 시작</a></li>
@@ -293,8 +293,11 @@
       langEl.classList.remove('is-active');
     };
 
-    setLocale(getLocale());
+    // setLocale(getLocale());
+    setLocale('en');
     getGnbLocale(getLocale());
+
+    window.setLocale = setLocale;
   }());
 
   (function() {

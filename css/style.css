@@ -569,7 +569,7 @@ body {
 }
 .card__tit {
   font-size: 2.3rem;
-  font-weight: bold;
+  font-weight: 500;
 }
 .card__desc {
   font-size: 1.5rem;
@@ -592,6 +592,10 @@ body {
   .card__desc {
     line-height: 1.9;
   }
+}
+[lang=en] .card__desc {
+  font-size: 14px;
+  line-height: 1.8;
 }
 
 .link-detail {
@@ -2135,11 +2139,20 @@ body.show-gnb {
   font-weight: 500;
   line-height: 1.5;
 }
+[lang=en] .hero__tit {
+  font-size: 3.4rem;
+  line-height: 1.5;
+  letter-spacing: -0.4px;
+}
 .hero__desc {
   margin-bottom: 58px;
   padding-right: 15.5555555556%;
   font-size: 1.9rem;
   line-height: 1.9;
+}
+[lang=en] .hero__desc {
+  font-size: 1.8rem;
+  line-height: 1.8;
 }
 .hero-motion-panel-wrap {
   position: relative;
@@ -2147,7 +2160,6 @@ body.show-gnb {
 
 .anim-dashboard,
 .graph {
-  position: relative;
   width: 720px;
   margin: 0 auto;
   border-radius: 16px;
@@ -2346,6 +2358,10 @@ body.show-gnb {
 .lineup-wasup .l-center {
   position: relative;
 }
+.lineup-wasup .lineup-anim-wrap {
+  position: absolute;
+  right: 0;
+}
 .lineup-wasup__tit-opacity {
   color: rgba(255, 255, 255, 0.7);
 }
@@ -2453,7 +2469,8 @@ body.show-gnb {
     margin-bottom: 60px;
   }
 
-  .lineup-wasup .hero__tit .line-brake {
+  .lineup-wasup .hero__tit .line-brake,
+.lineup-wasup .hero__desc .line-brake {
     display: none;
   }
 
@@ -2583,6 +2600,7 @@ body.show-gnb {
 }
 .tab-list .is-active a {
   opacity: 1;
+  font-weight: 500;
 }
 @media (max-width:960px) {
   .tab-list {
@@ -2627,11 +2645,11 @@ body.show-gnb {
   content: "";
 }
 .tab-content--wasup {
-  color: #788ece;
+  color: #3d5399;
   text-align: left;
 }
 .tab-content--wasup em {
-  color: #3d5399;
+  color: #788ece;
 }
 .tab-content--wasup::before {
   background-image: url(../images/sprite/sprite-icons-2x.png);
@@ -2642,11 +2660,11 @@ body.show-gnb {
   left: 5.6140350877%;
 }
 .tab-content--roro {
-  color: #438dd6;
+  color: #2557a0;
   text-align: right;
 }
 .tab-content--roro em {
-  color: #2557a0;
+  color: #438dd6;
 }
 .tab-content--roro::before {
   background-image: url(../images/sprite/sprite-icons-2x.png);
@@ -2686,6 +2704,11 @@ body.show-gnb {
     float: none;
   }
 }
+[lang=en] .tab-content {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  letter-spacing: -0.4px;
+}
 
 .customer-service {
   margin-bottom: -27px;
@@ -2703,6 +2726,9 @@ body.show-gnb {
     margin-bottom: 15px;
     font-size: 16px;
   }
+}
+[lang=en] .customer-service__tit {
+  margin-bottom: 60px;
 }
 .customer-service__desc {
   margin-bottom: 60px;

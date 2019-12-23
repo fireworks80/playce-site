@@ -8,9 +8,9 @@
     var goToSection = function(hash) {
       var snbEl = document.querySelector('.js-snb');
       var snbHeight = snbEl.getBoundingClientRect().height;
-      var sectionElOffsetTop = document.querySelector(hash).offsetTop;
-      var scrollTop = sectionElOffsetTop - snbHeight;
-
+      var sectionRelativeTop = document.querySelector(hash).getBoundingClientRect().top;
+      var pageYoffset = window.pageYOffset;
+      var scrollTop = (pageYoffset + sectionRelativeTop) - snbHeight;
       Playce.quick(parseInt(scrollTop));
       
     };

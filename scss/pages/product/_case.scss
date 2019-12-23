@@ -4,6 +4,10 @@
   padding-top: 130px;
   background-color: #fafafc;
 
+  .l-center {
+    @include relative;
+  }
+
   &--roro {
     padding-bottom: 60px;
   }

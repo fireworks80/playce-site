@@ -1248,7 +1248,13 @@ body {
   }
 }
 
+.anchor {
+  position: absolute;
+  top: -50px;
+}
+
 .l-center {
+  position: relative;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -2994,6 +3000,9 @@ body.show-gnb {
   padding-top: 130px;
   background-color: #fafafc;
 }
+.case .l-center {
+  position: relative;
+}
 .case--roro {
   padding-bottom: 60px;
 }
@@ -3816,6 +3825,7 @@ body.show-gnb {
 }
 
 .feature {
+  position: relative;
   padding-bottom: 200px;
   line-height: 2;
 }

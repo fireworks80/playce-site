@@ -66,7 +66,7 @@
 	"wasup-why3-tit": "클라우드 환경에 최적화",
 	"wasup-why3-item1": "클라우드 도입 시의 운영 관리 어려움 해결",
 	"wasup-why3-item2": "클라우드 환경에 적합한 운영 확장성 제공",
-
+	
 	"wasup-feature-desc": "빠르게 확장 가능하며, <span class=\"line-brake\"></span><em>신속한 장애 진단과 장애에<br /> 선대응할 수 있는 관리 기능</em>을 제공합니다",
 	"wasup-feature-prd1-tit": "쉽고 차별화된 관리 기능",
 	"wasup-feature-prd1-item1": "멀티 서버 및 클라우드 기반의 운영 최적화",
@@ -82,7 +82,8 @@
 	"wasup-feature-prd2-item3": "클라우드 환경에 최적화된 라이선스 구조",
 	"guide-tit": "사용자가이드 영상",
 	"guide-desc-wasup": "간편한 통합관리 기능을 경험해 보세요",
-	"wasup-function-desc": "설치부터 구성, 세션 클러스터링,<span class=\"line-brake\"></span> 장애 진단 및<span class=\"line-brake\"></span>대응까지 다양한<span class=\"line-brake\"></span> 기능을 제공합니다",
+	"wasup-func-tit" : "주요기능",
+	"wasup-func-desc": "설치부터 구성, 세션 클러스터링,<span class=\"line-brake\"></span> 장애 진단 및<span class=\"line-brake\"></span>대응까지 다양한<span class=\"line-brake\"></span> 기능을 제공합니다",
 	"wasup-wizard-tit": "편리한 Wizard 기능",
 	"wasup-wizard-desc": "웹 서버와 미들웨어 설정을 동시에 진행할 수 있는 Wizard 기능 제공",
 	"wasup-wizard-step1": "Step 1. 도메인 선택 및 신규 생성",
@@ -126,7 +127,8 @@
 	"os-item1": "Linux / Unix / Mac / Windows 등<br>Java Runtime Environment 8(JRE)<br>이상 설치가 가능한 OS",
 	"os-item2": "Web Server 설치 등 일부 기능은<br> Red Hat 계열의 Linux에서만 동작",
 	"case-desc": "Playce WASup은 GS인증을 획득한 공인된 제품으로<br><em>고객사에 안정적인 운영이 가능한 환경을 제공합니다</em>",
-	"wasup.case.quot": "“하나투어에서 운영하던 기존의 웹 서버와 WAS를 Playce WASup으로 구성하여 관리하도록 차세대 시스템을 구축하였고, 기존의 작업자가 각 시스템별로 환경 설정을 진행하던 것을 중앙의 웹 콘솔을 통해 손쉽게 구성함으로써, 전체적인 리소스 관리 효율을 향상시켰습니다.<em>웹 서버/미들웨어 제어, 모니터링을 통해 오픈소스 기반의 효율적인 운영환경을 만드는 최고의 도구입니다”</em>",
+	"wasup-case-ext1": "<em>웹 서버/미들웨어 제어, <br />모니터링을 통해</em> 오픈소스 기반의 효율적인 운영환경을 만드는 최고의 도구입니다.",
+	"wasup.case.quot": "<em>“하나투어에서 운영하던 기존의 웹 서버와 WAS를 Playce WASup으로 구성하여 관리하도록 차세대 시스템을 구축하였고, 기존의 작업자가 각 시스템별로 환경 설정을 진행하던 것을 중앙의 웹 콘솔을 통해 손쉽게 구성함으로써, 전체적인 리소스 관리 효율을 향상시켰습니다.</em>웹 서버/미들웨어 제어, 모니터링을 통해 오픈소스 기반의 효율적인 운영환경을 만드는 최고의 도구입니다”",
 	"wasup.case.quot2": "“중랑구청의 스마트시티 IoT 통합 플랫폼에 Playce WASup을 적용하여, <em>플랫폼 내부의 핵심 요소인 미들웨어를 체계적으로 관리할 수 있게 되었습니다.</em> 센서 및 디바이스 데이터를 중랑구청 IoT 서버로 전송하고 실시간 모니터링을 진행함으로써, <em>중랑구민에게 보다 안정적 서비스를 제공하게 되었습니다.</em>”",
 	"subscription-desc": "오픈소스컨설팅의 서브크립션 모델은 고객에게<br /> <em>최고 수준의 기술 지원 서비스와 최신의 소프트웨어를</em> 제공합니다.",
 	"subscription-dt1": "최신 제품 버전을 안심하고 사용",

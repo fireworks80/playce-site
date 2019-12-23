@@ -119,4 +119,13 @@
       display: none;
     }
   }
+
+  // en ver
+  // ===========================
+  [lang='en'] &__tit {
+    margin-bottom: 20px;
+    font-size: rem(23px);
+    line-height: 1.5;
+    letter-spacing: -0.4px;
+  }
 }

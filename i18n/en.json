@@ -54,8 +54,8 @@
 	"individual-info": "Privacy Policy",
 	"software": "End User License Agreement",
 
-	"wasup-tit": "Playce WASup is a WAS solution optimized for the cloud environment",
-	"wasup-desc": "Customer IT costs can be reduced to minimum by breaking away from vendor dependencies and enhancing Web and WAS features",
+	"wasup-tit": "Playce WASup is a<em class=\"hero__em\"> WAS solution optimized for</em> the cloud environment",
+	"wasup-desc": "Customer IT costs can be minimized by<br/> breaking away from vendor dependencies<br/> and enhancing Web and WAS features.",
 	"wasup-why1-tit": "Departing from Vendor Dependencies",
 	"wasup-why1-item1": "Reduce customer’s IT costs by using open source software",
 	"wasup-why1-item2": "Enhance customer IT ownership by breaking away from vendor dependencies",
@@ -68,7 +68,7 @@
 	"wasup-why3-item1": "Resolve operational management challenges when adopting cloud computing adoption of cloud computing",
 	"wasup-why3-item2": "Provide operational scalability suitable for cloud environment",
 	
-	"wasup-feature-desc": "We provide management tools to enable rapid expansion, prompt diagnosis, and preemptive action to problems.",
+	"wasup-feature-desc": "We provide management tools to enable <span class=\"line-brake\"></span><em>rapid expansion, prompt diagnosis, and preemptive action to problems</em>",
 	"wasup-feature-prd1-tit": "Easy and Differentiated Management",
 	"wasup-feature-prd1-item1": "Optimize for multi-server and cloud-based operation",
 	"wasup-feature-prd1-item2": "Integrated management and control for multiple servers",
@@ -85,7 +85,8 @@
 	"guide-tit": "User Guide Video",
 	"guide-desc-wasup": "Experience the easy-to-use feature of integration management.",
 
-	"wasup-function-desc": "Various features including convenient management from product installation to configuration, session clustering, provisioning, and more, are provided.",
+	"wasup-func-tit": "Main Function",
+	"wasup-func-desc": "Various features are provided including product installation,<span class=\"line-brake\"></span> configuration, session clustering, system failure, and provisioning",
 	"wasup-wizard-tit": "Convenient Wizard Features",
 	"wasup-wizard-desc": "Provide wizard function to configure web server and middleware",
 	"wasup-wizard-step1": "Step 1. Choose a domain and create a new one",
@@ -136,8 +137,9 @@
 	"os-item1": "OS that can install Java Runtime Environment (JRE) 8 or higher such as Linux / Unix / Mac / Windows",
 	"os-item2": "Some features, such as Web Server installation, work only on Red Hat Linux",
 
-	"case-desc": "Playce WASup is a GS certified product that provides a stable operating environment for customers.",
-	"wasup.case.quot": "“We have built a next-generation system using Playce WASup to manage the existing web server and WAS operated by Hana Tour. We were able to improve the overall efficiency of resource management by using a central web console configuration rather than the previous process where each user had to individually configure and manage each system. Playce WASup is the best tool for creating an efficient open source based operating environment through web server/middleware control and monitoring.”",
+	"case-desc": "Playce WASup is a GS certified product that provides<br/><em>a stable operating environment for customers.</em>",
+	"wasup-case-ext1": "<em>The best tool for creating an efficient open source based operating environment</em> through web server/middleware control and monitoring.",
+	"wasup.case.quot": "<em>“Playce WASup is the best tool for creating an efficient open source based operating environment through web server/middleware control and monitoring.</em> We have built a next-generation system using Playce WASup to manage the existing web server and WAS operated by Hana Tour. We were able to improve the overall efficiency of resource management by using a central web console configuration rather than having to individually configure and manage each system.”",
 	"wasup.case.quot2": "“By applying Playce WASup to Jungnang-gu office's smart city IoT integration platform, we were able to systematically manage the middleware, which is a key element in the platform. The data collected from sensors and devices are transferred to Jungnang-gu office IoT Server, and through real-time monitoring, we were able to provide more reliable services to Jungnang residents.“",
 
 	"subscription-desc": "Open Source Consulting’s subscription model provides customers with the highest level of Technical Support and the latest software.",
@@ -158,7 +160,7 @@
 	"scope-td3": "Patch files and application guide (Provide email)",
 	"scope-td4": "Product version upgrade (Provide email)",
 	"scope-td5": "Playce Support - Online (24 X 7)",
-	"scope-td6": "Phone support(Mon-Fri, AM 9시 - PM 5시)",
+	"scope-td6": "Phone support(Mon-Fri, AM 9 - PM 5)",
 	"scope-td7": "Professional engineer support (Mon~Fri. 9 AM~5 PM)",
 	"scope-td8": "Number of online support requests",
 	"scope-td9": "Unlimited",

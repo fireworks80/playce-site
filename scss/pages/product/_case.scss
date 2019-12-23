@@ -34,7 +34,7 @@
   text-align: right;
 
   .case--wasup & {
-    @include section-desc(#788ece);
+    @include section-desc(#323e51);
 
     em {
       color: #3d5399;
@@ -81,6 +81,12 @@
   p {
     @include size(percent(351px, $width), null);
     margin: 70px auto 0;
+
+    [lang='en'] & {
+      font-size: rem(29px);
+      line-height: 1.8;
+      letter-spacing: -0.4px;
+    }
   }
 
   // wasup / roro setting
@@ -117,12 +123,21 @@
   font-size: rem(16px);
   line-height: 2.38;
 
+  em {
+    font-weight: bold;
+  }
+
+  [lang='en'] & {
+    font-size: rem(16px);
+    line-height: 1.8;
+  }
+
   .case--wasup & {
     background-color: #e9eef5;
-    color: #788ece;
-
+    color: #3d5399;
+    
     em {
-      color: #3d5399;
+      color: #788ece;
     }
   } // wasup
 

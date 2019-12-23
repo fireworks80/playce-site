@@ -13,6 +13,13 @@
   color: $color;
   @content;
 
+  [lang='en'] & {
+    margin-bottom: 20px;
+    font-size: 2.3rem;
+    line-height: 1.5;
+    letter-spacing: -0.4px;
+  }
+
   @media ($query-mobile) {
     margin-bottom: 15px;
     font-size: 16px;
@@ -29,6 +36,11 @@
 
   color: $color;
   @content;
+
+  [lang='en'] & {
+    line-height: 1.8;
+    letter-spacing: -0.4px;
+  }
 
   @media ($query-mobile) {
     font-size: 20px;

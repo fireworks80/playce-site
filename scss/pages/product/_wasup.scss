@@ -868,7 +868,12 @@ $noti-step4-end: translateY(300%);
     font-size: rem(18px);
     line-height: 2.44;
     color: #a86247;
+    [lang='en'] & {
+      font-size: 16px;
+      line-height: 2;
+    }
   }
+
 
   li:nth-child(n + 2) {
     margin-top: 12px;
@@ -929,8 +934,11 @@ $noti-step4-end: translateY(300%);
     background-color: #425266;
     box-shadow: 0 16px 30px 0 #00000032;
 
+    [lang='en'] & {
+      min-height: 350px;
+    }
+
     &::before {
-      margin-left: percent(30px, 380px);
       margin-bottom: 28px;
     }
 
@@ -953,6 +961,10 @@ $noti-step4-end: translateY(300%);
 
     &__desc {
       line-height: 2.4;
+
+      [lang='en'] & {
+        line-height: 1.8;
+      }
     }
   } // card
 

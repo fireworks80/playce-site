@@ -5243,35 +5243,6 @@ body.show-gnb {
   }
 }
 
-.experience--roro {
-  padding-top: 161px;
-}
-.experience--roro .l-center {
-  padding-bottom: 149px;
-  border-bottom: 1px solid rgba(107, 117, 129, 0.3);
-}
-.experience--roro .btn-round--white2 {
-  width: 130px;
-}
-@media (max-width: 1030px) {
-  .experience--roro .l-center {
-    padding: 0 30px 80px;
-    text-align: center;
-  }
-  .experience--roro .l-left,
-.experience--roro .l-right {
-    float: none;
-  }
-}
-@media (max-width:960px) {
-  .experience--roro {
-    padding-top: 90px;
-  }
-  .experience--roro p {
-    font-size: 20px;
-  }
-}
-
 .support-hero {
   position: relative;
   background: url("../images/bg-support-hero.png") no-repeat center top;
@@ -5412,37 +5383,6 @@ body.show-gnb {
   }
 }
 
-.experience--support.experience {
-  margin-top: -20px;
-  padding-top: 124px;
-  padding-bottom: 103px;
-  background-color: #1e2839;
-  color: #d5dffa;
-}
-.experience--support.experience em {
-  color: #7c97e7;
-}
-.experience--support.experience .btn-round {
-  position: absolute;
-  top: 4px;
-  right: 0.8474576271%;
-}
-@media (max-width:960px) {
-  .experience--support.experience {
-    padding-top: 80px;
-    padding-bottom: 70px;
-    text-align: center;
-    font-size: 20px;
-  }
-  .experience--support.experience .experience__desc {
-    font-size: 16px;
-  }
-  .experience--support.experience .btn-round {
-    position: static;
-    margin-top: 40px;
-  }
-}
-
 .experience {
   font-size: 32px;
   line-height: 1.6;
@@ -5543,6 +5483,66 @@ body.show-gnb {
   }
   .experience--wasup .btn-round {
     width: 130px;
+  }
+}
+
+.experience--roro {
+  padding-top: 161px;
+}
+.experience--roro .l-center {
+  padding-bottom: 149px;
+  border-bottom: 1px solid rgba(107, 117, 129, 0.3);
+}
+.experience--roro .btn-round--white2 {
+  width: 130px;
+}
+@media (max-width: 1030px) {
+  .experience--roro .l-center {
+    padding: 0 30px 80px;
+    text-align: center;
+  }
+  .experience--roro .l-left,
+.experience--roro .l-right {
+    float: none;
+  }
+}
+@media (max-width:960px) {
+  .experience--roro {
+    padding-top: 90px;
+  }
+  .experience--roro p {
+    font-size: 20px;
+  }
+}
+
+.experience--support {
+  margin-top: -20px;
+  padding-top: 124px;
+  padding-bottom: 103px;
+  background-color: #1e2839;
+  color: #d5dffa;
+}
+.experience--support em {
+  color: #7c97e7;
+}
+.experience--support .btn-round {
+  position: absolute;
+  top: 4px;
+  right: 0.8474576271%;
+}
+@media (max-width:960px) {
+  .experience--support {
+    padding-top: 80px;
+    padding-bottom: 70px;
+    text-align: center;
+    font-size: 20px;
+  }
+  .experience--support .experience__desc {
+    font-size: 16px;
+  }
+  .experience--support .btn-round {
+    position: static;
+    margin-top: 40px;
   }
 }
 

@@ -136,4 +136,79 @@
       @include size(130px, null);
     }
   }
+} // wasup
+
+
+// roro
+// ================================================
+.experience--roro {
+  padding-top: 161px;
+
+  .l-center {
+    padding-bottom: 149px;
+    border-bottom: 1px solid rgba(107, 117, 129, 0.3);
+  }
+
+  .btn-round--white2 {
+    width: 130px;
+  }
+
+  @media (max-width: 1030px) {
+    .l-center {
+      padding: 0 30px 80px;
+      text-align: center;
+    }
+
+    .l-left,
+    .l-right {
+      float: none;
+    }
+  } // > 1030
+
+  @media ($query-mobile) {
+    padding-top: 90px;
+
+    p {
+      // line-height: 1.7;
+      font-size: 20px;
+    }
+  }
+}// roro
+
+
+// support
+// =============================================
+.experience--support {
+  margin-top: -20px;
+  padding-top: 124px;
+  padding-bottom: 103px;
+  background-color: #1e2839;
+  color: #d5dffa;
+
+  em {
+    color: #7c97e7;
+  }
+
+  .btn-round {
+    @include absolute($top: 4px, $right: percent(10px, $width-max - 20));
+  }
+
+  @media ($query-mobile) {
+    padding-top: 80px;
+    padding-bottom: 70px;
+    text-align: center;
+    font-size: 20px;
+
+    .experience__desc {
+      font-size: 16px;
+      // line-height: 1.6;
+    }
+
+    .btn-round {
+      position: static;
+      margin-top: 40px;
+    }
+  }
 }
+
+

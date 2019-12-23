@@ -615,39 +615,3 @@
     }
   } // > 960
 }
-
-// experience
-// ================================================
-.experience--roro {
-  padding-top: 161px;
-
-  .l-center {
-    padding-bottom: 149px;
-    border-bottom: 1px solid rgba(107, 117, 129, 0.3);
-  }
-
-  .btn-round--white2 {
-    width: 130px;
-  }
-
-  @media (max-width: 1030px) {
-    .l-center {
-      padding: 0 30px 80px;
-      text-align: center;
-    }
-
-    .l-left,
-    .l-right {
-      float: none;
-    }
-  } // > 1030
-
-  @media ($query-mobile) {
-    padding-top: 90px;
-
-    p {
-      // line-height: 1.7;
-      font-size: 20px;
-    }
-  }
-}

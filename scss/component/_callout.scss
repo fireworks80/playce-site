@@ -104,7 +104,7 @@
     font-weight: 700;
     color: $color-default;
 
-    // title, subtitle 감싼리링크 hover시
+    // title, subtitle 감싼링크 hover시
     .go-sel-page:hover & {
       color: inherit;
     }
@@ -132,8 +132,6 @@
   }
 
   &__link {
-    // @include debug;
-    // @include size(80px, null);
     line-height: 24px;
   }
 

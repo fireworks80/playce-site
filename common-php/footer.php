@@ -1,3 +1,47 @@
+<?php 
+  if ($current_page[0] === 'index' || $current_page[0] === 'wasup' || $current_page[0] === 'roro' || $current_page[0] === 'support') {
+?>
+  <!-- experience -->
+  <section class="experience experience--<?php echo $current_page[0]; if ($current_page[0] === 'support') {echo ' not-eng';} ?>">
+    <h2 class="a11y">무료로 시작</h2>
+    <div class="l-center clear-fix">
+      <?php 
+      if ($current_page[0] === 'index') { 
+        // index experience
+      ?>
+        <p data-i18n="[html]experience-index-desc1">오픈소스컨설팅의 <em>Playce 제품을<span class="line-brake"></span> 무료로</em> 시작해 보세요.</p>
+        <p class="experience__desc" data-i18n="[html]experience-index-desc2">Playce WASup과 Playce RoRo는<span class="line-brake"></span> 오픈소스 기반 솔루션으로, 언제든지<span class="line-brake"></span> 무료로 사용해 볼 수 있습니다.</p>
+        <a class="btn-round btn-round--apblue is-big" href="./free-start.html" data-i18n="freeStart">무료로 시작</a>
+      <?php 
+      } else if ($current_page[0] === 'wasup') {
+        // wasup experience
+      ?>
+        <p class="l-left" data-i18n="[html]experience-wasup-p">지금 바로 <em>Playce WASup 제품을 무료로</em> 체험해 볼 수 있습니다.</p>
+        <span class="experience__btns l-right">
+          <a class="btn-round btn-round--apblue" href="./free-start.html#playce-wasup" data-i18n="freeStart">무료로 시작</a>
+          <a class="btn-round btn-round--white2" href="https://jira.osci.kr/servicedesk/customer/portal/21" target="_blank" data-i18n="product-inquiry">제품 문의</a>
+        </span>
+      <?php 
+      } else if ($current_page[0] === 'roro') { 
+        // roro experience
+      ?>
+        <p class="l-left" data-i18n="[html]exp-roro-p">지금 바로 <em>Playce RoRo 제품을 무료로</em> 시작해보세요.</p>
+        <span class="experience__btns l-right">
+          <a class="btn-round btn-round--apblue" href="./free-start.html#playce-roro" data-i18n="freeStart">무료로 시작</a>
+          <a class="btn-round btn-round--white2" href="https://jira.osci.kr/servicedesk/customer/portal/21" target="_blank" data-i18n="product-inquiry">제품 문의</a>
+        </span>
+      <?php 
+      } else if ($current_page[0] === 'support') {
+        // support experience
+      ?>
+        <p data-i18n="[html]exp-support-p">Playce 제품을 <em>무료로 체험해보세요!</em></p>
+        <p class="experience__desc" data-i18n="exp-support-p2">Playce 제품의 무료 체험을 원하시나요? 신청 후 24시간 안에 해당 메일로 정보를 보내드립니다.</p>
+        <a class="btn-round btn-round--deep-blue is-big" href="./free-start.html" data-i18n="freeStart">무료로 시작</a>
+      <?php } ?>
+    </div>
+  </section>
+  <!-- // experience -->
+<?php }?>
   <footer class="footer">
     <div class="l-center">
       <!-- top -->

@@ -30,7 +30,7 @@
 	"family-opensource": "Open Source Consulting",
 
 	"index-wasup-tit": "<span class=\"lineup-wasup__tit-opacity\">Make your cloud <span class=\"line-brake\"></span> infrastructure more powerful through</span><span class=\"line-brake last\"></span>Web Application Server!",
-	"index-wasup-desc": "Playce WASup easily integrates and manages community open source WAS in order to reduce the client’s IT costs to minimum.",
+	"index-wasup-desc": "Playce WASup easily integrates and manages community open source <span class=\"line-brake\"></span>WAS in order to reduce the client’s IT <span class=\"line-brake\"></span>costs to minimum.",
 	"detail-wasup": "Learn more",
 	"index-roro-tit": "Fast and easy large-scale migration to the cloud!",
 	"index-roro-desc": "Playce RoRo provides fast and reliable cloud migration service through automated system diagnosis and analysis features.",

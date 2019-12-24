@@ -293,8 +293,7 @@
       langEl.classList.remove('is-active');
     };
 
-    // setLocale(getLocale());
-    setLocale('en');
+    setLocale(getLocale());
     getGnbLocale(getLocale());
 
     window.setLocale = setLocale;

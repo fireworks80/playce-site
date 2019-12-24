@@ -480,6 +480,16 @@ var caseSlider = function(wrap, opt) {
 	var $banner = $('.js-banner');
 	var $btn = $banner.find('.js-banner-btn');
 
+	var currentLang = document.documentElement.lang;
+
+	console.log(currentLang);
+
+	if (currentLang === 'en') {
+		$banner.css('display', 'none');
+		return;
+	}
+
+
 	var hideBanner = function() {
 		// $banner.data('collapsed', 'true');
 		$banner.attr('data-collapsed', 'true').slideUp();

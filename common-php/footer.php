@@ -73,7 +73,7 @@
         <div class="footer__services">
           <div class="footer__service-row">
             <div class="service">
-              <h2 class="service__tit" data-i18n="product">제품</h2>
+              <h2 class="service__tit" data-i18n="foot-product">제품</h2>
               <ul class="service__list">
                 <li><a href="./wasup.html">Playce WASup</a></li>
                 <li><a href="./roro.html">Playce RoRo</a></li>

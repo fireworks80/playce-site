@@ -42,7 +42,7 @@
       <ul class="gnb__list gnb__list--main">
         <!-- is-active 시 .callout 이 오픈 -->
         <li class="gnb__item has-callout">
-          <span class="gnb__link js-has-callout <?php echo (isCurrentPage($current_page[0], 'wasup') || isCurrentpage($current_page[0], 'roro')) ? 'gnb__link--current': ''; ?>" data-i18n="product">제품</span>
+          <span class="gnb__link js-has-callout <?php echo (isCurrentPage($current_page[0], 'wasup') || isCurrentpage($current_page[0], 'roro')) ? 'gnb__link--current': ''; ?>" data-i18n="gnb-product">제품</span>
           <div class="callout">
             <div class="callout__inner">
               <!-- wasup -->
@@ -90,7 +90,7 @@
         </li>
         <li class="gnb__item"><a data-i18n="partner" class="gnb__link <?php echo isCurrentPage($current_page[0], 'partner') ? 'gnb__link--current' : ''; ?>" href="./partner.html">파트너</a></li>
         <li class="gnb__item"><a data-i18n="resource" class="gnb__link <?php echo isCurrentPage($current_page[0], 'resource') ? 'gnb__link--current' : ''; ?>" href="./resource.html">리소스</a></li>
-        <li class="gnb__item"><a data-i18n="support" class="gnb__link <?php echo isCurrentPage($current_page[0], 'support') ? 'gnb__link--current' : ''; ?>" href="./support.html">고객지원</a></li>
+        <li class="gnb__item"><a data-i18n="gnb-support" class="gnb__link <?php echo isCurrentPage($current_page[0], 'support') ? 'gnb__link--current' : ''; ?>" href="./support.html">고객지원</a></li>
         <li class="gnb__item"><a data-i18n="freeStart" class="gnb__link <?php echo isCurrentPage($current_page[0], 'free-start') ? 'gnb__link--current' : ''; ?>" href="./free-start.html">무료로 시작</a></li>
       </ul>
       <ul class="gnb__list gnb-etc">

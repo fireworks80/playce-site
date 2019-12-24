@@ -102,10 +102,10 @@
   "wasup-ui-item2": "Single view at-a-glance of servers and resources registered to domain through Topology View",
   "wasup-ui-item3": "Provide switch function to Light/Dark Mode of browser",
 
-  "dash-tit": "Real-Time Monitoring Dashboard",
-  "dash-item1": "View to current alarms and monitoring key information through intuitive dashboard",
-  "dash-item2": "Realtime monitoring system through own agent, JMX, and ScouterX APM",
-  "dash-item3": "Data collection and statistical information display about operating system status (CPU, memory, disk, network, etc.)",
+  "wasup-dash-tit": "Real-Time Monitoring Dashboard",
+  "wasup-dash-item1": "View to current alarms and monitoring key information<br /> through intuitive dashboard",
+  "wasup-dash-item2": "Realtime monitoring system through own<br /> agent, JMX, and ScouterX APM",
+  "wasup-dash-item3": "Data collection and statistical information display about<br /> operating system status (CPU, memory, disk, network, etc.)",
 
   "notifi-tit": "Pre-response and Tracking of Failures",
   "notifi-item1": "Optimized failure event rule registration for the system",
@@ -140,8 +140,8 @@
   "wasup-case-desc": "Playce WASup is a GS certified product that provides<br/><em>a stable operating environment for customers.</em>",
   "wasup-case-ext-hana": "<em>The best tool for creating an efficient open source based operating environment</em> through web server/middleware control and monitoring.",
   "wasup.case.quot-hana": "<em>“Playce WASup is the best tool for creating an efficient open source based operating environment through web server/middleware control and monitoring.</em> We have built a next-generation system using Playce WASup to manage the existing web server and WAS operated by Hana Tour. We were able to improve the overall efficiency of resource management by using a central web console configuration rather than having to individually configure and manage each system.”",
-  "wasup.case.ext.junlang": "By applying Playce WASup to Jungnang-gu office's smart city IoT integration platform, we were able to systematically manage the middleware, which is a key element in the platform.",
-  "wasup.case.quot2": "“By applying Playce WASup to Jungnang-gu office's smart city IoT integration platform, we were able to systematically manage the middleware, which is a key element in the platform. The data collected from sensors and devices are transferred to Jungnang-gu office IoT Server, and through real-time monitoring, we were able to provide more reliable services to Jungnang residents.“",
+  "wasup.case.ext.junlang": "By applying Playce WASup to Jungnang-gu office's smart city IoT integration platform, <em>we were able to systematically manage the middleware</em>",
+  "wasup.case.quot2": "“<em>By applying Playce WASup to Jungnang-gu office's smart city IoT integration platform, we were able to systematically manage the middleware, which is a key element in the platform.</em>The data collected from sensors and devices are transferred to Jungnang-gu office IoT Server, and through real-time monitoring, we were able to provide more reliable services to Jungnang residents.“",
 
   "subscription-desc": "Open Source Consulting’s subscription model provides customers with the highest level of Technical Support and the latest software.",
   "subscription-dt1": "Use the latest version without worries",
@@ -252,10 +252,10 @@
   "price-item7": "Migration technical support service for user infrastructure environment",
   "roro-exp-p": "Try <em>Playce RoRo product for free</em> today",
 
-  "partner-h3": "Open Source Consulting offers a Value Added Partner Program to grow together with our partners.",
-  "partner-desc": "The Value-addded Partner Program helps you create new businesses and build skills by sharing open source and cloud-related technology know-how with partners.<span class=\"line-brake\"></span> Open Source Consulting aims to be a value-oriented partnership and awaits partners to develop the open source ecosystem together through the Value-added Partner Program.",
+  "partner-h3": "Open Source Consulting offers a <em>Value Added<span class=\"line-brake\"></span> Partner Program</em>to grow together with our partners.",
+  "partner-desc": "Value Addded Partner Program helps you create new businesses and build skills by<span class=\"line-brake\"></span> sharing open source and cloud-related technology know-how with partners.<span class=\"line-brake\"></span> Open Source Consulting aims to be a value-oriented partnership and awaits partners to<span class=\"line-brake\"></span> develop the open source ecosystem together through Value Added Partner Program.",
   "partner-benefit": "Partner Benefit",
-  "partner-benefit-p": "Value Added Partners in Open Source Consulting can benefit from a variety of benefits and support.",
+  "partner-benefit-p": "Value Added Partners in Open Source Consulting can benefit from<br/> <em>a variety of benefits and support.</em>",
 
   "business-tit": "Business Support",
   "business-item1": "Playce Solution basic discount",
@@ -282,9 +282,9 @@
   "mk-item6": "Provide newsletter",
 
   "partner-inquiry": "Partnership Inquiry",
-  "partner-inquiry-desc": "Open Source Consulting will support you to grow by working closely.",
-  "tel2-inquiry": "Phone Inquiry",
-  "tel2-inquiry-time": "Available : 10 AM~5 PM on weekdays",
+  "partner-inquiry-desc": "Open Source Consulting will <em>support you to grow by working closely.</em>",
+  "tel-inquiry": "Phone Inquiry",
+  "tel-inquiry-time": "Available : 10 AM~5 PM on weekdays",
   "email-inquiry": "Email Inquiry",
   "email-inquiry-desc": "Please inquire about partnership.",
 
@@ -307,8 +307,8 @@
   "link-detail2": "Go to the Technical Support",
   "faq-desc": "Please check FAQs before contacting Playce Support.",
   "go-to-faq": "Go to the FAQs",
-  "exp-support-p": "Try Playce product for free today</em>",
-  "exp-support-p2": "Playce 제품의 무료 체험을 원하시나요? 신청 후 24시간 안에 해당 메일로 정보를 보내드립니다.",
+  "support-exp": "Try Playce product for free today</em>",
+  "support-exp2": "Playce WASup and Playce RoRo are open source-based solutions that are free to try at any time.",
 
   "free-desc": "<em>Trial License to use Playce WASup is offered for free.</em> Trial License has no functional restrictions and can be used for free until the defined expiration date.",
   "free-step1-tit": "<span class=\"step-num\">Step 1.</span> Trial Key request",

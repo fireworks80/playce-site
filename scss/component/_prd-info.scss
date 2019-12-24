@@ -26,6 +26,10 @@
   &__desc {
     font-size: rem(16px);
     line-height: 2.22;
+
+    [lang='en'] & {
+      line-height: 1.8;
+    }
   }
 
   li:nth-child(n + 2) {
@@ -62,6 +66,10 @@
   @include prdInfoImg('.function--wasup', ($ic-function1-2x, $ic-function2-2x, $ic-function3-2x));
   @include prdInfoImg('.function--roro', ($ic-function1-roro-2x, $ic-function2-roro-2x, $ic-function3-roro-2x));
   @include prdInfoImg('.partner-prd-info-wrap', ($ico-benefit1-2x, $ico-benefit2-2x, $ico-benefit3-2x));
+
+  .partner-prd-info-wrap & {
+    color: #273759;
+  }
 
   // mobile
   // ==========================================

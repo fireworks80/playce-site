@@ -672,17 +672,17 @@ include_once 'common-php/header.php';
       <!-- dashboard -->
       <div class="function__row clear-fix">
         <dl class="prd-info l-right">
-          <dt class="prd-info__tit" data-i18n="dash-tit">실시간 모니터링 대시보드</dt>
+          <dt class="prd-info__tit" data-i18n="wasup-dash-tit">실시간 모니터링 대시보드</dt>
           <dd class="prd-info__desc">
             <ul>
-              <li class="ico-check ico-check--blue" data-i18n="[html]dash-item1">
+              <li class="ico-check ico-check--blue" data-i18n="[html]wasup-dash-item1">
                 직관적인 대시보드 화면을 통해 서버 및 모니터링 주요<br /> 정보를
                 조회할 수 있음
               </li>
-              <li class="ico-check ico-check--blue" data-i18n="[html]dash-item2">
+              <li class="ico-check ico-check--blue" data-i18n="[html]wasup-dash-item2">
                 자체 에이전트, JMX, 스카우터X(ScouterX) APM을 <br />활용한 실시간 모니터링 시스템 구현
               </li>
-              <li class="ico-check ico-check--blue" data-i18n="[html]dash-item3">
+              <li class="ico-check ico-check--blue" data-i18n="[html]wasup-dash-item3">
                 운영체제 상태(CPU, 메모리, 디스크, 네트워크 등)에<br /> 대한 데이터 수집 및 통계 정보 표시
               </li>
             </ul>
@@ -940,7 +940,7 @@ include_once 'common-php/header.php';
         </div>
         <div class="case__slide">
           <blockquote class="case__extract">
-            <p>
+            <p data-i18n="[html]wasup.case.ext.junlang">
               플랫폼 내부의 핵심 요소인 미들웨어를 <em>체계적으로 관리할 수 있게 되었습니다.</em>
             </p>
           </blockquote>
@@ -952,8 +952,18 @@ include_once 'common-php/header.php';
       </div>
       <div class="case__footer">
         <ul class="case__user-list js-case-logos">
-          <li><button type="button"><img src="./images/logo-hana.png" alt="하나투어"></button></li>
-          <li><button type="button"><img src="./images/logo-jungrang.png" alt="중랑구"></button></li>
+          <li>
+            <button type="button">
+              <img class="not-eng" src="./images/logo-hana@2x.png" alt="하나투어">
+              <img class="not-ko" src="./images/logo-hana-en@2x.png" alt="하나투어">
+            </button>
+          </li>
+          <li>
+            <button type="button">
+              <img class="not-eng" src="./images/logo-jungrangu@2x.png" alt="중랑구">
+              <img class="not-ko" src="./images/logo-jungrangu-en@2x.png" alt="중랑구">
+            </button>
+          </li>
         </ul>
         <span class="case__btns">
           <button class="btn-arrow btn-arrow--puple-prev" type="button"><span class="a11y">prev</span></button>

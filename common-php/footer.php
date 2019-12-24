@@ -2,7 +2,7 @@
   if ($current_page[0] === 'index' || $current_page[0] === 'wasup' || $current_page[0] === 'roro' || $current_page[0] === 'support') {
 ?>
   <!-- experience -->
-  <section class="experience experience--<?php echo $current_page[0]; if ($current_page[0] === 'support') {echo ' not-eng';} ?>">
+  <section class="experience experience--<?php echo $current_page[0]; ?>">
     <h2 class="a11y">무료로 시작</h2>
     <div class="l-center clear-fix">
       <?php 
@@ -34,8 +34,8 @@
       } else if ($current_page[0] === 'support') {
         // support experience
       ?>
-        <p data-i18n="[html]exp-support-p">Playce 제품을 <em>무료로 체험해보세요!</em></p>
-        <p class="experience__desc" data-i18n="exp-support-p2">Playce 제품의 무료 체험을 원하시나요? 신청 후 24시간 안에 해당 메일로 정보를 보내드립니다.</p>
+        <p data-i18n="[html]support-exp">Playce 제품을 <em>무료로 체험해보세요!</em></p>
+        <p class="experience__desc" data-i18n="support-exp2">Playce 제품의 무료 체험을 원하시나요? 신청 후 24시간 안에 해당 메일로 정보를 보내드립니다.</p>
         <a class="btn-round btn-round--deep-blue is-big" href="./free-start.html" data-i18n="freeStart">무료로 시작</a>
       <?php } ?>
     </div>

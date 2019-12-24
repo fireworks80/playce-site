@@ -351,14 +351,19 @@ $list-color: (
 }
 
 .motion-box-wrap {
-  @media ($query-mobile) {
+  @media (max-width: 980px) {
     display: flex;
     justify-content: center;
+    width: 50%;
 
     .motion-box {
       display: inline-block;
       transform: scale(0.8);
     }
+  } // > 980px
+
+  @media ($query-mobile) {
+    width: auto;
   }
 
   @media (max-width: 640px) {

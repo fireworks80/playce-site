@@ -83,7 +83,7 @@
     margin: 70px auto 0;
 
     [lang='en'] & {
-      font-size: rem(29px);
+      font-size: rem(26px);
       line-height: 1.5;
       letter-spacing: -0.4px;
     }
@@ -149,10 +149,6 @@
       color: #2557a0;
     }
   } // roro
-
-  // @media ($query-mobile) {
-  //   line-height: 2;
-  // }
 }
 
 .case__footer {
@@ -175,6 +171,10 @@
     border: 0;
     background-color: transparent;
     opacity: 0.2;
+
+    img {
+      @include size(null, 37px);
+    }
   }
 
   .current button {

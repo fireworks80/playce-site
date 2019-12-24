@@ -157,6 +157,7 @@
   &__tit {
     // @include debug;
     @include section-heading(#a86247) {
+      flex: 1 0 auto;
       display: inline-block;
       &::after {
         @include icon-setting($ic-arrow-brown-2x);
@@ -317,7 +318,6 @@
 
 // function
 .function--wasup {
-  
   padding-top: 318px;
   padding-bottom: 207px;
   background-image: url($path-img+'function-bg.png');
@@ -335,10 +335,6 @@
   @media ($query-mobile) {
     padding-top: 160px;
     padding-bottom: 140px;
-
-    // .function__desc {
-    //   line-height: 1.6;
-    // }
 
     .function__desc .line-brake:nth-child(2) {
       display: none;
@@ -874,7 +870,6 @@ $noti-step4-end: translateY(300%);
     }
   }
 
-
   li:nth-child(n + 2) {
     margin-top: 12px;
   } // li
@@ -903,7 +898,6 @@ $noti-step4-end: translateY(300%);
 // subscription
 // ====================================================
 .subscription {
-
   &__tit {
     @include section-heading(#fff) {
       margin-bottom: 30px;

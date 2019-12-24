@@ -819,6 +819,9 @@ body {
   font-size: 1.6rem;
   line-height: 2.22;
 }
+[lang=en] .prd-info__desc {
+  line-height: 1.8;
+}
 .prd-info li:nth-child(n+2) {
   margin-top: 12px;
 }
@@ -944,6 +947,9 @@ body {
   background-position: 0px -2506px;
   width: 100px;
   height: 100px;
+}
+.partner-prd-info-wrap .prd-info {
+  color: #273759;
 }
 @media (max-width: 1070px) {
   .prd-info__tit {
@@ -3144,7 +3150,7 @@ body.show-gnb {
   margin: 70px auto 0;
 }
 [lang=en] .case__extract p {
-  font-size: 2.9rem;
+  font-size: 2.6rem;
   line-height: 1.5;
   letter-spacing: -0.4px;
 }
@@ -3223,6 +3229,9 @@ body.show-gnb {
   border: 0;
   background-color: transparent;
   opacity: 0.2;
+}
+.case__user-list button img {
+  height: 37px;
 }
 .case__user-list .current button {
   opacity: 0.6;
@@ -3773,14 +3782,20 @@ body.show-gnb {
   }
 }
 
-@media (max-width:960px) {
+@media (max-width: 980px) {
   .motion-box-wrap {
     display: flex;
     justify-content: center;
+    width: 50%;
   }
   .motion-box-wrap .motion-box {
     display: inline-block;
     transform: scale(0.8);
+  }
+}
+@media (max-width:960px) {
+  .motion-box-wrap {
+    width: auto;
   }
 }
 @media (max-width: 640px) {
@@ -3936,6 +3951,7 @@ body.show-gnb {
 }
 .feature__tit {
   color: #a86247;
+  flex: 1 0 auto;
   display: inline-block;
 }
 .feature__tit::after {
@@ -5933,7 +5949,7 @@ body.show-gnb {
 }
 .partner-inquiry .card {
   width: 48.7804878049%;
-  height: 312px;
+  padding-bottom: 50px;
   color: #cdd9e8;
 }
 .partner-inquiry .card__lb {

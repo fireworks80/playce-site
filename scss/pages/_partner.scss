@@ -122,7 +122,8 @@
   }
 
   .card {
-    @include size(percent(580px, 1189px), 312px);
+    @include size(percent(580px, 1189px), null);
+    padding-bottom: 50px;
     color: #cdd9e8;
 
     &__lb {

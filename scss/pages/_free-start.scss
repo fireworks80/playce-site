@@ -134,6 +134,20 @@ $bp-mobile: 1070px;
     @include absolute($top: 3px, $right: 0);
   }
 
+  @media (max-width: 1210px) {
+    [lang='en'] & .trial-btn {
+      position: static;
+    }
+
+    [lang='en'] & .step-con {
+      text-align: right;
+    }
+
+    [lang='en'] & .step-sub-list {
+      margin-bottom: 20px;
+    }
+  } // > 1210
+
   @media (max-width: $bp-mobile) {
     .sub__tit2 {
       font-size: 24px;
@@ -168,6 +182,10 @@ $bp-mobile: 1070px;
       .trial-btn {
         position: static;
       }
+    }
+
+    [lang='en'] & .step-sub-list {
+      margin-bottom: 0;
     }
   } // >1070
 } // trial
@@ -255,6 +273,10 @@ $bp-mobile: 1070px;
 
         &--guide2 {
           right: 108px;
+
+          [lang='en'] & {
+            right: 130px;
+          }
         }
       }
     } // step-item
@@ -307,6 +329,7 @@ $bp-mobile: 1070px;
   $color: $color-major;
 
   @include size(null, $height);
+  flex: 0 0 auto;
   min-width: 98px;
   display: inline-flex;
   justify-content: center;

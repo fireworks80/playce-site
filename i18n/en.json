@@ -317,7 +317,7 @@
   "free-step2-tit": "<span class=\"step-num\">Step 2.</span> Installation file download",
   "free-step2-item1": "Installation files are provided in tar and zip file format.",
   "free-step2-item2": "By downloading the installation file, you agree to the <a class=\"link-franchisability\" href=\"./franchisability.html\" target=\"_blank\">EULA (End User License Agreement).</a>",
-  "free-m": "* PC 버전만 다운로드 가능합니다.",
+  "free-m": "* only PC",
   "free-step3-tit": "<span class=\"step-num\">Step 3.</span> Installation and running",
   "free-step3-item1": "Refer to the Subscription update guide for how to use your Trial Key.",
   "free-step3-item2": "Refer to the Subscription update guide for how to use your Trial Key.",

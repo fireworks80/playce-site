@@ -7,10 +7,11 @@
     background-image: url($path-img+'bg-support-hero-round.png');
   }
 
-  &__sub-tit,
-  &__desc em {
-    font-weight: bold;
-  }
+  // &__sub-tit,
+  // &__desc em {
+  //   font-weight: bold;
+    
+  // }
 
   .sub__tit {
     color: #324c99;
@@ -25,7 +26,7 @@
     }
   }
 
-  &__desc em {
+  .sub__desc em {
     color: #324c99;
   }
 

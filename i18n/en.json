@@ -299,8 +299,8 @@
   "resource-guide6": "새로워진 Playce WASup을 만나보세요! - 사용 가이드",
   "document": "문서",
 
-  "support-tit": "Open Source Consulting actively supports customers for smooth product use experience.",
-  "support-desc": "Playce Support is a customer support service operated to solve customer problems and provides technical support for responding to customer inquiries and troubleshooting in an accurate and prompt fashion.",
+  "support-tit": "Open Source Consulting actively supports customers<em>for smooth product use experience.</em>",
+  "support-desc": "<em>Playce Support</em> is a customer support service operated to solve customer problems and provides technical support<br/> for responding to customer inquiries and troubleshooting in an accurate and prompt fashion.",
   "go-support": "Go to the Playce Support",
 
   "supprot-tech-inquiry": "Technical Support Inquiry",

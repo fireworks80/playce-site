@@ -2038,6 +2038,10 @@ body.show-gnb {
   font-weight: 500;
   font-size: 3.7rem;
 }
+[lang=en] .sub__tit2 {
+  font-size: 3.3rem;
+  line-height: 1.5;
+}
 @media (max-width:960px) {
   .sub__tit2 {
     margin-bottom: 20px;
@@ -2049,6 +2053,10 @@ body.show-gnb {
   margin-bottom: 60px;
   line-height: 2.15;
   font-size: 2rem;
+}
+[lang=en] .sub__desc {
+  font-size: 2rem;
+  line-height: 1.8;
 }
 
 .sub-bottom {
@@ -5513,9 +5521,6 @@ body.show-gnb {
 .support-hero::after {
   background-image: url("../images/bg-support-hero-round.png");
 }
-.support-hero__sub-tit, .support-hero__desc em {
-  font-weight: bold;
-}
 .support-hero .sub__tit {
   color: #324c99;
 }
@@ -5526,7 +5531,7 @@ body.show-gnb {
   display: block;
   color: #324c99;
 }
-.support-hero__desc em {
+.support-hero .sub__desc em {
   color: #324c99;
 }
 .support-hero .btn-round {
@@ -6280,6 +6285,7 @@ body.show-gnb {
   font-weight: 500;
   border-radius: 4px;
   border: solid 1px #85af30;
+  transition: all 0.132s ease-in;
 }
 .resource__btn .ico-download {
   margin-left: 8px;

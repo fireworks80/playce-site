@@ -90,6 +90,11 @@
   font-weight: 500;
   font-size: rem(37px);
 
+  [lang='en'] & {
+    font-size: rem(33px);
+    line-height: 1.5;
+  }
+
   @media ($query-mobile) {
     margin-bottom: 20px;
     line-height: 1.6;
@@ -100,6 +105,11 @@
   margin-bottom: 60px;
   line-height: 2.15;
   font-size: rem(20px);
+
+  [lang='en'] & {
+    font-size: rem(20px);
+    line-height: 1.8;
+  }
 }
 
 .sub-bottom {

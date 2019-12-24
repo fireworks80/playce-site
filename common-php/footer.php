@@ -16,7 +16,7 @@
       } else if ($current_page[0] === 'wasup') {
         // wasup experience
       ?>
-        <p class="l-left" data-i18n="[html]experience-wasup-p">지금 바로 <em>Playce WASup 제품을 무료로</em> 체험해 볼 수 있습니다.</p>
+        <p class="l-left" data-i18n="[html]wasup-exp-p">지금 바로 <em>Playce WASup 제품을 무료로</em> 체험해 볼 수 있습니다.</p>
         <span class="experience__btns l-right">
           <a class="btn-round btn-round--apblue" href="./free-start.html#playce-wasup" data-i18n="freeStart">무료로 시작</a>
           <a class="btn-round btn-round--white2" href="https://jira.osci.kr/servicedesk/customer/portal/21" target="_blank" data-i18n="product-inquiry">제품 문의</a>
@@ -25,7 +25,7 @@
       } else if ($current_page[0] === 'roro') { 
         // roro experience
       ?>
-        <p class="l-left" data-i18n="[html]exp-roro-p">지금 바로 <em>Playce RoRo 제품을 무료로</em> 시작해보세요.</p>
+        <p class="l-left" data-i18n="[html]roro-exp-p">지금 바로 <em>Playce RoRo 제품을 무료로</em> 시작해보세요.</p>
         <span class="experience__btns l-right">
           <a class="btn-round btn-round--apblue" href="./free-start.html#playce-roro" data-i18n="freeStart">무료로 시작</a>
           <a class="btn-round btn-round--white2" href="https://jira.osci.kr/servicedesk/customer/portal/21" target="_blank" data-i18n="product-inquiry">제품 문의</a>

@@ -264,14 +264,20 @@
 
   $sns-names: ('facebook', 'youtube', 'in', 'github', 'blog');
 
-  @each $name in $sns-names {
-    .sns__link--#{$name} {
-      $idx: index($sns-names, $name) - 1;
-      $idx: if($idx == 0, 0, -($idx * $size + 2));
-
-      // @debug $idx;
-      background-position: $idx top;
-    }
+  .sns__link--facebook {
+    background-position: 0 0;
+  }
+  .sns__link--youtube {
+    background-position: -28px 0;
+  }
+  .sns__link--blog {
+    background-position: -57px 0;
+  }
+  .sns__link--github {
+    background-position: -86px 0;
+  }
+  .sns__link--in {
+    background-position: -114px 0;
   }
 
   @media (max-width: 900px) {

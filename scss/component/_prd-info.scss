@@ -128,4 +128,16 @@
     line-height: 1.5;
     letter-spacing: -0.4px;
   }
+
+  [lang='en'] &:nth-child(2) {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+
+  @media ($query-mobile) {
+    [lang='en'] &:nth-child(2) {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
 }

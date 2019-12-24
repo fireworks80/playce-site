@@ -228,7 +228,8 @@ body.show-gnb {
     &__item {
       border-bottom: 1px solid rgba(107, 117, 129, 0.3);
 
-      .gnb__list--main &:first-child {
+      .gnb__list--main &:first-child,
+      .gnb-etc &:last-child {
         border-bottom: 0;
       }
     }
@@ -279,10 +280,6 @@ body.show-gnb {
     }
   } // gnb link
 
-  // &:hover .callout {
-  //   display: block;
-  // }
-
   // pc / mobile 에서 hover 없이
   // click event (.is-active) 시에만
   // 2depth 활성화
@@ -294,21 +291,6 @@ body.show-gnb {
   }
 
   @media ($query-mobile) {
-    // 모바일일 경우 hover 가 되지 않으므로 반응이 없게
-    // (딱히 영향을 주지 않지만...)
-    // &:hover .callout {
-    //   display: none;
-    // }
-
-    // &.is-active {
-    //   .gnb__link::after {
-    //     transform: rotate(180deg);
-    //   }
-    //   .callout {
-    //     display: block;
-    //   }
-    // }
-
     .gnb__link {
       padding: 0;
       border-bottom: 1px solid rgba(107, 117, 129, 0.3);
@@ -323,6 +305,10 @@ body.show-gnb {
       .header--blue &::after {
         @include sprite-position($btn-arrow-down-2x);
       }
+    } // gnb__link
+
+    &.is-active .gnb__link::after {
+      transform: translateY(0) rotate(180deg);
     }
   } // > 960
 } // has-drop-down
@@ -496,8 +482,7 @@ body.show-gnb {
   }
 } // snb
 
-
-[lang='en'] .not-eng, 
-[lang='ko'] .not-ko { 
+[lang='en'] .not-eng,
+[lang='ko'] .not-ko {
   display: none;
 }

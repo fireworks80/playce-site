@@ -2510,6 +2510,9 @@ body.show-gnb {
     transform: scale(1);
     margin-bottom: 60px;
   }
+  .lineup-wasup .lineup-anim-wrap {
+    position: static;
+  }
 
   .lineup-wasup .hero__tit .line-brake,
 .lineup-wasup .hero__desc .line-brake {
@@ -2594,6 +2597,9 @@ body.show-gnb {
   padding-top: 30px;
   padding-bottom: 89px;
 }
+.case-index cite img {
+  height: 38px;
+}
 @media (max-width:960px) {
   .case-index .l-center {
     padding-top: 60px;
@@ -2675,7 +2681,7 @@ body.show-gnb {
   border-radius: 10px 32px;
   background-color: #fff;
   font-size: 1.6rem;
-  line-height: 2.2;
+  line-height: 2;
 }
 .tab-content em {
   font-weight: 500;
@@ -2721,14 +2727,6 @@ body.show-gnb {
   right: 8.7719298246%;
   bottom: 24px;
 }
-.tab-content--roro cite {
-  display: block;
-  margin-top: 16px;
-  text-align: right;
-}
-.tab-content:nth-of-type(2) cite {
-  margin-top: 51px;
-}
 @media (max-width:960px) {
   .tab-content {
     width: auto;
@@ -2748,7 +2746,7 @@ body.show-gnb {
 }
 [lang=en] .tab-content {
   font-size: 1.5rem;
-  line-height: 1.8;
+  line-height: 1.7;
   letter-spacing: -0.4px;
 }
 
@@ -3223,6 +3221,9 @@ body.show-gnb {
 }
 .case--wasup .case__quotation em {
   color: #788ece;
+}
+[lang=en] .case--wasup .case__quotation {
+  padding-top: 40px;
 }
 .case--roro .case__quotation {
   background-color: #e9f0f6;

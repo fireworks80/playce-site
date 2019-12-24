@@ -167,6 +167,10 @@
     transform-origin: center center;
     transform: scale(1);
     margin-bottom: 60px;
+
+    .lineup-wasup & {
+      position: static;
+    }
   }
 
   .lineup-wasup .hero__tit .line-brake,
@@ -259,6 +263,10 @@
     padding-bottom: 89px;
   }
 
+  cite img {
+    @include size(null, 38px);
+  }
+
   @media ($query-mobile) {
     .l-center {
       padding-top: 60px;
@@ -348,7 +356,7 @@
   border-radius: 10px 32px;
   background-color: #fff;
   font-size: rem(16px);
-  line-height: 2.2;
+  line-height: 2;
 
   em {
     font-weight: 500;
@@ -392,15 +400,15 @@
     @include absolute($bottom: 24px, $right: percent(50px, $width));
   }
 
-  &--roro cite {
-    display: block;
-    margin-top: 16px;
-    text-align: right;
-  }
+  // &--roro cite {
+  //   display: block;
+  //   margin-top: 16px;
+  //   text-align: right;
+  // }
 
-  &:nth-of-type(2) cite {
-    margin-top: 51px;
-  }
+  // &:nth-of-type(2) cite {
+  //   margin-top: 51px;
+  // }
 
   // mobile
   // ======================================================
@@ -424,7 +432,7 @@
   // en ver
   [lang='en'] & {
     font-size: rem(15px);
-    line-height: 1.8;
+    line-height: 1.7;
     letter-spacing: -0.4px;
   }
 }

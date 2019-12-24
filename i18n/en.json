@@ -240,6 +240,7 @@
   "roro-case-desc": "Provide stable cloud migration to enhance<br/> <em>customer’s business competitiveness</em>",
   "roro-case-ext-hyundai": "Using Playc RoRo has helped the project by <em>minimizing user errors and reducing time drastically.</em>",
   "roro-case-hyundai": "“Using Playce RoRo, we have moved our existing OpenStack-based virtual machine to a public cloud environment very easily. <em>This has helped the project by minimizing user errors and reducing time drastically.</em> I recommend it to enterprises that are considering moving their platforms to public cloud environments.”",
+  "roro-case-ext-aws": "Playc RoRo is a useful tool for customers who want to <em>move security-critical servers from their internal network to AWS cloud...</em>",
   "roro-case-aws": "“Playce RoRo makes it easy to migrate customer’s legacy environment in the data center to the cloud. The solution is a useful tool for customers to move security-critical servers from their internal network to AWS cloud by providing both SaaS and installation options.”",
 
   "roro-price-desc": "Separate pricing applies <em>based on the range of services provided</em>",

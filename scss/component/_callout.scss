@@ -33,6 +33,10 @@
       }
     }
 
+    [lang='en'] & {
+      @include size(780px, null);
+    }
+
     .callout--lang & {
       width: 100%;
       padding: 10px 20px;
@@ -42,13 +46,17 @@
         left: 50%;
         transform: translateX(-50%);
       }
+
+      [lang='en'] & {
+        @include size(100%, null);
+      }
     }
   } // .callout__inner
 
   &__content {
     // @include debug;
     @include relative;
-    width: 50%; // 303px;
+    @include size(50%, null);
     padding-left: (22px + 34px);
 
     &::before {
@@ -87,9 +95,7 @@
           font-weight: 500;
         }
       }
-    }
-
-    // for
+    } // for
   }
 
   &__tit {
@@ -110,8 +116,8 @@
     font-size: rem(16px);
     color: inherit;
 
-    [lang='en'] .callout__content:nth-child(2) & {
-      margin-bottom: 54px;
+    [lang='en'] & {
+      font-size: rem(15px);
     }
   }
 

@@ -646,6 +646,9 @@ body {
   border-color: transparent transparent #fff;
   border-width: 10px;
 }
+[lang=en] .callout__inner {
+  width: 780px;
+}
 .callout--lang .callout__inner {
   width: 100%;
   padding: 10px 20px;
@@ -654,6 +657,9 @@ body {
 .callout--lang .callout__inner::before {
   left: 50%;
   transform: translateX(-50%);
+}
+[lang=en] .callout--lang .callout__inner {
+  width: 100%;
 }
 .callout__content {
   position: relative;
@@ -710,8 +716,8 @@ body {
   font-size: 1.6rem;
   color: inherit;
 }
-[lang=en] .callout__content:nth-child(2) .callout__desc {
-  margin-bottom: 54px;
+[lang=en] .callout__desc {
+  font-size: 1.5rem;
 }
 .callout__list {
   display: flex;

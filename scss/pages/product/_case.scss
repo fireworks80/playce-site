@@ -124,7 +124,7 @@
   line-height: 2.38;
 
   em {
-    font-weight: bold;
+    font-weight: 500;
   }
 
   [lang='en'] & {
@@ -134,10 +134,10 @@
 
   .case--wasup & {
     background-color: #e9eef5;
-    color: #3d5399;
+    color: #788ece;
 
     em {
-      color: #788ece;
+      color: #3d5399;
     }
 
     [lang='en'] & {
@@ -167,7 +167,7 @@
   margin-right: percent(40px, $width-max - 20);
 
   li:first-child {
-    margin-right: percent(20px, $width-max - 20);
+    margin-right: 20px;
   }
 
   button {

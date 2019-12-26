@@ -1255,6 +1255,9 @@ body {
   height: 20px;
   content: "";
 }
+[lang=en] .ico-check::before {
+  top: 4px;
+}
 .ico-check--normal::before {
   background: url("../images/ic-checklist.svg") no-repeat center top;
 }
@@ -3217,7 +3220,7 @@ body.show-gnb {
   line-height: 2.38;
 }
 .case__quotation em {
-  font-weight: bold;
+  font-weight: 500;
 }
 [lang=en] .case__quotation {
   font-size: 1.6rem;
@@ -3225,10 +3228,10 @@ body.show-gnb {
 }
 .case--wasup .case__quotation {
   background-color: #e9eef5;
-  color: #3d5399;
+  color: #788ece;
 }
 .case--wasup .case__quotation em {
-  color: #788ece;
+  color: #3d5399;
 }
 [lang=en] .case--wasup .case__quotation {
   padding-top: 40px;
@@ -3252,7 +3255,7 @@ body.show-gnb {
   margin-right: 3.3898305085%;
 }
 .case__user-list li:first-child {
-  margin-right: 1.6949152542%;
+  margin-right: 20px;
 }
 .case__user-list button {
   padding: 0;
@@ -3520,7 +3523,7 @@ body.show-gnb {
   padding-left: 0.8333333333%;
   margin-bottom: 30px;
   font-size: 2.4rem;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 1.42;
 }
 [lang=en] .wizard__tit {
@@ -3552,6 +3555,10 @@ body.show-gnb {
   padding-left: 30px;
   font-size: 1.8rem;
   line-height: 2.22;
+}
+[lang=en] .wizard__desc {
+  font-size: 1.5rem;
+  line-height: 1.8;
 }
 @media (max-width: 1107px) {
   .wizard__desc {

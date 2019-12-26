@@ -9,6 +9,10 @@
     @include absolute($top: 8px, $left: 0);
     @include size(20px);
     content: '';
+
+    [lang='en'] & {
+      top: 4px;
+    }
   }
 
   &--normal::before {

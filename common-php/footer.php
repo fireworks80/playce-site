@@ -173,6 +173,8 @@
 <script src="./js/smooth-anchor.js"></script>
 <script>
   
+  // Playce.translation(location.pathname.indexOf('en') > -1 ? 'en' : 'ko');
+
   (function() {
     'use strict';
     var setMobileStatus = function() {
@@ -263,41 +265,7 @@
 
   }());
 
-  // 국문 영문
-  (function() {
-    var langEl = document.querySelector('.js-lang');
-    var currentLangEl = langEl.querySelector('.js-current-lang');
-
-    var getLocale = function () {
-      return location.pathname.indexOf('en') > -1 ? 'en' : 'ko';
-    };
-    
-
-    var setLocale = function(lang) {
-      $('body').css('display', 'none');
-      $.i18n({
-        locale: lang
-      })
-      .load({
-        en: "./i18n/en.json",
-        ko: "./i18n/ko.json"
-      })
-      .done(function () {
-        $("body").i18n();
-        $('body').css('display', '');
-      });
-    };
-    
-    var getGnbLocale = function(lang) {
-      currentLangEl.textContent = lang === 'en' ? 'ENG' : 'KOR';        
-      langEl.classList.remove('is-active');
-    };
-
-    setLocale(getLocale());
-    getGnbLocale(getLocale());
-
-    window.setLocale = setLocale;
-  }());
+  
 
   (function() {
 
@@ -307,7 +275,7 @@
 
       var calloutEls = document.querySelectorAll('.has-callout'); 
       var arrCallouts = Array.prototype.slice.call(calloutEls);
-      console.log( e.target.className);
+      // console.log( e.target.className);
 
       if (e.target.className !== null && e.target.className.indexOf('js-has-callout') < 0) {
 

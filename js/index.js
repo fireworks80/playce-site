@@ -81,6 +81,43 @@ Playce.tab = function(wrap) {
 	});
 };
 
+// 국문 / 영문
+Playce.translation = function(lang) {
+	// 국문 영문
+    var langEl = document.querySelector('.js-lang');
+    var currentLangEl = langEl.querySelector('.js-current-lang');
+
+    // var getLocale = function () {
+    //   return location.pathname.indexOf('en') > -1 ? 'en' : 'ko';
+    // };
+    
+		// translation
+    var setTranslation = function(lang) {
+      $('body').css('display', 'none');
+      $.i18n({
+        locale: lang
+      })
+      .load({
+        en: "./i18n/en.json",
+        ko: "./i18n/ko.json"
+      })
+      .done(function () {
+        $("body").i18n();
+        $('body').css('display', '');
+      });
+    };
+    
+		// gnb 언어 텍스트 설정
+    var getGnbLocale = function(lang) {
+      currentLangEl.textContent = lang === 'en' ? 'ENG' : 'KOR';        
+      langEl.classList.remove('is-active');
+    };
+
+    setTranslation(lang);
+    getGnbLocale(lang);
+
+};
+
 // ============================
 // wizardSlider
 // ============================
@@ -481,8 +518,6 @@ var caseSlider = function(wrap, opt) {
 	var $btn = $banner.find('.js-banner-btn');
 
 	var currentLang = document.documentElement.lang;
-
-	console.log(currentLang);
 
 	if (currentLang === 'en') {
 		$banner.css('display', 'none');

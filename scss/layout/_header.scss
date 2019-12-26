@@ -422,9 +422,10 @@ body.show-gnb {
     display: block;
     padding: 0 18px;
     line-height: 32px;
+    font-weight: 500;
 
     &:hover {
-      font-weight: 500;
+      font-weight: normal;
     }
 
     .snb__item:last-child & {

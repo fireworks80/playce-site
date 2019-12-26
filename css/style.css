@@ -1661,6 +1661,7 @@ body.show-gnb {
   display: block;
   padding: 0 18px;
   line-height: 32px;
+  font-weight: 500;
 }
 .snb--wasup .snb__link {
   color: #a86247;
@@ -1669,7 +1670,7 @@ body.show-gnb {
   color: #2557a0;
 }
 .snb__link:hover {
-  font-weight: 500;
+  font-weight: normal;
 }
 .snb__item:last-child .snb__link {
   border-radius: 3px 8px;

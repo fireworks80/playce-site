@@ -25,6 +25,7 @@
     opacity: 0.2;
     transition: opacity 0.32s;
 
+
     &.is-active {
       opacity: 1;
     }
@@ -40,6 +41,10 @@
     font-size: rem(22px);
     color: $color;
 
+    [lang='en'] & {
+      letter-spacing: -.4px;
+    }
+
     &::after {
       @include size(null, 4px);
       display: inherit;
@@ -47,6 +52,16 @@
       border-radius: 2.5px;
       background-color: $color;
       content: '';
+    }
+  }
+
+  @media (max-width: 1092px) {
+    [lang='en'] &-item {
+      width: 33%;
+
+      &:nth-child(2) {
+        margin: 0 4px;
+      }
     }
   }
 
@@ -64,6 +79,10 @@
 
     &-link {
       font-size: 16px;
+    }
+
+    [lang='en'] &-item {
+      width: 33%;
     }
   } // > 960
 } // tab

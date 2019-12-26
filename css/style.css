@@ -6124,6 +6124,9 @@ body.show-gnb {
   font-size: 2.2rem;
   color: #446d15;
 }
+[lang=en] .resource__tab-link {
+  letter-spacing: -0.4px;
+}
 .resource__tab-link::after {
   height: 4px;
   display: inherit;
@@ -6131,6 +6134,14 @@ body.show-gnb {
   border-radius: 2.5px;
   background-color: #446d15;
   content: "";
+}
+@media (max-width: 1092px) {
+  [lang=en] .resource__tab-item {
+    width: 33%;
+  }
+  [lang=en] .resource__tab-item:nth-child(2) {
+    margin: 0 4px;
+  }
 }
 @media (max-width:960px) {
   .resource__tab-item:nth-child(1) {
@@ -6145,6 +6156,9 @@ body.show-gnb {
   }
   .resource__tab-link {
     font-size: 16px;
+  }
+  [lang=en] .resource__tab-item {
+    width: 33%;
   }
 }
 

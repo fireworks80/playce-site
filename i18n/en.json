@@ -185,6 +185,7 @@
 
 	"guide-desc-roro": "Experience the easy and fast cloud migration.",
 
+	"roro-fn-tit": "Main Function",
 	"roro-function-desc": "While performing L2C and U2C migration effectively, various features, including flexible volume configuration, network setting support and automatic image generation, are provided.",
 	"roro-function-wizard-tit": "Migration Wizard feature",
 	"roro-wizard-step1": "Step 1. Select a license to perform migration",

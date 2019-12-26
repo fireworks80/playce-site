@@ -171,6 +171,7 @@
 	"roro-why-li5": "마이그레이션 대상 서버에 대한 유연한 <br />구성 가능",
 	"roro-why-li6": "마이그레이션 대상 서버에 구성한 설정과 <br />소프트웨어의 변경 없이 보존 가능",
 	"guide-desc-roro": "쉽고 빠른 클라우드 마이그레이션을 경험해 보세요",
+	"roro-fn-tit": "주요기능",
 	"roro-function-desc": "L2C 및 U2C 마이그레이션을 효과적으로 수행하면서 유연한 볼륨 구성,<span class=\"line-brake\"></span> 네트워크 설정 지원, 자동 이미지 생성 등 다양한 기능을 제공합니다",
 	"roro-function-wizard-tit": "마이그레이션 Wizard 기능",
 	"roro-wizard-step1": "Step 1. 마이그레이션 수행 라이선스 선택",

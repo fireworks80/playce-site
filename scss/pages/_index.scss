@@ -238,6 +238,10 @@
     .l-center {
       margin-top: -30px;
     }
+
+    [lang='en'] & .hero__em {
+      display: inline;
+    }
   }
 
   .lineup-anim-wrap {
@@ -369,11 +373,11 @@
   }
 
   &--wasup {
-    color: #3d5399;
     text-align: left;
+    color: #788ece;
 
     em {
-      color: #788ece;
+      color: #3d5399;
     }
 
     &::before {
@@ -399,16 +403,6 @@
   cite {
     @include absolute($bottom: 24px, $right: percent(50px, $width));
   }
-
-  // &--roro cite {
-  //   display: block;
-  //   margin-top: 16px;
-  //   text-align: right;
-  // }
-
-  // &:nth-of-type(2) cite {
-  //   margin-top: 51px;
-  // }
 
   // mobile
   // ======================================================

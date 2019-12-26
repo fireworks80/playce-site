@@ -2195,7 +2195,6 @@ body.show-gnb {
 }
 .hero__desc {
   margin-bottom: 58px;
-  padding-right: 15.5555555556%;
   font-size: 1.9rem;
   line-height: 1.9;
 }
@@ -2583,6 +2582,9 @@ body.show-gnb {
   .lineup-roro .l-center {
     margin-top: -30px;
   }
+  [lang=en] .lineup-roro .hero__em {
+    display: inline;
+  }
 
   .lineup-anim-wrap {
     margin-bottom: -70px;
@@ -2699,11 +2701,11 @@ body.show-gnb {
   content: "";
 }
 .tab-content--wasup {
-  color: #3d5399;
   text-align: left;
+  color: #788ece;
 }
 .tab-content--wasup em {
-  color: #788ece;
+  color: #3d5399;
 }
 .tab-content--wasup::before {
   background-image: url(../images/sprite/sprite-icons-2x.png);
@@ -5767,9 +5769,6 @@ body.show-gnb {
   }
   .experience--wasup p {
     font-size: 20px;
-  }
-  .experience--wasup .btn-round {
-    width: 130px;
   }
 }
 

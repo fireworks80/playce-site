@@ -84,7 +84,6 @@ $translateY-hero-comm: 10deg;
 
   &__desc {
     margin-bottom: 58px;
-    padding-right: percent(70px, 450px);
     font-size: rem(19px);
     line-height: 1.9;
 
@@ -142,7 +141,7 @@ $translateY-hero-comm: 10deg;
   padding-left: 28px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 2px rgba(0, 0, 0, .1);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 
   svg {
     @include size(100%);
@@ -270,7 +269,6 @@ $translateY-hero-comm: 10deg;
 // roro, wasup 스크롤시 sticky 상태일 경우
 // ===============================================================
 .sticky {
-
   .hero--roro &,
   .hero--wasup & {
     padding-top: (118px + $height-snb);

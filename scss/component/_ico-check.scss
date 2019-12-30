@@ -9,6 +9,10 @@
     @include absolute($top: 8px, $left: 0);
     @include size(20px);
     content: '';
+    background: {
+      repeat: no-repeat;
+      size: contain;
+    }
 
     [lang='en'] & {
       top: 4px;
@@ -16,27 +20,15 @@
   }
 
   &--normal::before {
-    @include background-image($path-img + 'ic-checklist.svg', $repeat: no-repeat, $x: center, $y: top, $color: null);
+    background-image: url($path-img+'ic-checklist.svg');
   }
 
   &--blue::before {
-    @include background-image(
-      $path-img + 'ic-checklist-blue.svg',
-      $repeat: no-repeat,
-      $x: center,
-      $y: top,
-      $color: null
-    );
+    background-image: url($path-img+'ic-checklist-blue.svg');
   }
 
   &--orange::before {
-    @include background-image(
-      $path-img + 'ic-checklist-orange.svg',
-      $repeat: no-repeat,
-      $x: center,
-      $y: top,
-      $color: null
-    );
+    background-image: url($path-img+'ic-checklist-orange.svg');
   }
 
   &--green::before {
@@ -44,32 +36,14 @@
   }
 
   &--skyblue::before {
-    @include background-image(
-      $path-img + 'ic-checklist-skyblue.svg',
-      $repeat: no-repeat,
-      $x: center,
-      $y: top,
-      $color: null
-    );
+    background-image: url($path-img+'ic-checklist-skyblue.svg');
   }
 
   &--skyblue2::before {
-    @include background-image(
-      $path-img + 'ic-checklist-skyblue2.svg',
-      $repeat: no-repeat,
-      $x: center,
-      $y: top,
-      $color: null
-    );
+    background-image: url($path-img+'ic-checklist-skyblue2.svg');
   }
   &--darkblue::before {
-    @include background-image(
-      $path-img + 'ic-checklist-darkblue.svg',
-      $repeat: no-repeat,
-      $x: center,
-      $y: top,
-      $color: null
-    );
+    background-image: url($path-img+'ic-checklist-darkblue.svg');
   }
 
   @media ($query-mobile) {

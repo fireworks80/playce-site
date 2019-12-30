@@ -1254,18 +1254,20 @@ body {
   width: 20px;
   height: 20px;
   content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 [lang=en] .ico-check::before {
   top: 4px;
 }
 .ico-check--normal::before {
-  background: url("../images/ic-checklist.svg") no-repeat center top;
+  background-image: url("../images/ic-checklist.svg");
 }
 .ico-check--blue::before {
-  background: url("../images/ic-checklist-blue.svg") no-repeat center top;
+  background-image: url("../images/ic-checklist-blue.svg");
 }
 .ico-check--orange::before {
-  background: url("../images/ic-checklist-orange.svg") no-repeat center top;
+  background-image: url("../images/ic-checklist-orange.svg");
 }
 .ico-check--green::before {
   background-image: url(../images/sprite/sprite-icons-2x.png);
@@ -1275,13 +1277,13 @@ body {
   height: 20px;
 }
 .ico-check--skyblue::before {
-  background: url("../images/ic-checklist-skyblue.svg") no-repeat center top;
+  background-image: url("../images/ic-checklist-skyblue.svg");
 }
 .ico-check--skyblue2::before {
-  background: url("../images/ic-checklist-skyblue2.svg") no-repeat center top;
+  background-image: url("../images/ic-checklist-skyblue2.svg");
 }
 .ico-check--darkblue::before {
-  background: url("../images/ic-checklist-darkblue.svg") no-repeat center top;
+  background-image: url("../images/ic-checklist-darkblue.svg");
 }
 @media (max-width:960px) {
   .ico-check::before {

@@ -95,8 +95,8 @@
       </ul>
       <ul class="gnb__list gnb-etc">
         <li class="gnb__item"><a data-i18n="inquiry" class="gnb__link" href="https://jira.osci.kr/servicedesk/customer/portal/21" target="_blank">문의하기</a></li>
-        <!-- .is-active로 하위 메뉴 열림 
-        <li class="gnb__item has-callout js-lang">
+        <!-- .is-active로 하위 메뉴 열림 -->
+        <li class="gnb__item has-callout js-lang" style="display: none;">
           <span class="gnb__link js-has-callout js-current-lang">KOR</span>
           <div class="callout callout--lang">
             <ul class="callout__inner">
@@ -104,7 +104,7 @@
               <li><a class="lang-link" href="<?php echo $en_url; ?>" data-lang="en">english</a></li>
             </ul>
           </div>
-        </li> -->
+        </li> 
       </ul>
       <button class="gnb__close js-gnb__close" type="button">
         <span class="a11y">전체 메뉴 닫기</span>

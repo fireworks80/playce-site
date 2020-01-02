@@ -6543,54 +6543,6 @@ body.show-gnb {
   border-radius: 31px 10px;
   box-shadow: 0 4px 12px 0 rgba(54, 63, 47, 0.15);
 }
-.trial--roro .trial-btn {
-  position: absolute;
-  top: 3px;
-  right: 0;
-}
-@media (max-width: 1210px) {
-  [lang=en] .trial .trial-btn {
-    position: static;
-  }
-  [lang=en] .trial .step-con {
-    text-align: right;
-  }
-  [lang=en] .trial .step-sub-list {
-    margin-bottom: 20px;
-  }
-}
-@media (max-width: 1070px) {
-  .trial .sub__tit2 {
-    font-size: 24px;
-  }
-  .trial .sub__desc {
-    margin-bottom: 24px;
-    font-size: 16px;
-    line-height: 2;
-  }
-  .trial .sub__desc em {
-    display: inline;
-  }
-  .trial__panel {
-    padding: 30px 20px;
-  }
-  .trial--roro .step-item {
-    text-align: right;
-  }
-  .trial--roro .step-item .trial-btn {
-    position: static;
-    margin-top: 20px;
-  }
-  .trial--roro .step-item:last-child .step-con {
-    padding-bottom: 24px;
-  }
-  .trial--roro .step-item:last-child .step-con .trial-btn {
-    position: static;
-  }
-  [lang=en] .trial .step-sub-list {
-    margin-bottom: 0;
-  }
-}
 
 .step-item {
   display: flex;
@@ -6601,13 +6553,7 @@ body.show-gnb {
 .trial--roro .step-item:nth-child(2) .step-num {
   display: block;
 }
-@media (max-width: 1070px) {
-  .step-item {
-    display: block;
-  }
-}
-
-.step-tit {
+.step-item .step-tit {
   width: 230px;
   display: block;
   font-size: 2rem;
@@ -6615,19 +6561,7 @@ body.show-gnb {
   line-height: 1.75;
   font-weight: 500;
 }
-@media (max-width: 1070px) {
-  .step-tit {
-    width: auto;
-    margin-bottom: 20px;
-    font-size: 16px;
-    text-align: left;
-  }
-  .step-tit .step-num {
-    display: block;
-  }
-}
-
-.step-con {
+.step-item .step-con {
   position: relative;
   width: 78.4821428571%;
   margin-left: 1.8584070796%;
@@ -6635,37 +6569,42 @@ body.show-gnb {
   padding-bottom: 30px;
   border-bottom: solid 1px #eae7e1;
 }
-.step-con .step-info-m {
+.step-item .only-pc {
   display: none;
   font-size: 12px;
   color: #a86247;
   text-align: right;
   font-weight: 500;
 }
-@media (max-width: 1070px) {
-  .step-con {
+@media (max-width:960px) {
+  .step-item {
+    display: block;
+  }
+  .step-item .step-tit {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  .step-item .step-con {
     width: auto;
-    margin-left: 0;
     padding-bottom: 24px;
   }
-  .step-con .step-info-m {
-    display: block;
-    margin-top: 20px;
-  }
-  .step-item:last-child .step-con {
-    position: relative;
+  .step-item .step-con--wasup-last {
     padding-bottom: 72px;
   }
-  .step-item:last-child .step-con .trial-btn {
+  .trial--roro .step-item .step-con {
+    padding-bottom: 72px;
+  }
+  .step-item .trial-btn {
     position: absolute;
     right: 0;
     bottom: 24px;
   }
-  .step-item:last-child .step-con .trial-btn--guide2 {
+  .step-item .trial-btn--subscription {
     right: 108px;
   }
-  [lang=en] .step-item:last-child .step-con .trial-btn--guide2 {
-    right: 130px;
+  .step-item .only-pc {
+    display: block;
+    margin-top: 20px;
   }
 }
 
@@ -6677,6 +6616,7 @@ body.show-gnb {
 .step-sub-list li {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .step-sub-list li:first-child {
   margin-bottom: 10px;
@@ -6691,17 +6631,13 @@ body.show-gnb {
 .step-sub-list .link-franchisability:hover {
   text-decoration: underline;
 }
-@media (max-width: 1070px) {
+[lang=en] .step-sub-list {
+  font-size: 1.5rem;
+}
+@media (max-width:960px) {
   .step-sub-list {
     font-size: 15px;
-    line-height: 1.73;
-  }
-  .step-sub-list li:first-child {
-    margin-bottom: 8px;
-  }
-  .step-sub-list .ico-check::before {
-    width: 17px;
-    height: 17px;
+    line-height: 1.7;
   }
 }
 
@@ -6712,12 +6648,14 @@ body.show-gnb {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  margin-left: 10px;
   padding: 0 14px;
   font-weight: 500;
   border: 1px solid #a86247;
   border-radius: 4px;
   color: #a86247;
   font-size: 1.4rem;
+  background-color: #fff;
 }
 .trial-btn:hover {
   color: #fff;
@@ -6739,18 +6677,22 @@ body.show-gnb {
 .trial-btn--gz:hover::after, .trial-btn--zip:hover::after {
   background-position: 0px -2987px;
 }
-@media (max-width: 1070px) {
+.download-zip .trial-btn:last-child {
+  margin-left: 0;
+}
+@media (max-width:960px) {
   .trial-btn {
     padding: 0 12px;
-    line-height: 28px;
+    height: 28px;
     font-size: 12px;
-    background-color: #fff;
   }
-  .trial-btn:hover {
-    color: #a86247;
-    background-color: #fff;
-  }
-  .trial-btn--gz, .trial-btn--zip {
+}
+
+.download-zip {
+  display: flex;
+}
+@media (max-width:960px) {
+  .download-zip {
     display: none;
   }
 }

@@ -47,15 +47,7 @@
     <title>Playce</title>
   </head>
   <body>
-    <div class="banner js-banner" data-collapsed="false">
-      <div class="l-center">
-        <a class="banner-anchor" href="http://bit.ly/2RIN2cp" target="_blank">
-          <img class="banner__pc-img" src="./images/top-banner2x.png" alt="">
-          <img class="banner__m-img" src="./images/top-banner2x-m.png" alt="">
-        </a>
-        <button class="banner-btn js-banner-btn" type="button">닫기</button>
-      </div>
-    </div>
+
     <!-- wrap -->
     <section class="wrap js-wrap">
     <?php include_once 'common-php/gnb.php'; ?>

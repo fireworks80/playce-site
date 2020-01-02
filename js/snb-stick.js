@@ -2,30 +2,31 @@
   'use strict';
   var snbSticky = function () {
     // snb sticky
-    var wrap = document.querySelector('.js-wrap');
-    var headerEl = document.querySelector('.js-header');
-    var headerElRect = headerEl.getBoundingClientRect();
-    var container = document.querySelector('.js-wrap');
-    var topBanner = document.querySelector('.js-banner');
-    var snbRect = document.querySelector('.snb').getBoundingClientRect();
-    var timeID = null;
-    // @return snb show scrollTop value
-    var getPinValue = function () { 
-      var bannerHeight = 60;
-      var isCollapsed = topBanner.getAttribute('data-collapsed');
-      return (isCollapsed === 'false') ? bannerHeight + headerElRect.height + snbRect.height : headerElRect.height + snbRect.height;
+    var config = {
+      wrap: null,
+      headerHeight: null,
+      snbHeight: null
     };
+    
     var setSnbSticky = function (yOffset) { 
+      var stickPoint = config.headerHeight + config.snbHeight;
 
-      if (yOffset >= getPinValue()) {
-        container.classList.add('sticky');
-      } else if (yOffset <= (getPinValue() - snbRect.height)) {
-        container.classList.remove('sticky');
+      if (yOffset >= stickPoint) {
+        config.wrap.classList.add('sticky');
+      } else if (yOffset <= config.headerHeight) {
+        config.wrap.classList.remove('sticky');
       }
     };
 
+    root.addEventListener('load', function () {
+      config.wrap = document.querySelector('.js-wrap');
+      config.headerHeight = config.wrap.querySelector('.js-header').clientHeight;
+      config.snbHeight = config.wrap.querySelector('.snb').clientHeight;
+    });
+
     root.addEventListener('scroll', function (e) {
-      setSnbSticky(root.pageYOffset);
+      if (config.headerHeight && config.snbHeight) setSnbSticky(root.pageYOffset);
+      
     });
   };
   window.snbSticky = snbSticky;

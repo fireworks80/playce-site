@@ -1159,6 +1159,7 @@ include_once 'common-php/header.php';
 <script>
   window.addEventListener('DOMContentLoaded', function() {
       var hash = Playce.getHash();
+      
       if (!hash) return;
       setTimeout(function() {
         var snbHeight = document.querySelector('.js-snb').getBoundingClientRect().height;
@@ -1253,8 +1254,8 @@ include_once 'common-php/header.php';
     // subscription
     setSubscriptionScope();
     smoothAnchor('.js-hash-link');
-
     snbSticky();
+
 </script>
 </body>
 </html>

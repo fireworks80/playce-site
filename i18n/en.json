@@ -45,8 +45,10 @@
   "index-service-desc": "오픈소스컨설팅의 고객지원 서비스를 통해 <em>궁금한 점을 해결</em>해보세요.",
   "service-inquiry": "Do you have any questions regarding Playce products?",
   "service-tech": "Do you need any assistance from a Playce product engineer?",
+  "index-link-tech": "Go to the Technical Support",
   "index-service-faq-desc": "Please check FAQs before contacting Playce Support.",
-  "experience-index-desc1": "Try open source consulting's <em>Playce products for free.</em>",
+  "index-link-faq": "Go to the FAQs",
+  "experience-index-desc1": "Try Open Source Consulting's <em>Playce products for free.</em>",
   "experience-index-desc2": "Playce WASup and Playce RoRo are open source-based solutions that are free to try at any time.",
 
   "foot-product": "Products",
@@ -55,6 +57,7 @@
   "addr": "5F, Narakium Bldg., 32, Teheran-ro 83-gil,, Gangnam-gu, Seoul, Republic of Korea",
   "individual-info": "Privacy Policy",
   "software": "End User License Agreement",
+  "foot-resource": "Other Resources",
 
   "wasup-tit": "Playce WASup is a<em class=\"hero__em\"> WAS solution optimized for</em> the cloud environment",
   "wasup-desc": "Customer IT costs can be minimized by<br/> breaking away from vendor dependencies<br/> and enhancing Web and WAS features.",
@@ -310,7 +313,7 @@
   "link-detail2": "Go to the Technical Support",
   "faq-desc": "Please check FAQs before contacting Playce Support.",
   "go-to-faq": "Go to the FAQs",
-  "support-exp": "Try open source consulting's <em>Playce product for free today</em>",
+  "support-exp": "Try Open Source Consulting's <em>Playce product for free today</em>",
   "support-exp2": "Playce WASup and Playce RoRo are open source-based solutions that are free to try at any time.",
 
   "free-desc": "<em>Trial License to use Playce WASup is offered for free.</em> Trial License has no functional restrictions and can be used for free until the defined expiration date.",

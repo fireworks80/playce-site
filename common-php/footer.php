@@ -92,7 +92,7 @@
               <ul class="service__list js-resource-list">
                 <li><a href="./resource.html" data-i18n="">Playce WASup</a></li>
                 <li><a href="./resource.html#playce-roro" dta-i18n="">Playce RoRo</a></li>
-                <li><a href="./resource.html#etc" data-i18n="add-resource">추가 리소스</a></li>
+                <li><a href="./resource.html#etc" data-i18n="foot-resource">추가 리소스</a></li>
               </ul>
             </div>
           </div>
@@ -173,8 +173,8 @@
 <script src="./js/smooth-anchor.js"></script>
 <script>
   
-  // Playce.translation(location.pathname.indexOf('en') > -1 ? 'en' : 'ko');
-  Playce.translation('en');
+  Playce.translation(location.pathname.indexOf('en') > -1 ? 'en' : 'ko');
+  // Playce.translation('en');
 
   (function() {
     'use strict';

@@ -44,7 +44,9 @@
   "index-service-desc": "오픈소스컨설팅의 고객지원 서비스를 통해 <em>궁금한 점을 해결</em>해보세요.",
   "service-inquiry": "Playce 제품에 대해 궁금한 사항이 있으신가요?",
   "service-tech": "Playce 제품 전담 엔지니어의 도움이 필요하신가요?",
+  "index-link-tech": "바로가기",
   "index-service-faq-desc": "Playce Support에 문의 전 FAQ 내용을 확인해<span class=\"line-brake\"></span>보세요.",
+  "index-link-faq": "바로가기",
   "experience-index-desc1": "오픈소스컨설팅의 <em>Playce 제품을<span class=\"line-brake\"></span> 무료로</em> 시작해 보세요.",
   "experience-index-desc2": "Playce WASup과 Playce RoRo는<span class=\"line-brake\"></span> 오픈소스 기반 솔루션으로, 언제든지<span class=\"line-brake\"></span> 무료로 사용해 볼 수 있습니다.",
 
@@ -54,6 +56,7 @@
   "addr": "서울특별시 강남구 테헤란로 83길 32, 5층  (삼성동,나라키움삼성동A빌딩)",
   "individual-info": "개인정보 처리방침",
   "software": "소프트웨어 사용권동의",
+  "foot-resource": "추가 리소스",
 
   "wasup-tit": "Playce WASup은<em class=\"hero__em\">클라우드 환경에 최적화된</em>WAS 솔루션입니다.",
   "wasup-desc": "벤더의 종속성에서 탈피하고 Web과 <br>WAS의 기능을 강화하여, 고객의 IT 비용을 <br>최대로 줄일 수 있습니다.",

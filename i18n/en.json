@@ -196,13 +196,13 @@
 
   "roro-fn-tit": "Main Function",
   "roro-fn-desc": "While performing L2C and U2C migration effectively, various features, <span class=\"line-brake\"></span>including flexible volume configuration, network setting support and automatic image generation, are provided.",
-  "roro-function-wizard-tit": "Migration Wizard feature",
+  "roro-function-wizard-tit": "Migration Wizard Feature",
   "roro-wizard-step1": "Step 1. Select a license to perform migration",
   "roro-wizard-step2": "Step 2. Select the target migration source server",
   "roro-wizard-step3": "Step 3. Set up network for the target cloud (AWS)",
   "roro-wizard-step4": "Step 4. Select the type of target instance",
   "roro-wizard-step5": "Step 5. Set the volume information for the target instance",
-  "roro-wizard-step6": "Step 6. Review Wizard and run migration",
+  "roro-wizard-step6": "Step 6. Review wizard and run migration",
 
   "roro-agen-tit": "Agentless Migration Tool",
   "roro-agen-item1": "Web console-based SaaS service without Agent installation",
@@ -210,7 +210,7 @@
 
   "path-tit": "Flexible Volume Configuration by Path",
   "path-desc1": "Single volume on-premises can be divided into multiple<br /> EBS volumes",
-  "path-desc2": "Multiple volumes on-premises can be combined into a s<br />ingle EBS volume",
+  "path-desc2": "Multiple volumes on-premises can be combined into a <br />single EBS volume",
 
   "network-tit": "Network Configuration Support",
   "network-desc1": "Access Key and Region setting function for the target cloud without<br /> AWS Console access",

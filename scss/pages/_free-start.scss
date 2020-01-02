@@ -16,7 +16,6 @@ $bp-mobile: 1070px;
 // ===========================================================================
 .free-start__tab {
   $width: 408px;
-  @include size(percent($width, $width-max), null);
   display: inline-flex;
   justify-content: center;
   font-weight: 500;
@@ -53,14 +52,20 @@ $bp-mobile: 1070px;
   }
 
   @media (max-width: $bp-mobile) {
+    display: flex;
     font-size: 16px;
+  }
 
-    &-item:first-child {
-      margin-right: 4px;
+  @media ($query-mobile) {
+    &-item {
+      flex: 1;
+      &:first-child {
+        margin-right: 4px;
+      }
     }
 
     &-link {
-      @include size(122px, null);
+      @include size(auto, null);
     }
   }
 } // tab
@@ -107,6 +112,7 @@ $bp-mobile: 1070px;
   }
 
   .sub__tit2 {
+    font-weight: bold;
     color: #323e51;
     text-align: center;
   }

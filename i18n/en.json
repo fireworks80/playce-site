@@ -12,7 +12,7 @@
   "support-tit-index": "Playce Support",
   "inquiry": "Contact",
   "resource": "Resource",
-  "add-resource": "Other Resources",
+  "add-resource": "<span>Other Resources</span>",
   "partner": "Partner",
   "partner-program": "Partner Program",
   "buy": "구매 문의",
@@ -35,7 +35,7 @@
   "index-wasup-desc": "Playce WASup makes it easier to integrate <span class=\"line-brake\"></span>and manage community open source WAS,<span class=\"line-brake\"></span>minimizing the client’s IT costs.",
   "detail-wasup": "Learn more",
 
-  "index-roro-tit": "Fast and easy large-scale<span class=\"line-brake\"></span> migration to the cloud!<span class=\"line-brake\"></span><em class=\"hero__em\">Cloud Migration Solution</em>",
+  "index-roro-tit": "Fast and easy large-scale<span class=\"line-brake\"></span> migration to the cloud!<span class=\"line-brake\"></span><em class=\"hero__em\"> Cloud Migration Solution</em>",
   "index-roro-desc": "Playce RoRo provides fast and reliable <span class=\"line-brake\"></span>cloud migration service through automated<span class=\"line-brake\"></span> system diagnosis and analysis features.",
   "detail-roro": "Learn more",
   "index-case1": "“<em>Playce WASup is the best tool for creating an efficient open source based operating environment through web server/middleware control and monitoring.</em>We have built a next-generation system using Playce WASup to manage the existing web server and WAS operated by Hana Tour. We were able to improve the overall efficiency of resource management by using a central web console configuration rather than having to individually configure and manage each system.”",
@@ -101,7 +101,7 @@
 
   "wasup-ui-tit": "Convenient Management Feature based on Web UI",
   "wasup-ui-item1": "Provide multi-server management and control",
-  "wasup-ui-item2": "Single view at-a-glance of servers and resources registered to domain through Topology View",
+  "wasup-ui-item2": "Single view at-a-glance of servers and resources registered to domain <br />through Topology View",
   "wasup-ui-item3": "Provide switch function to Light/Dark Mode of browser",
 
   "wasup-dash-tit": "Real-Time Monitoring Dashboard",
@@ -204,7 +204,7 @@
 
   "roro-agen-tit": "Agentless Migration Tool",
   "roro-agen-item1": "Web console-based SaaS service without Agent installation",
-  "roro-agen-item2": "Easy migration environment configuration with minimal inf<br />ormation registration for the server",
+  "roro-agen-item2": "Easy migration environment configuration with minimal <br />information registration for the server",
 
   "path-tit": "Flexible Volume Configuration by Path",
   "path-desc1": "Single volume on-premises can be divided into multiple<br /> EBS volumes",
@@ -291,16 +291,16 @@
   "email-inquiry": "Email Inquiry",
   "email-inquiry-desc": "Please inquire about partnership.",
 
-  "resource-guide1": "Playce WASup v1.0.0 installation file and Guide",
+  "resource-guide1": "Installation File <br />& Guide",
   "resource-release": "Playce WASup v1.0.0 릴리즈 노트",
-  "resource-file": "Playce WASup v1.0.0 installation file",
+  "resource-file": "Playce WASup v1.0.0 Installation File",
   "resource-m": "*PC 버전만 다운로드 가능합니다.",
 
   "resource-guide3": "Playce WASup v1.0.0 사용자 가이드 (국문)",
   "resource-file-mv": "Documentation",
   "resource-guide5": "Playce WASup v1.0.0 Brochure",
   "resource-guide6": "새로워진 Playce WASup을 만나보세요! - 사용 가이드",
-  "document": "문서",
+  "document": "Documentation",
 
   "support-tit": "Open Source Consulting actively supports customers<em>for smooth product use experience.</em>",
   "support-desc": "<em>Playce Support</em> is a customer support service operated to solve customer problems and provides technical support<br/> for responding to customer inquiries and troubleshooting in an accurate and prompt fashion.",

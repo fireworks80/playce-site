@@ -357,6 +357,10 @@
   &::after {
     @include icon-setting($ic-wizard-panel-2x);
   }
+} // function--wasup .slide-panel--wizard
+
+.function--wasup .prd-info-wrap:last-of-type .prd-info {
+  padding-top: 100px;
 }
 
 // =============================

@@ -15,16 +15,17 @@
 // ===========================================================================
 
 .resource__tab {
-  display: flex;
+  $color: rgba(68, 109, 21, 1);
+  display: inline-flex;
   justify-content: center;
   font-weight: 500;
 
   &-item {
     // @include debug;
-    @include size(percent(190px, $width-max), null);
+    // @include size(percent(190px, $width-max), null);
     opacity: 0.2;
     transition: opacity 0.32s;
-
+    // flex: 1;
 
     &.is-active {
       opacity: 1;
@@ -33,16 +34,15 @@
     &:nth-child(2) {
       margin: 0 8px;
     }
-  }
+  } // item
 
   &-link {
-    $color: rgba(68, 109, 21, 1);
     display: block;
     font-size: rem(22px);
     color: $color;
 
     [lang='en'] & {
-      letter-spacing: -.4px;
+      letter-spacing: -0.4px;
     }
 
     &::after {
@@ -53,36 +53,22 @@
       background-color: $color;
       content: '';
     }
-  }
 
-  @media (max-width: 1092px) {
-    [lang='en'] &-item {
-      width: 33%;
-
-      &:nth-child(2) {
-        margin: 0 4px;
-      }
+    span {
+      display: block;
+      padding: 0 5px;
     }
-  }
+  } // link
 
   @media ($query-mobile) {
-    &-item:nth-child(1) {
-      width: 122px;
-    }
-    &-item:nth-child(2) {
-      width: 108px;
-      margin: 0 4px;
-    }
-    &-item:nth-child(3) {
-      width: 90px;
+    display: flex;
+
+    &-item {
+      flex: 1 1 auto;
     }
 
     &-link {
-      font-size: 16px;
-    }
-
-    [lang='en'] &-item {
-      width: 33%;
+      font-size: 14px;
     }
   } // > 960
 } // tab

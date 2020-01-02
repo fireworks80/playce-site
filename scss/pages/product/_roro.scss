@@ -232,7 +232,7 @@
 // ====================================================
 .function--roro {
   padding-top: 404px;
-  padding-bottom: 389px;
+  padding-bottom: 280px;
   background: center top / contain no-repeat url($path-img+'bg-function-top-roro.png'),
     center bottom / contain no-repeat url($path-img+'bg-architecture-roro.png');
 
@@ -301,6 +301,10 @@
       transform: translateX(-50%);
       box-shadow: 0 2px 10px 0 rgba(50, 62, 81, 0.3);
     }
+  }
+
+  .prd-info-wrap:last-of-type .prd-info {
+    padding-top: 114px;
   }
 
   @media ($query-mobile) {

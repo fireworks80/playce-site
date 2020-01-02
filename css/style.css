@@ -825,7 +825,7 @@ body {
   width: 33.333333%;
 }
 .prd-info__tit {
-  padding-left: 2.5%;
+  padding-left: 10px;
   margin-bottom: 30px;
   font-size: 2.4rem;
   font-weight: bold;
@@ -1042,6 +1042,11 @@ body {
 }
 .btn-round:hover {
   box-shadow: 0 2px 4px 0 rgba(50, 62, 81, 0.3);
+}
+@media (max-width:960px) {
+  .btn-round {
+    font-size: 1.6rem;
+  }
 }
 
 .btn-round--white {
@@ -1672,7 +1677,7 @@ body.show-gnb {
   color: #2557a0;
 }
 .snb__link:hover {
-  font-weight: normal;
+  font-weight: 700;
 }
 .snb__item:last-child .snb__link {
   border-radius: 3px 8px;
@@ -2419,7 +2424,7 @@ body.show-gnb {
   color: rgba(255, 255, 255, 0.7);
 }
 .lineup-wasup .btn-round--white {
-  margin-right: 19px;
+  margin-right: 1.9791666667%;
 }
 .lineup-wasup .link-detail {
   position: relative;
@@ -2458,7 +2463,7 @@ body.show-gnb {
   color: #469bf0;
 }
 .lineup-roro .btn-round--lite-blue {
-  margin-right: 19px;
+  margin-right: 1.9791666667%;
 }
 .lineup-roro .link-detail {
   margin-top: 40px;
@@ -2722,11 +2727,11 @@ body.show-gnb {
   left: 5.6140350877%;
 }
 .tab-content--roro {
-  color: #2557a0;
+  color: #438dd6;
   text-align: right;
 }
 .tab-content--roro em {
-  color: #438dd6;
+  color: #2557a0;
 }
 .tab-content--roro::before {
   background-image: url(../images/sprite/sprite-icons-2x.png);
@@ -2738,7 +2743,7 @@ body.show-gnb {
 }
 .tab-content cite {
   position: absolute;
-  right: 8.7719298246%;
+  right: 30px;
   bottom: 24px;
 }
 @media (max-width:960px) {
@@ -2930,7 +2935,7 @@ body.show-gnb {
 
 .architecture {
   padding-bottom: 137px;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 .architecture--wasup {
@@ -3841,7 +3846,7 @@ body.show-gnb {
 @media (max-width: 640px) {
   .motion-box-wrap .motion-box {
     transform: scale(0.6);
-    margin-top: -16px;
+    margin-top: -50px;
   }
 }
 
@@ -4183,6 +4188,10 @@ body.show-gnb {
   background-position: 0px -2110px;
   width: 75px;
   height: 75px;
+}
+
+.function--wasup .prd-info-wrap:last-of-type .prd-info {
+  padding-top: 100px;
 }
 
 .dashboard__img-panels {
@@ -5166,7 +5175,7 @@ body.show-gnb {
 
 .function--roro {
   padding-top: 404px;
-  padding-bottom: 389px;
+  padding-bottom: 280px;
   background: center top/contain no-repeat url("../images/bg-function-top-roro.png"), center bottom/contain no-repeat url("../images/bg-architecture-roro.png");
 }
 .function--roro .function__desc .line-brake {
@@ -5230,6 +5239,9 @@ body.show-gnb {
   height: 71px;
   transform: translateX(-50%);
   box-shadow: 0 2px 10px 0 rgba(50, 62, 81, 0.3);
+}
+.function--roro .prd-info-wrap:last-of-type .prd-info {
+  padding-top: 114px;
 }
 @media (max-width:960px) {
   .function--roro {
@@ -6111,12 +6123,11 @@ body.show-gnb {
 }
 
 .resource__tab {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   font-weight: 500;
 }
 .resource__tab-item {
-  width: 15.8333333333%;
   opacity: 0.2;
   transition: opacity 0.32s;
 }
@@ -6142,30 +6153,19 @@ body.show-gnb {
   background-color: #446d15;
   content: "";
 }
-@media (max-width: 1092px) {
-  [lang=en] .resource__tab-item {
-    width: 33%;
-  }
-  [lang=en] .resource__tab-item:nth-child(2) {
-    margin: 0 4px;
-  }
+.resource__tab-link span {
+  display: block;
+  padding: 0 5px;
 }
 @media (max-width:960px) {
-  .resource__tab-item:nth-child(1) {
-    width: 122px;
+  .resource__tab {
+    display: flex;
   }
-  .resource__tab-item:nth-child(2) {
-    width: 108px;
-    margin: 0 4px;
-  }
-  .resource__tab-item:nth-child(3) {
-    width: 90px;
+  .resource__tab-item {
+    flex: 1 1 auto;
   }
   .resource__tab-link {
-    font-size: 16px;
-  }
-  [lang=en] .resource__tab-item {
-    width: 33%;
+    font-size: 14px;
   }
 }
 
@@ -6426,7 +6426,6 @@ body.show-gnb {
 }
 
 .free-start__tab {
-  width: 34%;
   display: inline-flex;
   justify-content: center;
   font-weight: 500;
@@ -6458,13 +6457,19 @@ body.show-gnb {
 }
 @media (max-width: 1070px) {
   .free-start__tab {
+    display: flex;
     font-size: 16px;
+  }
+}
+@media (max-width:960px) {
+  .free-start__tab-item {
+    flex: 1;
   }
   .free-start__tab-item:first-child {
     margin-right: 4px;
   }
   .free-start__tab-link {
-    width: 122px;
+    width: auto;
   }
 }
 
@@ -6502,6 +6507,7 @@ body.show-gnb {
   animation: anim-free-start-fade 0.32s forwards;
 }
 .trial .sub__tit2 {
+  font-weight: bold;
   color: #323e51;
   text-align: center;
 }

@@ -47,7 +47,7 @@
   }
 
   .btn-round--white {
-    margin-right: 19px;
+    margin-right: percent(19px, 960px);
   }
 
   .link-detail {
@@ -95,7 +95,8 @@
   }
 
   .btn-round--lite-blue {
-    margin-right: 19px;
+    // margin-right: 19px;
+    margin-right: percent(19px, 960px);
   }
 
   .link-detail {
@@ -387,11 +388,11 @@
   }
 
   &--roro {
-    color: #2557a0;
+    color: #438dd6;
     text-align: right;
 
     em {
-      color: #438dd6;
+      color: #2557a0;
     }
 
     &::before {
@@ -401,7 +402,7 @@
   }
 
   cite {
-    @include absolute($bottom: 24px, $right: percent(50px, $width));
+    @include absolute($bottom: 24px, $right: 30px);
   }
 
   // mobile

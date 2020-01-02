@@ -764,6 +764,10 @@ body {
   .callout--lang .callout__inner {
     padding: 0;
   }
+  [lang=en] .callout__inner {
+    width: auto;
+    height: auto;
+  }
   .callout__content {
     width: auto;
     height: auto;
@@ -782,22 +786,21 @@ body {
   }
   .callout__desc {
     font-size: 15px;
-  }
-  [lang=en] .callout__content:nth-child(2) .callout__desc {
-    margin-bottom: 32px;
+    margin-bottom: 22px;
   }
   .callout__list {
     display: block;
-    font-size: 14px;
+    font-size: 13px;
   }
   .callout__list li {
     width: auto;
     height: auto;
     display: inline-block;
     margin-bottom: 0;
+    margin-right: 10px;
   }
-  .callout__list li:nth-child(n+2) {
-    margin-left: 10px;
+  [lang=en] .callout__list {
+    letter-spacing: -0.2px;
   }
   .callout__link {
     width: auto;
@@ -1694,6 +1697,11 @@ body.show-gnb {
     margin-bottom: 0;
   }
 }
+@media (max-width: 775px) {
+  .snb__link {
+    padding: 0 16px;
+  }
+}
 @media (max-width: 768px) {
   .snb .l-center {
     height: auto;
@@ -1705,13 +1713,17 @@ body.show-gnb {
     margin-right: 4px;
   }
   .snb__item:last-child {
+    position: absolute;
+    top: 20px;
+    right: 16px;
     margin-right: 0;
   }
   .snb__link {
     padding: 4px;
     font-size: 13px;
-    font-weight: bold;
+    font-weight: 500;
     line-height: 28px;
+    letter-spacing: -0.2px;
   }
   .snb__item:first-child .snb__link {
     padding-left: 0;
@@ -1721,7 +1733,7 @@ body.show-gnb {
     padding-right: 10px;
   }
   .snb__logo {
-    margin-bottom: 18px;
+    margin-bottom: 25px;
   }
 }
 
@@ -2935,7 +2947,7 @@ body.show-gnb {
 
 .architecture {
   padding-bottom: 137px;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .architecture--wasup {
@@ -3156,9 +3168,13 @@ body.show-gnb {
 .case__slider {
   position: relative;
   margin-bottom: 40px;
+  visibility: hidden;
 }
 .case__slider .slick-list {
   overflow: visible;
+}
+.case__slider.is-visible {
+  visibility: visible;
 }
 
 .case__extract {
@@ -4964,6 +4980,7 @@ body.show-gnb {
   overflow: hidden;
   padding-top: 70px;
   padding-bottom: 198px;
+  margin-bottom: -1px;
   background-image: url("../images/bg-visual-roro-2x.png");
   background-size: contain;
 }
@@ -5061,6 +5078,7 @@ body.show-gnb {
 @media (max-width:960px) {
   .hero--roro {
     padding-bottom: 88px;
+    padding-top: 60px;
   }
   .hero--roro .hero__tit {
     margin-bottom: 10px;

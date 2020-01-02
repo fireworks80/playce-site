@@ -48,7 +48,7 @@
       <div class="footer__row">
         <!-- locale -->
         <div class="footer__locale">
-          <a href="http://osci.kr/main.php" target="_blank">
+          <a href="http://osci.kr<?php echo ($locale === 'en') ? '/eng/company': '/main'; ?>.php" target="_blank">
             <img
               class="footer__logo"
               src="./images/foot-logo2x.png"
@@ -130,8 +130,8 @@
         <div class="js-select select">
             <span class="select__current-text">Family Site</span>
             <ul class="select__list">
-              <li><a href="http://osci.kr/main.php" target="_blank" data-i18n="family-opensource">오픈소스컨설팅</a></li>
-              <li><a href="https://www.sharingtechlabs.com" target="_blank">열린기술공방</a></li>
+              <li><a href="http://osci.kr<?php echo ($locale === 'en') ? '/eng/company': '/main'; ?>.php" target="_blank" data-i18n="family-opensource">오픈소스컨설팅</a></li>
+              <li class="not-eng"><a href="https://www.sharingtechlabs.com" target="_blank">열린기술공방</a></li>
             </ul>
           </div>
       </div>

@@ -697,14 +697,17 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 
   // case
+  setTimeout(function() {
     caseSlider('.case--roro', {
       fade: true,
       infinite: false,
       prevArrow: '.case--roro .btn-arrow--blue-prev',
       nextArrow: '.case--roro .btn-arrow--blue-next'
     });
+    // $('.case__slider').addClass('is-visible');
+  }, 500);
 
-    smoothAnchor('.js-hash-link');
+  smoothAnchor('.js-hash-link');
 
     // visual counter
   counterAnim('.count', 1000);

@@ -1244,12 +1244,15 @@ include_once 'common-php/header.php';
   // ============================
 
     // case
-    caseSlider('.case--wasup', {
-      fade: true,
-      infinite: false,
-      prevArrow: '.case--wasup .btn-arrow--puple-prev',
-      nextArrow: '.case--wasup .btn-arrow--puple-next'
-    });
+    setTimeout(function() {
+      caseSlider('.case--wasup', {
+        fade: true,
+        infinite: false,
+        prevArrow: '.case--wasup .btn-arrow--puple-prev',
+        nextArrow: '.case--wasup .btn-arrow--puple-next'
+      });
+
+    }, 500);
 
     // subscription
     setSubscriptionScope();

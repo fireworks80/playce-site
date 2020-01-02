@@ -4,6 +4,7 @@
   overflow: hidden;
   padding-top: 70px;
   padding-bottom: 198px;
+  margin-bottom: -1px;
   background-image: url($path-img+'bg-visual-roro-2x.png');
   background-size: contain;
 
@@ -129,6 +130,7 @@
 
   @media ($query-mobile) {
     padding-bottom: 88px;
+    padding-top: 60px;
 
     .hero__tit {
       margin-bottom: 10px;

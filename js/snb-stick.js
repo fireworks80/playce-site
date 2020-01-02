@@ -10,7 +10,7 @@
     
     var setSnbSticky = function (yOffset) { 
       var stickPoint = config.headerHeight + config.snbHeight;
-
+      
       if (yOffset >= stickPoint) {
         config.wrap.classList.add('sticky');
       } else if (yOffset <= config.headerHeight) {

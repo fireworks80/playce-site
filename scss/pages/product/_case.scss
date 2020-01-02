@@ -52,9 +52,14 @@
 .case__slider {
   @include relative;
   margin-bottom: 40px;
+  visibility: hidden;
 
   .slick-list {
     overflow: visible;
+  }
+
+  &.is-visible {
+    visibility: visible;
   }
 }
 

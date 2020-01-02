@@ -176,6 +176,10 @@
       }
     }
 
+    [lang='en'] &__inner {
+      @include size(auto);
+    }
+
     &__content {
       // @include debug;
       @include size(auto);
@@ -200,29 +204,28 @@
 
     &__desc {
       font-size: 15px;
+      margin-bottom: 22px;
 
-      [lang='en'] .callout__content:nth-child(2) & {
-        margin-bottom: 32px;
-      }
+      // [lang='en'] .callout__content:nth-child(2) & {
+      //   margin-bottom: 32px;
+      // }
     }
 
     &__list {
       display: block;
-      font-size: 14px;
+      font-size: 13px;
 
       li {
         @include size(auto);
         display: inline-block;
         margin-bottom: 0;
+        margin-right: 10px;
+      } // li
 
-        &:nth-child(n + 2) {
-          // @include debug;
-          margin-left: 10px;
-        }
+      [lang='en'] & {
+        letter-spacing: -0.2px;
       }
-
-      // li
-    }
+    } // list
 
     // list
 

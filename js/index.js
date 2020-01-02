@@ -438,6 +438,10 @@ var caseSlider = function(wrap, opt) {
 
 	var sliderObj = slickWrapper(wrap, opt);
 
+	if (sliderObj) {
+		$('.case__slider').addClass('is-visible');
+	}
+
 	sliderObj.on('beforeChange', function(e, slick, current, next) {
 		setCurrentUserList(next);
 	});

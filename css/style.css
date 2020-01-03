@@ -2249,6 +2249,10 @@ body.show-gnb {
 .hero--wasup .graph {
   transform: perspective(2210px) rotateY(-25deg) rotateX(4deg) rotateZ(3deg) translateY(10px)translateX(-28px);
 }
+.no-smil .graph {
+  height: 510px;
+  background: url("../images/wasup-art-mainvisual@2x.png") no-repeat center top/contain;
+}
 
 .graph-section {
   width: 624px;
@@ -2262,6 +2266,9 @@ body.show-gnb {
 .graph-section svg {
   width: 100%;
   height: 100%;
+}
+.no-smil .graph-section {
+  display: none;
 }
 
 .graph-section .circle-inner,
@@ -2456,6 +2463,9 @@ body.show-gnb {
 .lineup-wasup .line-brake {
   display: block;
 }
+.no-smil .lineup-wasup {
+  overflow: hidden;
+}
 
 .lineup-roro {
   overflow: hidden;
@@ -2636,6 +2646,9 @@ body.show-gnb {
     padding-top: 60px;
     padding-bottom: 50px;
   }
+}
+.no-smil .case-index {
+  margin-top: -1px;
 }
 
 .tab {
@@ -4054,6 +4067,12 @@ body.show-gnb {
 .feature__desc em {
   color: #a86247;
 }
+.no-smil .feature__desc {
+  flex: 1 1 auto;
+}
+.feature .line-brake {
+  display: block;
+}
 @media (max-width:960px) {
   .feature {
     padding-bottom: 140px;
@@ -4071,7 +4090,7 @@ body.show-gnb {
     display: block;
     margin-bottom: 0;
   }
-  .feature br {
+  .feature .line-brake {
     display: none;
   }
 }

@@ -41,6 +41,7 @@
   "index-case2": "“<em>By applying Playce WASup to Jungnang-gu office's smart city IoT integration platform, we were able to systematically manage the middleware, which is a key element in the platform.</em>The data collected from sensors and devices are transferred to Jungnang-gu office IoT Server, and through real-time monitoring, we were able to provide more reliable services to Jungnang residents.”",
   "index-case3": "“Using Playce RoRo, we have moved our existing OpenStack-based virtual machine to a public cloud environment very easily. <em>This has helped the project by minimizing user errors and reducing time drastically.</em> I recommend it to enterprises that are considering moving their platforms to public cloud environments.”",
   "index-case4": "“Playce RoRo makes it easy to migrate customer’s legacy environment in the data center to the cloud. The solution is <em>a useful tool for customers to move security-critical servers from their internal network to AWS cloud by providing both SaaS and installation options.</em>”",
+  "index-service-tit": "Playce Support",
   "index-service-desc": "오픈소스컨설팅의 고객지원 서비스를 통해 <em>궁금한 점을 해결</em>해보세요.",
   "service-inquiry": "Do you have any questions regarding Playce products?",
   "service-tech": "Do you need any assistance from a Playce product engineer?",

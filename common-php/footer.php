@@ -159,6 +159,7 @@
   </div>
 </section>
 <!-- // wrap -->
+<script src="./js/modernizr-custom.js"></script>
 <script src="./js/jQuery.3.4.2.js"></script>
 <script src="./js/TweenMax.min.js"></script>
 <script src="./js/TimelineMax.min.js"></script>

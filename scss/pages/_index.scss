@@ -69,6 +69,11 @@
   .line-brake {
     display: block;
   }
+
+  // ie ==========================================================
+  .no-smil & {
+    overflow: hidden;
+  }
 }
 
 // line up roro
@@ -278,7 +283,12 @@
       padding-bottom: 50px;
     }
   }
-}
+
+  // ie =================================
+  .no-smil & {
+    margin-top: -1px;
+  }
+} // case index
 
 .tab {
   // @include debug;

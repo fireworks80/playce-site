@@ -2464,7 +2464,7 @@ body.show-gnb {
   display: block;
 }
 .no-smil .lineup-wasup {
-  overflow: hidden;
+  padding-bottom: 148px;
 }
 
 .lineup-roro {
@@ -2542,6 +2542,7 @@ body.show-gnb {
   .lineup-anim-wrap {
     position: static;
     top: 0;
+    display: -ms-flexbox;
     display: flex;
     justify-content: center;
     transform-origin: center center;

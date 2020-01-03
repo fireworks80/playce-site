@@ -70,11 +70,10 @@
     display: block;
   }
 
-  // ie ==========================================================
   .no-smil & {
-    overflow: hidden;
+    padding-bottom: 148px;
   }
-}
+} // lineup-wasup
 
 // line up roro
 // ===============================================================
@@ -168,6 +167,7 @@
   .lineup-anim-wrap {
     position: static;
     top: 0;
+    display: -ms-flexbox;
     display: flex;
     justify-content: center;
     transform-origin: center center;

@@ -48,7 +48,6 @@
   }
 }
 
-
 .sub-top {
   // @include debug;
   @include relative;
@@ -96,8 +95,11 @@
   }
 
   @media ($query-mobile) {
-    margin-bottom: 20px;
-    line-height: 1.6;
+    [lang] & {
+      margin-bottom: 20px;
+      font-size: 24px;
+      line-height: 1.6;
+    }
   }
 }
 
@@ -109,6 +111,12 @@
   [lang='en'] & {
     font-size: rem(20px);
     line-height: 1.8;
+  }
+
+  @media ($query-mobile) {
+    [lang] & {
+      font-size: 16px;
+    }
   }
 }
 

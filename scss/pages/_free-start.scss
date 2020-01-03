@@ -79,11 +79,17 @@ $bp-mobile: 1070px;
     margin-top: -540px;
   }
 
-  @media (max-width: $bp-mobile) {
+  @media ($query-mobile) {
     .l-center {
-      margin-top: -434px;
+      margin-top: -452px;
     }
   }
+
+  // @media (max-width: $bp-mobile) {
+  //   .l-center {
+  //     margin-top: -434px;
+  //   }
+  // }
 }
 
 @keyframes anim-free-start-fade {
@@ -112,7 +118,7 @@ $bp-mobile: 1070px;
   }
 
   .sub__tit2 {
-    font-weight: bold;
+    font-weight: 500;
     color: #323e51;
     text-align: center;
   }

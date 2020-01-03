@@ -3,7 +3,7 @@
   background-color: rgb(228, 235, 202);
 
   &::after {
-    background-image: url($path-img+'bg-resource-hero-btm-2x.png');
+    background-image: url($path-img+'bg-resource-round-2x.png');
   }
 
   .sub__tit {
@@ -76,12 +76,16 @@
 // panel
 // ===========================================================================
 .resource__panel-wrap {
-  // margin-top: -470px;
+  // margin-top: -525px;
   background-color: #f3f6f0;
+
+  .l-center {
+    margin-top: -540px;
+  }
 
   @media ($query-mobile) {
     .l-center {
-      margin-top: -438px;
+      margin-top: -452px;
     }
   }
 }
@@ -115,7 +119,7 @@
     margin: 0 0 50px;
     color: #363f2f;
     font-size: rem(37px);
-    font-weight: bold;
+    font-weight: 500;
     text-align: center;
   }
 

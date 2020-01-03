@@ -796,11 +796,8 @@ body {
     width: auto;
     height: auto;
     display: inline-block;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     margin-right: 10px;
-  }
-  [lang=en] .callout__list {
-    letter-spacing: -0.2px;
   }
   .callout__link {
     width: auto;
@@ -826,6 +823,9 @@ body {
 }
 .prd-info-wrap .prd-info {
   width: 33.333333%;
+}
+.no-smil[lang=en] .prd-info-wrap .prd-info {
+  width: 30%;
 }
 .prd-info__tit {
   padding-left: 10px;
@@ -1757,6 +1757,9 @@ body.show-gnb {
     padding-right: 30px;
   }
 }
+.footer__locale {
+  flex: 1;
+}
 @media (max-width: 1000px) {
   .footer__locale {
     display: none;
@@ -1768,6 +1771,7 @@ body.show-gnb {
   margin-bottom: 50px;
 }
 .footer__row {
+  display: -ms-flexbox;
   display: flex;
 }
 .footer__row:nth-of-type(1) {
@@ -2085,8 +2089,9 @@ body.show-gnb {
   line-height: 1.5;
 }
 @media (max-width:960px) {
-  .sub__tit2 {
+  [lang] .sub__tit2 {
     margin-bottom: 20px;
+    font-size: 24px;
     line-height: 1.6;
   }
 }
@@ -2099,6 +2104,11 @@ body.show-gnb {
 [lang=en] .sub__desc {
   font-size: 2rem;
   line-height: 1.8;
+}
+@media (max-width:960px) {
+  [lang] .sub__desc {
+    font-size: 16px;
+  }
 }
 
 .sub-bottom {
@@ -6154,7 +6164,7 @@ body.show-gnb {
   background-color: #e4ebca;
 }
 .resource__top::after {
-  background-image: url("../images/bg-resource-hero-btm-2x.png");
+  background-image: url("../images/bg-resource-round-2x.png");
 }
 .resource__top .sub__tit {
   color: #363f2f;
@@ -6210,9 +6220,12 @@ body.show-gnb {
 .resource__panel-wrap {
   background-color: #f3f6f0;
 }
+.resource__panel-wrap .l-center {
+  margin-top: -540px;
+}
 @media (max-width:960px) {
   .resource__panel-wrap .l-center {
-    margin-top: -438px;
+    margin-top: -452px;
   }
 }
 
@@ -6241,7 +6254,7 @@ body.show-gnb {
   margin: 0 0 50px;
   color: #363f2f;
   font-size: 3.7rem;
-  font-weight: bold;
+  font-weight: 500;
   text-align: center;
 }
 @media (max-width:960px) {
@@ -6517,9 +6530,9 @@ body.show-gnb {
 .trial-wrap .l-center {
   margin-top: -540px;
 }
-@media (max-width: 1070px) {
+@media (max-width:960px) {
   .trial-wrap .l-center {
-    margin-top: -434px;
+    margin-top: -452px;
   }
 }
 
@@ -6545,7 +6558,7 @@ body.show-gnb {
   animation: anim-free-start-fade 0.32s forwards;
 }
 .trial .sub__tit2 {
-  font-weight: bold;
+  font-weight: 500;
   color: #323e51;
   text-align: center;
 }

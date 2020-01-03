@@ -644,41 +644,11 @@ include_once 'common-php/header.php';
   </section>
   <!-- // price -->
 
-  <!-- experience 
-  <section class="experience experience--roro">
-    <h2 class="a11y">무료로 시작</h2>
-    <div class="l-center clear-fix">
-      <p class="l-left" data-i18n="[html]exp-roro-p">지금 바로 <em>Playce RoRo 제품을 무료로</em> 시작해보세요.</p>
-      <span class="experience__btns l-right">
-        <a class="btn-round btn-round--apblue" href="./free-start.html#playce-roro" data-i18n="freeStart">무료로 시작</a>
-        
-        <a class="btn-round btn-round--white2" href="https://jira.osci.kr/servicedesk/customer/portal/21" target="_blank" data-i18n="product-inquiry">제품 문의</a>
-      </span>
-    </div>
-  </section>
-   // experience -->
-
 <!-- // content -->  
   <?php 
   include_once 'common-php/footer.php';
 ?>
   <script>
-
-      
-window.addEventListener('DOMContentLoaded', function() {
-    var hash = Playce.getHash();
-    if (!hash) return;
-    setTimeout(function() {
-      var snbHeight = document.querySelector('.js-snb').getBoundingClientRect().height;
-      var sectionOffset = document.querySelector(hash).offsetTop;
-
-      Playce.quick(sectionOffset - snbHeight);
-    }, 150);
-});
-
-
-
-
 
     wizardSlider('.js-wizard');
     slickWrapper('.js-path', {
@@ -704,7 +674,7 @@ window.addEventListener('DOMContentLoaded', function() {
       prevArrow: '.case--roro .btn-arrow--blue-prev',
       nextArrow: '.case--roro .btn-arrow--blue-next'
     });
-    // $('.case__slider').addClass('is-visible');
+  
   }, 500);
 
   smoothAnchor('.js-hash-link');

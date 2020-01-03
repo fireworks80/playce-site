@@ -86,10 +86,6 @@ Playce.translation = function(lang) {
 	// 국문 영문
     var langEl = document.querySelector('.js-lang');
     var currentLangEl = langEl.querySelector('.js-current-lang');
-
-    // var getLocale = function () {
-    //   return location.pathname.indexOf('en') > -1 ? 'en' : 'ko';
-    // };
     
 		// translation
     var setTranslation = function(lang) {

@@ -1157,19 +1157,8 @@ include_once 'common-php/header.php';
   include_once 'common-php/footer.php';
   ?>
 <script>
-  window.addEventListener('DOMContentLoaded', function() {
-      var hash = Playce.getHash();
-      
-      if (!hash) return;
-      setTimeout(function() {
-        var snbHeight = document.querySelector('.js-snb').getBoundingClientRect().height;
-        var sectionOffset = document.querySelector(hash).offsetTop;
 
-        Playce.quick(sectionOffset - snbHeight);
-      }, 150);
-  });
-
-    var dashboard = new TickAnimation({
+  var dashboard = new TickAnimation({
     tickCount: 2,
     el: '.dashboard__img-panels',
     direction: 'orthodromicDirection',

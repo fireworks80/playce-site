@@ -1,3 +1,34 @@
+// callout wasup, roro setting
+@mixin set-callout-theme($colors) {
+  @for $i from 1 through length($colors) {
+    &:nth-of-type(#{$i}) {
+      @if $i==1 {
+        border-right: 1px solid #dde0e4;
+      } @else {
+        margin-left: 29px;
+      }
+
+      // drop down 아이콘 설정
+      &::before {
+        @if $i==1 {
+          @include sprite2x($gnb-favicon-wasup-2x);
+        } @else {
+          @include sprite2x($gnb-favicon-roro-2x);
+        }
+
+        transform-origin: left top;
+      }
+
+      // drop down 컨텐츠 하위 모든 link 마우스 올렸을때
+      a:hover {
+        $list-color: nth($colors, $i);
+        color: nth($list-color, 2);
+        font-weight: 500;
+      }
+    }
+  } // for
+}
+
 .callout {
   // @include debug(tomato);
   @include absolute($top: 100%, $left: -46px);
@@ -12,7 +43,7 @@
 
   [lang='en'] & {
     line-height: 1.4;
-  }
+  } // [lang=en] .callout
 
   &__inner {
     // @include debug;
@@ -36,7 +67,7 @@
         color: transparent transparent #fff;
         width: 10px;
       }
-    }
+    } // .callout__inner::before
 
     [lang='en'] & {
       @include size(780px, null);
@@ -60,6 +91,10 @@
 
   &__content {
     // @include debug;
+    // .drop-down__content 두 요소 색 설정
+    $colors: ((#faa61e #a86247), (#51a1f0 #2557a0));
+    // callout wasup, roro 설정
+    @include set-callout-theme($colors);
     @include relative;
     @include size(50%, null);
     padding-left: (22px + 34px);
@@ -70,38 +105,7 @@
       border-radius: 50%;
       content: '';
     }
-
-    // .drop-down__content 두 요소 색 설정
-    $colors: ((#faa61e #a86247), (#51a1f0 #2557a0));
-
-    @for $i from 1 through length($colors) {
-      &:nth-of-type(#{$i}) {
-        @if $i==1 {
-          border-right: 1px solid #dde0e4;
-        } @else {
-          margin-left: 29px;
-        }
-
-        // drop down 아이콘 설정
-        &::before {
-          @if $i==1 {
-            @include sprite2x($gnb-favicon-wasup-2x);
-          } @else {
-            @include sprite2x($gnb-favicon-roro-2x);
-          }
-
-          transform-origin: left top;
-        }
-
-        // drop down 컨텐츠 하위 모든 link 마우스 올렸을때
-        a:hover {
-          $list-color: nth($colors, $i);
-          color: nth($list-color, 2);
-          font-weight: 500;
-        }
-      }
-    } // for
-  }
+  } // .callout__content
 
   &__tit {
     margin-bottom: 10px;
@@ -114,7 +118,7 @@
     .go-sel-page:hover & {
       color: inherit;
     }
-  }
+  } // .callout__tit
 
   &__desc {
     margin-bottom: 32px;
@@ -124,7 +128,7 @@
     [lang='en'] & {
       font-size: rem(15px);
     }
-  }
+  } // callout__desc
 
   &__list {
     display: flex;
@@ -139,35 +143,37 @@
         margin-bottom: 0;
       }
     }
-  }
+  } // .callout__list
 
   &__link {
     display: block;
     line-height: 24px;
   }
 
+  // modifier
+  // ==================================================
   &--lang {
     left: 50%;
     transform: translateX(-50%);
     font-size: 13px;
-  }
 
-  &--lang li {
-    display: block;
-  }
+    li {
+      display: block;
+    }
 
-  .lang-link {
-    @include size(null, 40px);
-    display: flex;
-    align-items: center;
-    padding: 0;
-    border: 0;
-    text-transform: uppercase;
-  }
+    a {
+      @include size(null, 40px);
+      display: flex;
+      align-items: center;
+      padding: 0;
+      border: 0;
+      text-transform: uppercase;
+    }
+  } // .callout--lang
 
   // mobile
   // ====================================
-  @media ($query-mobile) {
+  @include respond-to(960px) {
     // @include debug;
     position: static;
 
@@ -180,11 +186,11 @@
       .callout--lang & {
         padding: 0;
       }
-    }
 
-    [lang='en'] &__inner {
-      @include size(auto);
-    }
+      [lang='en'] & {
+        @include size(auto);
+      }
+    } // .callout__inner
 
     &__content {
       // @include debug;
@@ -200,9 +206,7 @@
         margin-top: 20px;
         margin-left: 0;
       }
-    }
-
-    // content
+    } // content
 
     &__tit {
       font-size: 16px;
@@ -211,10 +215,6 @@
     &__desc {
       font-size: 15px;
       margin-bottom: 22px;
-
-      // [lang='en'] .callout__content:nth-child(2) & {
-      //   margin-bottom: 32px;
-      // }
     }
 
     // sub link list
@@ -229,14 +229,13 @@
         margin-bottom: 10px;
         margin-right: 10px;
       } // li
-    } // list
+    } // .callout__list
 
-    &__link {
-      @include size(auto);
-    }
-
+    // modifier
+    // ====================================================
+    // .callout--lang
     &--lang {
       transform: translateX(0);
     }
-  }
-}
+  } // respond-to
+} // callout

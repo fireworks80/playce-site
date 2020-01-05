@@ -112,3 +112,12 @@
   $sprite-offset-y: (nth($sprite, 4) / 2);
   background-position: $sprite-offset-x $sprite-offset-y;
 }
+
+// ===================================
+// media
+// ===================================
+@mixin respond-to($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}

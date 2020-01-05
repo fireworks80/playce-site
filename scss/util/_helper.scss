@@ -5,3 +5,8 @@
 .clear-fix {
   @include clear-fix;
 }
+
+[lang='en'] .not-eng,
+[lang='ko'] .not-ko {
+  display: none;
+}

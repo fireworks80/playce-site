@@ -34,7 +34,7 @@
 <header class="header js-header <?php echo $header_hook; ?>">
   <div class="l-center">
     <h1>
-      <a class="logo__link" href="<?php echo $root_url; ?>"><span class="a11y">Playce</span></a>
+      <a class="logo" href="<?php echo $root_url; ?>"><span class="a11y">Playce</span></a>
     </h1>
     <nav class="gnb">
       <a class="gnb__logo" href="<?php echo $root_url; ?>"><img src="./images/logo-gray-2x.png" alt="Playce"></a>

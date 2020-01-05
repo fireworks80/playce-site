@@ -1,3 +1,9 @@
+.wrap {
+  // @include debug;
+  @include relative;
+  min-width: 360px;
+}
+
 .l-center {
   // @include debug;
   @include relative;

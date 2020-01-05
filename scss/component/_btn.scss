@@ -1,4 +1,6 @@
-// visual button
+// =====================================================================
+// rounded btn
+// =====================================================================
 .btn-round {
   @include size(null, 42px);
   display: inline-block;
@@ -16,99 +18,49 @@
     box-shadow: 0 2px 4px 0 rgba(50, 62, 81, 0.3);
   }
 
-  @media ($query-mobile) {
+  // theme
+  // (modifier (normal color, hover color))
+  // ==========================================
+  $list-btn-color: (
+    ('white' (#fff #dee6fc)),
+    ('white2' (#fff #cfe2f1)),
+    ('lite-blue' (#469bf0 #2a82da)),
+    ('deep-blue' (#324c99 #253f8b)),
+    ('navy' (#333e54 #2c374b)),
+    ('dark-navy' (#323e51 #222c3d)),
+    ('apblue' (#2557a0 #1b4178)),
+    ('yellow' (#edaa43 #ea9711)),
+    ('luepurple' (#3b5198 #344b95))
+  );
+
+  @each $theme in $list-btn-color {
+    $key: nth($theme, 1);
+    $default: nth(nth($theme, 2), 1);
+    $hover: nth(nth($theme, 2), 2);
+
+    &--#{$key} {
+      background-color: $default;
+
+      &:hover {
+        background-color: $hover;
+      }
+    }
+  } // loop
+
+  // mobile
+  // ==========================================
+  @include respond-to(960px) {
     font-size: rem(16px);
   }
-}
+} // btn-round
 
-// landing page
-.btn-round--white {
-  color: #3d5399;
-  background-color: #fff;
-
-  &:hover {
-    background-color: #dee6fc;
-  }
-}
-
-// landing page
-.btn-round--deep-blue {
-  background-color: #324c99;
-
-  &:hover {
-    background-color: #253f8b;
-  }
-}
-// landing page
-.btn-round--navy {
-  background-color: #333e54;
-  &:hover {
-    background-color: #2c374b;
-  }
-}
-
-// roro
-.btn-round--lite-blue {
-  background-color: #469bf0;
-  &:hover {
-    background-color: #2a82da;
-  }
-}
-
-.btn-round--apblue {
-  background-color: #2557a0;
-  &:hover {
-    background-color: #1b4178;
-  }
-}
-
-.btn-round--white2 {
-  color: #2557a0;
-  background-color: #fff;
-
-  &:hover {
-    background-color: #cfe2f1;
-  }
-}
-
-// =================================
-// wasup
-// =================================
-.btn-round--yellow {
-  background-color: #edaa43;
-  &:hover {
-    background-color: #ea9711;
-  }
-}
-
-.btn-round--dark-navy {
-  background-color: #323e51;
-  &:hover {
-    background-color: #222c3d;
-  }
-}
-
-.btn-round--luepurple {
-  background-color: #3b5198;
-  &:hover {
-    background-color: #344b95;
-  }
-}
-
-.btn-round--ion-white {
-  color: #425266;
-  background-color: #fff;
-  &:hover {
-    background-color: #dfe8f3;
-  }
-}
-
+// =====================================================================
 // guide btn
+// =====================================================================
 .btn-play {
   @include icon-setting($btn-video-start-2x);
   @include absolute($left: 50%, $top: 50%);
-  // @include sprite2x($btn-video-start-2x);
-  // @include size(nth($btn-video-start-2x, 5) / 2, nth($btn-video-start-2x, 6) / 2);
+
   display: inline-block;
   transform: translateX(-50%) translateY(-50%);
   padding: 0;
@@ -120,7 +72,9 @@
   }
 }
 
+// =====================================================================
 // architecture btn
+// =====================================================================
 .btn-pic {
   @include absolute($bottom: -35px, $right: -35px);
   @include size(70px);
@@ -176,9 +130,9 @@
   }
 }
 
-// =======================================
-// prev next
-// =======================================
+// =====================================================================
+// wasup, roro slick prev, next
+// =====================================================================
 .btn-arrow {
   @include background-image($path-img + 'ir-btn-roro-arrows.png', $x: left);
   @include size(50px);
@@ -189,48 +143,32 @@
   background-size: (650px / 2) (330px / 2);
   box-shadow: 0 2px 7px 0 #323e5133;
 
-  &--green-next {
-    background-position: -166px -60px;
-    &.slick-disabled {
-      background-position: -55px -60px;
-    }
-  }
-  &--green-prev {
-    // margin-right: 20px;
-    background-position: -110px -60px;
+  // =======================================
 
-    &.slick-disabled {
-      background-position: 0 -60px;
-    }
-  }
+  // x: 공통 값
+  // y: 색마다 값이 바뀜
+  // =======================================
+  $theme-slick: (
+    'x': (
+      'next': -166px -55px,
+      'prev': -110px 0
+    ),
+    'colors': (
+      'green': -60px,
+      'blue': 0,
+      'puple': -115px
+    )
+  );
 
-  &--blue-next {
-    background-position: -166px 0;
-    &.slick-disabled {
-      background-position: -55px 0;
-    }
-  }
-  &--blue-prev {
-    // margin-right: 20px;
-    background-position: -110px 0;
+  @each $color, $posY in map-get($theme-slick, 'colors') {
+    @each $key, $valuesX in map-get($theme-slick, 'x') {
+      &--#{$color}-#{$key} {
+        background-position: nth($valuesX, 1) $posY;
 
-    &.slick-disabled {
-      background-position: 0 0;
-    }
-  }
-
-  &--puple-next {
-    background-position: -166px -115px;
-    &.slick-disabled {
-      background-position: -55px -115px;
-    }
-  }
-  &--puple-prev {
-    // margin-right: 20px;
-    background-position: -110px -115px;
-
-    &.slick-disabled {
-      background-position: 0 -115px;
-    }
-  }
+        &.slick-disabled {
+          background-position: nth($valuesX, 2) $posY;
+        }
+      }
+    } // loop
+  } // loop
 }

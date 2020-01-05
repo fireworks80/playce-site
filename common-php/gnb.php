@@ -39,7 +39,7 @@
     <nav class="gnb">
       <a class="gnb__logo" href="<?php echo $root_url; ?>"><img src="./images/logo-gray-2x.png" alt="Playce"></a>
       <h2 class="a11y">gnb</h2>
-      <ul class="gnb__list gnb__list--main">
+      <ul class="gnb__list">
         <!-- is-active 시 .callout 이 오픈 -->
         <li class="gnb__item has-callout">
           <span class="gnb__link js-has-callout <?php echo (isCurrentPage($current_page[0], 'wasup') || isCurrentpage($current_page[0], 'roro')) ? 'gnb__link--current': ''; ?>" data-i18n="gnb-product">제품</span>
@@ -93,7 +93,7 @@
         <li class="gnb__item"><a data-i18n="gnb-support" class="gnb__link <?php echo isCurrentPage($current_page[0], 'support') ? 'gnb__link--current' : ''; ?>" href="./support.html">고객지원</a></li>
         <li class="gnb__item"><a data-i18n="freeStart" class="gnb__link <?php echo isCurrentPage($current_page[0], 'free-start') ? 'gnb__link--current' : ''; ?>" href="./free-start.html">무료로 시작</a></li>
       </ul>
-      <ul class="gnb__list gnb-etc">
+      <ul class="gnb__list">
         <li class="gnb__item"><a data-i18n="inquiry" class="gnb__link" href="https://jira.osci.kr/servicedesk/customer/portal/21" target="_blank">문의하기</a></li>
         <!-- .is-active로 하위 메뉴 열림 -->
         <li class="gnb__item has-callout js-lang" style="display: none;">

@@ -2,44 +2,64 @@
 // gnb
 // ==============================
 .gnb {
-  &,
-  &__list {
-    display: flex;
-  }
-
+  display: flex;
   font-size: rem(16px);
 
   &__logo {
     @include size(79px, null);
     display: none;
-  }
+  } // logo
 
-  // list--main, list--etc 공통 설정
-  &__link,
-  .callout__link {
-    display: block;
-  }
+  &__list {
+    display: flex;
 
-  a {
-    color: inherit;
-  }
+    &:nth-of-type(2) {
+      margin-left: 20px;
+    }
+  } // list
+
+  &__item {
+    &.has-callout {
+      @include relative;
+    }
+  } // .gnb__item
 
   &__link {
-    // @include debug;
+    display: block;
     padding: 10px 18px;
     letter-spacing: 0.01px;
+    cursor: pointer;
 
     &:hover,
     &--current {
       font-weight: bold;
     }
-  }
 
-  // gnb__list--etc 설정
-  &-etc {
-    margin-left: 20px;
-  }
+    // 2depth menu를 갖는 링크
+    // ====================================
+    .has-callout & {
+      cursor: pointer;
+      padding: 10px 40px 10px 20px;
+    } // has-callout .gnb__link
 
+    .has-callout &::after {
+      @include icon-setting($btn-arrow-down-2x);
+      @include absolute($top: 50%);
+      transform: translateY(-50%);
+      content: '';
+
+      .header--white &,
+      .header--blue & {
+        @include sprite-position2x($ico-arrow-down-white-2x);
+      }
+    } // .has-callout .gnb__link::after
+
+    .has-callout.is-active &::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  } // link
+
+  // mobile btn
   &__close {
     @include absolute($top: 16px, $right: 25px);
     // @include size(18px);
@@ -48,10 +68,11 @@
     padding: 0;
     background-color: transparent;
     border: 0;
-  }
-  // mobile =======================================================
-  @media ($query-mobile) {
-    // @include debug;
+  } // .gnb__close (btn)
+
+  // mobile
+  // ========================================
+  @include respond-to(960px) {
     @include fixed($top: 0, $left: 100%);
     @include size(100%, 100%);
     overflow-y: auto;
@@ -68,6 +89,7 @@
 
     &__logo {
       display: block;
+      margin-bottom: 24px;
     }
 
     &__list {
@@ -76,19 +98,18 @@
       margin-left: 0;
       padding: 0 10px;
 
-      &--main {
-        margin-top: 24px;
+      &:nth-of-type(2) {
+        margin-left: 0;
       }
-    }
+    } // .gnb__list
 
     &__item {
       border-bottom: 1px solid rgba(107, 117, 129, 0.3);
 
-      .gnb__list--main &:first-child,
-      .gnb-etc &:last-child {
-        border-bottom: 0;
+      &.has-callout {
+        border-bottom-width: 0;
       }
-    }
+    } // .gnb__item
 
     &__link {
       // @include debug;
@@ -104,103 +125,31 @@
         transform: scale(0.5) rotate(90deg);
         content: '';
       }
-    }
+
+      // 2depth menu를 갖는 링크
+      .has-callout & {
+        padding: 0;
+        border-bottom: 1px solid rgba(107, 117, 129, 0.3);
+
+        &::after {
+          position: static;
+          display: inline-block;
+          transform: none;
+        }
+
+        .header--white &::after,
+        .header--blue &::after {
+          @include sprite-position($btn-arrow-down-2x);
+        }
+      } // .has-callout .gnb__link
+
+      .has-callout.is-active &::after {
+        transform: translateY(0) rotate(180deg);
+      }
+    } // .gnb__link
 
     &__close {
       display: inline-block;
     }
-  } // > 960
-}
-
-// 제품, KOR 링크는 drop down 아이콘을 갖는다.
-// ====================================================================================
-.has-callout {
-  @include relative;
-
-  .gnb__link {
-    cursor: pointer;
-    padding: 10px 40px 10px 20px;
-
-    &::after {
-      // @include debug;
-      @include icon-setting($btn-arrow-down-2x);
-      @include absolute($top: 50%);
-      transform: translateY(-50%);
-      content: '';
-
-      .header--white &,
-      .header--blue & {
-        // @debug &;
-        @include sprite-position2x($ico-arrow-down-white-2x);
-      }
-    }
-  } // gnb link
-
-  // pc / mobile 에서 hover 없이
-  // click event (.is-active) 시에만
-  // 2depth 활성화
-  &.is-active .gnb__link::after {
-    transform: translateY(-50%) rotate(180deg);
-  }
-  &.is-active .callout {
-    display: block;
-  }
-
-  @media ($query-mobile) {
-    .gnb__link {
-      padding: 0;
-      border-bottom: 1px solid rgba(107, 117, 129, 0.3);
-
-      &::after {
-        position: static;
-        display: inline-block;
-        transform: none;
-      }
-
-      .header--white &::after,
-      .header--blue &::after {
-        @include sprite-position($btn-arrow-down-2x);
-      }
-    } // gnb__link
-
-    &.is-active .gnb__link::after {
-      transform: translateY(0) rotate(180deg);
-    }
-  } // > 960
-} // has-drop-down
-
-// lang
-// ====================================================================================
-.lang__list {
-  @include absolute($top: 100%, $left: 0);
-  @include size(100%, null);
-
-  display: none;
-  background-color: #fff;
-  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
-
-  &:hover {
-    display: block;
-  }
-
-  button {
-    @include size(100%, null);
-    display: block;
-    padding: 10px 0;
-    border: 0;
-    text-align: center;
-    background-color: transparent;
-
-    &:hover {
-      background-color: #ddd;
-    }
-  }
-
-  .is-active & {
-    display: block;
-  }
-
-  @media ($query-mobile) {
-    // box-shadow
-  }
-} // list
+  } // respond
+} // gnb

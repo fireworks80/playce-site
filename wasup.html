@@ -573,22 +573,17 @@ include_once 'common-php/header.php';
 
   <!-- guide mv -->
   <section class="guide guide--wasup">
-    <h2 class="a11y">가이드 영상</h2>
     <div class="l-center">
-      <figure>
-        <span class="guide__poster">
-          <button class="btn-play js-popup-btn" data-name="guideWasup">
-            <span class="a11y">Playce Wasup 사용자 가이드 영상 재생하기</span>
-          </button>
-          <img src="./images/video-poster.png" alt="" />
-        </span>
-        <figcaption class="guide__tit">
-          <span data-i18n="guide-tit">
-            사용자가이드 영상
-          </span>
-        </figcaption>
+      <figure class="guide__poster">
+        <button class="btn-play js-popup-btn" data-name="guideWasup">
+          <span class="a11y">Playce Wasup 사용자 가이드 영상 재생하기</span>
+        </button>
+        <img src="./images/video-poster.png" alt="" />
       </figure>
-      <p class="guide__desc" data-i18n="guide-desc-wasup">간편한 통합관리 기능을 경험해 보세요</p>
+      <header>
+        <h2 class="guide__tit" data-i18n="guide-tit">가이드 영상</h2>
+        <p class="guide__desc" data-i18n="guide-desc-wasup">간편한 통합관리 기능을 경험해 보세요</p>
+      </header>
     </div>
   </section>
   <!-- // guide mv -->

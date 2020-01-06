@@ -1,25 +1,4 @@
 @charset "UTF-8";
-/*
-SCSS variables are information about icon's compiled state, stored under its original file name
-
-.icon-home {
-  width: $icon-home-width;
-}
-
-The large array-like variables contain all information about a single icon
-$icon-home: x y offset_x offset_y width height total_width total_height image_path;
-*/
-/*
-The provided mixins are intended to be used with the array-like variables
-
-.icon-home {
-  @include sprite-width($icon-home);
-}
-
-.icon-email {
-  @include sprite($icon-email);
-}
-*/
 .a11y {
   position: absolute;
   left: -9999em;
@@ -3643,6 +3622,7 @@ body.show-gnb {
   background-position: center top;
 }
 .guide--wasup {
+  padding-bottom: 132px;
   background-image: url("../images/bg-guide-top-wasup.png");
   background-color: #fffdfa;
 }
@@ -3650,19 +3630,9 @@ body.show-gnb {
   background-image: url("../images/bg-guide-top-roro.png");
   background-color: #fafcff;
 }
-.guide.guide--wasup {
-  padding-bottom: 132px;
-}
-@media (max-width:960px) {
-  .guide.guide--wasup {
-    padding-bottom: 50px;
-  }
-}
-
-.guide--roro figure {
+.guide--roro {
   text-align: right;
 }
-
 .guide__poster {
   position: relative;
   width: 65.9322033898%;
@@ -3678,33 +3648,13 @@ body.show-gnb {
   -webkit-box-shadow: 22px 29px 26px 5px rgba(50, 62, 81, 0.3);
   box-shadow: 22px 29px 26px 5px rgba(50, 62, 81, 0.3);
 }
-@media (max-width:960px) {
-  .guide__poster {
-    width: 100%;
-    margin-bottom: 50px;
-  }
-}
-
-.guide__tit {
-  position: relative;
-  margin-bottom: 30px;
-  display: block;
-}
-.guide__tit::before, .guide__tit::after {
+.guide--wasup .guide__tit::before, .guide--roro .guide__tit::after {
   display: inline-block;
   content: "";
 }
 .guide--wasup .guide__tit {
   color: #a86247;
   text-align: right;
-}
-.guide--wasup .guide__tit::before {
-  background-image: url(../images/sprite/sprite-icons-2x.png);
-  background-size: 169px, 4866px;
-  background-position: 0px -1025px;
-  width: 27px;
-  height: 27px;
-  transform: rotate(-45deg) scale(0.8);
 }
 [lang=en] .guide--wasup .guide__tit {
   margin-bottom: 20px;
@@ -3717,6 +3667,15 @@ body.show-gnb {
     margin-bottom: 15px;
     font-size: 16px;
   }
+}
+.guide--wasup .guide__tit::before {
+  background-image: url(../images/sprite/sprite-icons-2x.png);
+  width: 27px;
+  height: 27px;
+  transform: translateY(6px) rotate(-45deg) scale(0.7);
+  background-size: 169px, 4866px;
+  background-position: 0px -1025px;
+  margin-top: -2px;
 }
 .guide--roro .guide__tit {
   color: #2557a0;
@@ -3736,22 +3695,12 @@ body.show-gnb {
 }
 .guide--roro .guide__tit::after {
   background-image: url(../images/sprite/sprite-icons-2x.png);
-  background-size: 169px, 4866px;
-  background-position: 0px -833px;
   width: 27px;
   height: 27px;
-  transform: rotate(45deg) scale(0.7);
-  margin-top: -2px;
+  transform: translateY(6px) rotate(45deg) scale(0.7);
+  background-size: 169px, 4866px;
+  background-position: 0px -833px;
 }
-@media (max-width:960px) {
-  .guide--wasup .guide__tit {
-    margin-bottom: 16px;
-  }
-  .guide--wasup .guide__tit::before {
-    transform: rotate(-45deg) scale(0.6) translateY(-10px);
-  }
-}
-
 [lang=en] .guide__desc {
   line-height: 1.8;
   letter-spacing: -0.4px;
@@ -3767,6 +3716,21 @@ body.show-gnb {
 }
 .guide--roro .guide__desc {
   text-align: left;
+}
+@media (max-width: 960px) {
+  .guide--wasup {
+    padding-bottom: 50px;
+  }
+  .guide__poster {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .guide--wasup .guide__tit {
+    margin-bottom: 16px;
+  }
+  .guide--wasup .guide__tit::before {
+    transform: rotate(-45deg) scale(0.6) translateY(-10px);
+  }
 }
 
 .function {

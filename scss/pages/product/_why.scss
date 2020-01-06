@@ -1,0 +1,145 @@
+// ==============================
+// why
+// ==============================
+.wrap-gradient {
+  // @include debug;
+  @include gradient(#ffb621, #ffe282, #fff4e2);
+  margin-top: -1px;
+}
+
+// ==============================
+// wasup
+// ==============================
+.why {
+  &--wasup {
+    margin-bottom: 202px;
+    padding-top: 218px;
+  } // wasup
+
+  &--roro {
+    @include gradient(#50abf2, #99c6f3, #b0d8fb);
+    padding-top: 80px;
+    padding-bottom: 200px;
+  }
+
+  // mobile
+  // ============================
+  @include respond-to(960px) {
+    &--wasup {
+      padding-top: 100px;
+      margin-bottom: 140px;
+
+      .l-center {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    } // wasup
+
+    &--roro {
+      padding-top: 70px;
+      padding-bottom: 140px;
+      text-align: left;
+
+      .l-center {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    } // roro
+  } // > 960
+}
+
+// header
+// ===============================
+header {
+  .why--wasup & {
+    text-align: center;
+    margin-bottom: 120px;
+    font-size: rem(32px);
+    color: #fff;
+  } // wasup
+
+  .why--roro & {
+    text-align: center;
+    font-size: rem(32px);
+
+    span {
+      @include section-heading(#2557a0) {
+        margin-bottom: 30px;
+      }
+      display: block;
+    }
+  } // roro
+
+  // mobile
+  // =======================================
+  @include respond-to(960px) {
+    .why--wasup & {
+      margin-bottom: 60px;
+      font-size: 20px;
+      text-align: left;
+    } // .why--wasup header
+
+    .why--roro & {
+      text-align: left;
+    } // .why--roro header
+  }
+} // header
+
+// .why__tit
+// ===============================
+.why__tit {
+  .why--wasup & {
+    display: inline-block;
+  }
+
+  .why--roro & {
+    @include section-desc(#fff);
+    @include relative;
+    margin-bottom: 120px;
+    margin-left: 0;
+    display: block;
+  }
+
+  &::before {
+    transform: rotate(225deg);
+    margin-right: 20px;
+    display: inline-block;
+    content: '';
+
+    .why--wasup & {
+      @include icon-setting($ic-arrow-brown2x);
+    }
+    .why--roro & {
+      @include icon-setting($ic-arrow-blue2x);
+    }
+  } // before
+
+  // mobile
+  // =======================================
+  @include respond-to(960px) {
+    .why--wasup &::before {
+      margin-top: -2px;
+      transform: scale(0.7) rotate(225deg);
+    } // .why--wasup .why__tit::before
+    .why--roro & {
+      margin-bottom: 60px;
+
+      &::before {
+        transform: translateY(7px) rotate(225deg) scale(0.9);
+      }
+    } // .why--roro .why__tit
+  }
+}
+
+// .why--roro .prd-info
+// =======================================
+.prd-info {
+  $this: '.why--roro ' + &;
+  @at-root #{$this} dt {
+    color: #fff;
+  }
+
+  @at-root #{$this} dd {
+    color: #17488f;
+  }
+}

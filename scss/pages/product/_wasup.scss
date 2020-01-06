@@ -86,60 +86,6 @@
   } // > 768
 }
 
-// why
-// ==============================
-.wrap-gradient {
-  // @include debug;
-  @include gradient(#ffb621, #ffe282, #fff4e2);
-  margin-top: -1px;
-}
-
-.why--wasup {
-  margin-bottom: 202px;
-  padding-top: 218px;
-
-  header {
-    text-align: center;
-    margin-bottom: 120px;
-    font-size: rem(32px);
-    color: #fff;
-  }
-
-  .why__tit {
-    // @include debug;
-    display: inline-block;
-
-    &::before {
-      @include icon-setting($ic-arrow-brown2x);
-      display: inline-block;
-      margin-right: 20px;
-      transform: rotate(225deg);
-      content: '';
-    }
-  } // tit
-
-  @media ($query-mobile) {
-    padding-top: 100px;
-    margin-bottom: 140px;
-
-    .l-center {
-      padding-left: 30px;
-      padding-right: 30px;
-    }
-
-    header {
-      margin-bottom: 60px;
-      font-size: 20px;
-      text-align: left;
-    }
-
-    .why__tit::before {
-      margin-top: -2px;
-      transform: scale(0.7) rotate(225deg);
-    }
-  }
-} // was up
-
 // ======================================================
 // 특장점
 // ======================================================

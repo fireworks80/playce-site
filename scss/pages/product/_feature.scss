@@ -1,0 +1,190 @@
+// ======================================================
+// 특장점 (wasup)
+// ======================================================
+.feature {
+  @include relative;
+  padding-bottom: 200px;
+  line-height: 2;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+  }
+
+  // .feature__tit
+  // ==================================
+  &__tit {
+    // @include debug;
+    @include section-heading(#a86247) {
+      flex: 1 0 auto;
+      display: inline-block;
+      &::after {
+        @include icon-setting($ic-arrow-brown-2x);
+        transform: rotate(90deg) scale(0.8);
+        display: inline-block;
+        margin: 8px 0 0 10px;
+        content: '';
+      }
+    }
+  }
+
+  // desc
+  // ==================================
+  &__desc {
+    @include section-desc {
+      text-align: right;
+    }
+
+    em {
+      color: #a86247;
+    }
+
+    // ie
+    // ==================================
+    .no-smil & {
+      flex: 1 1 auto;
+    }
+  } // desc
+
+  // .feature .line-brake
+  // ==================================
+  .line-brake {
+    display: block;
+  }
+
+  // mobile
+  // ==============================
+  @include respond-to(960px) {
+    padding-bottom: 140px;
+
+    header {
+      margin-bottom: 50px;
+    }
+
+    &__tit::after {
+      transform: rotate(90deg) scale(0.6);
+      margin-top: 2px;
+    }
+  } // > 960
+
+  @include respond-to(640px) {
+    header {
+      display: block;
+      margin-bottom: 0;
+    }
+
+    .line-brake {
+      display: none;
+    }
+  }
+} // .feature
+
+// feature__motion-box
+// mobile에서 이용됨
+// =============================================
+.feature__motion-box {
+  // @include debug(green);
+
+  @include respond-to(960px) {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  } // > 960
+
+  @include respond-to(640px) {
+    margin-top: -40px;
+    margin-bottom: -130px;
+  } // 640px
+}
+
+// feature animation
+// =============================================
+.feature__anim-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 100px;
+
+  @include respond-to(960px) {
+    transform: scale(0.9);
+  }
+
+  @include respond-to(640px) {
+    transform: scale(0.5);
+  }
+}
+
+.feature__pic {
+  // @include debug;
+  @include size(622px, null);
+  display: inline-block;
+}
+
+.feature__btn-wrap {
+  margin-bottom: 40px;
+}
+
+.feature__btn {
+  @include size(111px, 34px);
+  padding: 0;
+  border: 0;
+  border-radius: 22px;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);
+  cursor: default;
+
+  // play stop button
+  @each $type in (play, stop) {
+    &--#{$type} {
+      @include background-image($path-img + 'feature-' + $type + '-btn.svg');
+    }
+  }
+}
+
+// animation 되는 row 전체를 감싸는 클래스
+// 감싸진 요소들이 있기 때문에 하위 선택자로 속성 추가
+.feature__rows-wrap {
+  & > div:nth-child(n + 1) {
+    margin-top: 8px;
+  }
+}
+
+.feature__row-img {
+  // @include debug;
+  @include size(100%, 64px);
+  background-image: url($path-img+'feature-un-selected-2x.png');
+  background-size: 100% 100%;
+  border-radius: 10px;
+
+  &.selected {
+    background-image: url($path-img+'feature-selected-2x.png');
+  }
+}
+
+// .feature__anim-single : 혼자 있는 요소
+// .feature__anim-double: 안에 두개가 있는 요소를 감싼 요소
+.feature__anim-single,
+.feature__anim-double {
+  transform-origin: right center;
+  border-radius: 10px;
+}
+
+.feature__anim-double {
+  @include relative;
+  @include size(null, 64px);
+
+  .feature__row-img {
+    @include absolute($top: 0, $left: 0);
+    animation: {
+      duration: 1s;
+    }
+
+    &.front {
+      z-index: 2;
+    }
+  }
+
+  &.selected {
+    box-shadow: 2px 10px 20px 0 rgba(50, 62, 81, 0.3);
+  }
+}

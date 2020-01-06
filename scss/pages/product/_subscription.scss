@@ -1,0 +1,284 @@
+.subscription {
+  @include background-image($path-img + 'bg-subscription-top-wasup.png', $color: #323e51);
+
+  padding-top: 255px;
+  text-align: center;
+
+  &__tit {
+    @include section-heading(#fff) {
+      margin-bottom: 30px;
+    }
+  } // .subscription__tit
+
+  &__desc {
+    @include section-desc(#fff) {
+      margin-bottom: 60px;
+      font-size: rem(28px);
+
+      em {
+        color: #889edf;
+      }
+    }
+  } // .subscription__desc
+
+  // card
+  // ============================================
+  .card {
+    margin-bottom: 70px;
+    padding-top: 40px;
+    padding-bottom: 36px;
+    background-color: #425266;
+    box-shadow: 0 16px 30px 0 #00000032;
+
+    [lang='en'] & {
+      min-height: 350px;
+    }
+
+    &::before {
+      margin-bottom: 28px;
+    }
+
+    // icon 설정
+    $icons: ($ico-subscript1-2x, $ico-subscript2-2x, $ico-subscript3-2x);
+    @for $i from 1 through length($icons) {
+      &:nth-of-type(#{$i})::before {
+        // @debug nth($icons, $i);
+        @include icon-setting(nth($icons, $i));
+      }
+    }
+
+    &:nth-child(1) {
+      margin-right: percent(20px, $width-max - 20);
+    }
+
+    &__tit {
+      margin-bottom: 20px;
+    }
+
+    &__desc {
+      line-height: 2.4;
+
+      [lang='en'] & {
+        line-height: 1.8;
+      }
+    }
+  } // card
+
+  // subscription__txt-in-mobile
+  // ============================================
+  &__txt-in-mobile {
+    display: none;
+    color: #cdd9e8;
+    font-size: 12px;
+    font-weight: 500;
+  } // .subscription__txt-in-mobile
+
+  // mobile
+  // ============================================
+  @include respond-to($bp-mobile) {
+    padding: 100px 0 80px;
+    background-image: none;
+
+    .l-left,
+    .l-right {
+      float: none;
+    }
+
+    &__desc br {
+      display: none;
+    }
+
+    // card
+    // ============================================
+    .card {
+      @include size(100%, null);
+      margin-bottom: 0;
+      padding: 26px;
+
+      &:nth-child(n + 2) {
+        margin-top: 29px;
+        margin-bottom: 0;
+      }
+
+      &::before {
+        transform: scale(0.9);
+        margin-left: 0;
+        margin-bottom: 19px;
+      }
+
+      &__tit {
+        margin-bottom: 12px;
+        font-size: 16px;
+      }
+
+      &__desc {
+        font-size: 14px;
+        line-height: 2;
+        br {
+          display: none;
+        }
+      }
+
+      .ico-check {
+        padding-left: 0;
+        &::before {
+          display: none;
+        }
+      }
+
+      &:first-child {
+        margin-right: 0;
+      }
+    } // card
+
+    // .subscription__txt-in-mobile
+    // ============================================
+    &__txt-in-mobile {
+      display: block;
+      margin-top: 40px;
+    }
+  } // > 960
+}
+
+// ======================================
+// subscription scope
+// ======================================
+$color-subscription-scope: #272f3b;
+$color-table-wrap: #334053;
+
+.subscription-scope {
+  padding-top: 132px;
+  background-color: $color-subscription-scope;
+  color: #fff;
+
+  &.is-hide {
+    display: none;
+  }
+
+  .scope-header {
+    background-color: #2c3748;
+    // border-bottom: 13px solid $color-table-wrap;
+
+    th {
+      @include relative;
+      height: 56px;
+      line-height: 44px;
+      text-align: left;
+
+      &::before {
+        @include absolute($bottom: 0, $left: 0, $right: 0);
+        height: 12px;
+        background-color: $color-table-wrap;
+        content: '';
+      }
+    }
+  }
+
+  &__tit {
+    @include section-heading(#fff) {
+      margin-bottom: 90px;
+    }
+  } // tit
+
+  // table wrap
+  &__table {
+    // @include debug;
+    margin-bottom: 70px;
+    padding: 10px percent(10px, $width-max);
+    border-radius: 8px;
+    text-align: left;
+    font-size: rem(14px);
+    background-color: $color-table-wrap;
+
+    &:nth-of-type(1) {
+      margin-bottom: 40px;
+    }
+  }
+
+  th,
+  td {
+    padding-left: 20px;
+  }
+
+  th {
+    text-align: left;
+    font-size: rem(15px);
+  }
+
+  td {
+    padding-top: 23px;
+    padding-bottom: 19px;
+    border-bottom: 1px solid #4c5c73;
+  }
+
+  thead {
+    margin-bottom: 10px;
+    // line-height: 44px;
+    color: #cdd9e8;
+  }
+
+  .scope-sub-tit {
+    line-height: 40px;
+
+    th:nth-of-type(1) {
+      border-right: 4px solid $color-subscription-scope;
+      background-color: #3d5399;
+    }
+    th:nth-of-type(2) {
+      border-left: 4px solid $color-subscription-scope;
+      color: #000;
+      background-color: #cdd9e8;
+    }
+
+    td {
+      background-color: #788ece;
+
+      &:nth-of-type(1) {
+        border-right: 4px solid $color-subscription-scope;
+      }
+    }
+  }
+  .ico-check::before {
+    top: -3px;
+  }
+  .not-support::before {
+    opacity: 0.1;
+  }
+}
+
+.scope-space td {
+  border-bottom: 21px solid $color-table-wrap;
+}
+
+// ======================================
+// subscription btn-detail
+// ======================================
+.btn-detail {
+  @include relative;
+  margin-bottom: 60px;
+  padding: 0 34px 0 20px;
+  background-color: transparent;
+  color: #cdd9e8;
+  font-size: rem(14px);
+  line-height: 32px;
+  opacity: 0.67;
+  border: 1px solid #cdd9e8;
+  border-radius: 2px;
+
+  &::before {
+    @include absolute($top: 50%, $right: 8px);
+    @include icon-setting($btn-arrow-down-sm-2x);
+    transform: translateY(-50%);
+    content: '';
+  }
+
+  &.is-active::before {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  // mobile
+  // ======================================
+  @include respond-to($bp-mobile) {
+    display: none;
+  }
+}

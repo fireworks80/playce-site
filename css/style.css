@@ -1128,11 +1128,8 @@ body {
   background-color: #fff;
   box-shadow: -2px 3px 10px 0 rgba(156, 86, 59, 0.2);
 }
-.architecture--wasup .btn-pic:hover, .architecture--wasup .btn-pic:active, .popup-architecture .btn-pic:hover, .popup-architecture .btn-pic:active {
+.popup-architecture .btn-pic:hover, .popup-architecture .btn-pic:active {
   background-color: #ffe6bf;
-}
-.architecture--roro .btn-pic:hover, .architecture--roro .btn-pic:active {
-  background-color: #c4dff4;
 }
 .btn-pic::before {
   display: block;
@@ -3347,6 +3344,46 @@ body.show-gnb {
   .architecture--wasup .architecture__img, .architecture--roro .architecture__img {
     width: 100%;
   }
+}
+
+.architecture__btn {
+  position: absolute;
+  right: -35px;
+  bottom: -35px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: -2px 3px 10px 0 rgba(156, 86, 59, 0.2);
+}
+.architecture__btn::before {
+  display: block;
+  content: "";
+}
+.architecture--wasup .architecture__btn:hover, .architecture--wasup .architecture__btn:active {
+  background-color: #ffe6bf;
+}
+.architecture--wasup .architecture__btn::before {
+  background-image: url(../images/sprite/sprite-icons-2x.png);
+  background-size: 169px, 4866px;
+  background-position: 0px -271px;
+  width: 34px;
+  height: 34px;
+}
+.architecture--roro .architecture__btn:hover, .architecture--roro .architecture__btn:active {
+  background-color: #c4dff4;
+}
+.architecture--roro .architecture__btn::before {
+  background-image: url(../images/sprite/sprite-icons-2x.png);
+  background-size: 169px, 4866px;
+  background-position: 0px -310px;
+  width: 34px;
+  height: 34px;
 }
 
 .case {

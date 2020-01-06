@@ -87,17 +87,17 @@
   background-color: #fff;
   box-shadow: -2px 3px 10px 0 rgba(156, 86, 59, 0.2);
 
-  .architecture--wasup &:hover,
-  .architecture--wasup &:active,
+  // .architecture--wasup &:hover,
+  // .architecture--wasup &:active,
   .popup-architecture &:hover,
   .popup-architecture &:active {
     background-color: #ffe6bf;
   }
 
-  .architecture--roro &:hover,
-  .architecture--roro &:active {
-    background-color: #c4dff4;
-  }
+  // .architecture--roro &:hover,
+  // .architecture--roro &:active {
+  //   background-color: #c4dff4;
+  // }
 
   &::before {
     // @include size(36px, 35px);

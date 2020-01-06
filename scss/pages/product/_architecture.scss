@@ -100,21 +100,25 @@
 // img
 // =======================
 .architecture__img {
+  $shadow: -17px 27px 23px 0px rgba(0, 0, 0, 0.2);
   @include relative;
 
   display: inline-block;
   max-width: 100%;
-  -webkit-box-shadow: -17px 27px 23px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: -17px 27px 23px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: -17px 27px 23px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
 
-  .architecture--wasup & {
-    @include size(percent(864px, $width-max - 20), null);
-    border-radius: 30px;
-  }
-  .architecture--roro & {
-    @include size(percent(880px, $width-max - 20), null);
-  }
+  // architecture img size
+  @each $type in ('wasup', 'roro') {
+    .architecture--#{$type} & {
+      @include size(percent(if($type == 'wasup', 864px, 880px), $width-max - 20), null);
+
+      @if ($type == 'wasup') {
+        border-radius: 30px;
+      }
+    }
+  } // loop
 
   @include respond-to(960px) {
     box-shadow: none;
@@ -125,3 +129,45 @@
     }
   }
 }
+
+// =====================================================================
+// architecture btn
+// =====================================================================
+.architecture__btn {
+  $map-theme: (
+    'wasup': #ffe6bf,
+    'roro': #c4dff4
+  );
+
+  @include absolute($bottom: -35px, $right: -35px);
+  @include size(70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: -2px 3px 10px 0 rgba(156, 86, 59, 0.2);
+
+  &::before {
+    display: block;
+    content: '';
+  }
+
+  // theme
+  // =============================================
+  @each $type, $color in $map-theme {
+    // btn color
+    .architecture--#{$type} &:hover,
+    .architecture--#{$type} &:active {
+      background-color: $color;
+    } // :hover, :active
+
+    // btn icon
+    .architecture--#{$type} &::before {
+      @debug &;
+      @include icon-setting(if($type == 'wasup', $btn-pic-enlarge-2x, $btn-pic-enlarge-roro-2x));
+    }
+  } // loop
+} // .architecture__btn

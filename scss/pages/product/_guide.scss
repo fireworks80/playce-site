@@ -85,6 +85,7 @@ $list-theme-name: ('wasup' 'roro');
       } // section-heading
     } // .guide--wasup .guide__tit / .guide--roro .guide__tit
 
+    // .guide__tit::(before||after)
     .guide--#{$type} &::#{if($type == 'wasup', before, after)} {
       // @include ico-setting($ico);
       @include sprite-image($ico);

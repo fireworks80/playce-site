@@ -144,9 +144,9 @@
         <div class="footer__sns">
           <a class="sns__link sns__link--facebook" href="https://www.facebook.com/osckorea" target="_blank"><span class="a11y">facebook</span></a>
           <a class="sns__link sns__link--youtube" href="https://www.youtube.com/channel/UCVtTsqu_d8WNjDpUif2x4Mw" target="_blank"><span class="a11y">youtube</span></a>
-          <a class="sns__link sns__link--in" href="https://tech.osci.kr" target="_blank"><span class="a11y">tech blog</span></a>
+          <a class="sns__link sns__link--in" href="https://www.slideshare.net/OpenSourceConsulting/presentations" target="_blank"><span class="a11y">tech blog</span></a>
           <a class="sns__link sns__link--github" href="https://github.com/OpenSourceConsulting" target="_blank"><span class="a11y">github</span></a>
-          <a class="sns__link sns__link--blog" href="https://www.slideshare.net/OpenSourceConsulting/presentations" target="_blank"><span class="a11y">in</span></a>
+          <a class="sns__link sns__link--blog" href="https://tech.osci.kr" target="_blank"><span class="a11y">in</span></a>
         </div>
       </div>
       <!-- // copyright -->

@@ -22,7 +22,7 @@
 
   // mobile
   // ==============================
-  @media ($query-mobile) {
+  @include respond-to(960px) {
     padding-bottom: 80px;
 
     &--wasup {
@@ -33,8 +33,8 @@
     .btn-pic {
       display: none;
     }
-  }
-}
+  } // > 960
+} // architecture
 
 // title
 // =======================
@@ -72,7 +72,7 @@
 
   // mobile
   // ==============================
-  @media ($query-mobile) {
+  @include respond-to(960px) {
     &::before {
       transform: rotate(225deg) scale(0.6);
       margin-top: -6px;
@@ -88,7 +88,7 @@
     text-align: right;
   }
 
-  @media ($query-mobile) {
+  @include respond-to(960px) {
     margin-bottom: 40px;
 
     br {
@@ -116,7 +116,7 @@
     @include size(percent(880px, $width-max - 20), null);
   }
 
-  @media ($query-mobile) {
+  @include respond-to(960px) {
     box-shadow: none;
 
     .architecture--wasup &,

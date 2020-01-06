@@ -3226,7 +3226,7 @@ body.show-gnb {
   padding-top: 60px;
   background-color: #2557a0;
 }
-@media (max-width:960px) {
+@media (max-width: 960px) {
   .architecture {
     padding-bottom: 80px;
   }
@@ -3294,7 +3294,7 @@ body.show-gnb {
     font-size: 16px;
   }
 }
-@media (max-width:960px) {
+@media (max-width: 960px) {
   .architecture__tit::before {
     transform: rotate(225deg) scale(0.6);
     margin-top: -6px;
@@ -3316,7 +3316,7 @@ body.show-gnb {
     line-height: 1.6;
   }
 }
-@media (max-width:960px) {
+@media (max-width: 960px) {
   .architecture__desc {
     margin-bottom: 40px;
   }
@@ -3340,7 +3340,7 @@ body.show-gnb {
 .architecture--roro .architecture__img {
   width: 74.5762711864%;
 }
-@media (max-width:960px) {
+@media (max-width: 960px) {
   .architecture__img {
     box-shadow: none;
   }
@@ -3633,6 +3633,12 @@ body.show-gnb {
 .guide--roro {
   text-align: right;
 }
+@media (max-width: 960px) {
+  .guide--wasup {
+    padding-bottom: 50px;
+  }
+}
+
 .guide__poster {
   position: relative;
   width: 65.9322033898%;
@@ -3648,6 +3654,13 @@ body.show-gnb {
   -webkit-box-shadow: 22px 29px 26px 5px rgba(50, 62, 81, 0.3);
   box-shadow: 22px 29px 26px 5px rgba(50, 62, 81, 0.3);
 }
+@media (max-width: 960px) {
+  .guide__poster {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
 .guide--wasup .guide__tit::before, .guide--roro .guide__tit::after {
   display: inline-block;
   content: "";
@@ -3701,6 +3714,15 @@ body.show-gnb {
   background-size: 169px, 4866px;
   background-position: 0px -833px;
 }
+@media (max-width: 960px) {
+  .guide--wasup .guide__tit {
+    margin-bottom: 16px;
+  }
+  .guide--wasup .guide__tit::before {
+    transform: rotate(-45deg) scale(0.6) translateY(-10px);
+  }
+}
+
 [lang=en] .guide__desc {
   line-height: 1.8;
   letter-spacing: -0.4px;
@@ -3717,24 +3739,8 @@ body.show-gnb {
 .guide--roro .guide__desc {
   text-align: left;
 }
-@media (max-width: 960px) {
-  .guide--wasup {
-    padding-bottom: 50px;
-  }
-  .guide__poster {
-    width: 100%;
-    margin-bottom: 50px;
-  }
-  .guide--wasup .guide__tit {
-    margin-bottom: 16px;
-  }
-  .guide--wasup .guide__tit::before {
-    transform: rotate(-45deg) scale(0.6) translateY(-10px);
-  }
-}
 
 .function {
-  background-size: 103%;
   background-repeat: no-repeat;
 }
 .function__tit {

@@ -27,97 +27,97 @@ $list-theme-name: ('wasup' 'roro');
     text-align: right;
   }
 
-  // poster
-  // ===============================
-  &__poster {
-    // x좌표가 빠진 box shadow 값
-    // prevend($list, $val:x좌표값)을 이용해서
-    // $list의 맨앞에 $val을 추가한다.
-    $shadow: 29px 26px 5px rgba(50, 62, 81, 0.3);
-
-    @include relative;
-    @include size(percent(778px, $width-max - 20), null);
-    display: inline-block;
-    margin-bottom: 132px;
-    border-radius: 18px;
-
-    @each $type in $list-theme-name {
-      .guide--#{$type} & {
-        -webkit-box-shadow: prepend($shadow, if($type == 'wasup', -22px, 22px));
-        box-shadow: prepend($shadow, if($type == 'wasup', -22px, 22px));
-      }
-    }
-  } // .guide__poster
-
-  // .guide__tit
-  // =====================================================================================
-  &__tit {
-    $list-theme-guide: ('wasup' #a86247), ('roro' #2557a0);
-
-    .guide--wasup &::before,
-    .guide--roro &::after {
-      display: inline-block;
-      content: '';
-    }
-
-    @each $type, $color in ($list-theme-guide) {
-      $txt-align: if($type == 'wasup', right, left);
-      $ico: if($type == 'wasup', $ic-arrow-brown2x, $ic-arrow-blue-2x);
-      $transform: translateY(6px) rotate(if($type == 'wasup', -45deg, 45deg)) scale(0.7);
-
-      .guide--#{$type} & {
-        @include section-heading($color) {
-          text-align: $txt-align;
-        } // section-heading
-      } // .guide--wasup .guide__tit / .guide--roro .guide__tit
-
-      .guide--#{$type} &::#{if($type == 'wasup', before, after)} {
-        // @include ico-setting($ico);
-        @include sprite-image($ico);
-        @include size((nth($ico, 5) / 2), (nth($ico, 6) / 2));
-
-        transform: $transform;
-        background-size: (nth($ico, 7) / 2), (nth($ico, 8) / 2);
-        background-position: (nth($ico, 3) / 2) (nth($ico, 4) / 2);
-
-        @if ($type == 'wasup') {
-          margin-top: -2px;
-        } // if
-      } // .guide--wasup/roro .guide__tit::before
-    } // loop
-  } // .guide__tit
-
-  // desc
-  // ==============================================
-  &__desc {
-    @include section-desc;
-
-    @each $type in $list-theme-name {
-      .guide--#{$type} & {
-        text-align: if($type == 'wasup', right, left);
-      }
-    }
-  } // .guide__desc
-
   // mobile
   // ======================================================================
   @include respond-to(960px) {
     &--wasup {
       padding-bottom: 50px;
     } // .guide--wasup
-
-    &__poster {
-      @include size(100%, null);
-      margin-bottom: 50px;
-    } // .guide__poster
-
-    &__tit {
-      .guide--wasup & {
-        margin-bottom: 16px;
-        &::before {
-          transform: rotate(-45deg) scale(0.6) translateY(-10px);
-        }
-      }
-    } // .guide--wasup .guide__tit
   } // > 960
 } // guide
+
+// poster
+// ===============================
+.guide__poster {
+  // x좌표가 빠진 box shadow 값
+  // prevend($list, $val:x좌표값)을 이용해서
+  // $list의 맨앞에 $val을 추가한다.
+  $shadow: 29px 26px 5px rgba(50, 62, 81, 0.3);
+
+  @include relative;
+  @include size(percent(778px, $width-max - 20), null);
+  display: inline-block;
+  margin-bottom: 132px;
+  border-radius: 18px;
+
+  @each $type in $list-theme-name {
+    .guide--#{$type} & {
+      -webkit-box-shadow: prepend($shadow, if($type == 'wasup', -22px, 22px));
+      box-shadow: prepend($shadow, if($type == 'wasup', -22px, 22px));
+    }
+  }
+
+  @include respond-to(960px) {
+    @include size(100%, null);
+    margin-bottom: 50px;
+  }
+} // .guide__poster
+
+// .guide__tit
+// =====================================================================================
+.guide__tit {
+  $list-theme-guide: ('wasup' #a86247), ('roro' #2557a0);
+
+  .guide--wasup &::before,
+  .guide--roro &::after {
+    display: inline-block;
+    content: '';
+  }
+
+  @each $type, $color in ($list-theme-guide) {
+    $txt-align: if($type == 'wasup', right, left);
+    $ico: if($type == 'wasup', $ic-arrow-brown2x, $ic-arrow-blue-2x);
+    $transform: translateY(6px) rotate(if($type == 'wasup', -45deg, 45deg)) scale(0.7);
+
+    .guide--#{$type} & {
+      @include section-heading($color) {
+        text-align: $txt-align;
+      } // section-heading
+    } // .guide--wasup .guide__tit / .guide--roro .guide__tit
+
+    .guide--#{$type} &::#{if($type == 'wasup', before, after)} {
+      // @include ico-setting($ico);
+      @include sprite-image($ico);
+      @include size((nth($ico, 5) / 2), (nth($ico, 6) / 2));
+
+      transform: $transform;
+      background-size: (nth($ico, 7) / 2), (nth($ico, 8) / 2);
+      background-position: (nth($ico, 3) / 2) (nth($ico, 4) / 2);
+
+      @if ($type == 'wasup') {
+        margin-top: -2px;
+      } // if
+    } // .guide--wasup/roro .guide__tit::before
+  } // loop
+
+  @include respond-to(960px) {
+    .guide--wasup & {
+      margin-bottom: 16px;
+      &::before {
+        transform: rotate(-45deg) scale(0.6) translateY(-10px);
+      }
+    }
+  }
+} // .guide__tit
+
+// desc
+// ==============================================
+.guide__desc {
+  @include section-desc;
+
+  @each $type in $list-theme-name {
+    .guide--#{$type} & {
+      text-align: if($type == 'wasup', right, left);
+    }
+  }
+} // .guide__desc

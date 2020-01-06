@@ -3134,7 +3134,8 @@ body.show-gnb {
     display: block;
     margin-bottom: 0;
   }
-  .feature .line-brake {
+  .feature .line-brake,
+.feature br {
     display: none;
   }
 }

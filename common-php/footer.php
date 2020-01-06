@@ -175,7 +175,7 @@
 <script>
   
   Playce.translation(location.pathname.indexOf('en') > -1 ? 'en' : 'ko');
-  // Playce.translation('ko');
+  // Playce.translation('en');
 
   (function() {
     'use strict';

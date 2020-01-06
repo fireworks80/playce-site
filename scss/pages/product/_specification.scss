@@ -44,3 +44,271 @@
     } // .specification__tit
   } // loop
 } // specification
+
+// =======================================
+// specification table - (wasup)
+// =======================================
+.specification__table {
+  // @include debug;
+  width: percent(796px, $width-max - 20);
+  font-size: rem(15px);
+  text-align: left;
+  color: $color-default;
+  font-weight: 500;
+
+  &-wrap {
+    margin-top: 60px;
+  }
+
+  .spec-fix-col {
+    width: 27.14285714%;
+  }
+
+  // ================================
+  // common
+  // ================================
+
+  th,
+  td {
+    height: 50px;
+    padding-left: 20px;
+    vertical-align: middle;
+
+    &:nth-child(n + 2) {
+      border-left: 4px solid #fff;
+    }
+  }
+
+  .table-tit,
+  .server-version th,
+  .server-version td {
+    height: 46px;
+  }
+
+  tbody tr:nth-child(2) th,
+  tbody tr:nth-child(2) td {
+    height: 60px;
+  }
+
+  .table-tit {
+    font-size: rem(15px);
+    color: #323e51;
+    background-color: #f9f7f4;
+  } // tit
+
+  .server-version th,
+  .server-version td {
+    color: #fff;
+  }
+
+  .server-version th {
+    background-color: #a86247;
+  }
+
+  .server-version td {
+    // padding-right: 13px;
+    background-color: #edaa43;
+  }
+
+  // util
+  .has-border-bottom {
+    border-bottom: 1px solid #e4e0db;
+  }
+
+  .radius-left {
+    border-radius: 4px 0 0 4px;
+  }
+  .radius-right {
+    border-radius: 0 4px 4px 0;
+  }
+
+  // mobile
+  // ========================================
+  @include respond-to(960px) {
+    @include size(auto, null);
+    margin-bottom: 40px;
+    font-size: 12px;
+
+    &.l-left {
+      float: none;
+    }
+
+    .spec-fix-col {
+      @include size(150px, null);
+    }
+
+    .server-version {
+      padding-left: 10px;
+    }
+
+    .spec-server-name {
+      display: none;
+    }
+  }
+} // table
+
+// os (wasup 만 있음)
+// =======================================
+.specification__os {
+  // @include debug;
+  $width: 364px;
+  margin-left: percent(20px, $width-max);
+  width: percent($width, $width-max - 20);
+  margin-top: 156px;
+
+  dt {
+    margin-bottom: 21px;
+    font-size: rem(16px);
+    font-weight: 500;
+    line-height: 2.13;
+
+    .specification--wasup & {
+      padding-left: 24px;
+      color: #a86247;
+      background-color: #f9f7f4;
+      line-height: 46px;
+    }
+  }
+
+  dd {
+    font-size: rem(18px);
+    line-height: 2.44;
+    color: #a86247;
+    [lang='en'] & {
+      font-size: 16px;
+      line-height: 2;
+    }
+  }
+
+  li:nth-child(n + 2) {
+    margin-top: 12px;
+  } // li
+
+  // mobile
+  // =======================================
+  @include respond-to($bp-mobile + 4) {
+    dd {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+  } // > 964px
+
+  // mobile
+  // =======================================
+  @include respond-to($bp-mobile) {
+    @include size(auto, null);
+    margin-top: 0;
+
+    &.l-left {
+      float: none;
+    }
+
+    br {
+      display: none;
+    }
+  }
+}
+
+// ========================================
+// specification
+// ========================================
+.spec-list {
+  $width-list: 390px;
+  $width-list-os: 392px;
+  // @include debug;
+  @include size(percent($width-list, $width-max - 20), null);
+  // @include size(390px, null);
+  font-size: rem(14px);
+  color: #363f2f;
+
+  h3 {
+    font-size: rem(15px);
+    color: #fff;
+    line-height: 46px;
+    background-color: #86ae28;
+  }
+
+  h3,
+  dt {
+    font-size: rem(15px);
+    font-weight: 500;
+  }
+
+  dt {
+    background-color: #eff2e7;
+    line-height: 40px;
+  }
+
+  li {
+    padding: 12px 0;
+    line-height: 1.8;
+
+    &:nth-child(n + 2) {
+      border-top: 1px solid #ecf0e6;
+    }
+
+    [lang='en'] & {
+      letter-spacing: -0.4px;
+    }
+  }
+
+  &:nth-of-type(1),
+  &:nth-of-type(2) {
+    margin-right: percent(4px, $width-max - 20);
+
+    h3,
+    dt {
+      padding-left: percent(20px, $width-list);
+    }
+
+    li {
+      padding-left: percent(20px, $width-list);
+    }
+  }
+
+  &:nth-of-type(3) {
+    @include size(percent($width-list-os, $width-max - 20), null);
+
+    h3,
+    dt {
+      padding-left: percent(20px, $width-list-os);
+    }
+
+    h3 {
+      background-color: #446d15;
+    }
+
+    li {
+      padding-left: percent(10px, $width-list-os);
+      color: #446d15;
+    }
+  }
+
+  .ico-check::before {
+    top: -3px;
+  }
+
+  // mobile
+  // ========================================
+  @include respond-to($bp-mobile) {
+    font-size: 12px;
+
+    &,
+    &:last-child {
+      @include size(auto, null);
+    }
+
+    &:nth-child(2) {
+      margin: 20px 0 40px;
+    }
+
+    &.l-left,
+    &.l-right {
+      float: none;
+    }
+
+    li {
+      line-height: 38px;
+    }
+  } // > 960
+} // spec list

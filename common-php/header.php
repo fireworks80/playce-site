@@ -13,15 +13,15 @@
   
   // logo click 했을때 
   // test 페이지 주석처리
-  $root_url = $locale === 'en' ? '/'.$locale.'/test' : '/test';
-  // $root_url = $locale === 'en' ? '/'.$locale : '/';
+  // $root_url = $locale === 'en' ? '/'.$locale.'/test' : '/test';
+  $root_url = $locale === 'en' ? '/'.$locale : '/';
 
   // gnb 국문 / 영문 클릭했을때
   $query_string = $_SERVER['QUERY_STRING'] ? '?'.$_SERVER['QUERY_STRING'] : '';
-  $ko_url = '/test/'.basename($_SERVER['PHP_SELF']).$query_string;
-  $en_url = '/en/test/'.basename($_SERVER['PHP_SELF']).$query_string;
-  // $ko_url = '/'.basename($_SERVER['PHP_SELF']).$query_string;
-  // $en_url = '/en/'.basename($_SERVER['PHP_SELF']).$query_string;
+  // $ko_url = '/test/'.basename($_SERVER['PHP_SELF']).$query_string;
+  // $en_url = '/en/test/'.basename($_SERVER['PHP_SELF']).$query_string;
+  $ko_url = '/'.basename($_SERVER['PHP_SELF']).$query_string;
+  $en_url = '/en/'.basename($_SERVER['PHP_SELF']).$query_string;
   
 ?>
 <!DOCTYPE html>

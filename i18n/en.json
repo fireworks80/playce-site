@@ -400,7 +400,7 @@
 
   "policy-agree-mean": "2. Consent to Personal Information Collection and Personal Information Collection Method",
   "policy-agree-mean-p1": "The Company has set out a procedure for the Members to click \"Agree\" button for personal information collection and utilization. When a member clicks this button, it is regarded that the member agrees to his or her personal information collection.",
-  "policy-agree-mean-p2": "The Company collects personal information in the following methods.",
+  "policy-agree-mean-p2": "The Customers have the right to refuse the agreement on collection and use of personal information, and your refusal on this agreement shall not incur any disadvantage. If you refuse to agree with the Mandatory Agreement items, however, service will become unavailable or the Service offerings as per the “Purpose of Collection & Use” in the Mandatory Agreement will be limited.",
 
   "policy-offering": "3. Utilization of Collected Personal Information and Supply of the Information to a Third Party",
   "policy-offering-p": "The Company uses the Members' personal information within a scope specified in the Service terms and conditions and Privacy Policy. The Company does not use the Members' personal information or provide it to a third party by exceeding the specified scope. In the following cases, however, the Company may utilize and provide personal information with caution.",
@@ -412,6 +412,75 @@
   "policy-reason-item1": "- Preserved Information: e-mail address",
   "policy-reason-item2": "- Grounds: To prevent illegal use, to cooperate in investigation by related agencies on illegal users",
   "policy-reason-item3": "- Preservation Period: Six (6) months",
+  "policy-reason2": "B. Reasons for information Retention according to related laws",
+  "policy-reason2-p": "Where it is necessary to preserve personal information under relevant laws including the Commercial Code, the National Basic Tax Act, the Communications Secret Protection Act, the Act Relating to Consumer Protection in Electronic Commercial Transactions, etc., and the Act Relating to Use and Protection of Credit Information, we shall retain the information of members for the period of time prescribed under relevant laws. In this case, we shall use the personal information to be retained only for the purpose of preservation, and the retention period shall be as follows:",
+  "policy-reason2-item1": "- Records relating to indication and advertisements: 6 months (the Act Relating to Consumer Protection in Electronic Commercial Transactions, etc.)",
+  "policy-reason2-item2": "- Records on agreements or withdrawals of offers: 5 years (the Act Relating to Consumer Protection in Electronic Commercial Transactions, etc.)",
+  "policy-reason2-item3": "- Records on payments and supplies of goods: 5 years (the Act Relating to Consumer Protection in Electronic Commercial Transactions, etc.)",
+  "policy-reason2-item4": "- Records of consumer complaints or dispute resolutions: 3 years (the Act Relating to Protection of Consumers in Electronic Commercial Transactions, etc.)",
+  "policy-reason2-item5": "- Records on verification of identification: six (6) months (the Act Relating to Information Communication Network Promotion and Personal Information Protection)",
+  "policy-reason2-item6": "- Records on visits (log-ins) : three (3) months (the Communication Secret Protection Act)",
+
+  "policy-destroy": "5. Destruction Procedures and Methods for Personal Information",
+  "policy-destroy-p": "The Company shall without delay destroy relevant information according to the retention or use period after the purposes of using the collected personal information have been fulfilled. The destruction procedures, methods, or time shall be as follows:",
+
+  "policy-dest-tit1": "A. Destruction Procedures and Time",
+  "policy-dest-p": "The personal information entered by customers for service use, etc. shall be deleted or destroyed according to the information protection policies under the internal policies or other relevant laws.",
+  "policy-dest-tit2": "B. Destruction Methods",
+  "policy-dest-p2": "The personal information entered in writing or printed in paper form shall be destroyed by paper shredding, destroyed, or dissolved by chemical treatment. Personal information saved in an electronic file format shall be deleted by using technical methods from which records cannot be regenerated.",
+
+  "policy-type6": "6. Rights and Obligations of User",
+
+  "policy-type7": "7. Personal Information Protection for Children",
+  "policy-type7-p1": "Children under fourteen (14) years of age are not allowed to use the service. In the event that the Company engages in the following activities regarding the personal information of children, we shall obtain consent from the childrens’ legal representatives:",
+  "policy-type7-p2": "In the event that the Company intends to collect personal information for children’s membership subscription, the Company may request the minimum required information in order to obtain consent from legal representatives, including names, contract information of legal representatives. In this case, we shall notify the children of the purpose of collecting, using, or providing personal information, the fact that consent of a legal representative is required, in a plain expression that the children can easily understand.",
+  "policy-type7-p3": "We shall not use or provide to third parties the personal information of legal representatives collected to obtain consent from legal representatives, for purposes other than those of confirming the consent of the legal representatives.",
+
+  "policy-type8": "8. Matters on Installation, Operation, and Rejection of Automatic Collection Instruments of Personal Information",
+  "policy-type8-p1": "There are cases where we install or operate cookies that save and frequently track information of customers through the Internet services provided. If a customer accesses the service, we may read the content of cookies in the customer’s browser, find out additional information, and then provide services without entering additional information such as his or her name required to get access thereto.",
+  "policy-type8-p2": "The Company may use the informations of customers collected through cookies for each of the following purposes:",
+
+  "policy-type8-item1": "• To provide differentiated information according to their individual fields of interested",
+  "policy-type8-item2": "• To trace the content that customers appear to have an interest in and provide individually customized services on the following visit",
+  "policy-type8-item3": "• When customers use paid services, to introduce the use period",
+  "policy-type8-item4": "• To analyze habits of members and use them for the modification of services, etc.",
+
+  "policy-type8-p3": "Customers shall have the option to install cookies. Customers may accept all cookies in “Tools > Internet Options > Personal Information > Advanced” at the top of the web browser, send notifications once cookies have been installed, or reject all the cookies.",
+
+  "policy-type9": "9. Technical and Managerial Measures for Protection of Personal Information",
+  "policy-type9-a": "A. Technical Measures",
+  "policy-type9-a-p": "In treating customers’ personal information, the Company takes the following measures in order to ensure that the personal information is not lost, stolen, leaked, altered, or damaged, and to obtain security:",
+  "policy-type9-a-item1": "• Customers’ personal information shall be protected by their passwords. By encoding files and transmission data or using a locking function for files, important data shall be protected by separate security functions.",
+  "policy-type9-a-item2": "• The Company frequently backs up materials to preparation of potential damage to personal information and prevents personal information or materials of users from being leaked or harmed by using the latest vaccine programs, and enables personal information to be safely transmitted on the networks by way of encoded communications,",
+  "policy-type9-a-item3": "• the Company takes measures to prevent damages by computer viruses with the use of vaccine programs. Vaccine programs are periodically updated. In the event that viruses suddenly appear, immediately when vaccines come out, the Company provides such vaccines to prevent personal information from being infringed upon.",
+  "policy-type9-a-item4": "• The Company adopts security devices that enable personal information to be safety transmitted on the networks.",
+
+  "policy-type9-b": "B. Managerial Measures",
+  "policy-type9-b-item1": "• The Company prepares procedures, etc. necessary to gain access to and control customers’ personal information, and requires its associated employees to be familiar and comply with such procedures.",
+  "policy-type9-b-item2": "• The Company limits authority to the access of customers’ personal information to a minimum number of personnel. Persons falling under the minimum number of personnel shall be as follows:",
+
+  "policy-type9-b-sub1": "- Persons who perform marketing operations directly with users",
+  "policy-type9-b-sub2": "- Persons who perform personal information control duties, including the personal information control manager and authorized manager",
+  "policy-type9-b-sub3": "- Any other persons on duty required to deal with personal information.",
+
+  "policy-type9-b-item3": "• In the event that the Company processes customers’ personal information by the use of computer, we designate authorized persons who have the authority to gain access to personal information and give them identifiable signs (IDs) and passwords, and regularly renew the passwords.",
+  "policy-type9-b-item4": "• We provide regular internal training and trusted external training to employees who deal with personal information, with respect to obtaining new security technologies and duties to protect personal information.",
+  "policy-type9-b-item5": "• We prevent employees from leaking personal information by requiring newly hired employees to give their content to information protection or to personal information protection. We prepare and continuously implement internal procedures to inspect matters on the performance of the Personal Information Treatment Policies and employees’ compliance therewith.",
+  "policy-type9-b-item6": "• We require retiring employees to sign a confidentiality agreement in order to prevent persons who have dealt with the personal information of customers from damaging, infringing upon, or disclosing the personal information they have come in contact with on duty.",
+  "policy-type9-b-item7": "• We require that relevant persons who have treated personal information thoroughly transfer their duties under the condition that certain security is maintained. We make clear relevant liabilities for accidents of personal information after employees join and retire from the company.",
+
+  "policy-type10": "10. Transmitting Advertising Information",
+  "policy-type10-p": "The Company may send to customers the advertising information about products/services of a third party as well as new products and promotional events via electronic means, in order to perform customer-oriented marketing activities. In this case, the Company shall obtain prior consent from the customers before sending such advertising communications. the Company shall also take the following measures in the subject line and text body of the electronic means, in a way that customers can easily recognize that the information contains advertising.",
+  "policy-type10-item1": "• Subject line of the electronic means: Put the phrase '(Advertising)' or '(Adult Advertising)' in Korean in the start of the subject line without any space, which shall then be followed by the title containing the key message of the text body. In case the Company sends for-profit advertising information via an electronic means on which it is difficult to indicate that the information contains advertising, then the Company shall take other available measures such as indicating the name of the sender.",
+  "policy-type10-item2": "• Other methods than e-mail, such as fax and mobile : The Company shall take other available measures such as indicating the name of the sender.",
+
+  "policy-type11": "11. Personal Information Control Manager and Authorized Manager",
+  "policy-type11-p": "The Company does its best to ensure that customers are able to use information safely. Upon the occurrence of an accident that contravenes matters publicly announced to customers while we are protecting personal information, the personal information control manager shall take all responsibilities thereof. The personal information control manager and authorized manager, who will promptly and sincerely reply to questions related to personal information, are as follows:",
+  "policy-type11-item1": "- Personal Information Control Manager : CTO, Jiwoong Choi",
+  "policy-type11-item2": "- Authorized Person for Personal Information Control : Director, Hyejin Han",
+  "policy-type11-item3": "- Affiliated department : Open Source Consulting Inc., Solution Development Team",
+  "policy-type11-item4": "- Tel",
+  "policy-type11-item5": "- E-mail",
 
   "soft-tit": "End User License Agreement",
   "soft-agree1": "This End User License Agreement (the \"Agreement\") is a legal agreement between you and Open Source Consulting Co., Ltd. (\"Open Source Consulting\") that sets out terms and conditions that govern your use of or access to executable or installation files (\"Products\") and any documents including, but not limited to, user guides, etc. (the \"Documents\").",

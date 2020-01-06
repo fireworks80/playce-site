@@ -1135,20 +1135,6 @@ body {
   display: block;
   content: "";
 }
-.architecture--wasup .btn-pic--in-large::before {
-  background-image: url(../images/sprite/sprite-icons-2x.png);
-  background-size: 169px, 4866px;
-  background-position: 0px -271px;
-  width: 34px;
-  height: 34px;
-}
-.architecture--roro .btn-pic--in-large::before {
-  background-image: url(../images/sprite/sprite-icons-2x.png);
-  background-size: 169px, 4866px;
-  background-position: 0px -310px;
-  width: 34px;
-  height: 34px;
-}
 .popup-architecture .btn-pic--shrink::before {
   background-image: url(../images/sprite/sprite-icons-2x.png);
   background-size: 169px, 4866px;

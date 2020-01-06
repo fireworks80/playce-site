@@ -73,7 +73,7 @@
 }
 
 // =====================================================================
-// architecture btn
+// architecture popup btn
 // =====================================================================
 .btn-pic {
   @include absolute($bottom: -35px, $right: -35px);
@@ -87,31 +87,14 @@
   background-color: #fff;
   box-shadow: -2px 3px 10px 0 rgba(156, 86, 59, 0.2);
 
-  // .architecture--wasup &:hover,
-  // .architecture--wasup &:active,
   .popup-architecture &:hover,
   .popup-architecture &:active {
     background-color: #ffe6bf;
   }
 
-  // .architecture--roro &:hover,
-  // .architecture--roro &:active {
-  //   background-color: #c4dff4;
-  // }
-
   &::before {
-    // @include size(36px, 35px);
     display: block;
     content: '';
-  }
-
-  &--in-large::before {
-    .architecture--wasup & {
-      @include icon-setting($btn-pic-enlarge-2x);
-    }
-    .architecture--roro & {
-      @include icon-setting($btn-pic-enlarge-roro-2x);
-    }
   }
 
   &--shrink::before {

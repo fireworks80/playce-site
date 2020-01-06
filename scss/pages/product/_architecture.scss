@@ -166,7 +166,6 @@
 
     // btn icon
     .architecture--#{$type} &::before {
-      @debug &;
       @include icon-setting(if($type == 'wasup', $btn-pic-enlarge-2x, $btn-pic-enlarge-roro-2x));
     }
   } // loop

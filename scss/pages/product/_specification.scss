@@ -1,0 +1,46 @@
+.specification {
+  $list-type: (
+    'wasup': (
+      'padding': 188px 247px,
+      'color-heading': #a86247
+    ),
+    'roro': (
+      'padding': 222px 97px,
+      'color-heading': #5c7a23
+    )
+  );
+
+  // .specification__desc
+  &__desc {
+    @include section-desc(#687381) {
+      margin-bottom: 60px;
+      font-size: rem(28px);
+    }
+  } // .specification__desc
+
+  // theme
+  // =============================================
+  @each $type, $maps in $list-type {
+    &--#{$type} {
+      padding-top: nth(map-get($maps, 'padding'), 1);
+      padding-bottom: nth(map-get($maps, 'padding'), 2);
+
+      @include respond-to(960px) {
+        @if ($type == 'wasup') {
+          padding: 100px 0 80px;
+        } @else {
+          padding-top: 100px;
+        }
+      }
+    }
+
+    // .specification__tit
+    &__tit {
+      .specification--#{$type} & {
+        @include section-heading(map-get($maps, 'color-heading')) {
+          margin-bottom: 30px;
+        } // @mixin section-heading
+      }
+    } // .specification__tit
+  } // loop
+} // specification

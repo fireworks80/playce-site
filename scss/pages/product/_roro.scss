@@ -268,26 +268,6 @@
 // =============================
 //  specification
 // =============================
-.specification--roro {
-  padding-top: 222px;
-  padding-bottom: 97px;
-
-  .specification__tit {
-    @include section-heading(#5c7a23) {
-      margin-bottom: 30px;
-    }
-  }
-  .specification__desc {
-    @include section-desc($color-light-black) {
-      margin-bottom: 40px;
-      font-size: rem(28px);
-    }
-  }
-
-  @media ($query-mobile) {
-    padding-top: 100px;
-  }
-}
 
 .spec-list {
   $width-list: 390px;

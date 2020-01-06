@@ -493,24 +493,6 @@ $noti-step4-end: translateY(300%);
 // =============================
 // specification
 // =============================
-.specification--wasup {
-  padding-top: 188px;
-  padding-bottom: 247px;
-
-  .specification__tit {
-    @include section-heading(#a86247);
-  }
-
-  .specification__desc {
-    @include section-desc(#687381) {
-      margin-bottom: 60px;
-    }
-  }
-
-  @media ($query-mobile) {
-    padding: 100px 0 80px;
-  }
-}
 
 // table
 // =======================================

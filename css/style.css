@@ -4501,6 +4501,11 @@ body.show-gnb {
   font-weight: 500;
 }
 @media (max-width: 960px) {
+  [lang=en] .subscription__txt-in-mobile {
+    display: none;
+  }
+}
+@media (max-width: 960px) {
   .subscription {
     padding: 100px 0 80px;
     background-image: none;

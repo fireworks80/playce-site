@@ -72,6 +72,12 @@
     color: #cdd9e8;
     font-size: 12px;
     font-weight: 500;
+
+    @include respond-to($bp-mobile) {
+      [lang='en'] & {
+        display: none;
+      }
+    }
   } // .subscription__txt-in-mobile
 
   // mobile

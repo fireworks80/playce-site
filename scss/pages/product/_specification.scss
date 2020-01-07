@@ -171,11 +171,12 @@
   }
 
   dd {
+    // @debug &;
     font-size: rem(18px);
     line-height: 2.44;
     color: #a86247;
     [lang='en'] & {
-      font-size: 12px;
+      font-size: 16px;
       line-height: 2;
     }
   }
@@ -206,7 +207,11 @@
     br {
       display: none;
     }
-  }
+
+    [lang='en'] & dd {
+      font-size: rem(12px);
+    }
+  } // > 960
 }
 
 // ========================================

@@ -3392,7 +3392,7 @@ body.show-gnb {
   text-align: right;
 }
 .case--wasup .case__tit {
-  color: #324c99;
+  color: #3d5399;
 }
 [lang=en] .case--wasup .case__tit {
   margin-bottom: 20px;
@@ -4310,7 +4310,7 @@ body.show-gnb {
   color: #a86247;
 }
 [lang=en] .specification__os dd {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 2;
 }
 .specification__os li:nth-child(n+2) {
@@ -4332,6 +4332,9 @@ body.show-gnb {
   }
   .specification__os br {
     display: none;
+  }
+  [lang=en] .specification__os dd {
+    font-size: 1.2rem;
   }
 }
 

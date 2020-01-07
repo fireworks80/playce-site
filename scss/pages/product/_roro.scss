@@ -234,7 +234,7 @@
     padding-top: 114px;
   }
 
-  @media ($query-mobile) {
+  @include respond-to($bp-mobile) {
     padding: 120px 0;
 
     .wizard__path .slide-btns,
@@ -250,6 +250,10 @@
 
     .wizard__network {
       margin-bottom: -60px;
+    }
+
+    .prd-info-wrap:last-of-type .prd-info {
+      padding-top: 0;
     }
   }
 

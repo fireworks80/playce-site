@@ -21,9 +21,11 @@
   }
 
   @media ($query-mobile) {
-    margin-bottom: 15px;
-    font-size: 16px;
-  }
+    [lang] & {
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+  } // 960
 }
 
 %section-desc {

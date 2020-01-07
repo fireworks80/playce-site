@@ -131,6 +131,10 @@
 
 .function--wasup .prd-info-wrap:last-of-type .prd-info {
   padding-top: 100px;
+
+  @include respond-to($bp-mobile) {
+    padding-top: 0;
+  }
 }
 
 // =============================

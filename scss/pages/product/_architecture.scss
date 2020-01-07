@@ -155,6 +155,10 @@
     content: '';
   }
 
+  @include respond-to($bp-mobile) {
+    display: none;
+  }
+
   // theme
   // =============================================
   @each $type, $color in $map-theme {

@@ -174,8 +174,8 @@
 <script src="./js/smooth-anchor.js"></script>
 <script>
   
-  Playce.translation(Playce.getLocale());
-  // Playce.translation('en');
+  // Playce.translation(Playce.getLocale());
+  Playce.translation('en');
 
   (function() {
     'use strict';

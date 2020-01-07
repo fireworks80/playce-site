@@ -3351,6 +3351,11 @@ body.show-gnb {
   display: block;
   content: "";
 }
+@media (max-width: 960px) {
+  .architecture__btn {
+    display: none;
+  }
+}
 .architecture--wasup .architecture__btn:hover, .architecture--wasup .architecture__btn:active {
   background-color: #ffe6bf;
 }
@@ -4291,7 +4296,7 @@ body.show-gnb {
 }
 .specification__os dt {
   margin-bottom: 21px;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 500;
   line-height: 2.13;
 }

@@ -114,16 +114,14 @@ $list-color: (
   line-height: 2.22;
 
   [lang='en'] & {
-    font-size: rem(15px);
+    font-size: rem(16px);
     line-height: 1.8;
   }
 
-  @media (max-width: 1107px) {
-    font-size: 16px;
-  } // > 1107
-
   @media (max-width: 1070px) {
-    font-size: 14px;
+    [lang] & {
+      font-size: 14px;
+    }
   } // > 1070
 
   @media ($query-mobile) {

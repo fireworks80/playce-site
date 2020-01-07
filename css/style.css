@@ -3863,16 +3863,11 @@ body.show-gnb {
   line-height: 2.22;
 }
 [lang=en] .wizard__desc {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 1.8;
 }
-@media (max-width: 1107px) {
-  .wizard__desc {
-    font-size: 16px;
-  }
-}
 @media (max-width: 1070px) {
-  .wizard__desc {
+  [lang] .wizard__desc {
     font-size: 14px;
   }
 }

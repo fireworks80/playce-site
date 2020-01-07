@@ -7,12 +7,6 @@
     background-image: url($path-img+'bg-support-hero-round.png');
   }
 
-  // &__sub-tit,
-  // &__desc em {
-  //   font-weight: bold;
-    
-  // }
-
   .sub__tit {
     color: #324c99;
   }
@@ -39,6 +33,12 @@
       background-color: #2a3346;
     }
   }
+
+  @include respond-to($bp-mobile) {
+    [lang='en'] &.sub-top {
+      height: 740px;
+    }
+  } // > 960
 
   @media (max-width: 640px) {
     .sub__tit2 em {

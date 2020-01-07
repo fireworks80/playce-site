@@ -5563,6 +5563,11 @@ body.show-gnb {
 .support-hero .btn-round:hover {
   background-color: #2a3346;
 }
+@media (max-width: 960px) {
+  [lang=en] .support-hero.sub-top {
+    height: 740px;
+  }
+}
 @media (max-width: 640px) {
   .support-hero .sub__tit2 em {
     display: inline;

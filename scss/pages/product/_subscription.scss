@@ -31,7 +31,7 @@
     box-shadow: 0 16px 30px 0 #00000032;
 
     [lang='en'] & {
-      min-height: 350px;
+      min-height: 368px;
     }
 
     &::before {
@@ -52,6 +52,7 @@
     }
 
     &__tit {
+      line-height: 1.4;
       margin-bottom: 20px;
     }
 

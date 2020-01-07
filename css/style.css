@@ -4307,7 +4307,7 @@ body.show-gnb {
   color: #a86247;
 }
 [lang=en] .specification__os dd {
-  font-size: 16px;
+  font-size: 12px;
   line-height: 2;
 }
 .specification__os li:nth-child(n+2) {
@@ -4455,7 +4455,7 @@ body.show-gnb {
   box-shadow: 0 16px 30px 0 #00000032;
 }
 [lang=en] .subscription .card {
-  min-height: 350px;
+  min-height: 368px;
 }
 .subscription .card::before {
   margin-bottom: 28px;
@@ -4485,6 +4485,7 @@ body.show-gnb {
   margin-right: 1.6949152542%;
 }
 .subscription .card__tit {
+  line-height: 1.4;
   margin-bottom: 20px;
 }
 .subscription .card__desc {

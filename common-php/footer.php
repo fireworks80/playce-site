@@ -99,7 +99,7 @@
   
           <div class="footer__service-row">
             <div class="service">
-              <h2 class="service__tit" data-i18n="support">고객지원</h2>
+              <h2 class="service__tit" data-i18n="gnb-support">고객지원</h2>
               <ul class="service__list">
                 <li><a href="https://jira.osci.kr/servicedesk/customer/portal/21" target="_blank" data-i18n="product-inquires-foot">제품 문의</a></li>
                 <li><a href="https://jira.osci.kr/servicedesk/customer/portal/21" target="_blank" data-i18n="tech-support2">기술 지원</a></li>

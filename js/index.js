@@ -81,6 +81,10 @@ Playce.tab = function(wrap) {
 	});
 };
 
+Playce.getLocale = function () { 
+	return location.pathname.indexOf('en') > -1 ? 'en' : 'ko';
+};
+
 // 국문 / 영문
 Playce.translation = function(lang) {
 	// 국문 영문
@@ -211,22 +215,30 @@ var slickWrapper = function(el, opt) {
 	};
 
 	var generateDOM = function(type) {
-		var stringDOM = {
-			guideRoRo:
-				'<div class="video-wrap">' +
-				'<video src="./images/guide-roro.mp4"></video>' +
-				'<button class="btn-play js-play-btn" type="button"><span class="a11y">가이드 영상 재생</span></button></div>',
-			guideWasup:
-				'<div class="video-wrap">' +
-				'<video src="./images/guide-wasup.mp4"></video>' +
-				'<button class="btn-play js-play-btn" type="button"><span class="a11y">가이드 영상 재생</span></button></div>',
-			architecture:
-				'<img src="./images/architecture-blueprint-large-2x.png" alt="">' +
-				'<button class="btn-pic btn-pic--shrink js-shrink-btn" type="button"><span class="a11y">닫기</span></button>',
-			architectureRoro:
-				'<img src="./images/img-architecture-roro-2x.png" alt="">' +
-				'<button class="btn-pic btn-pic--shrink btn-pic--shrink-roro js-shrink-btn" type="buttslon"><span class="a11y">닫기</span></button>'
+		var config = {
+			src: './images/',
+			fileRoRo: 'guide-roro'
 		};
+
+		var srcRoRo = config.src + config.fileRoRo + (Playce.getLocale() === 'en' ? '-en-2018.mp4' : '-ko.mp4');
+		var stringDOM = {
+      guideRoRo:
+        '<div class="video-wrap">' +
+        '<video src=".' +
+        srcRoRo +
+        '"></video>' +
+        '<button class="btn-play js-play-btn" type="button"><span class="a11y">가이드 영상 재생</span></button></div>',
+      guideWasup:
+        '<div class="video-wrap">' +
+        '<video src="./images/guide-wasup-ko.mp4"></video>' +
+        '<button class="btn-play js-play-btn" type="button"><span class="a11y">가이드 영상 재생</span></button></div>',
+      architecture:
+        '<img src="./images/architecture-blueprint-large-2x.png" alt="">' +
+        '<button class="btn-pic btn-pic--shrink js-shrink-btn" type="button"><span class="a11y">닫기</span></button>',
+      architectureRoro:
+        '<img src="./images/img-architecture-roro-2x.png" alt="">' +
+        '<button class="btn-pic btn-pic--shrink btn-pic--shrink-roro js-shrink-btn" type="buttslon"><span class="a11y">닫기</span></button>'
+    };
 
 		popupBox.innerHTML = stringDOM[type];
 

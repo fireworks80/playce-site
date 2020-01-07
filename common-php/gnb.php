@@ -96,7 +96,7 @@
       <ul class="gnb__list">
         <li class="gnb__item"><a data-i18n="inquiry" class="gnb__link" href="https://jira.osci.kr/servicedesk/customer/portal/21" target="_blank">문의하기</a></li>
         <!-- .is-active로 하위 메뉴 열림 -->
-        <li class="gnb__item has-callout js-lang">
+        <li class="gnb__item has-callout js-lang" style="display: none;">
           <span class="gnb__link js-has-callout js-current-lang">KOR</span>
           <div class="callout callout--lang">
             <ul class="callout__inner">

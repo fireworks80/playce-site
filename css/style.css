@@ -3459,7 +3459,6 @@ body.show-gnb {
 .case__slider {
   position: relative;
   margin-bottom: 40px;
-  visibility: hidden;
 }
 .case__slider .slick-list {
   overflow: visible;

@@ -25,8 +25,8 @@
   
 ?>
 <!DOCTYPE html>
-<!-- <html lang="<?php echo $locale; ?>"> -->
-<html lang="en">
+<html lang="<?php echo $locale; ?>">
+<!-- <html lang="en"> -->
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150725111-1"></script>

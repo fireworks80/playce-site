@@ -1567,12 +1567,7 @@ body.show-gnb {
     margin-bottom: 0;
   }
 }
-@media (max-width: 775px) {
-  .snb__link {
-    padding: 0 16px;
-  }
-}
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .snb .l-center {
     height: auto;
     flex-direction: column;
@@ -1580,16 +1575,16 @@ body.show-gnb {
     padding: 20px 0 16px 18px;
   }
   .snb__item {
-    margin-right: 4px;
+    margin-right: 8px;
   }
-  .snb__item:last-child {
+  [lang=en] .snb__item:last-child {
     position: absolute;
     top: 20px;
     right: 16px;
     margin-right: 0;
   }
   .snb__link {
-    padding: 4px;
+    padding: 0;
     font-size: 13px;
     font-weight: 500;
     line-height: 28px;
@@ -1601,6 +1596,9 @@ body.show-gnb {
   .snb__item:last-child .snb__link {
     padding-left: 10px;
     padding-right: 10px;
+  }
+  [lang=en] .snb__link {
+    font-size: 12px;
   }
   .snb__logo {
     margin-bottom: 25px;
@@ -4832,9 +4830,12 @@ body.show-gnb {
   }
 }
 @media (max-width: 960px) {
-  .price-kind {
+  [lang=ko] .price-kind {
     width: auto;
     height: 280px;
+  }
+  [lang=en] .price-kind {
+    width: auto;
   }
   .price-kind:hover {
     transform: scale(1);
@@ -5402,7 +5403,7 @@ body.show-gnb {
     padding-right: 0;
   }
 }
-@media (max-width:960px) {
+@media (max-width: 960px) {
   .hero--roro {
     padding-bottom: 88px;
     padding-top: 60px;
@@ -5414,6 +5415,10 @@ body.show-gnb {
   }
   .hero--roro .hero__desc {
     font-size: 16px;
+  }
+  [lang=en] .hero--roro__btns {
+    display: flex;
+    justify-content: space-between;
   }
 }
 @media (max-width: 670px) {

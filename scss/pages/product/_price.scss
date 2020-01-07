@@ -153,7 +153,12 @@
   // mobile
   // ==============================
   @include respond-to($bp-mobile) {
-    @include size(auto, 280px);
+    [lang='ko'] & {
+      @include size(auto, 280px);
+    }
+    [lang='en'] & {
+      @include size(auto, null);
+    }
 
     &:hover {
       transform: scale(1);

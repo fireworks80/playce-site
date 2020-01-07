@@ -128,7 +128,7 @@
     }
   }
 
-  @media ($query-mobile) {
+  @include respond-to($bp-mobile) {
     padding-bottom: 88px;
     padding-top: 60px;
 
@@ -140,6 +140,11 @@
 
     .hero__desc {
       font-size: 16px;
+    }
+
+    [lang='en'] &__btns {
+      display: flex;
+      justify-content: space-between;
     }
   } // > 960
 

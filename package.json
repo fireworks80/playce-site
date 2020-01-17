@@ -10,6 +10,7 @@
   "scripts": {
     "server": "lite-server",
     "scss": "sass --watch ./scss/style.scss ./css/style.css",
+    "build-scss": "sass --watch ./scss/style.scss ./css/style.css --style compressed",
     "sprite": "spritesmith"
   }
 }

@@ -1,27 +1,27 @@
 $font-map: (
   (
-    "name": Thin,
-    "weight": 100
+    'name': Thin,
+    'weight': 100
   ),
   (
-    "name": Light,
-    "weight": 300
+    'name': Light,
+    'weight': 300
   ),
   (
-    "name": Regular,
-    "weight": 400
+    'name': Regular,
+    'weight': 400
   ),
   (
-    "name": Medium,
-    "weight": 500
+    'name': Medium,
+    'weight': 500
   ),
   (
-    "name": Bold,
-    "weight": 700
+    'name': Bold,
+    'weight': 700
   ),
   (
-    "name": Black,
-    "weight": 900
+    'name': Black,
+    'weight': 900
   )
 );
 
@@ -29,20 +29,20 @@ $font-map: (
   $ie-compat-src: null;
   $other-src: null;
   $extmods: (
-    eot: "?#ietfix"
+    eot: '?#ietfix'
   );
 
   $formats: (
-    eot: "embedded-opentype",
-    otf: "opentype",
-    ttf: "truetype"
+    eot: 'embedded-opentype',
+    otf: 'opentype',
+    ttf: 'truetype'
   );
 
   @each $ext in $exts {
     $extmode: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
     $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
-    $ie-compat-src: url(quote($path + "." + nth($exts, 1)));
-    $other-src: append($other-src, url(quote($path + "." + $ext)) format(quote($format)), comma);
+    $ie-compat-src: url(quote($path + '.' + nth($exts, 1)));
+    $other-src: append($other-src, url(quote($path + '.' + $ext)) format(quote($format)), comma);
   }
 
   @font-face {
@@ -51,11 +51,12 @@ $font-map: (
     font-weight: $weight;
     src: $ie-compat-src;
     src: $other-src;
+    font-display: swap;
   }
 }
 
 @each $map in $font-map {
-  $path: $path-font + "NotoSansCJKkr-" + map-get($map, name);
+  $path: $path-font + 'NotoSansCJKkr-' + map-get($map, name);
 
-  @include font-face("NotoCJK", $path, normal, map-get($map, weight));
+  @include font-face('NotoCJK', $path, normal, map-get($map, weight));
 }

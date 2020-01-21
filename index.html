@@ -560,10 +560,17 @@ include_once 'common-php/footer.php';
     var $tab = $('.js-tab');
     var $tabList = $tab.find('.js-tab-list');
     var $tabContent = $tab.find('.tab-contents');
+    var slider = null;
 
-    var slider = $tabContent.slick({
-      arrows: false,
-      infinite: false
+    
+    $(function() {
+      slider = $tabContent.slick({
+        arrows: false,
+        infinite: false
+      });
+
+      $(window).trigger('resize');
+
     });
 
     var activateCurrentTab = function(idx) {

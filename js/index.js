@@ -130,10 +130,10 @@ Playce.drawSvgAnim = function () {
 		count: 0
 	};
 
-	$('.circle-inner').eq(0).velocity({ 'stroke-dashoffset': 130 }, { duration: 500 }, {delay: 450});
-	$('.circle-outer').eq(0).velocity({ 'stroke-dashoffset': 200 }, { duration: 500 }, {delay: 300});
-	$('.circle-inner').eq(1).velocity({ 'stroke-dashoffset': 60 }, { duration: 500 }, {delay: 400});
-	$('.circle-outer').eq(1).velocity({ 'stroke-dashoffset': 160 }, { duration: 500 }, {delay: 230});
+	$('.circle-inner').eq(0).velocity({ 'stroke-dashoffset': 130 }, { duration: 5000 }, {delay: 2000});
+	$('.circle-outer').eq(0).velocity({ 'stroke-dashoffset': 200 }, { duration: 5000 }, {delay: 1000});
+	$('.circle-inner').eq(1).velocity({ 'stroke-dashoffset': 60 }, { duration: 5000 }, {delay: 2500});
+	$('.circle-outer').eq(1).velocity({ 'stroke-dashoffset': 160 }, { duration: 5000 }, {delay: 2300});
 
 };
 

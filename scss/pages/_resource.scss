@@ -190,6 +190,12 @@
     display: none;
   }
 
+  @include respond-to(999px) {
+    &-tit.resource-guide-version br {
+      display: none;
+    }
+  }
+
   @media ($query-mobile) {
     display: block;
     // padding-left: 10px;

@@ -1,9 +1,10 @@
 var Playce = Playce || {};
 
 Playce.isMobile = false;
+
+// @return true: ie
 Playce.isIE = function() {
 	var agent = navigator.userAgent.toLowerCase();
-	// true: ie
 	return (navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || agent.indexOf('msie') != -1;
 };
 
@@ -117,6 +118,26 @@ Playce.translation = function(lang) {
     getGnbLocale(lang);
 
 };
+
+Playce.drawSvgAnim = function () { 
+
+	var graph = document.querySelector('.graph');
+	var innerCircles = graph.querySelectorAll('.circle-inner');
+	var outerCircles = graph.querySelectorAll('.circle-outer');
+	var config = {
+		offset1: [267, 130],
+		tick: 10,
+		count: 0
+	};
+
+	$('.circle-inner').eq(0).velocity({ 'stroke-dashoffset': 130 }, { duration: 500 }, {delay: 450});
+	$('.circle-outer').eq(0).velocity({ 'stroke-dashoffset': 200 }, { duration: 500 }, {delay: 300});
+	$('.circle-inner').eq(1).velocity({ 'stroke-dashoffset': 60 }, { duration: 500 }, {delay: 400});
+	$('.circle-outer').eq(1).velocity({ 'stroke-dashoffset': 160 }, { duration: 500 }, {delay: 230});
+
+};
+
+
 
 // ============================
 // wizardSlider

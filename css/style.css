@@ -2161,10 +2161,6 @@ body.show-gnb {
 .hero--wasup .graph {
   transform: perspective(2210px) rotateY(-25deg) rotateX(4deg) rotateZ(3deg) translateY(10px)translateX(-28px);
 }
-.no-smil .graph {
-  height: 510px;
-  background: url("../images/wasup-art-mainvisual@2x.png") no-repeat center top/contain;
-}
 
 .graph-section {
   width: 624px;
@@ -2178,9 +2174,6 @@ body.show-gnb {
 .graph-section svg {
   width: 100%;
   height: 100%;
-}
-.no-smil .graph-section {
-  display: none;
 }
 
 .graph-section .circle-inner,

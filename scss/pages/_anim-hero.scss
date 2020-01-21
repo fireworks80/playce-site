@@ -133,10 +133,10 @@ $translateY-hero-comm: 10deg;
     transform: $transform + translateX(-28px);
   }
 
-  .no-smil & {
-    height: 510px;
-    background: url($path-img+'wasup-art-mainvisual@2x.png') no-repeat center top / contain;
-  }
+  // .no-smil & {
+  // height: 510px;
+  // background: url($path-img+'wasup-art-mainvisual@2x.png') no-repeat center top / contain;
+  // }
 }
 
 .graph-section {
@@ -152,9 +152,9 @@ $translateY-hero-comm: 10deg;
     @include size(100%);
   }
 
-  .no-smil & {
-    display: none;
-  }
+  // .no-smil & {
+  //   display: none;
+  // }
 }
 
 // 상하의 svg 공통 설정

@@ -161,6 +161,7 @@
 <!-- // wrap -->
 <script src="./js/modernizr-custom.js"></script>
 <script src="./js/jQuery.3.4.2.js"></script>
+<script src="https://cdn.jsdelivr.net/velocity/1.2.2/velocity.min.js"></script>
 <script src="./js/TweenMax.min.js"></script>
 <script src="./js/TimelineMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/ScrollToPlugin.min.js"></script>

@@ -4873,7 +4873,7 @@ body.show-gnb {
   background-size: contain;
 }
 .hero--wasup > .l-center {
-  padding-top: 236px;
+  padding-top: 166px;
 }
 .hero--wasup .hero__em {
   display: block;
@@ -5316,7 +5316,7 @@ body.show-gnb {
   background-size: contain;
 }
 .hero--roro > .l-center {
-  padding-top: 236px;
+  padding-top: 166px;
 }
 .hero--roro .hero__desc {
   padding-right: 0;
@@ -5359,7 +5359,7 @@ body.show-gnb {
   }
   .hero--roro .hero-motion-panel-wrap {
     position: absolute;
-    top: -30px;
+    top: 140px;
     left: 10px;
   }
   [lang=en] .hero--roro .hero-motion-panel-wrap {

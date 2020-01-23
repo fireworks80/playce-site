@@ -5418,7 +5418,7 @@ body.show-gnb {
   }
   [lang=en] .hero--roro__btns {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
 }
 @media (max-width: 670px) {

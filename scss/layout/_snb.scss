@@ -1,3 +1,5 @@
+@use '../util/mixins';
+@use '../util/function' as fn;
 // ======================================================================
 // snb
 // ======================================================================
@@ -12,23 +14,23 @@
 }
 
 .snb {
-  // @include debug;
-  @include relative;
-  z-index: 2;
-  margin-bottom: 106px;
+  // @include mixins.debug;
+  @include mixins.absolute($top: 0, $left: 0);
+  @include mixins.size(100%, null);
 
-  font-size: rem(14px);
+  z-index: 2;
+  font-size: fn.rem(14px);
 
   .sticky & {
-    @include fixed($left: 0, $top: 0);
-    @include size(100%, null);
+    @include mixins.fixed($left: 0, $top: 0);
+    @include mixins.size(100%, null);
     z-index: 15;
     background-color: #fff;
     box-shadow: 0 1px 2px 0 rgba(50, 62, 81, 0.1);
     animation: sticky-anim 0.45s;
   }
   .l-center {
-    @include size(null, $height-snb);
+    @include mixins.size(null, $height-snb);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,11 +41,11 @@
     margin-top: 6px;
 
     .snb--roro & {
-      @include size(106px, null);
+      @include mixins.size(106px, null);
     }
 
     .snb--wasup & {
-      @include size(122px, null);
+      @include mixins.size(122px, null);
     }
   }
 
@@ -89,13 +91,13 @@
     } // item last a
   } // link
 
-  @include respond-to(1050px) {
+  @include mixins.respond-to(1050px) {
     margin-bottom: 0;
   }
 
-  @include respond-to($bp-mobile) {
+  @include mixins.respond-to($bp-mobile) {
     .l-center {
-      @include size(null, auto);
+      @include mixins.size(null, auto);
 
       flex-direction: column;
       align-items: flex-start;

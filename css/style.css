@@ -1507,9 +1507,11 @@ body.show-gnb {
   }
 }
 .snb {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 2;
-  margin-bottom: 106px;
   font-size: 1.4rem;
 }
 .sticky .snb {
@@ -4866,12 +4868,11 @@ body.show-gnb {
 
 .hero--wasup {
   overflow: hidden;
-  padding-top: 70px;
-  padding-bottom: 142px;
+  padding: 70px 0 142px;
   background-image: url("../images/bg-visual-wasup-2x.png");
   background-size: contain;
 }
-.sticky .hero--wasup {
+.hero--wasup > .l-center {
   padding-top: 236px;
 }
 .hero--wasup .hero__em {
@@ -5314,10 +5315,7 @@ body.show-gnb {
   background-image: url("../images/bg-visual-roro-2x.png");
   background-size: contain;
 }
-.hero--roro .l-center {
-  position: relative;
-}
-.sticky .hero--roro {
+.hero--roro > .l-center {
   padding-top: 236px;
 }
 .hero--roro .hero__desc {

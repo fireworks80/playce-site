@@ -1,11 +1,10 @@
 .hero--wasup {
   overflow: hidden;
-  padding-top: 70px;
-  padding-bottom: 142px;
+  padding: 70px 0 142px;
   background-image: url($path-img+'bg-visual-wasup-2x.png');
   background-size: contain;
 
-  .sticky & {
+  & > .l-center {
     padding-top: 236px;
   }
 

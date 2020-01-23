@@ -8,11 +8,7 @@
   background-image: url($path-img+'bg-visual-roro-2x.png');
   background-size: contain;
 
-  .l-center {
-    @include relative;
-  }
-
-  .sticky & {
+  & > .l-center {
     padding-top: 236px;
   }
 

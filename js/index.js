@@ -1,6 +1,7 @@
 var Playce = Playce || {};
 
 Playce.isMobile = false;
+Playce.scrollSpeed = 1500;
 
 // @return true: ie
 Playce.isIE = function() {
@@ -25,15 +26,12 @@ Playce.onResizable = function(callback) {
 };
 
 Playce.quick = function(val) {
-	// console.log('quick: ', val);
+	
+	var that = this;
+
 	$('html, body')
 		.stop()
-		.animate(
-			{
-				scrollTop: val || 0
-			},
-			400
-		);
+		.animate({ scrollTop: val || 0 }, that.scrollSpeed);
 };
 
 Playce.getHash = function() {

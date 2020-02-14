@@ -53,6 +53,10 @@
     display: block;
   }
 
+  &--wasup .line-brake {
+    display: none;
+  }
+
   // mobile
   // ==============================
   @include respond-to(960px) {

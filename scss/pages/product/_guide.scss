@@ -68,6 +68,8 @@ $list-theme-name: ('wasup' 'roro');
 .guide__tit {
   $list-theme-guide: ('wasup' #a86247), ('roro' #2557a0);
 
+  margin-bottom: 10px;
+
   .guide--wasup &::before,
   .guide--roro &::after {
     display: inline-block;

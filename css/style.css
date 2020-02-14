@@ -3078,6 +3078,9 @@ body.show-gnb {
 .feature .line-brake {
   display: block;
 }
+.feature--wasup .line-brake {
+  display: none;
+}
 @media (max-width: 960px) {
   .feature {
     padding-bottom: 140px;
@@ -3687,6 +3690,9 @@ body.show-gnb {
   }
 }
 
+.guide__tit {
+  margin-bottom: 10px;
+}
 .guide--wasup .guide__tit::before, .guide--roro .guide__tit::after {
   display: inline-block;
   content: "";
@@ -5432,7 +5438,7 @@ body.show-gnb {
 }
 
 .function--roro {
-  padding-top: 404px;
+  padding-top: 200px;
   padding-bottom: 280px;
   background: center top/contain no-repeat url("../images/bg-function-top-roro.png"), center bottom/contain no-repeat url("../images/bg-architecture-roro.png");
 }

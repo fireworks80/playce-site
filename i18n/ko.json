@@ -320,6 +320,7 @@
   "placeholder-company": "회사명을 입력해주세요.",
   "email": "이메일",
   "tel": "연락처",
+  "placeholder-phone": "010-1234-5678",
   "subject": "부서",
   "placeholder-subject": "부서 입력해주세요.",
   "grade": "직급",

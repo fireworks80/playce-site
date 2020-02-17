@@ -347,6 +347,7 @@
   "placeholder-company": "Enter your company name.",
   "email": "Business Email",
   "tel": "Phone Number",
+  "placeholder-phone": "82-10-1234-5678",
   "subject": "Department",
   "placeholder-subject": "Enter your department.",
   "grade": "Job Title",

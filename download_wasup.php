@@ -8,7 +8,8 @@ if ($_SESSION['user_info_saved'] !== 'success') {
   exit;
 }
 
-$file = '/var/www/html/wasup/wasup-manager.tar.gz';
+$fileName = $_GET['type'] === 'zip' ? 'wasup-manager.zip' : 'wasup-manager.tar.gz';
+$file = "/var/www/html/wasup/$fileName";
 
 
 function sendHeaders($file, $type, $name=NULL)
@@ -31,7 +32,7 @@ function sendHeaders($file, $type, $name=NULL)
 if (is_file($file))
 {
     ob_clean();
-    sendHeaders($file, 'application/x-gzip', 'wasup-manager.tar.gz');
+    sendHeaders($file, 'application/x-gzip', $fileName);
     $chunkSize = 1024 * 1024;
     $handle = fopen($file, 'rb');
     while (!feof($handle))

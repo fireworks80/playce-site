@@ -17,6 +17,10 @@
     exit;
   }
 
+  if (empty($name) || empty($company) || empty($email) || empty($phone)) {
+    failed(0);
+  }
+
   //	id	name	company	email	phone	department	position	path	read_yn	delete_yn	download_date
   
   $tableName = 'gen_wasup_download_user';
@@ -50,7 +54,7 @@
 
     script("
       opener.history.back();
-      window.location.assign('download_wasup.php');
+      window.location.assign('download_wasup.php?type=$type');
       setTimeout(function() {
         window.close();
       }, 500);

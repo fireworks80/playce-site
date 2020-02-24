@@ -4,3 +4,5 @@
 /icons
 /pdf
 .DS_Store
+*.zip
+*.gzip

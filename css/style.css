@@ -1820,6 +1820,9 @@ body.show-gnb {
   font-size: 1.3rem;
   line-height: 28px;
 }
+.address__ko {
+  max-width: 240px;
+}
 
 .copyright {
   line-height: 28px;
@@ -2051,6 +2054,7 @@ body.show-gnb {
 }
 .banner {
   display: none;
+  min-width: 360px;
   color: #fff;
   font-size: 1.5rem;
   background: url("../images/bg-banner.png") center top repeat-y;
@@ -2061,26 +2065,29 @@ body.show-gnb {
   padding-left: 0;
   padding-right: 0;
 }
+.banner.is-active {
+  display: block;
+}
 .banner button {
   position: absolute;
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
-  padding: 0 30px 0 0;
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
   background-color: transparent;
   border: 0;
-  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  color: #323e51;
 }
 .banner button::after {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  background-image: url(../images/sprite/sprite-icons-2x.png);
-  background-size: 169px, 4866px;
-  background-position: 0px -2819px;
   width: 20px;
   height: 20px;
-  transform: translateY(-50%);
+  margin-left: 8px;
+  background: url("../images/btn-close-banner.png") center center no-repeat;
+  background-size: 20px;
   content: "";
 }
 .banner:hover p {
@@ -2097,9 +2104,18 @@ body.show-gnb {
   .banner__m-img {
     display: inline-block;
   }
-
   .banner__pc-img {
     display: none;
+  }
+  .banner button {
+    top: 13.1147541%;
+    transform: none;
+  }
+  .banner button span {
+    display: none;
+  }
+  .banner button::after {
+    margin-left: 0;
   }
 }
 @keyframes fade-in {
@@ -6223,8 +6239,11 @@ body.show-gnb {
 .resource__link {
   display: flex;
 }
-.resource__link:nth-child(2) {
+.resource__link:nth-child(n+2) {
   margin-top: 90px;
+}
+[lang=en] .resource__link:nth-child(2) {
+  margin-top: 0;
 }
 .resource__link-tit {
   width: 17.5%;

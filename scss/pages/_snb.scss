@@ -1,0 +1,56 @@
+.snb {
+  // @include debug;
+  font-size: rem(14px);
+
+  &.sticky {
+    @include fixed($top: 0, $left: 0);
+    @include size(100%, 60px);
+    z-index: 5;
+    padding-top: 14px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(50, 62, 81, 0.1);
+  }
+
+  .center-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  &__img {
+    @include size(122px, 20px);
+    margin-top: 6px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  // 전체 a요소 설정
+  a {
+    // @include debug;
+    display: block;
+    padding: 0 18px;
+    line-height: 32px;
+    color: #a86247;
+
+    &:hover {
+      font-weight: 500;
+    }
+  }
+
+  li:last-child {
+    margin-left: 10px;
+    a {
+      border-radius: 3px 8px;
+      background-color: #fff;
+      box-shadow: 0 2px 6px 0 rgba(50, 62, 81, 0.2);
+      font-weight: bold;
+
+      &:hover {
+        background-color: #f9f7f4;
+        box-shadow: 0 2px 2px 0 rgba(50, 62, 81, 0.2);
+      }
+    }
+  }
+}

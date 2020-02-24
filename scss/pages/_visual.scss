@@ -1,0 +1,185 @@
+.visual {
+  // @include debug;
+  @include background-image($path-img + 'bg-container-1.svg', $y: 101%);
+  padding-top: 118px;
+  padding-bottom: (250px - 62px);
+  background-size: 103%;
+
+  .visual__text {
+    float: left;
+    max-width: 450px;
+  }
+
+  &__tit {
+    margin-bottom: 17px;
+    font-size: rem(37px);
+    line-height: 1.9;
+  }
+
+  &__em {
+    display: block;
+    color: #ea9711;
+  }
+
+  &__desc {
+    margin-bottom: 53px;
+    padding-right: percent(70px, 450px);
+    font-size: rem(22px);
+    line-height: 2.2;
+  }
+
+  &__btns {
+    .btn {
+      border-radius: 3px 8px;
+      box-shadow: 0 3px 8px 0 rgba(50, 62, 81, 0.3);
+
+      &:hover {
+        box-shadow: 0 2px 4px 0 rgba(50, 62, 81, 0.3);
+      }
+    }
+
+    .btn--secondary {
+      margin-right: 19px;
+
+      &:hover {
+        background-color: #ea9711;
+      }
+    }
+
+    .btn--primary {
+      &:hover {
+        background-color: #222c3d;
+      }
+    }
+  }
+
+  &__graph {
+    // @include debug;
+    @include size(720px, 510px);
+    @include background-image($path-img + 'bg-visual-page-2x.png');
+    float: right;
+    overflow: hidden;
+    padding: {
+      top: 100px;
+      left: 76px;
+    }
+    border-radius: 16px;
+    background-size: 100% 100%;
+    box-shadow: 20px 26px 36px rgba(50, 62, 81, 0.4);
+    transform: perspective(2210px) rotateY(-25deg) rotateX(4deg) rotateZ(3deg) translateY(10px)
+      translateX(percent(2px, 1200px));
+    perspective-origin: bottom right;
+    transform-origin: center center;
+
+    &-section {
+      // @include debug;
+      @include size(624px, 187px);
+      padding-top: 54px;
+      padding-left: 28px;
+
+      // 공통영역
+      svg {
+        // @include debug(gray);
+        @include size(100%);
+      }
+
+      .circle-inner,
+      .circle-outer {
+        stroke-width: 13;
+        stroke-dasharray: 267;
+        stroke-dashoffset: 267;
+      }
+
+      .anim-warning {
+        opacity: 0;
+        animation: fade-in 0.32s 0.15s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+      }
+
+      .anim-err {
+        opacity: 0;
+        animation: fade-in 0.32s 0.25s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+      }
+
+      .anim-line {
+        transform: scaleX(0);
+        transform-origin: 52% center;
+        animation: {
+          name: draw-line;
+          duration: 0.75s;
+          timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+          fill-mode: forwards;
+        }
+      }
+
+      // // 개별 영역
+      &:nth-child(1) {
+        margin-bottom: 17px;
+
+        .circle-inner {
+          stroke: #3d5399;
+          animation: circle-inner 0.5s 0.45s cubic-bezier(0.28, 0.28, 0.16, 0.98) forwards;
+        }
+
+        .circle-outer {
+          stroke: #788ece;
+          animation: circle-outer 0.5s 0.3s cubic-bezier(0.28, 0.28, 0.16, 0.98) forwards;
+        }
+      }
+
+      &:nth-child(2) {
+        padding-top: 51px;
+
+        .circle-inner {
+          stroke: #a85838;
+          animation: circle-inner2 0.5s 0.4s cubic-bezier(0.28, 0.28, 0.16, 0.98) forwards;
+        }
+
+        .circle-outer {
+          stroke: #faa61e;
+          animation: circle-outer2 0.5s 0.25s cubic-bezier(0.28, 0.28, 0.16, 0.98) forwards;
+        }
+      }
+    }
+  }
+}
+
+// top circle
+@keyframes circle-inner {
+  to {
+    stroke-dashoffset: 130;
+  }
+}
+
+@keyframes circle-outer {
+  to {
+    stroke-dashoffset: 200;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes draw-line {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+// bottom circle
+@keyframes circle-inner2 {
+  to {
+    stroke-dashoffset: 60;
+  }
+}
+
+@keyframes circle-outer2 {
+  to {
+    stroke-dashoffset: 160;
+  }
+}

@@ -1,0 +1,232 @@
+// visual button
+.btn-round {
+  @include size(null, 42px);
+  display: inline-block;
+  padding: 0 21px;
+  border-radius: 3px 8px;
+  border: 0;
+  box-shadow: 0 3px 8px 0 rgba(50, 62, 81, 0.3);
+  text-align: center;
+  font-size: rem(18px);
+  font-weight: 500;
+  line-height: 42px;
+  color: #fff;
+
+  &:hover {
+    box-shadow: 0 2px 4px 0 rgba(50, 62, 81, 0.3);
+  }
+}
+
+// landing page
+.btn-round--white {
+  color: #3d5399;
+  background-color: #fff;
+
+  &:hover {
+    background-color: #dee6fc;
+  }
+}
+
+// landing page
+.btn-round--deep-blue {
+  background-color: #324c99;
+
+  &:hover {
+    background-color: #253f8b;
+  }
+}
+// landing page
+.btn-round--navy {
+  background-color: #333e54;
+  &:hover {
+    background-color: #2c374b;
+  }
+}
+
+// roro
+.btn-round--lite-blue {
+  background-color: #469bf0;
+  &:hover {
+    background-color: #2a82da;
+  }
+}
+
+.btn-round--apblue {
+  background-color: #2557a0;
+  &:hover {
+    background-color: #1b4178;
+  }
+}
+
+.btn-round--white2 {
+  color: #2557a0;
+  background-color: #fff;
+
+  &:hover {
+    background-color: #cfe2f1;
+  }
+}
+
+// =================================
+// wasup
+// =================================
+.btn-round--yellow {
+  background-color: #edaa43;
+  &:hover {
+    background-color: #ea9711;
+  }
+}
+
+.btn-round--dark-navy {
+  background-color: #323e51;
+  &:hover {
+    background-color: #222c3d;
+  }
+}
+
+.btn-round--luepurple {
+  background-color: #3b5198;
+  &:hover {
+    background-color: #344b95;
+  }
+}
+
+.btn-round--ion-white {
+  color: #425266;
+  background-color: #fff;
+  &:hover {
+    background-color: #dfe8f3;
+  }
+}
+
+// guide btn
+.btn-play {
+  @include icon-setting($btn-video-start-2x);
+  @include absolute($left: 50%, $top: 50%);
+  // @include sprite2x($btn-video-start-2x);
+  // @include size(nth($btn-video-start-2x, 5) / 2, nth($btn-video-start-2x, 6) / 2);
+  display: inline-block;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+
+  &:hover {
+    @include sprite2x($btn-video-start-hover-2x);
+  }
+}
+
+// architecture btn
+.btn-pic {
+  @include absolute($bottom: -35px, $right: -35px);
+  @include size(70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: -2px 3px 10px 0 rgba(156, 86, 59, 0.2);
+
+  .architecture--wasup &:hover,
+  .architecture--wasup &:active,
+  .popup-architecture &:hover,
+  .popup-architecture &:active {
+    background-color: #ffe6bf;
+  }
+
+  .architecture--roro &:hover,
+  .architecture--roro &:active {
+    background-color: #c4dff4;
+  }
+
+  &::before {
+    // @include size(36px, 35px);
+    display: block;
+    content: '';
+  }
+
+  &--in-large::before {
+    .architecture--wasup & {
+      @include icon-setting($btn-pic-enlarge-2x);
+    }
+    .architecture--roro & {
+      @include icon-setting($btn-pic-enlarge-roro-2x);
+    }
+  }
+
+  &--shrink::before {
+    .popup-architecture & {
+      @include icon-setting($btn-pic-shrink-2x);
+    }
+  }
+
+  &--shrink-roro::before {
+    @include icon-setting($btn-pic-shrink-roro-2x);
+  }
+
+  &--shrink-roro:hover,
+  &--shrink-roro:active {
+    background-color: #c4dff4;
+  }
+}
+
+// =======================================
+// prev next
+// =======================================
+.btn-arrow {
+  @include background-image($path-img + 'ir-btn-roro-arrows.png', $x: left);
+  @include size(50px);
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-size: (650px / 2) (330px / 2);
+  box-shadow: 0 2px 7px 0 #323e5133;
+
+  &--green-next {
+    background-position: -166px -60px;
+    &.slick-disabled {
+      background-position: -55px -60px;
+    }
+  }
+  &--green-prev {
+    // margin-right: 20px;
+    background-position: -110px -60px;
+
+    &.slick-disabled {
+      background-position: 0 -60px;
+    }
+  }
+
+  &--blue-next {
+    background-position: -166px 0;
+    &.slick-disabled {
+      background-position: -55px 0;
+    }
+  }
+  &--blue-prev {
+    // margin-right: 20px;
+    background-position: -110px 0;
+
+    &.slick-disabled {
+      background-position: 0 0;
+    }
+  }
+
+  &--puple-next {
+    background-position: -166px -115px;
+    &.slick-disabled {
+      background-position: -55px -115px;
+    }
+  }
+  &--puple-prev {
+    // margin-right: 20px;
+    background-position: -110px -115px;
+
+    &.slick-disabled {
+      background-position: 0 -115px;
+    }
+  }
+}

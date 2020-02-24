@@ -1,0 +1,252 @@
+// mixin
+// =====================================
+@mixin circle-anim($offset) {
+  @at-root {
+    @keyframes circle-anim#{$offset} {
+      to {
+        stroke-dashoffset: $offset;
+      }
+    }
+  }
+}
+
+// animation setting
+// @params offsetVal, duration, delay, fill-mode, timing-function
+@mixin animation-state($val, $duration, $delay, $fn, $mode: forwards) {
+  @include circle-anim($val);
+  animation: {
+    name: circle-anim#{$val};
+    duration: $duration;
+    delay: $delay;
+    timing-function: $fn;
+    fill-mode: $mode;
+  }
+}
+
+// animation
+// =====================================
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes draw-line {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+// ============================================
+// style
+// ============================================
+.visual {
+  $padding-top: 118px;
+  // @include debug;
+
+  // padding-bottom: (250px - 62px);
+  background-repeat: no-repeat;
+  background-position: center 101%;
+  background-size: cover;
+
+  .sticky & {
+    padding-top: ($padding-top + $height-snb);
+  }
+
+  .center-box {
+    padding-left: percent(10px, $width-max);
+    padding-right: percent(10px, $width-max);
+  }
+
+  &--roro {
+    padding-top: 121px;
+    padding-bottom: 308px;
+  }
+
+  &--wasup {
+    padding-bottom: 223px;
+  }
+
+  // roro, wasup
+  // 배경색 설정
+  // ==========================================
+
+  @each $name in ('wasup', 'roro') {
+    &--#{$name} {
+      @if $name == 'roro' {
+        padding-bottom: 308px;
+      }
+
+      background-image: url($path-img+'bg-visual-'+$name+'-2x.png');
+    }
+  }
+}
+
+// visual tit common
+// ================================
+.visual__tit {
+  margin-bottom: 24px;
+  font-size: rem(37px);
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.visual__em {
+  @each $name, $color in ('wasup': #ea9711, 'roro': #469bf0) {
+    .visual--#{$name} & {
+      @if $name == 'wasup' {
+        display: block;
+      }
+      color: $color;
+    }
+  }
+}
+
+// visual desc common
+// ================================
+.visual__desc {
+  margin-bottom: 58px;
+  padding-right: percent(70px, 450px);
+  font-size: rem(19px);
+  line-height: 2.2;
+}
+
+// visual text common
+// ================================
+.visual__text {
+  // float: left;
+  width: percent(450px, $width-max - 20);
+}
+
+.btn-free-trial {
+  margin-right: 19px;
+}
+
+// graph
+// ================================
+.visual__graph {
+  // @include debug;
+  @include size(720px, 510px);
+  @include background-image($path-img + 'bg-visual-page-2x.png');
+
+  overflow: hidden;
+  padding: {
+    top: 100px;
+    left: 76px;
+  }
+  border-radius: 16px;
+  background-size: 100% 100%;
+  transform-origin: center center;
+  box-shadow: 20px 26px 36px rgba(50, 62, 81, 0.4);
+  perspective-origin: bottom right;
+
+  // wasup / roro 표 방향 설정
+  .visual--wasup & {
+    transform: perspective(2210px) rotateY(-25deg) rotateX(4deg) rotateZ(3deg) translateY(10px)
+      translateX(percent(2px, 1200px));
+  }
+
+  .visual--roro & {
+    transform: perspective(2210px) rotateY(25deg) rotateX(4deg) rotateZ(-3deg) translateY(-10px)
+      translateX(-0.1666666667%);
+  }
+}
+
+.visual__graph svg {
+  // @include debug(gray);
+  @include size(100%);
+}
+
+.visual__graph-section {
+  // @include debug;
+  @include size(624px, 187px);
+  padding-top: 54px;
+  padding-left: 28px;
+}
+
+// 상하의 svg 공통 설정
+// =========================================
+.visual__graph-section .circle-inner,
+.visual__graph-section .circle-outer {
+  stroke-width: 13;
+  stroke-dasharray: 267;
+  stroke-dashoffset: 267;
+}
+
+.visual__graph-section .anim-warning {
+  opacity: 0;
+  animation: fade-in 0.32s 0.15s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+}
+
+.visual__graph-section .anim-err {
+  opacity: 0;
+  animation: fade-in 0.32s 0.25s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+}
+
+.visual__graph-section .anim-line {
+  transform: scaleX(0);
+  transform-origin: 52% center;
+  animation: {
+    name: draw-line;
+    duration: 0.75s;
+    timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    fill-mode: forwards;
+  }
+}
+
+// // 개별 영역
+.visual__graph-section:nth-child(1) {
+  margin-bottom: 17px;
+}
+
+.visual__graph-section:nth-child(2) {
+  padding-top: 51px;
+}
+
+// circle animation
+// ==============================================
+
+.circle-inner {
+  .visual__graph-section:nth-child(1) & {
+    @include animation-state(130, 0.5s, 0.45s, cubic-bezier(0.28, 0.28, 0.16, 0.98));
+    stroke: #3d5399;
+  }
+
+  .visual__graph-section:nth-child(2) & {
+    @include animation-state(60, 0.5s, 0.4s, cubic-bezier(0.28, 0.28, 0.16, 0.98));
+    stroke: #a85838;
+  }
+}
+
+.circle-outer {
+  .visual__graph-section:nth-child(1) & {
+    @include animation-state(200, 0.5s, 0.3s, cubic-bezier(0.28, 0.28, 0.16, 0.98));
+    stroke: #788ece;
+  }
+  .visual__graph-section:nth-child(2) & {
+    @include animation-state(160, 0.5s, 0.23s, cubic-bezier(0.28, 0.28, 0.16, 0.98));
+    stroke: #faa61e;
+  }
+}
+
+// ================================
+// roro
+// ================================
+.go-to-roro {
+  @include relative;
+  margin-top: 40px;
+  display: inline-block;
+  color: #2557a0;
+  font-size: rem(14px);
+
+  &::after {
+    @include absolute($top: -6px, $right: -35px);
+    @include sprite2x($ic-arrow-blue-2x);
+    @include size(nth($ic-arrow-blue-2x, 5) / 2, nth($ic-arrow-blue-2x, 6) / 2);
+    transform: rotate(90deg) scale(0.6);
+    content: '';
+  }
+}

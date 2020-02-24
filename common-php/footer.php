@@ -60,7 +60,7 @@
               <span data-i18n="reg-num">사업자등록번호</span> : 114-86-94359
             </li>
             <li class="not-eng" data-i18n="representative">대표자 : 장용훈</li>
-            <li data-i18n="addr">
+            <li class="address__ko" data-i18n="addr">
               서울특별시 강남구 테헤란로 83길 32, 5층  (삼성동,나라키움삼성동A빌딩)
             </li>
             <li>Tel. 02-516-0711</li>
@@ -291,4 +291,8 @@
       }
     });
   }());
+
+  $('.js-banner-btn').on('click', function() {
+    $(".js-banner").removeClass('is-active');
+  });
 </script>

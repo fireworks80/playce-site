@@ -11,6 +11,7 @@
   $position = htmlentities($_POST['position']);
   $path = htmlentities($_POST['path']);
   $type = $_POST['type'];
+  $ver = $_POST['ver'];// version 항목이 따로 있어 추가 (20200220 한승철)
 
   function failed($param) {
     alertNClose("Failed to save data");
@@ -51,10 +52,13 @@
     $connect->close();
 
     $_SESSION['user_info_saved'] = 'success';
+    
+    // version 항목이 따로 있어 수정함 (20200220 한승철)
+    $param = empty($ver) ? 'type='.$type : 'type='.$type.'&ver='.$ver;
 
     script("
       opener.history.back();
-      window.location.assign('download_wasup.php?type=$type');
+      window.location.assign('download_wasup.php?$param');
       setTimeout(function() {
         window.close();
       }, 500);

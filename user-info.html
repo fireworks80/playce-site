@@ -2,6 +2,7 @@
   session_start();
 
   $type = $_GET['type'];
+  $ver = $_GET['ver'];
   if (empty($type)) {
     $type =- 'gzip';
   }
@@ -82,6 +83,14 @@
             <button class="btn-round btn-round--navy" type="submit" href="#" data-i18n="download">다운로드</button> 
           </div>
           <input type="hidden" name="type" value="<?=$type?>" />
+
+
+          <?php
+          // version 항목이 따로 있어 수정함 (20200220 한승철)
+            if (!empty($ver)) { 
+          ?>
+          <input type="hidden" name="ver" value="<?=$ver?>" />
+          <?php } ?>
         </form>
       </div>
     </div>

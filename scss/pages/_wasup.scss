@@ -1,0 +1,1068 @@
+.hero--wasup {
+  overflow: hidden;
+  padding-top: 70px;
+  padding-bottom: 142px;
+  background-image: url($path-img+'bg-visual-wasup-2x.png');
+  background-size: contain;
+
+  .sticky & {
+    padding-top: 236px;
+  }
+}
+
+.hero--wasup .hero__em {
+  display: block;
+  color: #ea9711;
+}
+
+.hero--wasup .btn-round--yellow {
+  margin-right: 20px;
+}
+
+.wrap-gradient {
+  // @include debug;
+  @include gradient(#ffb621, #ffe282, #fff4e2);
+  margin-top: -1px;
+}
+
+.why--wasup {
+  padding-top: 218px;
+}
+
+.why--wasup {
+  margin-bottom: 202px;
+
+  .prd-info dl {
+    @include whyPrdInfoIcon(($why1-2x, $why2-2x, $why3-2x));
+    color: $color-default;
+  } // prd info
+
+  .prd-info dt,
+  .prd-info dd {
+    color: inherit;
+  }
+} // was up
+
+// =======================================
+// wasup
+// wrap gradient
+// why, feature wrapping
+// 두개의 섹션을 한번에 칠해야 해서
+// div로 감쌌기 때문에 따로 클래스 명을 줌
+// =======================================
+
+// tit
+// ===================================
+.why__tit {
+  // @include debug;
+  @include relative;
+  display: inline-block;
+  padding-left: 44px;
+  margin-left: 394px;
+  margin-bottom: 120px;
+  font-size: rem(32px);
+  color: #fff;
+
+  &::before {
+    @include absolute($left: 0, $top: 0);
+    @include icon-setting($ic-arrow-brown2x);
+    transform: rotate(225deg);
+    content: '';
+  }
+} // tit
+
+// roro prd info
+// ======================
+
+.why .prd-info dt {
+  // color: #fff;
+  padding-left: 10px;
+  &::before {
+    @include absolute($top: 0, $left: 10px);
+  }
+}
+
+.why .prd-info dd {
+  // color: #17488f;
+  &::before {
+    font-size: rem(28px);
+  }
+}
+
+// ======================================================
+// 특장점
+// ======================================================
+.feature {
+  padding-bottom: 200px;
+  line-height: 2;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+  }
+
+  &__tit {
+    // @include debug;
+    @include relative;
+    display: inline-block;
+    margin-left: percent(10px, $width-max);
+    padding-right: 44px;
+    font-size: rem(20px);
+
+    &::after {
+      @include absolute($top: 9px, $right: 0);
+      transform: rotate(90deg);
+      content: '';
+    }
+  }
+
+  &__desc {
+    // @include debug;
+    margin-right: percent(10px, $width-max);
+    font-size: rem(32px);
+    text-align: right;
+
+    em {
+      color: #a86247;
+    }
+  }
+
+  // .feature .prd-info 재정의
+  .prd-info dl {
+    padding-top: 0;
+  }
+
+  .prd-info dt::before {
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  .prd-info dd {
+    font-size: rem(16px);
+    line-height: 2.13;
+  }
+
+  .prd-info li {
+    @include relative;
+    padding-left: 28px;
+
+    &::before {
+      @include absolute($top: 8px, $left: 0);
+      // @include sprite($ic-checklist);
+      content: '';
+      display: inline-block;
+    }
+  }
+}
+
+// feature animation
+// 길이가 길어져서 하단으로 분리
+.feature__anim-section {
+  // @include debug;
+  margin-bottom: 100px;
+  text-align: right;
+  padding-right: percent(10px, $width-max);
+}
+
+.feature__pic {
+  // @include debug;
+  @include size(622px, null);
+  display: inline-block;
+}
+
+.feature__btn-wrap {
+  margin-bottom: 40px;
+}
+
+.feature__btn {
+  @include size(111px, 34px);
+  padding: 0;
+  border: 0;
+  border-radius: 22px;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);
+  cursor: default;
+
+  // play stop button
+  @each $type in (play, stop) {
+    &--#{$type} {
+      @include background-image($path-img + 'feature-' + $type + '-btn.svg');
+    }
+  }
+}
+
+// animation 되는 row 전체를 감싸는 클래스
+// 감싸진 요소들이 있기 때문에 하위 선택자로 속성 추가
+.feature__rows-wrap {
+  & > div:nth-child(n + 1) {
+    margin-top: 8px;
+  }
+}
+
+.feature__row-img {
+  @include size(100%, 64px);
+  @include background-image($path-img + 'feature-un-selected-2x.png');
+  background-size: 100%;
+  border-radius: 10px;
+
+  &.selected {
+    background-image: url($path-img+'feature-selected-2x.png');
+  }
+}
+
+// .feature__anim-single : 혼자 있는 요소
+// .feature__anim-double: 안에 두개가 있는 요소를 감싼 요소
+.feature__anim-single,
+.feature__anim-double {
+  transform-origin: right center;
+  border-radius: 10px;
+}
+
+.feature__anim-double {
+  @include relative;
+  @include size(null, 64px);
+
+  .feature__row-img {
+    @include absolute($top: 0, $left: 0);
+    animation: {
+      duration: 1s;
+    }
+
+    &.front {
+      z-index: 2;
+    }
+  }
+
+  &.selected {
+    box-shadow: 2px 10px 20px 0 rgba(50, 62, 81, 0.3);
+  }
+}
+
+// guide
+.guide--wasup .guide__tit {
+  @include section-heading(#a86247);
+  padding-left: 44px;
+
+  &::before {
+    @include absolute($left: 0, $top: 0);
+    @include iconSetting($ic-arrow-brown2x);
+    transform: rotate(-45deg) scale(0.8);
+  }
+}
+
+.guide--wasup .guide__desc,
+.guide--wasup .guide__desc2 {
+  text-align: right;
+}
+
+// function
+.function--wasup {
+  padding-top: 318px;
+  padding-bottom: 207px;
+  background-image: url($path-img+'function-bg.png');
+  background-position: center -60px;
+}
+
+.function--wasup .slide-panel--wizard {
+  @include size(percent(546px, $width-max - 10), null);
+  padding: 65px 52px 40px;
+  background-image: url($path-img+'step-bg.png');
+
+  &::after {
+    @include icon-setting($ic-wizard-panel-2x);
+  }
+}
+
+.function--wasup .wizard__list {
+  @include relative;
+
+  &::after {
+    @include absolute($left: 16px, $top: 0);
+    @include size(1px, 100%);
+    @include background-image($path-img + 'bg-dot-blue.png', $repeat: repeat-y);
+    z-index: 1;
+    background-size: 2px 4px;
+    content: '';
+  }
+
+  li {
+    $color: #788ece;
+    @include step-num($to: 7);
+
+    &::before {
+      z-index: 2;
+      color: $color;
+      box-shadow: inset 0 0 0 3px $color, 0 2px 5px 0 rgba(50, 62, 81, 0.3);
+    }
+
+    &.current::before {
+      color: #fff;
+      background-color: $color;
+      box-shadow: inset 0 0 0 3px $color, 0 2px 5px 0 rgba(50, 62, 81, 0.3);
+    }
+  }
+}
+
+.function--wasup strong {
+  color: #788ece;
+}
+
+.function--wasup .wizard__list .current strong {
+  color: #788ece;
+}
+
+.function__detail--wasup-ui {
+  margin-top: 108px;
+}
+
+// =============================
+// dashboard
+// setting
+// animation
+// for wasup
+// =============================
+$cubic: 0.645, 0.045, 0.355, 1; // dashboard, notification share cubic value
+
+// dashboard 만 사용하는 변수
+$perspective: 3250px;
+$transX: 10%;
+$transY: 0;
+$scale: 1;
+$rotateY: 36deg;
+$rotateX: 8deg;
+$rotateZ: 1.5deg;
+
+.dashboard {
+  margin-top: 180px;
+} // dashboard
+
+.dashboard__img-panels {
+  @include relative;
+  @include size(530px, 584px);
+}
+
+.dashboard__img-panel {
+  @include absolute($top: 0, $left: 0);
+  @include size(inherit, inherit);
+  transform-origin: center center;
+  transition: transform 1s;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 18px;
+  -webkit-box-shadow: -11px 25px 26px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: -11px 25px 26px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: -11px 25px 26px 0px rgba(0, 0, 0, 0.35);
+
+  // dashboard .anim hook 추가
+  .dashboard__img-panels.anim & {
+    animation: {
+      duration: 1s;
+      timing-function: cubic-bezier($cubic);
+      fill-mode: forwards;
+    }
+
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        animation-name: step-forward + $i;
+      }
+    }
+  }
+
+  @for $i from 0 through 3 {
+    &--#{$i} {
+      background-image: url($path-img+'dash-board'+$i+'-2x.png');
+    }
+  }
+
+  $share-property: perspective($perspective) rotateY($rotateY) rotateX($rotateX) rotateZ($rotateZ);
+
+  &:nth-child(1) {
+    transform: translate($transX, 0) scale($scale) $share-property;
+    z-index: 4;
+  }
+
+  &:nth-child(2) {
+    transform: translate(($transX - $transX), 0) scale(($scale - 0.1)) $share-property;
+    z-index: 3;
+  }
+
+  &:nth-child(3) {
+    transform: translate(-$transX, 0) scale(($scale - 0.2)) $share-property;
+    z-index: 2;
+  }
+
+  &:nth-child(4) {
+    transform: translate(-$transX - $transX, 0) scale(($scale - 0.3)) $share-property;
+    opacity: 0;
+    z-index: 1;
+  }
+} // dash board img panel
+
+@keyframes step-forward1 {
+  0% {
+    transform: translate($transX, 0) scale($scale) perspective($perspective) rotateY($rotateY) rotateX($rotateX)
+      rotateZ($rotateZ);
+    // z-index: 4;
+  }
+
+  100% {
+    transform: translate(24%, 50%) scale($scale) perspective($perspective) rotateY($rotateY) rotateX(-10deg)
+      rotateZ($rotateZ);
+    opacity: 0;
+    // z-index: 4;
+  }
+}
+
+@keyframes step-forward2 {
+  0% {
+    transform: translate(($transX - $transX), 0) scale(($scale - 0.1)) perspective($perspective) rotateY($rotateY)
+      rotateX($rotateX) rotateZ($rotateZ);
+  }
+  100% {
+    transform: translate($transX, 0) scale($scale) perspective($perspective) rotateY($rotateY) rotateX($rotateX)
+      rotateZ($rotateZ);
+  }
+}
+
+@keyframes step-forward3 {
+  0% {
+    transform: translate(-$transX, 0) scale(($scale - 0.2)) perspective($perspective) rotateY($rotateY)
+      rotateX($rotateX) rotateZ($rotateZ);
+  }
+  100% {
+    transform: translate(($transX - $transX), 0) scale(($scale - 0.1)) perspective($perspective) rotateY($rotateY)
+      rotateX($rotateX) rotateZ($rotateZ);
+  }
+}
+
+@keyframes step-forward4 {
+  from {
+    transform: translate(-$transX - $transX, 0) scale(($scale - 0.3)) perspective($perspective) rotateY($rotateY)
+      rotateX($rotateX) rotateZ($rotateZ);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-$transX, 0) scale(($scale - 0.2)) perspective($perspective) rotateY($rotateY)
+      rotateX($rotateX) rotateZ($rotateZ);
+    opacity: 1;
+    // z-index: 1;
+  }
+}
+
+// =============================
+//  notification
+//  setting, animation
+//  for wasup
+// =============================
+.notification {
+  $easing: 0.645, 0.045, 0.355, 1;
+
+  @include relative;
+  @include size(546px, 607px);
+  @include background-image($path-img + 'notification-bg.png');
+  padding: 70px 53px 50px;
+  -webkit-box-shadow: 12px 37px 30px 0px rgba(50, 62, 81, 0.35);
+  -moz-box-shadow: 12px 37px 30px 0px rgba(50, 62, 81, 0.35);
+  box-shadow: 12px 37px 30px 0px rgba(50, 62, 81, 0.35);
+  border-radius: 18px;
+
+  &::before,
+  &::after {
+    @include absolute($top: 0, $left: 50%);
+    transform: translateX(-50%) translateY(-50%);
+    content: '';
+  }
+
+  &::before {
+    @include size(74px);
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px 0 rgba(50, 62, 81, 0.3);
+  }
+
+  &::after {
+    @include sprite2x($ic-bell-2x);
+    @include size((nth($ic-bell-2x, 5) / 2), (nth($ic-bell-2x, 6) / 2));
+  }
+}
+
+// panel
+.notification__panel {
+  @include relative;
+  @include size(440px, 487px);
+  overflow: hidden;
+  padding-top: 30px;
+  background-color: #fff;
+  border-radius: 18px;
+
+  &::after {
+    @include absolute($bottom: 0, $left: 0, $right: 0, $top: 50%);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 30%, #fff 94%);
+    content: '';
+    z-index: 10;
+  }
+}
+
+.notification h3 {
+  margin-bottom: 42px;
+  margin-left: 28px;
+  font-size: rem(20px);
+  font-weight: 500;
+  color: #3d5399;
+}
+
+.notification__card-wrap {
+  // @include debug;
+  @include relative;
+  @include size(100%);
+}
+
+.notification__card {
+  // @include debug;
+  @include absolute($left: 20px, $right: 20px, $top: 0);
+  @include size(null, 135px);
+  padding: 18px 45px 25px 67px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 12px -2px rgba(9, 30, 66, 0.25), 0 0 1px 0 rgba(9, 30, 66, 0.31);
+
+  // 맨 위에서 내려오는 요소
+  &:nth-child(1) {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  // 확대되는 요소
+  &:nth-child(2) {
+    transform: translateY(0) scale(1.078);
+    z-index: 4;
+  }
+
+  // 확대 다음 요소
+  &:nth-child(3) {
+    transform: translateY(100%);
+    z-index: 3;
+  }
+
+  // 아래로 사라지는 요소
+  &:nth-child(4) {
+    transform: translateY(200%);
+    z-index: 2;
+    // opacity: 0;
+  }
+
+  &::before {
+    @include absolute($left: 20px, $top: 14px);
+    content: '';
+  }
+
+  // ico setting
+  @each $name, $ico in ('alert': $ic-critical-2x, 'key': $ic-key-2x, 'warning': $ic-warning-2x) {
+    &--#{$name}::before {
+      @include icon-setting($ico);
+    }
+  }
+
+  strong {
+    display: block;
+    margin-bottom: 18px;
+    font-size: 16px;
+  }
+
+  .card-line {
+    @include size(100%, 9px);
+    display: inline-block;
+    background-color: rgba(205, 214, 225, 0.6);
+
+    &:nth-of-type(1) {
+      margin-bottom: 16px;
+    }
+
+    &:nth-of-type(2) {
+      margin-bottom: 10px;
+    }
+
+    &--bold {
+      background-color: #cdd6e1;
+    }
+
+    &--short {
+      @include size(60%, null);
+    }
+
+    &--middle {
+      @include size(70%, null);
+    }
+  } // card line
+
+  time {
+    @include absolute($top: 18px, $right: 22px);
+    color: rgba(109, 115, 129, 0.6);
+    font-size: 14px;
+  }
+
+  // animation 시작
+  .notification__card-wrap.anim & {
+    animation: {
+      timing-function: cubic-bezier(easing);
+      duration: 0.5s;
+      fill-mode: forwards;
+    }
+
+    &:nth-of-type(1) {
+      animation-name: step1;
+    }
+
+    &:nth-of-type(2) {
+      animation-name: step2;
+      z-index: 4;
+    }
+    &:nth-of-type(3) {
+      animation-name: step3;
+      z-index: 3;
+    }
+
+    &:nth-of-type(4) {
+      animation-name: step4;
+      z-index: 2;
+    }
+  }
+} // card
+$noti-step1-start: translateY(0) scale(1.078);
+$noti-step2-end: translateY(100%);
+$noti-step3-end: translateY(200%);
+$noti-step4-end: translateY(300%);
+
+@keyframes step1 {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: $noti-step1-start;
+    opacity: 1;
+    z-index: 4;
+  }
+}
+
+@keyframes step2 {
+  from {
+    transform: $noti-step1-start;
+    z-index: 4;
+  }
+  to {
+    transform: $noti-step2-end;
+    z-index: 3;
+  }
+}
+
+@keyframes step3 {
+  from {
+    transform: $noti-step2-end;
+    z-index: 3;
+  }
+  to {
+    transform: $noti-step3-end;
+    z-index: 2;
+  }
+}
+
+@keyframes step4 {
+  from {
+    transform: $noti-step3-end;
+  }
+  to {
+    transform: $noti-step4-end;
+  }
+}
+
+// =============================
+// architecture
+// =============================
+.architecture--wasup {
+  padding-top: 222px;
+  background-image: url($path-img+'bg-architecture.png');
+}
+
+.architecture--wasup .architecture__tit {
+  @include section-heading(#9c563b) {
+    margin-bottom: 30px;
+    text-align: right;
+  }
+
+  &::after {
+    @include absolute($right: 80px, $top: -2px);
+    @include icon-setting($ic-arrow-brown2x);
+    transform: rotate(225deg) scale(0.8);
+  }
+}
+
+.architecture--wasup .architecture__img {
+  @include size(864px, null);
+  border-radius: 30px;
+}
+
+// =============================
+// specification
+// =============================
+.specification--wasup {
+  padding-top: 188px;
+  padding-bottom: 247px;
+}
+
+.specification--wasup .specification__tit {
+  @include section-heading(#a86247);
+}
+
+// table
+// =======================================
+.specification__table {
+  // @include debug;
+  width: percent(796px, $width-max - 20);
+  float: left;
+  font-size: rem(15px);
+  text-align: left;
+  color: $color-default;
+  font-weight: 500;
+
+  // ================================
+  // common
+  // ================================
+
+  th,
+  td {
+    height: 50px;
+    padding-left: 20px;
+    vertical-align: middle;
+
+    &:nth-child(n + 2) {
+      border-left: 4px solid #fff;
+    }
+  }
+
+  .table-tit,
+  .server-version th,
+  .server-version td {
+    height: 46px;
+  }
+
+  tbody tr:nth-child(2) th,
+  tbody tr:nth-child(2) td {
+    height: 60px;
+  }
+
+  .table-tit {
+    font-size: rem(15px);
+    color: #323e51;
+    background-color: #f9f7f4;
+  } // tit
+
+  .server-version th,
+  .server-version td {
+    color: #fff;
+  }
+
+  .server-version th {
+    background-color: #a86247;
+  }
+
+  .server-version td {
+    // padding-right: 13px;
+    background-color: #edaa43;
+  }
+
+  // util
+  .has-border-bottom {
+    border-bottom: 1px solid #e4e0db;
+  }
+
+  .radius-left {
+    border-radius: 4px 0 0 4px;
+  }
+  .radius-right {
+    border-radius: 0 4px 4px 0;
+  }
+} // table
+
+// os (wasup 만 있음)
+// =======================================
+.specification__os {
+  // @include debug;
+  $width: 364px;
+  margin-left: percent(20px, $width-max);
+  width: percent($width, $width-max - 20);
+  margin-top: 156px;
+
+  dt {
+    margin-bottom: 21px;
+    font-size: rem(16px);
+    font-weight: 500;
+    line-height: 2.13;
+
+    .specification--wasup & {
+      padding-left: 24px;
+      color: #a86247;
+      background-color: #f9f7f4;
+      line-height: 46px;
+    }
+  }
+
+  dd {
+    font-size: rem(18px);
+    line-height: 2.44;
+    color: #a86247;
+  }
+
+  li:nth-child(n + 2) {
+    margin-top: 12px;
+  } // li
+}
+
+// =============================
+//  case
+// =============================
+.case--wasup .case__desc em {
+  color: #3d5399;
+}
+
+.case--wasup .case__extract {
+  color: #788ece;
+
+  em {
+    color: #3d5399;
+  }
+  &::before {
+    @include icon-setting($ico-case-wasup-2x);
+  }
+}
+
+.case--wasup .case__quotation {
+  background-color: #e9eef5;
+  color: #788ece;
+
+  em {
+    color: #3d5399;
+  }
+}
+
+// subscription
+// ====================================================
+.subscription {
+  @include background-image($path-img + 'bg-subscription-top-wasup.png', $color: #323e51);
+  padding-top: 255px;
+  // background-color: #272f3b;
+  text-align: center;
+
+  &__tit {
+    @include section-heading(#fff) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__desc {
+    @include section-desc(#fff) {
+      margin-bottom: 60px;
+
+      em {
+        color: #889edf;
+      }
+    }
+  } // desc
+
+  // card
+  .card {
+    margin-bottom: 70px;
+    padding-top: 40px;
+    padding-bottom: 36px;
+    background-color: #425266;
+    box-shadow: 0 16px 30px 0 #00000032;
+
+    &::before {
+      margin-left: percent(30px, 380px);
+      margin-bottom: 28px;
+    }
+
+    // icon 설정
+    $icons: ($ico-subscript1-2x, $ico-subscript2-2x, $ico-subscript3-2x);
+    @for $i from 1 through length($icons) {
+      &:nth-of-type(#{$i})::before {
+        // @debug nth($icons, $i);
+        @include icon-setting(nth($icons, $i));
+      }
+    }
+
+    &:nth-child(1) {
+      margin-right: percent(20px, $width-max - 20);
+    }
+
+    &__tit {
+      margin-bottom: 20px;
+    }
+
+    &__desc {
+      line-height: 2.4;
+    }
+  } // card
+}
+
+.subscription__btns {
+  // @include debug;
+  margin-bottom: 70px;
+  text-align: center;
+
+  .btn-round {
+    color: #323e51;
+  }
+}
+
+.subscription .btn-detail {
+  margin-bottom: 60px;
+}
+
+// ======================================
+// subscription scope
+// ======================================
+$color-subscription-scope: #272f3b;
+$color-table-wrap: #334053;
+
+.subscription-scope {
+  padding-top: 132px;
+  background-color: $color-subscription-scope;
+  color: #fff;
+
+  &.is-hide {
+    display: none;
+  }
+
+  .scope-header {
+    background-color: #2c3748;
+    // border-bottom: 13px solid $color-table-wrap;
+
+    th {
+      @include relative;
+      height: 56px;
+      line-height: 44px;
+      text-align: left;
+
+      &::before {
+        @include absolute($bottom: 0, $left: 0, $right: 0);
+        height: 12px;
+        background-color: $color-table-wrap;
+        content: '';
+      }
+    }
+  }
+
+  &__tit {
+    @include section-heading(#fff) {
+      margin-bottom: 90px;
+    }
+  } // tit
+
+  // table wrap
+  &__table {
+    // @include debug;
+    margin-bottom: 70px;
+    padding: 10px percent(10px, $width-max);
+    border-radius: 8px;
+    text-align: left;
+    font-size: rem(14px);
+    background-color: $color-table-wrap;
+
+    &:nth-of-type(1) {
+      margin-bottom: 40px;
+    }
+  }
+
+  th,
+  td {
+    padding-left: 20px;
+  }
+
+  th {
+    text-align: left;
+    font-size: rem(15px);
+  }
+
+  td {
+    padding-top: 23px;
+    padding-bottom: 19px;
+    border-bottom: 1px solid #4c5c73;
+  }
+
+  thead {
+    margin-bottom: 10px;
+    // line-height: 44px;
+    color: #cdd9e8;
+  }
+
+  .scope-sub-tit {
+    line-height: 40px;
+
+    th:nth-of-type(1) {
+      border-right: 4px solid $color-subscription-scope;
+      background-color: #3d5399;
+    }
+    th:nth-of-type(2) {
+      border-left: 4px solid $color-subscription-scope;
+      color: #000;
+      background-color: #cdd9e8;
+    }
+
+    td {
+      background-color: #788ece;
+
+      &:nth-of-type(1) {
+        border-right: 4px solid $color-subscription-scope;
+      }
+    }
+  }
+  .ico-check::before {
+    top: -3px;
+  }
+  .not-support::before {
+    opacity: 0.1;
+  }
+}
+
+.scope-space td {
+  border-bottom: 21px solid $color-table-wrap;
+}
+
+.btn-detail {
+  @include relative;
+  padding: 0 34px 0 20px;
+  background-color: transparent;
+  color: #cdd9e8;
+  font-size: rem(14px);
+  line-height: 32px;
+  opacity: 0.67;
+  border: 1px solid #cdd9e8;
+  border-radius: 2px;
+
+  &::before {
+    @include absolute($top: 50%, $right: 8px);
+    @include icon-setting($btn-arrow-down-sm-2x);
+    transform: translateY(-50%);
+    content: '';
+  }
+
+  &.is-active::before {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+// experience
+// ====================================================
+.experience--wasup {
+  padding-top: 150px;
+
+  .l-center {
+    padding-bottom: 150px;
+    border-bottom: solid 1px rgba(107, 117, 129, 0.3);
+  }
+
+  // .btn-round {
+  //   @include absolute($top: 8px, $right: percent(10px, $width-max - 20));
+  // }
+}

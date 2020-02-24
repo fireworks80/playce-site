@@ -1,0 +1,18 @@
+// ==============================
+// header
+// ==============================
+.header {
+  // @include debug;
+
+  .logo {
+    @include size(80px, 20px);
+  }
+
+  .center-box {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+  }
+}

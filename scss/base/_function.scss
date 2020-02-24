@@ -1,0 +1,22 @@
+$font-default-size: 16px;
+// ===================================
+// percent
+// ===================================
+@function percent($current, $container) {
+  @if $container {
+    @return $current / $container * 100%;
+  } @else {
+    @error '$container is not defained';
+  }
+}
+
+// ===================================
+// rem
+// ===================================
+@function rem($current, $container: 10px) {
+  @if $container {
+    @return $current / $container * 1rem;
+  } @else {
+    @error '$container is not defained';
+  }
+}

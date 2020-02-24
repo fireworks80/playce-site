@@ -35,6 +35,56 @@ include_once 'common-php/header.php';
           <article id="playce-wasup" class="resource__panel is-active">
             <h3 class="resource__panel-tit">Playce WASup</h3>
             <div class="resource__link-wrap">
+              <!-- ver 1.1.0 -->
+              <div class="resource__link not-eng">
+                <h4 class="resource__link-tit resource-guide-version" data-i18n="[html]resource-guide1.1">v1.1.0 설치파일 및<br /> 가이드</h4>
+                <ul class="resource__link-list">
+                  <!-- 1.1.0 릴리즈 노트 -->
+                  <li class="resource__link-item not-eng">
+                    <p class="resource__link-txt">
+                      <span class="ico-note"></span>
+                      <span data-i18n="resource-release1.1">Playce WASup v1.1.0 릴리즈 노트</span>
+                    </p>
+                    <a class="resource__btn" href="https://osci.atlassian.net/wiki/spaces/PWUG/pages/112984065/v1.1.0+Release+Note" target="_blank">HTML</a>
+                  </li>
+
+                  <!-- 1.1.0설치 파일 -->
+                  <li class="resource__link-item">
+                    <p class="resource__link-txt">
+                      <span class="ico-file"></span>
+                      <span data-i18n="resource-file1.1">Playce WASup v1.1.0 설치 파일</span>
+                    </p>
+                    <span class="resource__download-pc resource__btn-wrap">
+                      <a class="resource__btn" href="./user-info.html?type=gzip&ver=-1.1.0">tar.gz <span class="ico-download"></span></a>
+                      <a class="resource__btn" href="./user-info.html?type=zip&ver=-1.1.0">zip<span class="ico-download"></span></a>
+                    </span>
+                    <p class="resource__info-m" data-i18n="resource-m">*PC 버전만 다운로드 가능합니다.</p>
+                  </li>
+                  <!-- 국문/ 영문 -->
+                  <li class="resource__link-item not-eng">
+                    <p class="resource__link-txt">
+                      <span class="ico-file"></span>
+                      <span>Playce WASup v1.1.0 설치 가이드</span>
+                    </p> 
+                    <a class="resource__btn" href="https://osci.atlassian.net/wiki/spaces/PWUG/pages/134578620/2." target="_blank">HTML</a>
+                  </li>
+                  <li class="resource__link-item not-ko">
+                    <p class="resource__link-txt">
+                      <span class="ico-file"></span>
+                      <span>Playce WASup AMI & Installation Guide</span>
+                    </p> 
+                    <a class="resource__btn" href="./pdf/Playce_WASup_Install_Guide_191223_eng.pdf" target="_blank">PDF</a>
+                  </li><!-- // 국문/ 영문 -->
+                  <li class="resource__link-item not-eng">
+                    <p class="resource__link-txt">
+                      <span class="ico-file"></span>
+                      <span data-i18n="resource-guide3.1">Playce WASup v1.1.0 사용자 가이드</span>
+                    </p>
+                    <a class="resource__btn" href="https://docs.play-ce.io/wasup" target="_blank">HTML</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- ver 1.0.0 -->
               <div class="resource__link">
                 <h4 class="resource__link-tit resource-guide-version" data-i18n="[html]resource-guide1">v1.0.0 설치파일 및<br /> 가이드</h4>
                 <ul class="resource__link-list">
@@ -43,7 +93,7 @@ include_once 'common-php/header.php';
                       <span class="ico-note"></span>
                       <span data-i18n="resource-release">Playce WASup v1.0.0 릴리즈 노트</span>
                     </p>
-                    <a class="resource__btn" href="https://osci.atlassian.net/wiki/spaces/PWUG/pages/30212097/Release+Note" target="_blank">HTML</a>
+                    <a class="resource__btn" href="https://osci.atlassian.net/wiki/spaces/PWUG/pages/30408705/v1.0.0+Release+Note" target="_blank">HTML</a>
                   </li>
                   <li class="resource__link-item">
                     <p class="resource__link-txt">
@@ -62,7 +112,7 @@ include_once 'common-php/header.php';
                       <span class="ico-file"></span>
                       <span>Playce WASup v1.0.0 설치 가이드</span>
                     </p> 
-                    <a class="resource__btn" href="https://osci.atlassian.net/wiki/spaces/PWUG/pages/11599974/2." target="_blank">HTML</a>
+                    <a class="resource__btn" href="https://osci.atlassian.net/wiki/spaces/PWUG/pages/11599974/2.+v1.0.0" target="_blank">HTML</a>
                   </li>
                   <li class="resource__link-item not-ko">
                     <p class="resource__link-txt">
@@ -71,13 +121,13 @@ include_once 'common-php/header.php';
                     </p> 
                     <a class="resource__btn" href="./pdf/Playce_WASup_Install_Guide_191223_eng.pdf" target="_blank">PDF</a>
                   </li><!-- // 국문/ 영문 -->
-                  <li class="resource__link-item not-eng">
+                  <!-- <li class="resource__link-item not-eng">
                     <p class="resource__link-txt">
                       <span class="ico-file"></span>
                       <span data-i18n="resource-guide3">Playce WASup v1.0.0 사용자 가이드</span>
                     </p>
                     <a class="resource__btn" href="https://docs.play-ce.io/wasup" target="_blank">HTML</a>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
               <div class="resource__link">
@@ -86,17 +136,10 @@ include_once 'common-php/header.php';
                   <li class="resource__link-item not-eng">
                     <p class="resource__link-txt">
                       <span class="ico-file"></span>
-                      <span>Playce WASup v1.0.0 브로슈어</span>
+                      <span>Playce WASup 브로슈어</span>
                     </p>
                     <a class="resource__btn" href="./pdf/Playce_WASup_Brochure_190917_Rev2-kor.pdf" target="_blank">PDF</a>
                   </li>
-                  <!-- <li class="resource__link-item">
-                    <p class="resource__link-txt">
-                      <span class="ico-file"></span>
-                      <span data-i18n="resource-guide5">Playce WASup v1.0.0 브로슈어 (영문)</span>
-                    </p>
-                    <a class="resource__btn" href="./pdf/Playce_Wasup_Brochure_ENG_191018.pdf" target="_blank">PDF</a>
-                  </li> -->
                   <li class="resource__link-item not-eng">
                     <p class="resource__link-txt">
                       <span class="ico-video"></span>

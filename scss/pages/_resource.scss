@@ -148,8 +148,12 @@
 .resource__link {
   display: flex;
 
-  &:nth-child(2) {
+  &:nth-child(n + 2) {
     margin-top: 90px;
+  }
+
+  [lang='en'] &:nth-child(2) {
+    margin-top: 0;
   }
 
   &-tit {

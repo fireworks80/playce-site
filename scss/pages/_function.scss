@@ -1,0 +1,578 @@
+.function {
+  // @include debug;
+  // @include background-image($path-img + "function-bg.svg");
+  background: center top / contain no-repeat url($path-img+'function-bg.svg'),
+    center bottom / contain no-repeat url($path-img+'architecture-bg.svg');
+  padding-top: 380px;
+  padding-bottom: 486px;
+  background-size: 103%;
+
+  &__tit {
+    @include section-heading(#485c9b);
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__desc {
+    @include section-desc($color-light-black) {
+      margin-bottom: 217px;
+      text-align: center;
+    }
+  }
+}
+
+// =============================
+//  wizard
+// =============================
+.wizard {
+  // @include debug;
+  margin-bottom: 108px;
+
+  &__tit {
+    padding-left: 10px;
+    margin-bottom: 30px;
+    font-size: rem(24px);
+    font-weight: 500;
+    line-height: 1.42;
+  }
+
+  &__desc {
+    // @include debug(gray);
+    margin-bottom: 63px;
+    padding-left: 30px;
+    font-size: rem(18px);
+    line-height: 2.22;
+  }
+
+  &__step {
+    float: left;
+  }
+
+  &__list {
+    // @include debug;
+    margin-left: 30px;
+    font-size: rem(16px);
+
+    .a11y {
+      display: none;
+    }
+
+    li {
+      // @include debug;
+      position: relative;
+      padding-left: (32px + 24px);
+      margin-bottom: 26px;
+      line-height: 32px;
+      cursor: pointer;
+
+      &::before {
+        @include absolute($top: 0, $left: 0);
+        @include size(32px);
+
+        color: #788ece;
+        text-align: center;
+        line-height: 32px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 3px #788ece, 0 2px 5px 0 rgba(50, 62, 81, 0.3);
+        background-color: #fff;
+      }
+
+      @for $i from 0 to 8 {
+        &:nth-child(n + #{$i + 1})::before {
+          content: '#{$i}';
+        }
+      }
+    }
+
+    strong {
+      display: block;
+      color: #788ece;
+    }
+
+    .current {
+      &::before {
+        background-color: $color-normal;
+        box-shadow: inset 0 0 0 3px $color-normal, 0 2px 5px 0 rgba(50, 62, 81, 0.3);
+        color: #fff;
+      }
+      strong {
+        font-weight: 500;
+        color: $color-normal;
+      }
+    }
+  } // list
+
+  &__panel {
+    &::before,
+    &::after {
+      @include absolute($top: 0, $left: 50%);
+      content: '';
+    }
+
+    &::before {
+      // @include debug;
+      @include size(74px);
+      transform: translateX(-50%) translateY(-50%);
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px 0 rgba(50, 62, 81, 0.3);
+    }
+
+    &::after {
+      @include sprite2x($ic-wizard-panel-2x);
+      @include size(nth($ic-wizard-panel-2x, 5) / 2, nth($ic-wizard-panel-2x, 6) / 2);
+      transform: translate(-50%, -50%);
+    }
+
+    &.swiper-container {
+      @include size(546px, null);
+      border-radius: 18px;
+
+      .swiper-wrapper {
+        height: auto;
+      }
+
+      .swiper-slide {
+        opacity: 0;
+
+        &.swiper-slide-active {
+          opacity: 1;
+        }
+      }
+    }
+
+    @include background-image($path-img + 'step-bg.png');
+    float: right;
+    padding: 69px 52px 40px;
+    background-size: contain;
+    -webkit-box-shadow: 0px 27px 36px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 27px 36px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 27px 36px 0px rgba(0, 0, 0, 0.4);
+
+    &-imgs {
+      // @include debug;
+      @include relative;
+      @include size(441px, 490px);
+      display: inline-block;
+    }
+  }
+}
+
+// ===== wizard
+
+// =============================
+//  function detail
+// =============================
+.function__detail {
+  // @include debug;
+
+  &-left {
+    float: left;
+  }
+
+  &-right {
+    float: right;
+  }
+
+  dt {
+    padding-left: 10px;
+    margin-bottom: 30px;
+    font-size: rem(24px);
+    font-weight: 500;
+  }
+
+  dd {
+    font-size: 18px;
+    line-height: 2.22;
+    color: #687381;
+  }
+}
+
+// =============================
+//  dashboard
+// =============================
+$cubic: 0.645, 0.045, 0.355, 1; // dashboard, notification share cubic value
+
+// dashboard 만 사용하는 변수
+$perspective: 3250px;
+$transX: 10%;
+$transY: 0;
+$scale: 1;
+$rotateY: 34deg;
+$rotateX: 6deg;
+$rotateZ: 1.5deg;
+
+.dashboard {
+  $this: &;
+  margin-top: 180px;
+
+  &__img {
+    &-panels {
+      // @include debug;
+      @include relative;
+      @include size(530px, 584px);
+    } // .dashboard__img-panels
+
+    &-panel {
+      @include absolute($top: 0, $left: 0);
+      @include size(inherit, inherit);
+      transform-origin: center center;
+      transition: transform 1s;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 18px;
+      -webkit-box-shadow: 11px 25px 26px 0px rgba(0, 0, 0, 0.35);
+      -moz-box-shadow: 11px 25px 26px 0px rgba(0, 0, 0, 0.35);
+      box-shadow: 11px 25px 26px 0px rgba(0, 0, 0, 0.35);
+
+      @for $i from 0 through 3 {
+        &--#{$i} {
+          background-image: url($path-img+'dash-board'+$i+'-2x.png');
+        }
+      }
+
+      $share-property: perspective($perspective) rotateY($rotateY) rotateX($rotateX) rotateZ($rotateZ);
+
+      &:nth-child(1) {
+        transform: translate($transX, 0) scale($scale) $share-property;
+        z-index: 4;
+      }
+
+      &:nth-child(2) {
+        transform: translate(($transX - $transX), 0) scale(($scale - 0.1)) $share-property;
+        z-index: 3;
+      }
+
+      &:nth-child(3) {
+        transform: translate(-$transX, 0) scale(($scale - 0.2)) $share-property;
+        z-index: 2;
+      }
+
+      &:nth-child(4) {
+        transform: translate(-$transX - $transX, 0) scale(($scale - 0.3)) $share-property;
+        opacity: 0;
+        z-index: 1;
+      }
+    } // .dashboard__img-panel
+  } // __img
+
+  &__img-panels.anim #{$this}__img-panel {
+    animation: {
+      duration: 1s;
+      timing-function: cubic-bezier($cubic);
+      fill-mode: forwards;
+    }
+
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        animation-name: step-forward + $i;
+      }
+    }
+  } // .anim.dashboard__img-panels .dashboard__img-panel
+} // dashboard
+
+@keyframes step-forward1 {
+  0% {
+    transform: translate($transX, 0) scale($scale) perspective($perspective) rotateY($rotateY) rotateX($rotateX)
+      rotateZ($rotateZ);
+    // z-index: 4;
+  }
+
+  100% {
+    transform: translate(24%, 50%) scale($scale) perspective($perspective) rotateY($rotateY) rotateX(-10deg)
+      rotateZ($rotateZ);
+    opacity: 0;
+    // z-index: 4;
+  }
+}
+
+@keyframes step-forward2 {
+  0% {
+    transform: translate(($transX - $transX), 0) scale(($scale - 0.1)) perspective($perspective) rotateY($rotateY)
+      rotateX($rotateX) rotateZ($rotateZ);
+  }
+  100% {
+    transform: translate($transX, 0) scale($scale) perspective($perspective) rotateY($rotateY) rotateX($rotateX)
+      rotateZ($rotateZ);
+  }
+}
+
+@keyframes step-forward3 {
+  0% {
+    transform: translate(-$transX, 0) scale(($scale - 0.2)) perspective($perspective) rotateY($rotateY)
+      rotateX($rotateX) rotateZ($rotateZ);
+  }
+  100% {
+    transform: translate(($transX - $transX), 0) scale(($scale - 0.1)) perspective($perspective) rotateY($rotateY)
+      rotateX($rotateX) rotateZ($rotateZ);
+  }
+}
+
+@keyframes step-forward4 {
+  from {
+    transform: translate(-$transX - $transX, 0) scale(($scale - 0.3)) perspective($perspective) rotateY($rotateY)
+      rotateX($rotateX) rotateZ($rotateZ);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-$transX, 0) scale(($scale - 0.2)) perspective($perspective) rotateY($rotateY)
+      rotateX($rotateX) rotateZ($rotateZ);
+    opacity: 1;
+    // z-index: 1;
+  }
+}
+
+// =============================
+//  trace
+// =============================
+.trace {
+  margin-top: 248px;
+  margin-bottom: 233px;
+}
+
+.function .prd-info dl {
+  // @include debug;
+  dt::before {
+    @include absolute($top: 0, $left: 2.5%);
+    border-radius: 0;
+  }
+
+  &:nth-child(1) dt::before {
+    @include sprite2x($ic-function1-2x);
+    @include size(nth($ic-function1-2x, 5) / 2, nth($ic-function1-2x, 6) / 2);
+  }
+  &:nth-child(2) dt::before {
+    @include sprite2x($ic-function2-2x);
+    @include size(nth($ic-function2-2x, 5) / 2, nth($ic-function2-2x, 6) / 2);
+  }
+  &:nth-child(3) dt::before {
+    @include sprite2x($ic-function3-2x);
+    @include size(nth($ic-function3-2x, 5) / 2, nth($ic-function3-2x, 6) / 2);
+  }
+}
+
+// =============================
+//  notification
+// =============================
+.notification {
+  $easing: 0.645, 0.045, 0.355, 1;
+
+  @include relative;
+  @include size(546px, 607px);
+  @include background-image($path-img + 'notification-bg.png');
+  padding: 70px 53px 50px;
+  -webkit-box-shadow: 12px 37px 30px 0px rgba(50, 62, 81, 0.35);
+  -moz-box-shadow: 12px 37px 30px 0px rgba(50, 62, 81, 0.35);
+  box-shadow: 12px 37px 30px 0px rgba(50, 62, 81, 0.35);
+  border-radius: 18px;
+
+  &::before,
+  &::after {
+    @include absolute($top: 0, $left: 50%);
+    transform: translateX(-50%) translateY(-50%);
+    content: '';
+  }
+
+  &::before {
+    @include size(74px);
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px 0 rgba(50, 62, 81, 0.3);
+  }
+
+  &::after {
+    @include sprite2x($ic-bell-2x);
+    @include size((nth($ic-bell-2x, 5) / 2), (nth($ic-bell-2x, 6) / 2));
+  }
+
+  &__panel {
+    @include relative;
+    @include size(440px, 487px);
+    overflow: hidden;
+    padding-top: 30px;
+    background-color: #fff;
+    border-radius: 18px;
+
+    &::after {
+      @include absolute($bottom: 0, $left: 0, $right: 0, $top: 50%);
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 30%, #fff 94%);
+      content: '';
+      z-index: 10;
+    }
+  }
+
+  h3 {
+    margin-bottom: 42px;
+    margin-left: 28px;
+    font-size: rem(20px);
+    font-weight: 500;
+    color: #3d5399;
+  }
+
+  &__card-wrap {
+    // @include debug;
+    @include relative;
+    @include size(100%);
+  }
+
+  &__card {
+    // @include debug;
+    @include absolute($left: 20px, $right: 20px, $top: 0);
+    @include size(null, 135px);
+    padding: 18px 45px 25px 67px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 12px -2px rgba(9, 30, 66, 0.25), 0 0 1px 0 rgba(9, 30, 66, 0.31);
+
+    &:nth-child(1) {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    &:nth-child(2) {
+      // opacity: 0;
+      transform: translateY(0) scale(1.078);
+      z-index: 4;
+    }
+    &:nth-child(3) {
+      transform: translateY(100%);
+      z-index: 3;
+      // opacity: 0;
+    }
+
+    &:nth-child(4) {
+      transform: translateY(200%);
+      z-index: 2;
+      // opacity: 0;
+    }
+
+    &::before {
+      @include absolute($left: 20px, $top: 14px);
+      content: '';
+    }
+
+    &--alert::before {
+      @include sprite2x($ic-critical-2x);
+      @include size((nth($ic-critical-2x, 5) / 2), (nth($ic-critical-2x, 6) / 2));
+    } // alert
+
+    &--key::before {
+      @include sprite2x($ic-key-2x);
+      @include size((nth($ic-key-2x, 5) / 2), (nth($ic-key-2x, 6) / 2));
+    } // key
+    &--warning::before {
+      @include sprite2x($ic-warning-2x);
+      @include size((nth($ic-warning-2x, 5) / 2), (nth($ic-warning-2x, 6) / 2));
+    } // warning
+
+    strong {
+      display: block;
+      margin-bottom: 18px;
+      font-size: 16px;
+    }
+
+    .card-line {
+      @include size(100%, 9px);
+      display: inline-block;
+      background-color: rgba(205, 214, 225, 0.6);
+
+      &:nth-of-type(1) {
+        margin-bottom: 16px;
+      }
+
+      &:nth-of-type(2) {
+        margin-bottom: 10px;
+      }
+
+      &--bold {
+        background-color: #cdd6e1;
+      }
+
+      &--short {
+        @include size(60%, null);
+      }
+
+      &--middle {
+        @include size(70%, null);
+      }
+    } // card line
+
+    time {
+      @include absolute($top: 18px, $right: 22px);
+      color: rgba(109, 115, 129, 0.6);
+      font-size: 14px;
+    }
+  } // card
+
+  &__card-wrap.anim &__card {
+    animation: {
+      timing-function: cubic-bezier(easing);
+      duration: 0.5s;
+      fill-mode: forwards;
+    }
+
+    &:nth-of-type(1) {
+      animation-name: step1;
+    }
+
+    &:nth-of-type(2) {
+      animation-name: step2;
+      z-index: 4;
+    }
+    &:nth-of-type(3) {
+      animation-name: step3;
+      z-index: 3;
+    }
+
+    &:nth-of-type(4) {
+      animation-name: step4;
+      z-index: 2;
+    }
+  } // card
+}
+
+@keyframes step1 {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1.078);
+    opacity: 1;
+    z-index: 4;
+  }
+}
+
+@keyframes step2 {
+  from {
+    transform: translateY(0) scale(1.078);
+    z-index: 4;
+  }
+  to {
+    transform: translateY(100%);
+    z-index: 3;
+  }
+}
+
+@keyframes step3 {
+  from {
+    transform: translateY(100%);
+    z-index: 3;
+  }
+  to {
+    transform: translateY(200%);
+    z-index: 2;
+  }
+}
+
+@keyframes step4 {
+  from {
+    transform: translateY(200%);
+  }
+  to {
+    transform: translateY(300%);
+  }
+}
+
+.function .prd-info dl {
+  padding-top: 95px;
+}

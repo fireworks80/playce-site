@@ -8,8 +8,17 @@ if ($_SESSION['user_info_saved'] !== 'success') {
   exit;
 }
 
-$fileName = $_GET['type'] === 'zip' ? 'wasup-manager.zip' : 'wasup-manager.tar.gz';
+// version 항목이 따로 있어 수정함 (20200220 한승철)
+$ver = $_GET['ver'];
+
+if (!empty($ver)) {
+    $fileName = $_GET['type'] === 'zip' ? 'wasup-manager'.$_GET['ver'].'.zip' : 'wasup-manager'.$_GET['ver'].'.tar.gz';
+} else {
+    $fileName = $_GET['type'] === 'zip' ? 'wasup-manager.zip' : 'wasup-manager.tar.gz';
+}
+
 $file = "/var/www/html/wasup/$fileName";
+
 
 
 function sendHeaders($file, $type, $name=NULL)

@@ -1,0 +1,289 @@
+// ============================================
+// index, roro, wasup 페이지 공통
+// (모션 들어 있는 섹션)
+// ============================================
+
+$shadow-hero-comm: 20px 26px 36px rgba(50, 62, 81, 0.4);
+$perspective-hero-comm: 2210px;
+$rotateY-hero-comm: 25deg;
+$rotateX-hero-comm: 4deg;
+$rotateZ-hero-comm: -3deg;
+$translateY-hero-comm: 10deg;
+
+// mixin
+// =====================================
+@mixin circle-anim($offset) {
+  @at-root {
+    @keyframes circle-anim#{$offset} {
+      to {
+        stroke-dashoffset: $offset;
+      }
+    }
+  }
+}
+
+// animation setting
+// @params offsetVal, duration, delay, fill-mode, timing-function
+@mixin animation-state($val, $duration, $delay, $fn, $mode: forwards) {
+  @include circle-anim($val);
+  animation: {
+    name: circle-anim#{$val};
+    duration: $duration;
+    delay: $delay;
+    timing-function: $fn;
+    fill-mode: $mode;
+  }
+}
+
+@function transform-hero($perspective: 2210px, $rY: 25deg, $rX: 4deg, $rZ: -3deg, $tY: 10px, $tX: 10px) {
+  @return perspective($perspective) rotateY($rY) rotateX($rX) rotateZ($rZ) translateY($tY) translateX($tX);
+}
+
+// animation
+// =====================================
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes draw-line {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+// ============================================
+// style
+// ============================================
+.hero {
+  $index-hero-padding-top: 66px;
+
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+}
+
+// hero text common
+// ================================
+.hero__text-section {
+  width: percent(440px, $width-max - 20);
+}
+
+// hero tit common
+// ================================
+.hero__tit {
+  margin-bottom: 24px;
+  font-size: rem(37px);
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+// hero desc common
+// ================================
+.hero__desc {
+  margin-bottom: 58px;
+  padding-right: percent(70px, 450px);
+  font-size: rem(19px);
+  line-height: 2.2;
+}
+
+// 모션 패널
+// ================================
+.motion-panel {
+  // @include debug;
+  @include relative;
+  @include size(720px, 510px);
+  @include background-image($path-img + 'bg-dashboard-graph.png');
+
+  padding: {
+    top: 100px;
+    left: 76px;
+  }
+  border-radius: 16px;
+  background-size: 100% 100%;
+  transform-origin: center center;
+  perspective-origin: bottom right;
+
+  &__tit {
+    @include absolute($top: -54px);
+    font-size: rem(20px);
+    font-weight: 500;
+  }
+
+  .hero--roro &,
+  .line-up-roro & {
+    // @include transform-hero;
+    margin-left: percent(-10px, $width-max - 20);
+    // transform: perspective($perspective-hero-comm) rotateY($rotateY-hero-comm) rotateX($rotateX-hero-comm)
+    //   rotateZ($rotateZ-hero-comm) translateY($translateY-hero-comm) translateX(-0.1666666667%);
+    transform: transform-hero();
+    box-shadow: $shadow-hero-comm;
+
+    @media (max-width: 1238px) {
+      margin-left: percent(10px, $width-max - 10);
+      // transform: perspective(2210px) rotateY(25deg) rotateX(4deg) rotateZ(-3deg) translateY(-10px) translateX(0);
+    }
+  }
+
+  .hero--wasup &,
+  .line-up-wasup & {
+    transform: perspective(2210px) rotateY(-25deg) rotateX(4deg) rotateZ(3deg) translateY(10px) translateX(1%);
+    box-shadow: $shadow-hero-comm;
+
+    @media (max-width: 1238px) {
+      transform: perspective(2210px) rotateY(-25deg) rotateX(4deg) rotateZ(3deg) translateY(10px) translateX(0);
+    }
+  }
+}
+
+// graph
+// ================================
+.graph-section {
+  // @include debug;
+  @include size(624px, 187px);
+  padding-top: 54px;
+  padding-left: 28px;
+
+  svg {
+    @include size(100%);
+  }
+}
+
+// 상하의 svg 공통 설정
+// =========================================
+.graph-section .circle-inner,
+.graph-section .circle-outer {
+  stroke-width: 13;
+  stroke-dasharray: 267;
+  stroke-dashoffset: 267;
+}
+
+.graph-section .anim-warning {
+  opacity: 0;
+  animation: fade-in 0.32s 0.15s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+}
+
+.graph-section .anim-err {
+  opacity: 0;
+  animation: fade-in 0.32s 0.25s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+}
+
+.graph-section .anim-line {
+  transform: scaleX(0);
+  transform-origin: 52% center;
+  animation: {
+    name: draw-line;
+    duration: 0.75s;
+    timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    fill-mode: forwards;
+  }
+}
+
+// // 개별 영역
+.graph-section:nth-child(1) {
+  margin-bottom: 17px;
+}
+
+.graph-section:nth-child(2) {
+  padding-top: 51px;
+}
+
+// circle animation
+// ==============================================
+
+.circle-inner {
+  .graph-section:nth-child(1) & {
+    @include animation-state(130, 0.5s, 0.45s, cubic-bezier(0.28, 0.28, 0.16, 0.98));
+    stroke: #3d5399;
+  }
+
+  .graph-section:nth-child(2) & {
+    @include animation-state(60, 0.5s, 0.4s, cubic-bezier(0.28, 0.28, 0.16, 0.98));
+    stroke: #a85838;
+  }
+}
+
+.circle-outer {
+  .graph-section:nth-child(1) & {
+    @include animation-state(200, 0.5s, 0.3s, cubic-bezier(0.28, 0.28, 0.16, 0.98));
+    stroke: #788ece;
+  }
+  .graph-section:nth-child(2) & {
+    @include animation-state(160, 0.5s, 0.23s, cubic-bezier(0.28, 0.28, 0.16, 0.98));
+    stroke: #faa61e;
+  }
+}
+
+// dash board
+// ==============================================
+.hero-dashboard {
+  // @include debug;
+  @include size(720px, 500px);
+  @include background-image($path-img + 'bg-roro-visual.png');
+  padding-left: 75px;
+  padding-top: 97px;
+}
+
+.dashboard-row {
+  -ms-display: flex;
+  display: flex;
+
+  &:nth-of-type(n + 2) {
+    margin-top: 12px;
+  }
+}
+
+.dashboard-cell {
+  // @include debug;
+  @include size(148px, 84px);
+  overflow: hidden;
+  display: block;
+  padding-top: 40px;
+  padding-right: 16px;
+  border-radius: 8px;
+  font-size: rem(28px);
+  text-align: right;
+
+  &:nth-of-type(n + 2) {
+    margin-left: 10px;
+  }
+
+  .dashboard-row:nth-of-type(1) & {
+    padding-top: 0;
+    padding-right: 0;
+    height: 187px;
+  }
+
+  &.has-shadow {
+    $shadow: -10px 10px 28px 0px rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+  }
+}
+
+// .link-detail {
+//   @include relative;
+//   margin-top: 40px;
+//   display: inline-block;
+//   font-size: rem(14px);
+
+//   &::after {
+//     @include absolute;
+//     content: '';
+//   }
+// }
+
+// ===============================================================
+// roro, wasup 스크롤시 sticky 상태일 경우
+// ===============================================================
+.sticky {
+  .hero--roro &,
+  .hero--wasup & {
+    padding-top: (118px + $height-snb);
+  }
+}

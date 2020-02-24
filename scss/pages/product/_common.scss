@@ -1,0 +1,136 @@
+.prd-info {
+  // @include debug;
+  display: flex;
+  justify-content: center;
+
+  dl {
+    // @include debug(dodgerblue);
+    @include relative;
+    @include size(33.333333%, null);
+
+    padding-top: 170px;
+  }
+
+  dt {
+    padding-left: 2.5%;
+    margin-bottom: 30px;
+    font-size: rem(24px);
+    font-weight: 500;
+
+    &::before {
+      @include size(100px);
+      border-radius: 50%;
+      content: '';
+    }
+  }
+
+  dd {
+    font-size: rem(16px);
+    line-height: 2.22;
+  }
+
+  li {
+    &:nth-child(n + 2) {
+      margin-top: 12px;
+    }
+  } // li
+}
+
+// =======================================
+// ico check
+// =======================================
+.ico-check {
+  @include relative;
+  padding-left: 30px;
+
+  &::before {
+    @include absolute($top: 8px, $left: 0);
+    @include size(20px);
+    content: '';
+  }
+
+  &--normal::before {
+    @include background-image($path-img + 'ic-checklist.svg', $repeat: no-repeat, $x: center, $y: top, $color: null);
+  }
+
+  &--blue::before {
+    @include background-image(
+      $path-img + 'ic-checklist-blue.svg',
+      $repeat: no-repeat,
+      $x: center,
+      $y: top,
+      $color: null
+    );
+  }
+
+  &--orange::before {
+    @include background-image(
+      $path-img + 'ic-checklist-orange.svg',
+      $repeat: no-repeat,
+      $x: center,
+      $y: top,
+      $color: null
+    );
+  }
+
+  &--green::before {
+    @include icon-setting($ic-checklist-green);
+  }
+
+  &--skyblue::before {
+    @include background-image(
+      $path-img + 'ic-checklist-skyblue.svg',
+      $repeat: no-repeat,
+      $x: center,
+      $y: top,
+      $color: null
+    );
+  }
+
+  &--skyblue2::before {
+    @include background-image(
+      $path-img + 'ic-checklist-skyblue2.svg',
+      $repeat: no-repeat,
+      $x: center,
+      $y: top,
+      $color: null
+    );
+  }
+  &--darkblue::before {
+    @include background-image(
+      $path-img + 'ic-checklist-darkblue.svg',
+      $repeat: no-repeat,
+      $x: center,
+      $y: top,
+      $color: null
+    );
+  }
+}
+
+// =======================================
+// section common
+// tit
+// desc
+// =======================================
+%section-heading {
+  font-size: rem(20px);
+  font-weight: 500;
+}
+
+@mixin section-heading($color: null) {
+  @extend %section-heading;
+  color: $color;
+  @content;
+}
+
+%section-desc {
+  font-size: rem(32px);
+  line-height: 2.06;
+}
+
+@mixin section-desc($color: null) {
+  @extend %section-desc;
+
+  color: $color;
+  @content;
+}

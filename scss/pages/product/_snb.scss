@@ -1,0 +1,91 @@
+@keyframes sticky-anim {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+.snb {
+  // @include debug;
+  @include size(null, $height-snb);
+  // padding: 14px percent(10px, $width-max) 0;
+  font-size: rem(14px);
+
+  .sticky & {
+    @include fixed($left: 0, $top: 0);
+    @include size(100%, null);
+    z-index: 15;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(50, 62, 81, 0.1);
+    animation: sticky-anim 0.45s;
+  }
+}
+
+// snb center box
+// =========================================
+.snb .center-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px percent(10px, $width-max) 0;
+}
+
+// snb a common
+// =========================================
+.snb a {
+  display: block;
+}
+
+// snb--wasup a color
+// snb--roro a color
+// =========================================
+@each $name, $color in ('wasup': #a86247, 'roro': #2557a0) {
+  .snb--#{$name} a {
+    color: $color;
+  }
+}
+
+// snb logo
+// =========================================
+.snb__logo {
+  margin-top: 6px;
+
+  .snb--roro & {
+    @include size(106px, null);
+  }
+
+  .snb--wasup & {
+    @include size(122px, null);
+  }
+}
+
+// snb list
+// =========================================
+.snb__list {
+  display: flex;
+
+  a {
+    padding: 0 18px;
+    line-height: 32px;
+
+    &:hover {
+      font-weight: 500;
+    }
+  }
+
+  li:last-child {
+    margin-left: 10px;
+    a {
+      border-radius: 3px 8px;
+      background-color: #fff;
+      box-shadow: 0 2px 6px 0 rgba(50, 62, 81, 0.2);
+      font-weight: bold;
+
+      &:hover {
+        background-color: #f9f7f4;
+        box-shadow: 0 2px 2px 0 rgba(50, 62, 81, 0.2);
+      }
+    }
+  }
+}

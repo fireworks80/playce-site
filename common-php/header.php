@@ -26,6 +26,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $locale; ?>">
+
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150725111-1"></script>
@@ -49,7 +50,15 @@
     <title>Playce</title>
   </head>
   <body>
-
+    <div class="js-banner banner is-active">
+      <div class="l-center">
+        <a href="./resource.html">
+          <img class="banner__pc-img" src="../images/banner-pc.png" alt="">
+          <img class="banner__m-img" src="../images/banner-m.png" alt="">
+        </a>
+        <button class="js-banner-btn" type="button"><span>닫기</span></button>
+      </div>
+    </div>
     <!-- wrap -->
     <section class="wrap js-wrap">
     <?php include_once 'common-php/gnb.php'; ?>

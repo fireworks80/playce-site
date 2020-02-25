@@ -270,21 +270,6 @@
   "email-inquiry": "이메일 문의",
   "email-inquiry-desc": "파트너십에 관련한 문의사항을 보내주세요.",
 
-  "resource-guide1.1": "v1.1.0 설치파일 및<br /> 가이드",
-  "resource-release1.1": "Playce WASup v1.1.0 릴리즈 노트",
-  "resource-file1.1": "Playce WASup v1.1.0 설치 파일",
-
-  "resource-guide1": "v1.0.0 설치파일 및<br /> 가이드",
-  "resource-release": "Playce WASup v1.0.0 릴리즈 노트",
-  "resource-file": "Playce WASup v1.0.0 설치 파일",
-  "resource-m": "*PC 버전만 다운로드 가능합니다.",
-
-  "resource-guide3.1": "Playce WASup v1.1.0 사용자 가이드",
-  "resource-file-mv": "문서 및 동영상",
-  "resource-guide5": "Playce WASup v1.0.0 브로슈어 (영문)",
-  "resource-guide6": "새로워진 Playce WASup을 만나보세요! - 사용 가이드",
-  "document": "문서",
-
   "support-tit": "<em>오픈소스컨설팅은 고객의 원활한 제품 사용을 위해</em> 고객지원에 적극적으로 임하고 있습니다.",
   "support-desc": "<em>Playce Support</em>란 고객의 문제 해결을 위해 운영되는 고객지원 서비스로,<br /> 보다 신속 정확하게 고객 문의에 대한 응대, 장애 처리를 위한 기술을 지원합니다.",
   "go-support": "Playce Support 가기",

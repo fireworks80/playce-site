@@ -5779,19 +5779,27 @@ body.show-gnb {
 .experience--wasup .btn-round--white2 {
   color: #2557a0;
 }
-@media (max-width:960px) {
+@media (max-width: 1144px) {
   .experience--wasup {
-    padding-top: 80px;
     text-align: center;
   }
-  .experience--wasup .l-center {
-    padding-bottom: 80px;
+  .experience--wasup p {
+    margin-bottom: 20px;
   }
   .experience--wasup .l-left,
 .experience--wasup .l-right {
     float: none;
   }
+}
+@media (max-width:960px) {
+  .experience--wasup {
+    padding-top: 80px;
+  }
+  .experience--wasup .l-center {
+    padding-bottom: 80px;
+  }
   .experience--wasup p {
+    margin-bottom: 0;
     font-size: 20px;
   }
 }

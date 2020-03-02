@@ -2055,7 +2055,6 @@ body.show-gnb {
 .banner {
   display: none;
   min-width: 360px;
-  color: #fff;
   font-size: 1.5rem;
   background: url("../images/bg-banner.png") center top repeat-y;
   background-size: cover;
@@ -3667,7 +3666,6 @@ body.show-gnb {
   background-position: center top;
 }
 .guide--wasup {
-  padding-bottom: 132px;
   background-image: url("../images/bg-guide-top-wasup.png");
   background-color: #fffdfa;
 }
@@ -4964,7 +4962,7 @@ body.show-gnb {
 }
 
 .function--wasup {
-  padding-top: 318px;
+  padding-top: 177px;
   padding-bottom: 207px;
   background-image: url("../images/function-bg.png");
   background-position: center -60px;
@@ -5454,7 +5452,7 @@ body.show-gnb {
 }
 
 .function--roro {
-  padding-top: 200px;
+  padding-top: 192px;
   padding-bottom: 280px;
   background: center top/contain no-repeat url("../images/bg-function-top-roro.png"), center bottom/contain no-repeat url("../images/bg-architecture-roro.png");
 }

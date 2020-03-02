@@ -13,9 +13,7 @@ $list-theme-name: ('wasup' 'roro');
   // ==============================
   @each $name, $color in ('wasup': #fffdfa, 'roro': #fafcff) {
     &--#{$name} {
-      @if ($name == 'wasup') {
-        padding-bottom: 132px;
-      }
+      
       background-image: url($path-img+'bg-guide-top-'+$name+'.png');
       background-color: $color;
     }

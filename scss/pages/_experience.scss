@@ -211,10 +211,16 @@
     padding-top: 80px;
     padding-bottom: 70px;
     font-size: 20px;
+    text-align: center;
 
     .experience__desc {
+      margin-bottom: 40px;
       font-size: 16px;
-      // line-height: 1.6;
     }
-  }
+
+    .btn-round {
+      position: static;
+    }
+
+  } // > 960
 }

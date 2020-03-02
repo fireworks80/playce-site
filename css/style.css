@@ -5863,9 +5863,14 @@ body.show-gnb {
     padding-top: 80px;
     padding-bottom: 70px;
     font-size: 20px;
+    text-align: center;
   }
   .experience--support .experience__desc {
+    margin-bottom: 40px;
     font-size: 16px;
+  }
+  .experience--support .btn-round {
+    position: static;
   }
 }
 

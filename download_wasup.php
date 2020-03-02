@@ -12,7 +12,7 @@ if ($_SESSION['user_info_saved'] !== 'success') {
 $ver = $_GET['ver'];
 
 if (!empty($ver)) {
-    $fileName = $_GET['type'] === 'zip' ? 'wasup-manager'.$_GET['ver'].'.zip' : 'wasup-manager'.$_GET['ver'].'.tar.gz';
+    $fileName = $_GET['type'] === 'zip' ? 'wasup-manager-'.$_GET['ver'].'.zip' : 'wasup-manager-'.$_GET['ver'].'.tar.gz';
 } else {
     $fileName = $_GET['type'] === 'zip' ? 'wasup-manager.zip' : 'wasup-manager.tar.gz';
 }

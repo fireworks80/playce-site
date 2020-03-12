@@ -181,9 +181,8 @@
   (function() {
     'use strict';
     var setMobileStatus = function() {
-      var wrap = document.querySelector('.js-wrap');
       var mobileBrakePointSize = 960;
-      Playce.isMobile = (wrap.clientWidth <= mobileBrakePointSize) ? true : false;
+      Playce.isMobile = (window.innerWidth <= mobileBrakePointSize) ? true : false;
       // console.log(Playce.isMobile);
     };
 
@@ -226,7 +225,7 @@
         hideGnb();
       };
       
-      // 모바일 때때
+      // 모바일 일때
       hamburger.addEventListener('click', function() {
         document.body.classList.add('show-gnb');
       });
@@ -271,22 +270,16 @@
   
 
   (function() {
-
+    // 바탕화면 클릭시 callout 닫기
     document.body.addEventListener('click', function(e) {
-
       if (Playce.isMobile) return;
-
+      var gnbEl = document.querySelector('.js-gnb');
       var calloutEls = document.querySelectorAll('.has-callout'); 
       var arrCallouts = Array.prototype.slice.call(calloutEls);
-      // console.log( e.target.className);
 
-      if (e.target.className !== null && e.target.className.indexOf('js-has-callout') < 0) {
-
-        arrCallouts.forEach(function(li, idx) {
-          if (li.classList.contains('is-active')) {
-            li.classList.remove('is-active');
-            console.log('hide');
-          }
+      if (!gnbEl.contains(e.target)) {
+        arrCallouts.forEach(function(el, idx) {
+          el.classList.remove('is-active');
         });
       }
     });

@@ -36,7 +36,7 @@
     <h1>
       <a class="logo" href="<?php echo $root_url; ?>"><span class="a11y">Playce</span></a>
     </h1>
-    <nav class="gnb">
+    <nav class="gnb js-gnb">
       <a class="gnb__logo" href="<?php echo $root_url; ?>"><img src="./images/logo-gray-2x.png" alt="Playce"></a>
       <h2 class="a11y">gnb</h2>
       <ul class="gnb__list">

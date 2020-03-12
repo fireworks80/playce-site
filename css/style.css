@@ -827,7 +827,7 @@ body {
 }
 .prd-info__desc {
   font-size: 1.6rem;
-  line-height: 2.22;
+  line-height: 2;
 }
 [lang=en] .prd-info__desc {
   line-height: 1.8;
@@ -1213,7 +1213,7 @@ body {
 }
 .ico-check::before {
   position: absolute;
-  top: 8px;
+  top: 6px;
   left: 0;
   width: 20px;
   height: 20px;
@@ -3883,7 +3883,7 @@ body.show-gnb {
   margin-bottom: 63px;
   padding-left: 30px;
   font-size: 1.8rem;
-  line-height: 2.22;
+  line-height: 2;
 }
 [lang=en] .wizard__desc {
   font-size: 1.6rem;
@@ -4327,7 +4327,7 @@ body.show-gnb {
 }
 .specification__os dd {
   font-size: 1.8rem;
-  line-height: 2.44;
+  line-height: 2;
   color: #a86247;
 }
 [lang=en] .specification__os dd {
@@ -6616,7 +6616,7 @@ body.show-gnb {
 
 .step-sub-list {
   font-size: 1.6rem;
-  line-height: 2.5;
+  line-height: 2;
   text-align: left;
 }
 .step-sub-list li {

@@ -6,7 +6,7 @@
   padding-left: 30px;
 
   &::before {
-    @include absolute($top: 8px, $left: 0);
+    @include absolute($top: 6px, $left: 0);
     @include size(20px);
     content: '';
     background: {

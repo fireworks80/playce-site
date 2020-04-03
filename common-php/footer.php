@@ -60,9 +60,7 @@
               <span data-i18n="reg-num">사업자등록번호</span> : 114-86-94359
             </li>
             <li class="not-eng" data-i18n="representative">대표자 : 장용훈</li>
-            <li class="address__ko" data-i18n="addr">
-              서울특별시 강남구 테헤란로 83길 32, 5층  (삼성동,나라키움삼성동A빌딩)
-            </li>
+            <li class="address__ko" data-i18n="addr">서울특별시 강남구 테헤란로83길 32, 5층 (삼성동)</li>
             <li>Tel. 02-516-0711</li>
             <li>Fax. 02-516-0722</li>
           </ul>
@@ -90,8 +88,8 @@
             <div class="service">
               <h2 class="service__tit" data-i18n="resource">리소스</h2>
               <ul class="service__list js-resource-list">
-                <li><a href="./resource.html" data-i18n="">Playce WASup</a></li>
-                <li><a href="./resource.html#playce-roro" dta-i18n="">Playce RoRo</a></li>
+                <li><a href="./resource.html">Playce WASup</a></li>
+                <li><a href="./resource.html#playce-roro">Playce RoRo</a></li>
                 <li><a href="./resource.html#etc" data-i18n="foot-resource">추가 리소스</a></li>
               </ul>
             </div>

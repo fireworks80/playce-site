@@ -1821,7 +1821,8 @@ body.show-gnb {
   line-height: 28px;
 }
 .address__ko {
-  max-width: 240px;
+  max-width: 230px;
+  line-height: 1.4;
 }
 
 .copyright {

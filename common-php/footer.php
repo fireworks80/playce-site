@@ -283,7 +283,7 @@
     });
   }());
 
-  $('.js-banner-btn').on('click', function() {
-    $(".js-banner").removeClass('is-active');
-  });
+  // $('.js-banner-btn').on('click', function() {
+  //   $(".js-banner").removeClass('is-active');
+  // });
 </script>
